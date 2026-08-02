@@ -9,7 +9,9 @@ const MARKET = process.env.SPOTIFY_MARKET || "TR";
 const MAX_PAGES = 4;
 const DISPLAY_NAME = "Şehinşah";
 
-async function getToken(clientId, clientSecret) {
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function getSpotifyToken(clientId, clientSecret) {
   const basic = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
   const res = await fetch("https://accounts.spotify.com/api/token", {
     method: "POST",
@@ -20,8 +22,7 @@ async function getToken(clientId, clientSecret) {
     body: "grant_type=client_credentials",
   });
   if (!res.ok) throw new Error(`token_${res.status}`);
-  const data = await res.json();
-  return data.access_token;
+  return (await res.json()).access_token;
 }
 
 function pickImage(images = []) {
@@ -34,12 +35,12 @@ function normalizeSpotify(raw) {
     id: raw.id,
     name: raw.name,
     albumType: raw.album_type,
-    releaseDate: raw.release_date,
+    releaseDate: raw.release_date || "",
     releaseYear: (raw.release_date || "").slice(0, 4),
-    totalTracks: raw.total_tracks,
+    totalTracks: raw.total_tracks || 0,
     imageUrl: pickImage(raw.images),
-    spotifyUrl: raw.external_urls?.spotify,
-    uri: raw.uri,
+    spotifyUrl: raw.external_urls?.spotify || `https://open.spotify.com/album/${raw.id}`,
+    uri: raw.uri || `spotify:album:${raw.id}`,
     artists: (raw.artists || []).map((a) => a.name),
   };
 }
@@ -48,24 +49,9 @@ function mapDeezerType(recordType) {
   const t = (recordType || "").toLowerCase();
   if (t === "album") return "album";
   if (t === "compile" || t === "compilation") return "compilation";
+  // Spotify discography groups EP with singles
+  if (t === "ep" || t === "single") return "single";
   return "single";
-}
-
-function normalizeDeezer(raw) {
-  const releaseDate = raw.release_date || "";
-  const q = encodeURIComponent(`${raw.title} ${DISPLAY_NAME}`);
-  return {
-    id: `deezer-${raw.id}`,
-    name: raw.title,
-    albumType: mapDeezerType(raw.record_type),
-    releaseDate,
-    releaseYear: releaseDate.slice(0, 4),
-    totalTracks: raw.nb_tracks || 0,
-    imageUrl: raw.cover_xl || raw.cover_big || raw.cover_medium || null,
-    spotifyUrl: `https://open.spotify.com/intl-tr/search/${q}`,
-    uri: `deezer:album:${raw.id}`,
-    artists: [DISPLAY_NAME],
-  };
 }
 
 async function fetchSpotifyAlbums(token) {
@@ -80,12 +66,11 @@ async function fetchSpotifyAlbums(token) {
     });
     if (!res.ok) throw new Error(`albums_${res.status}`);
     const data = await res.json();
-    collected.push(...(data.items || []));
+    collected.push(...(data.items || []).map(normalizeSpotify));
     next = data.next;
     pages += 1;
   }
-
-  return collected.map(normalizeSpotify);
+  return collected;
 }
 
 async function fetchDeezerAlbums() {
@@ -106,8 +91,89 @@ async function fetchDeezerAlbums() {
     next = data.next || null;
     pages += 1;
   }
+  return collected;
+}
 
-  return collected.map(normalizeDeezer);
+async function resolveSpotifyAlbumId(title) {
+  const query = `${title} ${DISPLAY_NAME}`;
+  const target = `https://open.spotify.com/intl-tr/search/${encodeURIComponent(query)}`;
+  const res = await fetch(`https://r.jina.ai/http://${target.replace(/^https?:\/\//, "")}`, {
+    headers: { Accept: "text/plain", "User-Agent": "SehinsahDijitalEvren/1.0" },
+  });
+  if (!res.ok) return null;
+  const text = await res.text();
+  const match = text.match(/open\.spotify\.com\/album\/([a-zA-Z0-9]{22})/);
+  return match?.[1] || null;
+}
+
+async function oEmbedAlbum(albumId) {
+  const res = await fetch(
+    `https://open.spotify.com/oembed?url=${encodeURIComponent(`https://open.spotify.com/album/${albumId}`)}`,
+  );
+  if (!res.ok) return null;
+  return res.json();
+}
+
+async function buildFromDeezerWithSpotifyLinks() {
+  const deezerAlbums = await fetchDeezerAlbums();
+  const releases = [];
+  const seenSpotify = new Set();
+
+  console.log(`[sync] Resolving ${deezerAlbums.length} Deezer releases → Spotify album URLs`);
+
+  for (let i = 0; i < deezerAlbums.length; i += 1) {
+    const item = deezerAlbums[i];
+    const title = item.title;
+    process.stdout.write(`  [${i + 1}/${deezerAlbums.length}] ${title} … `);
+
+    let spotifyId = null;
+    try {
+      spotifyId = await resolveSpotifyAlbumId(title);
+    } catch {
+      spotifyId = null;
+    }
+
+    if (!spotifyId) {
+      console.log("skip (no spotify album)");
+      await sleep(700);
+      continue;
+    }
+
+    if (seenSpotify.has(spotifyId)) {
+      console.log(`dup ${spotifyId}`);
+      await sleep(400);
+      continue;
+    }
+    seenSpotify.add(spotifyId);
+
+    let imageUrl = item.cover_xl || item.cover_big || item.cover_medium || null;
+    let displayName = title;
+    try {
+      const embed = await oEmbedAlbum(spotifyId);
+      if (embed?.thumbnail_url) imageUrl = embed.thumbnail_url;
+      if (embed?.title) displayName = embed.title;
+    } catch {
+      /* keep deezer meta */
+    }
+
+    const releaseDate = item.release_date || "";
+    releases.push({
+      id: spotifyId,
+      name: displayName,
+      albumType: mapDeezerType(item.record_type),
+      releaseDate,
+      releaseYear: releaseDate.slice(0, 4),
+      totalTracks: item.nb_tracks || 0,
+      imageUrl,
+      spotifyUrl: `https://open.spotify.com/album/${spotifyId}`,
+      uri: `spotify:album:${spotifyId}`,
+      artists: [DISPLAY_NAME],
+    });
+    console.log(spotifyId);
+    await sleep(850);
+  }
+
+  return releases;
 }
 
 function dedupe(items) {
@@ -116,7 +182,7 @@ function dedupe(items) {
   const seen = new Set();
   const out = [];
   for (const item of byId.values()) {
-    const key = `${item.name.toLowerCase()}::${item.releaseYear}`;
+    const key = `${item.name.toLowerCase()}::${item.releaseYear}::${item.albumType}`;
     if (seen.has(key)) continue;
     seen.add(key);
     out.push(item);
@@ -126,31 +192,38 @@ function dedupe(items) {
 
 async function keepExisting() {
   try {
-    const raw = await readFile(OUT, "utf8");
-    JSON.parse(raw);
-    console.warn("[sync-spotify] Keeping existing catalog JSON");
+    await readFile(OUT, "utf8");
+    console.warn("[sync] Keeping existing catalog JSON");
   } catch {
-    console.warn("[sync-spotify] No valid existing catalog to keep");
+    console.warn("[sync] No valid existing catalog to keep");
   }
 }
 
 async function writeCatalog(releases) {
-  const albums = releases.filter((r) => r.albumType === "album");
-  const singles = releases.filter((r) => r.albumType === "single");
+  const sorted = dedupe(releases);
+  const albums = sorted.filter((r) => r.albumType === "album" || r.albumType === "compilation");
+  const singles = sorted.filter((r) => r.albumType === "single" || r.albumType === "ep");
 
-  if (!releases.length) {
-    console.warn("[sync-spotify] Empty response — keeping previous file");
+  if (!sorted.length) {
+    console.warn("[sync] Empty — keeping previous file");
     await keepExisting();
     return false;
   }
 
+  // Guard: never write search URLs
+  for (const r of sorted) {
+    if (!r.spotifyUrl || r.spotifyUrl.includes("/search/")) {
+      throw new Error(`invalid_spotify_url:${r.name}:${r.spotifyUrl}`);
+    }
+  }
+
   const catalog = {
-    releases,
+    releases: sorted,
     albums,
     singles,
-    latestRelease: releases[0] || null,
+    latestRelease: sorted[0] || null,
     counts: {
-      total: releases.length,
+      total: sorted.length,
       albums: albums.length,
       singles: singles.length,
     },
@@ -160,7 +233,7 @@ async function writeCatalog(releases) {
 
   await mkdir(path.dirname(OUT), { recursive: true });
   await writeFile(OUT, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
-  console.log(`[sync-spotify] Wrote ${releases.length} releases → ${OUT}`);
+  console.log(`[sync] Wrote ${sorted.length} releases (${albums.length} albums, ${singles.length} singles) → ${OUT}`);
   return true;
 }
 
@@ -170,26 +243,20 @@ async function main() {
 
   try {
     if (clientId && clientSecret) {
-      const token = await getToken(clientId, clientSecret);
-      const releases = dedupe(await fetchSpotifyAlbums(token));
+      console.log("[sync] Using Spotify Web API");
+      const token = await getSpotifyToken(clientId, clientSecret);
+      const releases = await fetchSpotifyAlbums(token);
       await writeCatalog(releases);
       return;
     }
 
-    console.warn("[sync-spotify] Spotify credentials missing — syncing via Deezer");
-    const releases = dedupe(await fetchDeezerAlbums());
+    console.warn("[sync] No Spotify credentials — resolving album URLs via Deezer + Spotify search pages");
+    const releases = await buildFromDeezerWithSpotifyLinks();
     await writeCatalog(releases);
   } catch (error) {
-    console.error("[sync-spotify] Failed:", error.message);
-    try {
-      console.warn("[sync-spotify] Trying Deezer fallback…");
-      const releases = dedupe(await fetchDeezerAlbums());
-      await writeCatalog(releases);
-    } catch (fallbackError) {
-      console.error("[sync-spotify] Fallback failed:", fallbackError.message);
-      await keepExisting();
-      process.exitCode = 0;
-    }
+    console.error("[sync] Failed:", error.message);
+    await keepExisting();
+    process.exitCode = 0;
   }
 }
 

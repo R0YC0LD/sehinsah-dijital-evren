@@ -44,8 +44,6 @@ export function MusicSection({ catalog }: Props) {
           </h3>
           <AlbumGrid catalog={catalog} />
         </div>
-
-        <p className={styles.attr}>{siteConfig.music.attribution}</p>
       </div>
     </section>
   );

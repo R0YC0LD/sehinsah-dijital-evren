@@ -33,10 +33,11 @@ NEXT_PUBLIC_DEPLOY_TARGET=vercel
 
 Öncelik sırası:
 
-1. Spotify Web API (credential varsa)
-2. Deezer public artist catalog (credential yoksa — otomatik)
-3. `data/generated/spotify-catalog.json`
-4. Kompakt fallback UI
+1. Spotify Web API (credential varsa) — doğrudan albüm linkleri
+2. `data/generated/spotify-catalog.json` (`npm run sync:spotify`)
+3. Kompakt fallback UI
+
+`sync:spotify` arama URL’si yazmaz; yalnızca `open.spotify.com/album/...` linkleri üretir.
 
 Secret değerleri asla `NEXT_PUBLIC_` ile başlamamalı.
 
@@ -101,7 +102,7 @@ Kullanıcı önce **SES ÖNİZLEMELERİNİ AÇ** demeden ses başlamaz. Preview 
 ```text
 public/media/sehinsah-falling.png
 public/media/sehinsah-bubilet.png
-public/media/sehinsah-instagram.png
+public/media/storiesdown.webp
 ```
 
 ## Komutlar

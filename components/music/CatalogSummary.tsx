@@ -6,15 +6,10 @@ type Props = {
 };
 
 export function CatalogSummary({ catalog }: Props) {
-  const updated = catalog.updatedAt
-    ? new Date(catalog.updatedAt).toLocaleDateString("tr-TR")
-    : "—";
-
   const items = [
     { label: "TOPLAM YAYIN", value: String(catalog.counts.total) },
     { label: "ALBÜM", value: String(catalog.counts.albums) },
     { label: "TEKLİ / EP", value: String(catalog.counts.singles) },
-    { label: "SON GÜNCELLEME", value: updated },
   ];
 
   return (

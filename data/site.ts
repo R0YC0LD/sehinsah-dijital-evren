@@ -67,7 +67,7 @@ export const siteConfig = {
   media: {
     falling: "/media/sehinsah-falling.png",
     bubilet: "/media/sehinsah-bubilet.png",
-    instagram: "/media/sehinsah-instagram.png",
+    instagram: "/media/storiesdown.webp",
   },
   audioPreview: {
     defaultDuration: 8,

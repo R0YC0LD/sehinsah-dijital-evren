@@ -1,1093 +1,827 @@
 {
   "releases": [
     {
-      "id": "deezer-1008049731",
+      "id": "2aTmzuUvKITVuP2qBnrvvD",
       "name": "Entropi",
       "albumType": "single",
       "releaseDate": "2026-07-03",
       "releaseYear": "2026",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ecdbb41d2605d85194ff48f2a1e7c444/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Entropi%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:1008049731",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cfc03e0fdf23d0a055b1e6e1",
+      "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
+      "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-922965461",
+      "id": "0TiW19cwPu2FnmR0WcpDXI",
       "name": "Benim Adım Arda",
       "albumType": "single",
       "releaseDate": "2026-02-27",
       "releaseYear": "2026",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/a7eef10cdee7a3535f8c3448637850dd/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Benim%20Ad%C4%B1m%20Arda%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:922965461",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023a125f950b8a80efd61327b5",
+      "spotifyUrl": "https://open.spotify.com/album/0TiW19cwPu2FnmR0WcpDXI",
+      "uri": "spotify:album:0TiW19cwPu2FnmR0WcpDXI",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-901048262",
+      "id": "5iG9dUUVurewjfXYPhvOYB",
       "name": "NASINASI?",
       "albumType": "single",
       "releaseDate": "2026-02-13",
       "releaseYear": "2026",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/3c95cbdb3da1f93b1e1c268cf16d8c64/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/NASINASI%3F%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:901048262",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cc7e4741f5f9b73b68e7d65f",
+      "spotifyUrl": "https://open.spotify.com/album/5iG9dUUVurewjfXYPhvOYB",
+      "uri": "spotify:album:5iG9dUUVurewjfXYPhvOYB",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-797061711",
+      "id": "5ht5m3cJvjGdTgDRUVrVeL",
       "name": "Lab Cypher 6",
       "albumType": "single",
       "releaseDate": "2025-08-08",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/dfc15f7f2841d0c7fe3ce9a4beb876ae/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Lab%20Cypher%206%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:797061711",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02de0c2848293720adabe26583",
+      "spotifyUrl": "https://open.spotify.com/album/5ht5m3cJvjGdTgDRUVrVeL",
+      "uri": "spotify:album:5ht5m3cJvjGdTgDRUVrVeL",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-789051961",
+      "id": "7yXKu5sXCZmZmEAc723mIp",
       "name": "INVIDIA",
       "albumType": "single",
       "releaseDate": "2025-07-18",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ba1d1918d8e3603360420262cad76b5e/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/INVIDIA%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:789051961",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02a03b41f0232b90458b87e376",
+      "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
+      "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-769164361",
-      "name": "LAMINE YAMAL",
+      "id": "5IjNvRJSvWIOhqxkc8T2pG",
+      "name": "Lamine Yamal | The New Prince",
       "albumType": "single",
       "releaseDate": "2025-06-27",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/fb1a921808b4fd0dd36b52896cf2d14a/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/LAMINE%20YAMAL%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:769164361",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d34e984f52c8e21f84b23837",
+      "spotifyUrl": "https://open.spotify.com/album/5IjNvRJSvWIOhqxkc8T2pG",
+      "uri": "spotify:album:5IjNvRJSvWIOhqxkc8T2pG",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-737933361",
-      "name": "Memleketim",
-      "albumType": "single",
-      "releaseDate": "2025-04-04",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/cfe1be602931f93ca3047bc26ae55152/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Memleketim%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:737933361",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-728768901",
+      "id": "3wn6SfgDifkgzusYoiH5Eg",
       "name": "Eskisi Gibi",
       "albumType": "single",
       "releaseDate": "2025-03-28",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6c0d072060127d7aa7d9d553a9c77580/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Eskisi%20Gibi%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:728768901",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0210e25ac1457f3d4f5a681f44",
+      "spotifyUrl": "https://open.spotify.com/album/3wn6SfgDifkgzusYoiH5Eg",
+      "uri": "spotify:album:3wn6SfgDifkgzusYoiH5Eg",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-715625901",
-      "name": "BLACKROCK",
-      "albumType": "single",
-      "releaseDate": "2025-02-28",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/d7f3b5cce260ec2b35c953c83a32a980/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/BLACKROCK%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:715625901",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-715633771",
-      "name": "Cheval Blanc",
-      "albumType": "single",
-      "releaseDate": "2025-02-21",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/fbbf856731e2546b3225fcac03da67bb/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Cheval%20Blanc%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:715633771",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-704321031",
+      "id": "77kh4b22L5QCCIZhXsUOU2",
       "name": "FUTAŞK",
       "albumType": "single",
       "releaseDate": "2025-02-14",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/7a5bc2b81db933cf04e49c63435526fe/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/FUTA%C5%9EK%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:704321031",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02bdd1b4665eb2fd436d5955ba",
+      "spotifyUrl": "https://open.spotify.com/album/77kh4b22L5QCCIZhXsUOU2",
+      "uri": "spotify:album:77kh4b22L5QCCIZhXsUOU2",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-707242011",
+      "id": "1xNzac76pyGW65UbQ15Jpn",
       "name": "6EP",
       "albumType": "single",
       "releaseDate": "2025-02-07",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/d0bff6a7883ff09d77a09758f9acd8dd/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/6EP%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:707242011",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02895d87353bba9ac437c7357c",
+      "spotifyUrl": "https://open.spotify.com/album/1xNzac76pyGW65UbQ15Jpn",
+      "uri": "spotify:album:1xNzac76pyGW65UbQ15Jpn",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-688163931",
+      "id": "2mUZZJGMOMvL5IUIqD5anA",
       "name": "KBR",
       "albumType": "single",
       "releaseDate": "2025-01-10",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/dabaca3ee06b7bc9d992da8ee0940bef/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/KBR%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:688163931",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028b2b010ac1257b164042c531",
+      "spotifyUrl": "https://open.spotify.com/album/2mUZZJGMOMvL5IUIqD5anA",
+      "uri": "spotify:album:2mUZZJGMOMvL5IUIqD5anA",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-689912191",
-      "name": "Simülasyon",
-      "albumType": "single",
-      "releaseDate": "2024-12-30",
-      "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/70eee2395a8c748314facbc9fba05545/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Sim%C3%BClasyon%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:689912191",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-678804771",
+      "id": "7uTRfHeplUuIyM0xER7BQX",
       "name": "PEAK POINT",
       "albumType": "single",
       "releaseDate": "2024-12-20",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c4d9e55c1d63523894adc8eb1fc95040/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/PEAK%20POINT%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:678804771",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021b65722c213fb317b4dcf6c2",
+      "spotifyUrl": "https://open.spotify.com/album/7uTRfHeplUuIyM0xER7BQX",
+      "uri": "spotify:album:7uTRfHeplUuIyM0xER7BQX",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-670209661",
-      "name": "BANA NE",
+      "id": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "name": "Baban",
       "albumType": "single",
       "releaseDate": "2024-11-29",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c3da8db5253c47548421f2ff2e4d3843/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/BANA%20NE%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:670209661",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023d150ac9ec18e311f13dda00",
+      "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
+      "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-656634221",
+      "id": "1t5ZDQ8TsZw9bP2UQS1n2n",
       "name": "Tanrıyı Kıyamete Zorlama",
       "albumType": "single",
       "releaseDate": "2024-11-01",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b419e92aedfdec14bec2ce28b7efd8c5/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Tanr%C4%B1y%C4%B1%20K%C4%B1yamete%20Zorlama%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:656634221",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024ed0ef958cce8a13723754fa",
+      "spotifyUrl": "https://open.spotify.com/album/1t5ZDQ8TsZw9bP2UQS1n2n",
+      "uri": "spotify:album:1t5ZDQ8TsZw9bP2UQS1n2n",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-638647551",
+      "id": "3ZyPooMmaV1rw9disOgtgd",
       "name": "Meclis-i Ala",
       "albumType": "single",
       "releaseDate": "2024-09-06",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b1ad9f46274c7f09e04f97af04f16c53/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Meclis-i%20Ala%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:638647551",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025a79c7ded3876d207b6ad07d",
+      "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
+      "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-625186751",
-      "name": "Deliyoo",
+      "id": "6ov1Z6rmcE663OhLxy5AFA",
+      "name": "Deli Deli",
       "albumType": "single",
       "releaseDate": "2024-08-23",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/954cd787aab7bde56e1113c25304b824/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Deliyoo%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:625186751",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02797ef610a6b76a0b0817e696",
+      "spotifyUrl": "https://open.spotify.com/album/6ov1Z6rmcE663OhLxy5AFA",
+      "uri": "spotify:album:6ov1Z6rmcE663OhLxy5AFA",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-606563842",
+      "id": "6pdFHFbeC3j4QMdsuDhmWj",
       "name": "UFUKMANIA",
       "albumType": "single",
       "releaseDate": "2024-07-05",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/a55e23eb0d39eb816318844d9b02fb79/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/UFUKMANIA%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:606563842",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026eee746af5276cf55dee4824",
+      "spotifyUrl": "https://open.spotify.com/album/6pdFHFbeC3j4QMdsuDhmWj",
+      "uri": "spotify:album:6pdFHFbeC3j4QMdsuDhmWj",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-578260601",
+      "id": "0FzybsrMkrplViiOHqNFvL",
       "name": "Sönük Kaldın",
       "albumType": "single",
       "releaseDate": "2024-06-07",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/5a3fc1eafc0d22ab06785e4e7b11cb22/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/S%C3%B6n%C3%BCk%20Kald%C4%B1n%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:578260601",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ea3c1a257a665b58efd1a809",
+      "spotifyUrl": "https://open.spotify.com/album/0FzybsrMkrplViiOHqNFvL",
+      "uri": "spotify:album:0FzybsrMkrplViiOHqNFvL",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-574580211",
+      "id": "1zkZPiKRqqVJPKIqap3SU8",
       "name": "IKARUS",
       "albumType": "album",
       "releaseDate": "2024-05-10",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/4e50f84f9e58f6d5824fa3735ecaeed3/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/IKARUS%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:574580211",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e025ac008dd77ae2ffa80895a87",
+      "spotifyUrl": "https://open.spotify.com/album/1zkZPiKRqqVJPKIqap3SU8",
+      "uri": "spotify:album:1zkZPiKRqqVJPKIqap3SU8",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-556739322",
+      "id": "049jPvA9iOQZy7Jt9KPM0q",
       "name": "DAİM",
       "albumType": "single",
       "releaseDate": "2024-03-29",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/7ece9aa89313b9463d497fbd62b922b2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/DA%C4%B0M%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:556739322",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b23e508b7b13115d1aa3e6c8",
+      "spotifyUrl": "https://open.spotify.com/album/049jPvA9iOQZy7Jt9KPM0q",
+      "uri": "spotify:album:049jPvA9iOQZy7Jt9KPM0q",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-544511382",
+      "id": "60KXppgH6yocRHr0UBZuxP",
       "name": "Kirlendi Tüm Duygularım",
       "albumType": "single",
       "releaseDate": "2024-02-06",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/94e7d5cf2a34bc8825b97f6b02b8dcc8/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Kirlendi%20T%C3%BCm%20Duygular%C4%B1m%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:544511382",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d8fcc6bca1b0af14cefe4de0",
+      "spotifyUrl": "https://open.spotify.com/album/60KXppgH6yocRHr0UBZuxP",
+      "uri": "spotify:album:60KXppgH6yocRHr0UBZuxP",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-943613791",
-      "name": "#PHONKFREESTYLE",
-      "albumType": "single",
-      "releaseDate": "2024-01-26",
-      "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b6d387a0dbbe945cfa7e9bd1e1c0e200/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%23PHONKFREESTYLE%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:943613791",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-553623762",
+      "id": "4t6eu3P27YmnmM7nddmix4",
       "name": "Pembe Yalanlar",
       "albumType": "single",
       "releaseDate": "2024-01-12",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ad919dc2fa3b08346f99ca4844ec8906/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Pembe%20Yalanlar%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:553623762",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0298288dda1c1d582d1fea5f1b",
+      "spotifyUrl": "https://open.spotify.com/album/4t6eu3P27YmnmM7nddmix4",
+      "uri": "spotify:album:4t6eu3P27YmnmM7nddmix4",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-507130221",
-      "name": "Hüsran",
-      "albumType": "single",
-      "releaseDate": "2023-11-10",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b6805c133f86b5bc40fd1839103859ac/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/H%C3%BCsran%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:507130221",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-487287515",
+      "id": "23htijc8a6yzCdGNW0dK8V",
       "name": "Canım Babam",
       "albumType": "single",
       "releaseDate": "2023-09-22",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/45649675a6330b52b863a89b3766c4ff/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Can%C4%B1m%20Babam%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:487287515",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02b3bbbab7e0c40c8af4a9b1a7",
+      "spotifyUrl": "https://open.spotify.com/album/23htijc8a6yzCdGNW0dK8V",
+      "uri": "spotify:album:23htijc8a6yzCdGNW0dK8V",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-481802585",
-      "name": "Darılmak Yok (Hamam Sessions)",
-      "albumType": "single",
-      "releaseDate": "2023-09-01",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/26658e705b90666f08e3c20aa26fcec6/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Dar%C4%B1lmak%20Yok%20(Hamam%20Sessions)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:481802585",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-448949515",
+      "id": "1CPPRdILLPdn99FcwcJgMW",
       "name": "Maymunlar Cehennemi",
       "albumType": "single",
       "releaseDate": "2023-06-23",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/42eab7640e2af3842445066818660fcc/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Maymunlar%20Cehennemi%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:448949515",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fa8204e626c3dc1bd95d39ad",
+      "spotifyUrl": "https://open.spotify.com/album/1CPPRdILLPdn99FcwcJgMW",
+      "uri": "spotify:album:1CPPRdILLPdn99FcwcJgMW",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-447991865",
+      "id": "0bFFfvETEdNUfkJkCRG6d9",
       "name": "CimCimem",
       "albumType": "single",
       "releaseDate": "2023-06-09",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6babbde65cc614a9eb431b5b34c3913c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/CimCimem%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:447991865",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0226b2b5a43cb99c826ac7f42b",
+      "spotifyUrl": "https://open.spotify.com/album/0bFFfvETEdNUfkJkCRG6d9",
+      "uri": "spotify:album:0bFFfvETEdNUfkJkCRG6d9",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-436521647",
-      "name": "KYOTO/GEISHA",
-      "albumType": "single",
-      "releaseDate": "2023-05-12",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6cdd1996796ff880fd4c674891db4384/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/KYOTO%2FGEISHA%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:436521647",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-433636297",
+      "id": "0XjW92nRHEuASd6hlA06DO",
       "name": "Galvanize",
       "albumType": "single",
       "releaseDate": "2023-04-28",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/cca5c48143e85cf27e06015fadf01865/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Galvanize%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:433636297",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02545a2464211a762600a65eea",
+      "spotifyUrl": "https://open.spotify.com/album/0XjW92nRHEuASd6hlA06DO",
+      "uri": "spotify:album:0XjW92nRHEuASd6hlA06DO",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-423401237",
-      "name": "İST/TAKSÎMİ",
-      "albumType": "single",
-      "releaseDate": "2023-04-07",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/3ad1c0721cbf32cd865a651e8904bbc7/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%C4%B0ST%2FTAKS%C3%8EM%C4%B0%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:423401237",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-425281827",
+      "id": "71kPiLmNbaT0eylc5Ycvdj",
       "name": "Prenses (Remix)",
       "albumType": "single",
       "releaseDate": "2023-04-05",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/35851fc7feb1e38e2b879c8825f0dcb2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Prenses%20(Remix)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:425281827",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c305c8facc0fccc80af72a25",
+      "spotifyUrl": "https://open.spotify.com/album/71kPiLmNbaT0eylc5Ycvdj",
+      "uri": "spotify:album:71kPiLmNbaT0eylc5Ycvdj",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-419685447",
+      "id": "2xhKy3Nm1eazIwWRnA9gys",
       "name": "Fırtına",
       "albumType": "single",
       "releaseDate": "2023-03-24",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/fea226f8ed65e1bcb31af03460ada282/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/F%C4%B1rt%C4%B1na%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:419685447",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0285c31bf5391826549978c380",
+      "spotifyUrl": "https://open.spotify.com/album/2xhKy3Nm1eazIwWRnA9gys",
+      "uri": "spotify:album:2xhKy3Nm1eazIwWRnA9gys",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191642",
+      "id": "7H6b2Etlb0ryYF7tqbFbDG",
       "name": "Prenses",
       "albumType": "single",
       "releaseDate": "2023-03-17",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/5b9da46d84c28e64e1224271896fbd24/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Prenses%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191642",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0268b030b37e771b976f6aa41a",
+      "spotifyUrl": "https://open.spotify.com/album/7H6b2Etlb0ryYF7tqbFbDG",
+      "uri": "spotify:album:7H6b2Etlb0ryYF7tqbFbDG",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-437476407",
-      "name": "High 2",
-      "albumType": "single",
-      "releaseDate": "2023-01-06",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/5d64915b41a7dc37746b1ca024a21910/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/High%202%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:437476407",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-551191632",
+      "id": "3GzZrTChFzvS4KqBNaFWCP",
       "name": "Muz Cumhuriyeti",
       "albumType": "single",
       "releaseDate": "2022-12-30",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c1677de6b00465ac3a1785ff0027fcc3/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Muz%20Cumhuriyeti%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191632",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b893f34b9e34a742316ba251",
+      "spotifyUrl": "https://open.spotify.com/album/3GzZrTChFzvS4KqBNaFWCP",
+      "uri": "spotify:album:3GzZrTChFzvS4KqBNaFWCP",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891082",
+      "id": "23ofnyZ4eAhpkk1YH1VVwD",
       "name": "Ellerinde",
       "albumType": "single",
       "releaseDate": "2022-11-25",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6614b7ff04672d556e7288fdffda34e4/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Ellerinde%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891082",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e566b41c52c20258cd0a12df",
+      "spotifyUrl": "https://open.spotify.com/album/23ofnyZ4eAhpkk1YH1VVwD",
+      "uri": "spotify:album:23ofnyZ4eAhpkk1YH1VVwD",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550890602",
+      "id": "7vuH67pbtQuzNvct5WLTF1",
       "name": "Dönmedin Ki",
       "albumType": "single",
       "releaseDate": "2022-09-09",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/41579aef4387cae2026062bf073c5351/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/D%C3%B6nmedin%20Ki%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550890602",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02f269f464dfd1ee4c5faf00bc",
+      "spotifyUrl": "https://open.spotify.com/album/7vuH67pbtQuzNvct5WLTF1",
+      "uri": "spotify:album:7vuH67pbtQuzNvct5WLTF1",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-349883537",
-      "name": "No Risk No Fun",
-      "albumType": "single",
-      "releaseDate": "2022-09-01",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ea0cdfb894095a612e1385cb82917077/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/No%20Risk%20No%20Fun%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:349883537",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-347887247",
-      "name": "Yaşamak",
-      "albumType": "single",
-      "releaseDate": "2022-08-25",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/441275bca7c2c1bcf3093737c522fa1d/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Ya%C5%9Famak%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:347887247",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-330807587",
-      "name": "Nefret",
+      "id": "4mnBdWx2psHiTg78pclViD",
+      "name": "Meclis-i Ala İstanbul",
       "albumType": "single",
       "releaseDate": "2022-07-01",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/d51a865e1a160235262fbf8e1ac29f5f/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Nefret%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:330807587",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a8179ed4fe988d51e76438ee",
+      "spotifyUrl": "https://open.spotify.com/album/4mnBdWx2psHiTg78pclViD",
+      "uri": "spotify:album:4mnBdWx2psHiTg78pclViD",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-322816877",
-      "name": "Taktik",
+      "id": "5QWdCZD91757ow6zCrYTnr",
+      "name": "TAK TAK TAK",
       "albumType": "single",
       "releaseDate": "2022-06-10",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/41968d10caf26f31c6c3daca6977c0f6/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Taktik%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:322816877",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022b570cac7049d9ac64af30a0",
+      "spotifyUrl": "https://open.spotify.com/album/5QWdCZD91757ow6zCrYTnr",
+      "uri": "spotify:album:5QWdCZD91757ow6zCrYTnr",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-312377627",
+      "id": "463e8VUKAZB5i86sUNIRGH",
       "name": "+28 (Tirat)",
       "albumType": "single",
       "releaseDate": "2022-04-29",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/614aff01b5d8d99055b7c4e6e8188f7c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%2B28%20(Tirat)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:312377627",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02da93ab6a169ad28199edef84",
+      "spotifyUrl": "https://open.spotify.com/album/463e8VUKAZB5i86sUNIRGH",
+      "uri": "spotify:album:463e8VUKAZB5i86sUNIRGH",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891062",
+      "id": "6XdehvklsVZ5Ly5nnJAHTv",
       "name": "Diabolico",
       "albumType": "single",
       "releaseDate": "2022-02-04",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/f35852a864284e22bfc7da6e5661a7dc/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Diabolico%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891062",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0201f124e38aa2db7dea57392f",
+      "spotifyUrl": "https://open.spotify.com/album/6XdehvklsVZ5Ly5nnJAHTv",
+      "uri": "spotify:album:6XdehvklsVZ5Ly5nnJAHTv",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-552632652",
+      "id": "1Aen2zuQGFR5sEWVjBmmLg",
       "name": "Hadi Yaparsın",
       "albumType": "single",
       "releaseDate": "2022-01-05",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/83ac3361fd71410fa03a8f3cfc810d1c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Hadi%20Yapars%C4%B1n%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:552632652",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f052fb5f8a1faefbcdf15d8d",
+      "spotifyUrl": "https://open.spotify.com/album/1Aen2zuQGFR5sEWVjBmmLg",
+      "uri": "spotify:album:1Aen2zuQGFR5sEWVjBmmLg",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191622",
+      "id": "5SsZm0U0j5D5khXo9SKLku",
       "name": "The Face Of Vision",
       "albumType": "single",
       "releaseDate": "2021-12-27",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/a6617125fc2f0d8146e526eb98e225d6/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/The%20Face%20Of%20Vision%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191622",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0261b798225f4fcafc0b7b9fa7",
+      "spotifyUrl": "https://open.spotify.com/album/5SsZm0U0j5D5khXo9SKLku",
+      "uri": "spotify:album:5SsZm0U0j5D5khXo9SKLku",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-242737132",
-      "name": "Kader",
+      "id": "53KuHTKWIjUaZGCEXUeNid",
+      "name": "Kader Çıkmazı (45'lik)",
       "albumType": "single",
       "releaseDate": "2021-07-16",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/e885728aa4ac429d96ba6c6d66d50ad0/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Kader%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:242737132",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be173e48cb8687a6ed6b645c",
+      "spotifyUrl": "https://open.spotify.com/album/53KuHTKWIjUaZGCEXUeNid",
+      "uri": "spotify:album:53KuHTKWIjUaZGCEXUeNid",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-229146602",
-      "name": "MATRIX",
-      "albumType": "single",
-      "releaseDate": "2021-06-18",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6dc5d255b5bdc6c6e5dfd9cbac6b9427/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/MATRIX%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:229146602",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-218163232",
-      "name": "Merhamet Yok",
-      "albumType": "single",
-      "releaseDate": "2021-04-02",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/657cebf8d22caa82ed07e4e78f49ab91/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Merhamet%20Yok%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:218163232",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-213489782",
+      "id": "6VXZxNd3ur24KwERIBjFcs",
       "name": "M.I.Ş",
       "albumType": "single",
       "releaseDate": "2021-03-12",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/0adf2dc7449c7b1f5795bb2a247eade8/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/M.I.%C5%9E%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:213489782",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0207c7d578b213d0bc03f6e889",
+      "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
+      "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191262",
+      "id": "69HxKUUjYmS2v2fRumhjkP",
       "name": "Samanyolu",
       "albumType": "single",
       "releaseDate": "2021-03-05",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/4ab865001eb4aee562174afbf6a0d713/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Samanyolu%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191262",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0249771818ecc38e66eebe891e",
+      "spotifyUrl": "https://open.spotify.com/album/69HxKUUjYmS2v2fRumhjkP",
+      "uri": "spotify:album:69HxKUUjYmS2v2fRumhjkP",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-208765982",
-      "name": "Lanet",
-      "albumType": "single",
-      "releaseDate": "2021-02-26",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/43be7584e161c7750348f89aade1bc64/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Lanet%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:208765982",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-550891042",
-      "name": "Darilmak Yok",
+      "id": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "name": "Darılmak Yok (Hamam Sessions)",
       "albumType": "single",
       "releaseDate": "2020-12-28",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/1a44678974c1a6e9e59dbcf9c532569b/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Darilmak%20Yok%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891042",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02866a6e154056de47bf9c5187",
+      "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
+      "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-921138881",
+      "id": "07cwiM7nU3jXF6J9UgXdCd",
       "name": "Dön Dünya",
       "albumType": "single",
       "releaseDate": "2020-12-11",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/79bd4584fbadc542afc9047ed6829849/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/D%C3%B6n%20D%C3%BCnya%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:921138881",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022caf5b4a3a42b13e3854d472",
+      "spotifyUrl": "https://open.spotify.com/album/07cwiM7nU3jXF6J9UgXdCd",
+      "uri": "spotify:album:07cwiM7nU3jXF6J9UgXdCd",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551202702",
+      "id": "1IOByJLwwmG0z16dSBiHAK",
       "name": "Kunteper",
       "albumType": "single",
       "releaseDate": "2020-11-19",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/9b95e65170a5c9b69d6f18900682ddcb/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Kunteper%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551202702",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e029fdd2db5df51fa46c3b39130",
+      "spotifyUrl": "https://open.spotify.com/album/1IOByJLwwmG0z16dSBiHAK",
+      "uri": "spotify:album:1IOByJLwwmG0z16dSBiHAK",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551202572",
+      "id": "6cWS5yrVFflrNt7o7eWgqx",
       "name": "666",
       "albumType": "album",
       "releaseDate": "2020-11-04",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/8fe14fa6a31882d09007e8a175a052f8/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/666%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551202572",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cee143d354e75d848a05ebc",
+      "spotifyUrl": "https://open.spotify.com/album/6cWS5yrVFflrNt7o7eWgqx",
+      "uri": "spotify:album:6cWS5yrVFflrNt7o7eWgqx",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191612",
+      "id": "4GLUe5UzDTd2WAkZPsqeVu",
       "name": "Trump",
       "albumType": "single",
       "releaseDate": "2020-07-31",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/1951021ad4c56b145ad70699acd767ab/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Trump%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191612",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026e589386051cea586c07f04e",
+      "spotifyUrl": "https://open.spotify.com/album/4GLUe5UzDTd2WAkZPsqeVu",
+      "uri": "spotify:album:4GLUe5UzDTd2WAkZPsqeVu",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-146642382",
-      "name": "Baban",
-      "albumType": "single",
-      "releaseDate": "2020-05-06",
-      "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/82cdb9f6ca2888bc3192a3ff748c3f94/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Baban%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:146642382",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-112541132",
+      "id": "4THM0v0TgGHbQClcWVLza1",
       "name": "İmza",
       "albumType": "single",
       "releaseDate": "2019-09-23",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ab9e2d0f93accdcc0f089e3fbdb5a86e/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%C4%B0mza%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:112541132",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0278264f47b7b34e2c9e0545d1",
+      "spotifyUrl": "https://open.spotify.com/album/4THM0v0TgGHbQClcWVLza1",
+      "uri": "spotify:album:4THM0v0TgGHbQClcWVLza1",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-107699522",
+      "id": "1GIkj7GCcjfto5jWBKoTe1",
       "name": "Talep - Arz",
       "albumType": "single",
       "releaseDate": "2019-08-13",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/eb0c23d451a28e919f2f6ed52e8e57d2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Talep%20-%20Arz%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:107699522",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e08693b3340d39ee8b40af03",
+      "spotifyUrl": "https://open.spotify.com/album/1GIkj7GCcjfto5jWBKoTe1",
+      "uri": "spotify:album:1GIkj7GCcjfto5jWBKoTe1",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-106779712",
+      "id": "3slJ2gXpniB6I4eb7NCruj",
       "name": "Çocuk",
       "albumType": "single",
       "releaseDate": "2019-08-07",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c9fdefcddce3c8e96ade15cfc02a826d/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%C3%87ocuk%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:106779712",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028282d866aee38f5ec9c8aa83",
+      "spotifyUrl": "https://open.spotify.com/album/3slJ2gXpniB6I4eb7NCruj",
+      "uri": "spotify:album:3slJ2gXpniB6I4eb7NCruj",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-99628702",
-      "name": "Yaz Yağmurum",
-      "albumType": "single",
-      "releaseDate": "2019-06-11",
-      "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/e6b03afb3024a0559d7e8161a68cee9c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Yaz%20Ya%C4%9Fmurum%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:99628702",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-97264682",
+      "id": "62dW2UToWLtRNu5sSfkXpM",
       "name": "Aslan Marşı",
       "albumType": "single",
       "releaseDate": "2019-05-18",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/7b176b7b8ed6d6aa2467b8b2af54ba57/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Aslan%20Mar%C5%9F%C4%B1%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:97264682",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e25bcef3444696c8360a536c",
+      "spotifyUrl": "https://open.spotify.com/album/62dW2UToWLtRNu5sSfkXpM",
+      "uri": "spotify:album:62dW2UToWLtRNu5sSfkXpM",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-95537642",
-      "name": "Bahaneleriniz",
-      "albumType": "single",
-      "releaseDate": "2019-05-10",
-      "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/8efc88a40daf9ccb9757a0f4b9c25075/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Bahaneleriniz%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:95537642",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-85430242",
+      "id": "5dMbZ9ECO3Wxkpr7BWmLN3",
       "name": "Pirana",
       "albumType": "single",
       "releaseDate": "2019-02-01",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/1347487684d9baaf3e52f722177c4dd4/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Pirana%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:85430242",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fda764e0a334756b49002b10",
+      "spotifyUrl": "https://open.spotify.com/album/5dMbZ9ECO3Wxkpr7BWmLN3",
+      "uri": "spotify:album:5dMbZ9ECO3Wxkpr7BWmLN3",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-83195392",
-      "name": "Kıskanç",
+      "id": "6tU5HiXjXem6qihbGElWjY",
+      "name": "Kıskanmak (Original Soundtrack)",
       "albumType": "single",
       "releaseDate": "2019-01-11",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/3c4b36561f623cc7f0c7fdca9d00755b/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/K%C4%B1skan%C3%A7%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:83195392",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c17ee6fbbb8415b321ba0c5b",
+      "spotifyUrl": "https://open.spotify.com/album/6tU5HiXjXem6qihbGElWjY",
+      "uri": "spotify:album:6tU5HiXjXem6qihbGElWjY",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891032",
+      "id": "7w23DpIjUzfefwiq0aXDNn",
       "name": "Dünya'dan Atlas'a",
       "albumType": "single",
       "releaseDate": "2018-11-04",
       "releaseYear": "2018",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ad9c921636f7a1d19ea01ea52486d25f/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/D%C3%BCnya'dan%20Atlas'a%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891032",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026430b3465763270bae28fccc",
+      "spotifyUrl": "https://open.spotify.com/album/7w23DpIjUzfefwiq0aXDNn",
+      "uri": "spotify:album:7w23DpIjUzfefwiq0aXDNn",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-552538942",
+      "id": "4tBnVWP1N4g7Hn9PYgPtWo",
       "name": "Milyon",
       "albumType": "single",
       "releaseDate": "2018-10-01",
       "releaseYear": "2018",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b61258ea282af3f78e7a9420f36f1e93/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Milyon%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:552538942",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023a7c8ef98e28dc95cf36386c",
+      "spotifyUrl": "https://open.spotify.com/album/4tBnVWP1N4g7Hn9PYgPtWo",
+      "uri": "spotify:album:4tBnVWP1N4g7Hn9PYgPtWo",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-67559912",
+      "id": "61WtSUVOoxxeKeV4jOZNWi",
       "name": "Yak Yak Yak",
       "albumType": "single",
       "releaseDate": "2018-07-10",
       "releaseYear": "2018",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/84efc0c4869b2f076586af96ea15bcc0/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Yak%20Yak%20Yak%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:67559912",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cbf6763af9cc073e968c388",
+      "spotifyUrl": "https://open.spotify.com/album/61WtSUVOoxxeKeV4jOZNWi",
+      "uri": "spotify:album:61WtSUVOoxxeKeV4jOZNWi",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-53182232",
-      "name": "Klasör 1; Şehinşah!",
+      "id": "41vkDxCgMJIDSc8zauKoUW",
+      "name": "Karma",
       "albumType": "single",
       "releaseDate": "2017-12-09",
       "releaseYear": "2017",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/efb7620b1237d34d5423c5b8515728c2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Klas%C3%B6r%201%3B%20%C5%9Eehin%C5%9Fah!%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:53182232",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ba09c4cf44f1656d12adf069",
+      "spotifyUrl": "https://open.spotify.com/album/41vkDxCgMJIDSc8zauKoUW",
+      "uri": "spotify:album:41vkDxCgMJIDSc8zauKoUW",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891002",
-      "name": "Karma",
-      "albumType": "single",
-      "releaseDate": "2017-11-27",
-      "releaseYear": "2017",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c72180d30b7bd2b2b0d56c1ab90ae556/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Karma%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891002",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-551202962",
-      "name": "Uzulme",
+      "id": "6zYRbnh9xKNGkaAkWPKhM8",
+      "name": "Uzulme (feat. Artz)",
       "albumType": "single",
       "releaseDate": "2016-12-16",
       "releaseYear": "2016",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/38e31f62b063081ac08402e68cc2dfa2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Uzulme%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551202962",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027573b15341f457146202a978",
+      "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
+      "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-581636952",
-      "name": "Yeşil",
+      "id": "72psRaJ9JNqucQloOlHtWs",
+      "name": "Yeşilçam Şarkıları Vol. 3 - Yıldızların Altında",
       "albumType": "single",
       "releaseDate": "2016-10-31",
       "releaseYear": "2016",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/f022f0856beb2696dc95801a38658dcf/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Ye%C5%9Fil%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:581636952",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026a124d78e3ff6240abb34eba",
+      "spotifyUrl": "https://open.spotify.com/album/72psRaJ9JNqucQloOlHtWs",
+      "uri": "spotify:album:72psRaJ9JNqucQloOlHtWs",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551226532",
+      "id": "2q7QzY8q8OVxa5sAyyl8OF",
       "name": "DEEV (Deluxe Edition)",
       "albumType": "album",
       "releaseDate": "2016-02-20",
       "releaseYear": "2016",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/e6f96aef110469cc7c3215b83e9b7306/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/DEEV%20(Deluxe%20Edition)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551226532",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be931103920f1e2183225657",
+      "spotifyUrl": "https://open.spotify.com/album/2q7QzY8q8OVxa5sAyyl8OF",
+      "uri": "spotify:album:2q7QzY8q8OVxa5sAyyl8OF",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-417042857",
+      "id": "5wDw71G6My66IurTcLbULV",
       "name": "Denetimli Serbestlik Stili (Deluxe)",
       "albumType": "album",
       "releaseDate": "2012-01-01",
       "releaseYear": "2012",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/17440bc004ae93c625b5aed1c78a7c1b/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Denetimli%20Serbestlik%20Stili%20(Deluxe)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:417042857",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e029326b0126a75938c8805c795",
+      "spotifyUrl": "https://open.spotify.com/album/5wDw71G6My66IurTcLbULV",
+      "uri": "spotify:album:5wDw71G6My66IurTcLbULV",
       "artists": [
         "Şehinşah"
       ]
@@ -1095,57 +829,57 @@
   ],
   "albums": [
     {
-      "id": "deezer-574580211",
+      "id": "1zkZPiKRqqVJPKIqap3SU8",
       "name": "IKARUS",
       "albumType": "album",
       "releaseDate": "2024-05-10",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/4e50f84f9e58f6d5824fa3735ecaeed3/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/IKARUS%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:574580211",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e025ac008dd77ae2ffa80895a87",
+      "spotifyUrl": "https://open.spotify.com/album/1zkZPiKRqqVJPKIqap3SU8",
+      "uri": "spotify:album:1zkZPiKRqqVJPKIqap3SU8",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551202572",
+      "id": "6cWS5yrVFflrNt7o7eWgqx",
       "name": "666",
       "albumType": "album",
       "releaseDate": "2020-11-04",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/8fe14fa6a31882d09007e8a175a052f8/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/666%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551202572",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cee143d354e75d848a05ebc",
+      "spotifyUrl": "https://open.spotify.com/album/6cWS5yrVFflrNt7o7eWgqx",
+      "uri": "spotify:album:6cWS5yrVFflrNt7o7eWgqx",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551226532",
+      "id": "2q7QzY8q8OVxa5sAyyl8OF",
       "name": "DEEV (Deluxe Edition)",
       "albumType": "album",
       "releaseDate": "2016-02-20",
       "releaseYear": "2016",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/e6f96aef110469cc7c3215b83e9b7306/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/DEEV%20(Deluxe%20Edition)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551226532",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be931103920f1e2183225657",
+      "spotifyUrl": "https://open.spotify.com/album/2q7QzY8q8OVxa5sAyyl8OF",
+      "uri": "spotify:album:2q7QzY8q8OVxa5sAyyl8OF",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-417042857",
+      "id": "5wDw71G6My66IurTcLbULV",
       "name": "Denetimli Serbestlik Stili (Deluxe)",
       "albumType": "album",
       "releaseDate": "2012-01-01",
       "releaseYear": "2012",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/17440bc004ae93c625b5aed1c78a7c1b/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Denetimli%20Serbestlik%20Stili%20(Deluxe)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:417042857",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e029326b0126a75938c8805c795",
+      "spotifyUrl": "https://open.spotify.com/album/5wDw71G6My66IurTcLbULV",
+      "uri": "spotify:album:5wDw71G6My66IurTcLbULV",
       "artists": [
         "Şehinşah"
       ]
@@ -1153,1061 +887,795 @@
   ],
   "singles": [
     {
-      "id": "deezer-1008049731",
+      "id": "2aTmzuUvKITVuP2qBnrvvD",
       "name": "Entropi",
       "albumType": "single",
       "releaseDate": "2026-07-03",
       "releaseYear": "2026",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ecdbb41d2605d85194ff48f2a1e7c444/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Entropi%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:1008049731",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cfc03e0fdf23d0a055b1e6e1",
+      "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
+      "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-922965461",
+      "id": "0TiW19cwPu2FnmR0WcpDXI",
       "name": "Benim Adım Arda",
       "albumType": "single",
       "releaseDate": "2026-02-27",
       "releaseYear": "2026",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/a7eef10cdee7a3535f8c3448637850dd/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Benim%20Ad%C4%B1m%20Arda%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:922965461",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023a125f950b8a80efd61327b5",
+      "spotifyUrl": "https://open.spotify.com/album/0TiW19cwPu2FnmR0WcpDXI",
+      "uri": "spotify:album:0TiW19cwPu2FnmR0WcpDXI",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-901048262",
+      "id": "5iG9dUUVurewjfXYPhvOYB",
       "name": "NASINASI?",
       "albumType": "single",
       "releaseDate": "2026-02-13",
       "releaseYear": "2026",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/3c95cbdb3da1f93b1e1c268cf16d8c64/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/NASINASI%3F%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:901048262",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cc7e4741f5f9b73b68e7d65f",
+      "spotifyUrl": "https://open.spotify.com/album/5iG9dUUVurewjfXYPhvOYB",
+      "uri": "spotify:album:5iG9dUUVurewjfXYPhvOYB",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-797061711",
+      "id": "5ht5m3cJvjGdTgDRUVrVeL",
       "name": "Lab Cypher 6",
       "albumType": "single",
       "releaseDate": "2025-08-08",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/dfc15f7f2841d0c7fe3ce9a4beb876ae/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Lab%20Cypher%206%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:797061711",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02de0c2848293720adabe26583",
+      "spotifyUrl": "https://open.spotify.com/album/5ht5m3cJvjGdTgDRUVrVeL",
+      "uri": "spotify:album:5ht5m3cJvjGdTgDRUVrVeL",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-789051961",
+      "id": "7yXKu5sXCZmZmEAc723mIp",
       "name": "INVIDIA",
       "albumType": "single",
       "releaseDate": "2025-07-18",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ba1d1918d8e3603360420262cad76b5e/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/INVIDIA%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:789051961",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02a03b41f0232b90458b87e376",
+      "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
+      "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-769164361",
-      "name": "LAMINE YAMAL",
+      "id": "5IjNvRJSvWIOhqxkc8T2pG",
+      "name": "Lamine Yamal | The New Prince",
       "albumType": "single",
       "releaseDate": "2025-06-27",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/fb1a921808b4fd0dd36b52896cf2d14a/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/LAMINE%20YAMAL%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:769164361",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d34e984f52c8e21f84b23837",
+      "spotifyUrl": "https://open.spotify.com/album/5IjNvRJSvWIOhqxkc8T2pG",
+      "uri": "spotify:album:5IjNvRJSvWIOhqxkc8T2pG",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-737933361",
-      "name": "Memleketim",
-      "albumType": "single",
-      "releaseDate": "2025-04-04",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/cfe1be602931f93ca3047bc26ae55152/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Memleketim%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:737933361",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-728768901",
+      "id": "3wn6SfgDifkgzusYoiH5Eg",
       "name": "Eskisi Gibi",
       "albumType": "single",
       "releaseDate": "2025-03-28",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6c0d072060127d7aa7d9d553a9c77580/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Eskisi%20Gibi%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:728768901",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0210e25ac1457f3d4f5a681f44",
+      "spotifyUrl": "https://open.spotify.com/album/3wn6SfgDifkgzusYoiH5Eg",
+      "uri": "spotify:album:3wn6SfgDifkgzusYoiH5Eg",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-715625901",
-      "name": "BLACKROCK",
-      "albumType": "single",
-      "releaseDate": "2025-02-28",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/d7f3b5cce260ec2b35c953c83a32a980/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/BLACKROCK%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:715625901",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-715633771",
-      "name": "Cheval Blanc",
-      "albumType": "single",
-      "releaseDate": "2025-02-21",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/fbbf856731e2546b3225fcac03da67bb/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Cheval%20Blanc%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:715633771",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-704321031",
+      "id": "77kh4b22L5QCCIZhXsUOU2",
       "name": "FUTAŞK",
       "albumType": "single",
       "releaseDate": "2025-02-14",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/7a5bc2b81db933cf04e49c63435526fe/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/FUTA%C5%9EK%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:704321031",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02bdd1b4665eb2fd436d5955ba",
+      "spotifyUrl": "https://open.spotify.com/album/77kh4b22L5QCCIZhXsUOU2",
+      "uri": "spotify:album:77kh4b22L5QCCIZhXsUOU2",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-707242011",
+      "id": "1xNzac76pyGW65UbQ15Jpn",
       "name": "6EP",
       "albumType": "single",
       "releaseDate": "2025-02-07",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/d0bff6a7883ff09d77a09758f9acd8dd/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/6EP%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:707242011",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02895d87353bba9ac437c7357c",
+      "spotifyUrl": "https://open.spotify.com/album/1xNzac76pyGW65UbQ15Jpn",
+      "uri": "spotify:album:1xNzac76pyGW65UbQ15Jpn",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-688163931",
+      "id": "2mUZZJGMOMvL5IUIqD5anA",
       "name": "KBR",
       "albumType": "single",
       "releaseDate": "2025-01-10",
       "releaseYear": "2025",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/dabaca3ee06b7bc9d992da8ee0940bef/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/KBR%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:688163931",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028b2b010ac1257b164042c531",
+      "spotifyUrl": "https://open.spotify.com/album/2mUZZJGMOMvL5IUIqD5anA",
+      "uri": "spotify:album:2mUZZJGMOMvL5IUIqD5anA",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-689912191",
-      "name": "Simülasyon",
-      "albumType": "single",
-      "releaseDate": "2024-12-30",
-      "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/70eee2395a8c748314facbc9fba05545/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Sim%C3%BClasyon%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:689912191",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-678804771",
+      "id": "7uTRfHeplUuIyM0xER7BQX",
       "name": "PEAK POINT",
       "albumType": "single",
       "releaseDate": "2024-12-20",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c4d9e55c1d63523894adc8eb1fc95040/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/PEAK%20POINT%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:678804771",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021b65722c213fb317b4dcf6c2",
+      "spotifyUrl": "https://open.spotify.com/album/7uTRfHeplUuIyM0xER7BQX",
+      "uri": "spotify:album:7uTRfHeplUuIyM0xER7BQX",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-670209661",
-      "name": "BANA NE",
+      "id": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "name": "Baban",
       "albumType": "single",
       "releaseDate": "2024-11-29",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c3da8db5253c47548421f2ff2e4d3843/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/BANA%20NE%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:670209661",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023d150ac9ec18e311f13dda00",
+      "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
+      "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-656634221",
+      "id": "1t5ZDQ8TsZw9bP2UQS1n2n",
       "name": "Tanrıyı Kıyamete Zorlama",
       "albumType": "single",
       "releaseDate": "2024-11-01",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b419e92aedfdec14bec2ce28b7efd8c5/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Tanr%C4%B1y%C4%B1%20K%C4%B1yamete%20Zorlama%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:656634221",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024ed0ef958cce8a13723754fa",
+      "spotifyUrl": "https://open.spotify.com/album/1t5ZDQ8TsZw9bP2UQS1n2n",
+      "uri": "spotify:album:1t5ZDQ8TsZw9bP2UQS1n2n",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-638647551",
+      "id": "3ZyPooMmaV1rw9disOgtgd",
       "name": "Meclis-i Ala",
       "albumType": "single",
       "releaseDate": "2024-09-06",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b1ad9f46274c7f09e04f97af04f16c53/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Meclis-i%20Ala%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:638647551",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025a79c7ded3876d207b6ad07d",
+      "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
+      "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-625186751",
-      "name": "Deliyoo",
+      "id": "6ov1Z6rmcE663OhLxy5AFA",
+      "name": "Deli Deli",
       "albumType": "single",
       "releaseDate": "2024-08-23",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/954cd787aab7bde56e1113c25304b824/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Deliyoo%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:625186751",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02797ef610a6b76a0b0817e696",
+      "spotifyUrl": "https://open.spotify.com/album/6ov1Z6rmcE663OhLxy5AFA",
+      "uri": "spotify:album:6ov1Z6rmcE663OhLxy5AFA",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-606563842",
+      "id": "6pdFHFbeC3j4QMdsuDhmWj",
       "name": "UFUKMANIA",
       "albumType": "single",
       "releaseDate": "2024-07-05",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/a55e23eb0d39eb816318844d9b02fb79/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/UFUKMANIA%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:606563842",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026eee746af5276cf55dee4824",
+      "spotifyUrl": "https://open.spotify.com/album/6pdFHFbeC3j4QMdsuDhmWj",
+      "uri": "spotify:album:6pdFHFbeC3j4QMdsuDhmWj",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-578260601",
+      "id": "0FzybsrMkrplViiOHqNFvL",
       "name": "Sönük Kaldın",
       "albumType": "single",
       "releaseDate": "2024-06-07",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/5a3fc1eafc0d22ab06785e4e7b11cb22/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/S%C3%B6n%C3%BCk%20Kald%C4%B1n%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:578260601",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ea3c1a257a665b58efd1a809",
+      "spotifyUrl": "https://open.spotify.com/album/0FzybsrMkrplViiOHqNFvL",
+      "uri": "spotify:album:0FzybsrMkrplViiOHqNFvL",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-556739322",
+      "id": "049jPvA9iOQZy7Jt9KPM0q",
       "name": "DAİM",
       "albumType": "single",
       "releaseDate": "2024-03-29",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/7ece9aa89313b9463d497fbd62b922b2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/DA%C4%B0M%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:556739322",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b23e508b7b13115d1aa3e6c8",
+      "spotifyUrl": "https://open.spotify.com/album/049jPvA9iOQZy7Jt9KPM0q",
+      "uri": "spotify:album:049jPvA9iOQZy7Jt9KPM0q",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-544511382",
+      "id": "60KXppgH6yocRHr0UBZuxP",
       "name": "Kirlendi Tüm Duygularım",
       "albumType": "single",
       "releaseDate": "2024-02-06",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/94e7d5cf2a34bc8825b97f6b02b8dcc8/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Kirlendi%20T%C3%BCm%20Duygular%C4%B1m%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:544511382",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d8fcc6bca1b0af14cefe4de0",
+      "spotifyUrl": "https://open.spotify.com/album/60KXppgH6yocRHr0UBZuxP",
+      "uri": "spotify:album:60KXppgH6yocRHr0UBZuxP",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-943613791",
-      "name": "#PHONKFREESTYLE",
-      "albumType": "single",
-      "releaseDate": "2024-01-26",
-      "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b6d387a0dbbe945cfa7e9bd1e1c0e200/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%23PHONKFREESTYLE%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:943613791",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-553623762",
+      "id": "4t6eu3P27YmnmM7nddmix4",
       "name": "Pembe Yalanlar",
       "albumType": "single",
       "releaseDate": "2024-01-12",
       "releaseYear": "2024",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ad919dc2fa3b08346f99ca4844ec8906/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Pembe%20Yalanlar%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:553623762",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0298288dda1c1d582d1fea5f1b",
+      "spotifyUrl": "https://open.spotify.com/album/4t6eu3P27YmnmM7nddmix4",
+      "uri": "spotify:album:4t6eu3P27YmnmM7nddmix4",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-507130221",
-      "name": "Hüsran",
-      "albumType": "single",
-      "releaseDate": "2023-11-10",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b6805c133f86b5bc40fd1839103859ac/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/H%C3%BCsran%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:507130221",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-487287515",
+      "id": "23htijc8a6yzCdGNW0dK8V",
       "name": "Canım Babam",
       "albumType": "single",
       "releaseDate": "2023-09-22",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/45649675a6330b52b863a89b3766c4ff/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Can%C4%B1m%20Babam%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:487287515",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02b3bbbab7e0c40c8af4a9b1a7",
+      "spotifyUrl": "https://open.spotify.com/album/23htijc8a6yzCdGNW0dK8V",
+      "uri": "spotify:album:23htijc8a6yzCdGNW0dK8V",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-481802585",
-      "name": "Darılmak Yok (Hamam Sessions)",
-      "albumType": "single",
-      "releaseDate": "2023-09-01",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/26658e705b90666f08e3c20aa26fcec6/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Dar%C4%B1lmak%20Yok%20(Hamam%20Sessions)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:481802585",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-448949515",
+      "id": "1CPPRdILLPdn99FcwcJgMW",
       "name": "Maymunlar Cehennemi",
       "albumType": "single",
       "releaseDate": "2023-06-23",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/42eab7640e2af3842445066818660fcc/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Maymunlar%20Cehennemi%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:448949515",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fa8204e626c3dc1bd95d39ad",
+      "spotifyUrl": "https://open.spotify.com/album/1CPPRdILLPdn99FcwcJgMW",
+      "uri": "spotify:album:1CPPRdILLPdn99FcwcJgMW",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-447991865",
+      "id": "0bFFfvETEdNUfkJkCRG6d9",
       "name": "CimCimem",
       "albumType": "single",
       "releaseDate": "2023-06-09",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6babbde65cc614a9eb431b5b34c3913c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/CimCimem%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:447991865",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0226b2b5a43cb99c826ac7f42b",
+      "spotifyUrl": "https://open.spotify.com/album/0bFFfvETEdNUfkJkCRG6d9",
+      "uri": "spotify:album:0bFFfvETEdNUfkJkCRG6d9",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-436521647",
-      "name": "KYOTO/GEISHA",
-      "albumType": "single",
-      "releaseDate": "2023-05-12",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6cdd1996796ff880fd4c674891db4384/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/KYOTO%2FGEISHA%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:436521647",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-433636297",
+      "id": "0XjW92nRHEuASd6hlA06DO",
       "name": "Galvanize",
       "albumType": "single",
       "releaseDate": "2023-04-28",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/cca5c48143e85cf27e06015fadf01865/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Galvanize%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:433636297",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02545a2464211a762600a65eea",
+      "spotifyUrl": "https://open.spotify.com/album/0XjW92nRHEuASd6hlA06DO",
+      "uri": "spotify:album:0XjW92nRHEuASd6hlA06DO",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-423401237",
-      "name": "İST/TAKSÎMİ",
-      "albumType": "single",
-      "releaseDate": "2023-04-07",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/3ad1c0721cbf32cd865a651e8904bbc7/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%C4%B0ST%2FTAKS%C3%8EM%C4%B0%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:423401237",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-425281827",
+      "id": "71kPiLmNbaT0eylc5Ycvdj",
       "name": "Prenses (Remix)",
       "albumType": "single",
       "releaseDate": "2023-04-05",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/35851fc7feb1e38e2b879c8825f0dcb2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Prenses%20(Remix)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:425281827",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c305c8facc0fccc80af72a25",
+      "spotifyUrl": "https://open.spotify.com/album/71kPiLmNbaT0eylc5Ycvdj",
+      "uri": "spotify:album:71kPiLmNbaT0eylc5Ycvdj",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-419685447",
+      "id": "2xhKy3Nm1eazIwWRnA9gys",
       "name": "Fırtına",
       "albumType": "single",
       "releaseDate": "2023-03-24",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/fea226f8ed65e1bcb31af03460ada282/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/F%C4%B1rt%C4%B1na%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:419685447",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0285c31bf5391826549978c380",
+      "spotifyUrl": "https://open.spotify.com/album/2xhKy3Nm1eazIwWRnA9gys",
+      "uri": "spotify:album:2xhKy3Nm1eazIwWRnA9gys",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191642",
+      "id": "7H6b2Etlb0ryYF7tqbFbDG",
       "name": "Prenses",
       "albumType": "single",
       "releaseDate": "2023-03-17",
       "releaseYear": "2023",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/5b9da46d84c28e64e1224271896fbd24/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Prenses%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191642",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0268b030b37e771b976f6aa41a",
+      "spotifyUrl": "https://open.spotify.com/album/7H6b2Etlb0ryYF7tqbFbDG",
+      "uri": "spotify:album:7H6b2Etlb0ryYF7tqbFbDG",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-437476407",
-      "name": "High 2",
-      "albumType": "single",
-      "releaseDate": "2023-01-06",
-      "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/5d64915b41a7dc37746b1ca024a21910/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/High%202%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:437476407",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-551191632",
+      "id": "3GzZrTChFzvS4KqBNaFWCP",
       "name": "Muz Cumhuriyeti",
       "albumType": "single",
       "releaseDate": "2022-12-30",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c1677de6b00465ac3a1785ff0027fcc3/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Muz%20Cumhuriyeti%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191632",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b893f34b9e34a742316ba251",
+      "spotifyUrl": "https://open.spotify.com/album/3GzZrTChFzvS4KqBNaFWCP",
+      "uri": "spotify:album:3GzZrTChFzvS4KqBNaFWCP",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891082",
+      "id": "23ofnyZ4eAhpkk1YH1VVwD",
       "name": "Ellerinde",
       "albumType": "single",
       "releaseDate": "2022-11-25",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6614b7ff04672d556e7288fdffda34e4/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Ellerinde%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891082",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e566b41c52c20258cd0a12df",
+      "spotifyUrl": "https://open.spotify.com/album/23ofnyZ4eAhpkk1YH1VVwD",
+      "uri": "spotify:album:23ofnyZ4eAhpkk1YH1VVwD",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550890602",
+      "id": "7vuH67pbtQuzNvct5WLTF1",
       "name": "Dönmedin Ki",
       "albumType": "single",
       "releaseDate": "2022-09-09",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/41579aef4387cae2026062bf073c5351/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/D%C3%B6nmedin%20Ki%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550890602",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02f269f464dfd1ee4c5faf00bc",
+      "spotifyUrl": "https://open.spotify.com/album/7vuH67pbtQuzNvct5WLTF1",
+      "uri": "spotify:album:7vuH67pbtQuzNvct5WLTF1",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-349883537",
-      "name": "No Risk No Fun",
-      "albumType": "single",
-      "releaseDate": "2022-09-01",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ea0cdfb894095a612e1385cb82917077/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/No%20Risk%20No%20Fun%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:349883537",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-347887247",
-      "name": "Yaşamak",
-      "albumType": "single",
-      "releaseDate": "2022-08-25",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/441275bca7c2c1bcf3093737c522fa1d/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Ya%C5%9Famak%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:347887247",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-330807587",
-      "name": "Nefret",
+      "id": "4mnBdWx2psHiTg78pclViD",
+      "name": "Meclis-i Ala İstanbul",
       "albumType": "single",
       "releaseDate": "2022-07-01",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/d51a865e1a160235262fbf8e1ac29f5f/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Nefret%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:330807587",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a8179ed4fe988d51e76438ee",
+      "spotifyUrl": "https://open.spotify.com/album/4mnBdWx2psHiTg78pclViD",
+      "uri": "spotify:album:4mnBdWx2psHiTg78pclViD",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-322816877",
-      "name": "Taktik",
+      "id": "5QWdCZD91757ow6zCrYTnr",
+      "name": "TAK TAK TAK",
       "albumType": "single",
       "releaseDate": "2022-06-10",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/41968d10caf26f31c6c3daca6977c0f6/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Taktik%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:322816877",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022b570cac7049d9ac64af30a0",
+      "spotifyUrl": "https://open.spotify.com/album/5QWdCZD91757ow6zCrYTnr",
+      "uri": "spotify:album:5QWdCZD91757ow6zCrYTnr",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-312377627",
+      "id": "463e8VUKAZB5i86sUNIRGH",
       "name": "+28 (Tirat)",
       "albumType": "single",
       "releaseDate": "2022-04-29",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/614aff01b5d8d99055b7c4e6e8188f7c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%2B28%20(Tirat)%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:312377627",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02da93ab6a169ad28199edef84",
+      "spotifyUrl": "https://open.spotify.com/album/463e8VUKAZB5i86sUNIRGH",
+      "uri": "spotify:album:463e8VUKAZB5i86sUNIRGH",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891062",
+      "id": "6XdehvklsVZ5Ly5nnJAHTv",
       "name": "Diabolico",
       "albumType": "single",
       "releaseDate": "2022-02-04",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/f35852a864284e22bfc7da6e5661a7dc/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Diabolico%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891062",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0201f124e38aa2db7dea57392f",
+      "spotifyUrl": "https://open.spotify.com/album/6XdehvklsVZ5Ly5nnJAHTv",
+      "uri": "spotify:album:6XdehvklsVZ5Ly5nnJAHTv",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-552632652",
+      "id": "1Aen2zuQGFR5sEWVjBmmLg",
       "name": "Hadi Yaparsın",
       "albumType": "single",
       "releaseDate": "2022-01-05",
       "releaseYear": "2022",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/83ac3361fd71410fa03a8f3cfc810d1c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Hadi%20Yapars%C4%B1n%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:552632652",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f052fb5f8a1faefbcdf15d8d",
+      "spotifyUrl": "https://open.spotify.com/album/1Aen2zuQGFR5sEWVjBmmLg",
+      "uri": "spotify:album:1Aen2zuQGFR5sEWVjBmmLg",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191622",
+      "id": "5SsZm0U0j5D5khXo9SKLku",
       "name": "The Face Of Vision",
       "albumType": "single",
       "releaseDate": "2021-12-27",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/a6617125fc2f0d8146e526eb98e225d6/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/The%20Face%20Of%20Vision%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191622",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0261b798225f4fcafc0b7b9fa7",
+      "spotifyUrl": "https://open.spotify.com/album/5SsZm0U0j5D5khXo9SKLku",
+      "uri": "spotify:album:5SsZm0U0j5D5khXo9SKLku",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-242737132",
-      "name": "Kader",
+      "id": "53KuHTKWIjUaZGCEXUeNid",
+      "name": "Kader Çıkmazı (45'lik)",
       "albumType": "single",
       "releaseDate": "2021-07-16",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/e885728aa4ac429d96ba6c6d66d50ad0/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Kader%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:242737132",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be173e48cb8687a6ed6b645c",
+      "spotifyUrl": "https://open.spotify.com/album/53KuHTKWIjUaZGCEXUeNid",
+      "uri": "spotify:album:53KuHTKWIjUaZGCEXUeNid",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-229146602",
-      "name": "MATRIX",
-      "albumType": "single",
-      "releaseDate": "2021-06-18",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/6dc5d255b5bdc6c6e5dfd9cbac6b9427/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/MATRIX%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:229146602",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-218163232",
-      "name": "Merhamet Yok",
-      "albumType": "single",
-      "releaseDate": "2021-04-02",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/657cebf8d22caa82ed07e4e78f49ab91/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Merhamet%20Yok%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:218163232",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-213489782",
+      "id": "6VXZxNd3ur24KwERIBjFcs",
       "name": "M.I.Ş",
       "albumType": "single",
       "releaseDate": "2021-03-12",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/0adf2dc7449c7b1f5795bb2a247eade8/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/M.I.%C5%9E%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:213489782",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0207c7d578b213d0bc03f6e889",
+      "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
+      "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191262",
+      "id": "69HxKUUjYmS2v2fRumhjkP",
       "name": "Samanyolu",
       "albumType": "single",
       "releaseDate": "2021-03-05",
       "releaseYear": "2021",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/4ab865001eb4aee562174afbf6a0d713/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Samanyolu%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191262",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0249771818ecc38e66eebe891e",
+      "spotifyUrl": "https://open.spotify.com/album/69HxKUUjYmS2v2fRumhjkP",
+      "uri": "spotify:album:69HxKUUjYmS2v2fRumhjkP",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-208765982",
-      "name": "Lanet",
-      "albumType": "single",
-      "releaseDate": "2021-02-26",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/43be7584e161c7750348f89aade1bc64/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Lanet%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:208765982",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-550891042",
-      "name": "Darilmak Yok",
+      "id": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "name": "Darılmak Yok (Hamam Sessions)",
       "albumType": "single",
       "releaseDate": "2020-12-28",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/1a44678974c1a6e9e59dbcf9c532569b/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Darilmak%20Yok%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891042",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02866a6e154056de47bf9c5187",
+      "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
+      "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-921138881",
+      "id": "07cwiM7nU3jXF6J9UgXdCd",
       "name": "Dön Dünya",
       "albumType": "single",
       "releaseDate": "2020-12-11",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/79bd4584fbadc542afc9047ed6829849/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/D%C3%B6n%20D%C3%BCnya%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:921138881",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022caf5b4a3a42b13e3854d472",
+      "spotifyUrl": "https://open.spotify.com/album/07cwiM7nU3jXF6J9UgXdCd",
+      "uri": "spotify:album:07cwiM7nU3jXF6J9UgXdCd",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551202702",
+      "id": "1IOByJLwwmG0z16dSBiHAK",
       "name": "Kunteper",
       "albumType": "single",
       "releaseDate": "2020-11-19",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/9b95e65170a5c9b69d6f18900682ddcb/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Kunteper%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551202702",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e029fdd2db5df51fa46c3b39130",
+      "spotifyUrl": "https://open.spotify.com/album/1IOByJLwwmG0z16dSBiHAK",
+      "uri": "spotify:album:1IOByJLwwmG0z16dSBiHAK",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-551191612",
+      "id": "4GLUe5UzDTd2WAkZPsqeVu",
       "name": "Trump",
       "albumType": "single",
       "releaseDate": "2020-07-31",
       "releaseYear": "2020",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/1951021ad4c56b145ad70699acd767ab/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Trump%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551191612",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026e589386051cea586c07f04e",
+      "spotifyUrl": "https://open.spotify.com/album/4GLUe5UzDTd2WAkZPsqeVu",
+      "uri": "spotify:album:4GLUe5UzDTd2WAkZPsqeVu",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-146642382",
-      "name": "Baban",
-      "albumType": "single",
-      "releaseDate": "2020-05-06",
-      "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/82cdb9f6ca2888bc3192a3ff748c3f94/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Baban%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:146642382",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-112541132",
+      "id": "4THM0v0TgGHbQClcWVLza1",
       "name": "İmza",
       "albumType": "single",
       "releaseDate": "2019-09-23",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ab9e2d0f93accdcc0f089e3fbdb5a86e/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%C4%B0mza%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:112541132",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0278264f47b7b34e2c9e0545d1",
+      "spotifyUrl": "https://open.spotify.com/album/4THM0v0TgGHbQClcWVLza1",
+      "uri": "spotify:album:4THM0v0TgGHbQClcWVLza1",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-107699522",
+      "id": "1GIkj7GCcjfto5jWBKoTe1",
       "name": "Talep - Arz",
       "albumType": "single",
       "releaseDate": "2019-08-13",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/eb0c23d451a28e919f2f6ed52e8e57d2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Talep%20-%20Arz%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:107699522",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e08693b3340d39ee8b40af03",
+      "spotifyUrl": "https://open.spotify.com/album/1GIkj7GCcjfto5jWBKoTe1",
+      "uri": "spotify:album:1GIkj7GCcjfto5jWBKoTe1",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-106779712",
+      "id": "3slJ2gXpniB6I4eb7NCruj",
       "name": "Çocuk",
       "albumType": "single",
       "releaseDate": "2019-08-07",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c9fdefcddce3c8e96ade15cfc02a826d/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/%C3%87ocuk%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:106779712",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028282d866aee38f5ec9c8aa83",
+      "spotifyUrl": "https://open.spotify.com/album/3slJ2gXpniB6I4eb7NCruj",
+      "uri": "spotify:album:3slJ2gXpniB6I4eb7NCruj",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-99628702",
-      "name": "Yaz Yağmurum",
-      "albumType": "single",
-      "releaseDate": "2019-06-11",
-      "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/e6b03afb3024a0559d7e8161a68cee9c/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Yaz%20Ya%C4%9Fmurum%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:99628702",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-97264682",
+      "id": "62dW2UToWLtRNu5sSfkXpM",
       "name": "Aslan Marşı",
       "albumType": "single",
       "releaseDate": "2019-05-18",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/7b176b7b8ed6d6aa2467b8b2af54ba57/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Aslan%20Mar%C5%9F%C4%B1%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:97264682",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e25bcef3444696c8360a536c",
+      "spotifyUrl": "https://open.spotify.com/album/62dW2UToWLtRNu5sSfkXpM",
+      "uri": "spotify:album:62dW2UToWLtRNu5sSfkXpM",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-95537642",
-      "name": "Bahaneleriniz",
-      "albumType": "single",
-      "releaseDate": "2019-05-10",
-      "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/8efc88a40daf9ccb9757a0f4b9c25075/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Bahaneleriniz%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:95537642",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-85430242",
+      "id": "5dMbZ9ECO3Wxkpr7BWmLN3",
       "name": "Pirana",
       "albumType": "single",
       "releaseDate": "2019-02-01",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/1347487684d9baaf3e52f722177c4dd4/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Pirana%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:85430242",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fda764e0a334756b49002b10",
+      "spotifyUrl": "https://open.spotify.com/album/5dMbZ9ECO3Wxkpr7BWmLN3",
+      "uri": "spotify:album:5dMbZ9ECO3Wxkpr7BWmLN3",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-83195392",
-      "name": "Kıskanç",
+      "id": "6tU5HiXjXem6qihbGElWjY",
+      "name": "Kıskanmak (Original Soundtrack)",
       "albumType": "single",
       "releaseDate": "2019-01-11",
       "releaseYear": "2019",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/3c4b36561f623cc7f0c7fdca9d00755b/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/K%C4%B1skan%C3%A7%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:83195392",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c17ee6fbbb8415b321ba0c5b",
+      "spotifyUrl": "https://open.spotify.com/album/6tU5HiXjXem6qihbGElWjY",
+      "uri": "spotify:album:6tU5HiXjXem6qihbGElWjY",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891032",
+      "id": "7w23DpIjUzfefwiq0aXDNn",
       "name": "Dünya'dan Atlas'a",
       "albumType": "single",
       "releaseDate": "2018-11-04",
       "releaseYear": "2018",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ad9c921636f7a1d19ea01ea52486d25f/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/D%C3%BCnya'dan%20Atlas'a%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891032",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026430b3465763270bae28fccc",
+      "spotifyUrl": "https://open.spotify.com/album/7w23DpIjUzfefwiq0aXDNn",
+      "uri": "spotify:album:7w23DpIjUzfefwiq0aXDNn",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-552538942",
+      "id": "4tBnVWP1N4g7Hn9PYgPtWo",
       "name": "Milyon",
       "albumType": "single",
       "releaseDate": "2018-10-01",
       "releaseYear": "2018",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/b61258ea282af3f78e7a9420f36f1e93/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Milyon%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:552538942",
+      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023a7c8ef98e28dc95cf36386c",
+      "spotifyUrl": "https://open.spotify.com/album/4tBnVWP1N4g7Hn9PYgPtWo",
+      "uri": "spotify:album:4tBnVWP1N4g7Hn9PYgPtWo",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-67559912",
+      "id": "61WtSUVOoxxeKeV4jOZNWi",
       "name": "Yak Yak Yak",
       "albumType": "single",
       "releaseDate": "2018-07-10",
       "releaseYear": "2018",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/84efc0c4869b2f076586af96ea15bcc0/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Yak%20Yak%20Yak%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:67559912",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cbf6763af9cc073e968c388",
+      "spotifyUrl": "https://open.spotify.com/album/61WtSUVOoxxeKeV4jOZNWi",
+      "uri": "spotify:album:61WtSUVOoxxeKeV4jOZNWi",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-53182232",
-      "name": "Klasör 1; Şehinşah!",
+      "id": "41vkDxCgMJIDSc8zauKoUW",
+      "name": "Karma",
       "albumType": "single",
       "releaseDate": "2017-12-09",
       "releaseYear": "2017",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/efb7620b1237d34d5423c5b8515728c2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Klas%C3%B6r%201%3B%20%C5%9Eehin%C5%9Fah!%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:53182232",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ba09c4cf44f1656d12adf069",
+      "spotifyUrl": "https://open.spotify.com/album/41vkDxCgMJIDSc8zauKoUW",
+      "uri": "spotify:album:41vkDxCgMJIDSc8zauKoUW",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-550891002",
-      "name": "Karma",
-      "albumType": "single",
-      "releaseDate": "2017-11-27",
-      "releaseYear": "2017",
-      "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/c72180d30b7bd2b2b0d56c1ab90ae556/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Karma%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:550891002",
-      "artists": [
-        "Şehinşah"
-      ]
-    },
-    {
-      "id": "deezer-551202962",
-      "name": "Uzulme",
+      "id": "6zYRbnh9xKNGkaAkWPKhM8",
+      "name": "Uzulme (feat. Artz)",
       "albumType": "single",
       "releaseDate": "2016-12-16",
       "releaseYear": "2016",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/38e31f62b063081ac08402e68cc2dfa2/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Uzulme%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:551202962",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027573b15341f457146202a978",
+      "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
+      "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
       "artists": [
         "Şehinşah"
       ]
     },
     {
-      "id": "deezer-581636952",
-      "name": "Yeşil",
+      "id": "72psRaJ9JNqucQloOlHtWs",
+      "name": "Yeşilçam Şarkıları Vol. 3 - Yıldızların Altında",
       "albumType": "single",
       "releaseDate": "2016-10-31",
       "releaseYear": "2016",
       "totalTracks": 0,
-      "imageUrl": "https://cdn-images.dzcdn.net/images/cover/f022f0856beb2696dc95801a38658dcf/1000x1000-000000-80-0-0.jpg",
-      "spotifyUrl": "https://open.spotify.com/intl-tr/search/Ye%C5%9Fil%20%C5%9Eehin%C5%9Fah",
-      "uri": "deezer:album:581636952",
+      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026a124d78e3ff6240abb34eba",
+      "spotifyUrl": "https://open.spotify.com/album/72psRaJ9JNqucQloOlHtWs",
+      "uri": "spotify:album:72psRaJ9JNqucQloOlHtWs",
       "artists": [
         "Şehinşah"
       ]
     }
   ],
   "latestRelease": {
-    "id": "deezer-1008049731",
+    "id": "2aTmzuUvKITVuP2qBnrvvD",
     "name": "Entropi",
     "albumType": "single",
     "releaseDate": "2026-07-03",
     "releaseYear": "2026",
     "totalTracks": 0,
-    "imageUrl": "https://cdn-images.dzcdn.net/images/cover/ecdbb41d2605d85194ff48f2a1e7c444/1000x1000-000000-80-0-0.jpg",
-    "spotifyUrl": "https://open.spotify.com/intl-tr/search/Entropi%20%C5%9Eehin%C5%9Fah",
-    "uri": "deezer:album:1008049731",
+    "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cfc03e0fdf23d0a055b1e6e1",
+    "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
+    "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
     "artists": [
       "Şehinşah"
     ]
   },
   "counts": {
-    "total": 78,
+    "total": 59,
     "albums": 4,
-    "singles": 74
+    "singles": 55
   },
-  "updatedAt": "2026-08-02T12:26:21.597Z",
+  "updatedAt": "2026-08-02T12:57:00.727Z",
   "source": "generated-json"
 }

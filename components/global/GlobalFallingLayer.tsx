@@ -10,20 +10,24 @@ import styles from "./GlobalFallingLayer.module.css";
 export function GlobalFallingLayer() {
   const rootRef = useRef<HTMLDivElement>(null);
   const characterRef = useRef<HTMLDivElement>(null);
+  const shadowRef = useRef<HTMLImageElement>(null);
   const reduced = useReducedMotion();
   const src = assetPath(siteConfig.media.falling);
 
   useLayoutEffect(() => {
-    if (reduced || !characterRef.current) return;
+    if (reduced || !characterRef.current || !shadowRef.current) return;
 
     const { gsap, ScrollTrigger } = registerGsap();
-    let velocityTimer: gsap.core.Tween | null = null;
+    let settleTimer: gsap.core.Tween | null = null;
 
     const ctx = gsap.context(() => {
-      const getStartY = () => window.innerHeight * -0.65;
-      const getEndY = () => window.innerHeight * 1.25;
+      const character = characterRef.current!;
+      const shadow = shadowRef.current!;
 
-      gsap.set(characterRef.current, {
+      const getStartY = () => window.innerHeight * -0.92;
+      const getEndY = () => window.innerHeight * 1.42;
+
+      gsap.set(character, {
         y: getStartY(),
         xPercent: -50,
         rotation: -3,
@@ -31,7 +35,27 @@ export function GlobalFallingLayer() {
         force3D: true,
       });
 
-      gsap.to(characterRef.current, {
+      gsap.set(shadow, {
+        y: -18,
+        scaleY: 1.035,
+        opacity: 0.08,
+        force3D: true,
+      });
+
+      const shadowY = gsap.quickTo(shadow, "y", {
+        duration: 0.22,
+        ease: "power2.out",
+      });
+      const shadowScaleY = gsap.quickTo(shadow, "scaleY", {
+        duration: 0.22,
+        ease: "power2.out",
+      });
+      const shadowOpacity = gsap.quickTo(shadow, "opacity", {
+        duration: 0.22,
+        ease: "power2.out",
+      });
+
+      gsap.to(character, {
         y: () => getEndY(),
         scale: 0.94,
         ease: "none",
@@ -40,23 +64,26 @@ export function GlobalFallingLayer() {
           id: "global-sehinsah-fall",
           start: 0,
           end: "max",
-          scrub: 0.8,
+          scrub: 0.75,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
-            const shadow = characterRef.current?.querySelector<HTMLElement>(
-              "[data-fall-shadow]",
-            );
-            if (!shadow) return;
-            const v = Math.min(Math.abs(self.getVelocity()) / 2000, 1);
-            shadow.style.setProperty("--shadow-y", `${-14 - v * 10}px`);
-            shadow.style.setProperty("--shadow-blur", `${12 + v * 6}px`);
-            shadow.style.setProperty("--shadow-opacity", String(0.06 + v * 0.05));
+            const v = Math.min(Math.abs(self.getVelocity()) / 1600, 1);
+            const y = -14 - v * 10;
+            const scaleY = 1.02 + v * 0.02;
+            const opacity = 0.06 + v * 0.05;
+            const blur = 12 + v * 6;
 
-            velocityTimer?.kill();
-            velocityTimer = gsap.delayedCall(0.18, () => {
-              shadow.style.setProperty("--shadow-y", "-18px");
+            shadowY(y);
+            shadowScaleY(scaleY);
+            shadowOpacity(opacity);
+            shadow.style.setProperty("--shadow-blur", `${blur}px`);
+
+            settleTimer?.kill();
+            settleTimer = gsap.delayedCall(0.2, () => {
+              shadowY(-18);
+              shadowScaleY(1.035);
+              shadowOpacity(0.08);
               shadow.style.setProperty("--shadow-blur", "14px");
-              shadow.style.setProperty("--shadow-opacity", "0.08");
             });
           },
         },
@@ -68,7 +95,7 @@ export function GlobalFallingLayer() {
     window.addEventListener("resize", refresh);
 
     return () => {
-      velocityTimer?.kill();
+      settleTimer?.kill();
       window.removeEventListener("load", refresh);
       window.removeEventListener("resize", refresh);
       ctx.revert();
@@ -80,6 +107,7 @@ export function GlobalFallingLayer() {
       <div ref={characterRef} className={styles.character}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
+          ref={shadowRef}
           className={styles.shadow}
           data-fall-shadow
           src={src}

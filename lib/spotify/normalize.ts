@@ -56,14 +56,22 @@ export function dedupeAlbums(albums: SpotifyRelease[]): SpotifyRelease[] {
   return result.sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
 }
 
+function isAlbumType(type: string) {
+  return type === "album" || type === "compilation";
+}
+
+function isSingleType(type: string) {
+  return type === "single" || type === "ep";
+}
+
 export function buildMusicCatalog(
   releases: SpotifyRelease[],
   source: MusicCatalog["source"],
   updatedAt: string | null = new Date().toISOString(),
 ): MusicCatalog {
-  const albums = releases.filter((r) => r.albumType === "album");
-  const singles = releases.filter((r) => r.albumType === "single");
   const sorted = [...releases].sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
+  const albums = sorted.filter((r) => isAlbumType(r.albumType));
+  const singles = sorted.filter((r) => isSingleType(r.albumType));
 
   return {
     releases: sorted,

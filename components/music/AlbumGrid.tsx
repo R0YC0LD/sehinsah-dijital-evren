@@ -64,12 +64,6 @@ export function AlbumGrid({ catalog }: Props) {
           <AlbumCard key={album.id} album={album} />
         ))}
       </div>
-
-      {catalog.updatedAt ? (
-        <p className={styles.updated}>
-          Güncelleme: {new Date(catalog.updatedAt).toLocaleString("tr-TR")}
-        </p>
-      ) : null}
     </div>
   );
 }

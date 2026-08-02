@@ -20,7 +20,14 @@ export function LatestRelease({ release }: Props) {
     );
   }
 
-  const typeLabel = release.albumType === "album" ? "Albüm" : "Tekli";
+  const typeLabel =
+    release.albumType === "album"
+      ? "Albüm"
+      : release.albumType === "compilation"
+        ? "Derleme"
+        : release.albumType === "ep"
+          ? "EP"
+          : "Tekli";
 
   return (
     <article className={styles.card}>

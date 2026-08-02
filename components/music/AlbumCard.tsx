@@ -6,7 +6,14 @@ type Props = {
 };
 
 export function AlbumCard({ album }: Props) {
-  const typeLabel = album.albumType === "album" ? "Albüm" : "Tekli";
+  const typeLabel =
+    album.albumType === "album"
+      ? "Albüm"
+      : album.albumType === "compilation"
+        ? "Derleme"
+        : album.albumType === "ep"
+          ? "EP"
+          : "Tekli";
 
   return (
     <a
