@@ -49,3 +49,5 @@ next-env.d.ts
 image (31).png
 image (32).png
 
+.vercel
+.env*
