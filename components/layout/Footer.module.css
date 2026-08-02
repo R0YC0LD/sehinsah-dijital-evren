@@ -5,22 +5,22 @@
   justify-content: space-between;
   gap: 1rem 2rem;
   padding: 2rem clamp(1.25rem, 4vw, 3rem) calc(1.5rem + var(--safe-bottom));
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--line);
 }
 
 .brand {
-  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-size: clamp(1.4rem, 4vw, 2rem);
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1.4rem;
-  font-size: 0.78rem;
+  gap: 1rem 1.35rem;
+  font-size: 0.75rem;
   letter-spacing: 0.12em;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .links a:hover {
-  color: var(--foreground);
+  color: var(--text);
 }

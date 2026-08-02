@@ -1,13 +1,9 @@
 # Şehinşah — Dijital Evren
 
-Karanlık, sade ve sinematik sanatçı sitesi. Tek gerçekçi düşüş animasyonu, Spotify Web API diskografisi ve kontrollü kaos.
+Karanlık, sinematik sanatçı sitesi. Global düşüş animasyonu, Spotify katalog entegrasyonu, etkileşimli menü.
 
-## Teknolojiler
-
-- Next.js App Router + TypeScript
-- GSAP ScrollTrigger + Lenis
-- Spotify Web API (Client Credentials, server-only)
-- CSS Modules
+**Ana üretim hedefi: Vercel** (6 saatlik server-side cache).  
+**Yedek mirror: GitHub Pages** (scheduled static export).
 
 ## Kurulum
 
@@ -17,42 +13,87 @@ cp .env.example .env.local
 npm run dev
 ```
 
-## Spotify Developer App
+## A. Vercel — canlı 6 saatlik yenileme
 
-1. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) → Create app
-2. Client ID ve Client Secret’ı kopyala
-3. `.env.local` içine ekle:
+1. Repo’yu Vercel’e import et (Framework: Next.js).
+2. Environment variables:
 
 ```env
 SPOTIFY_CLIENT_ID=...
 SPOTIFY_CLIENT_SECRET=...
 SPOTIFY_MARKET=TR
 SPOTIFY_REVALIDATE_SECONDS=21600
-SPOTIFY_TOP_TRACKS_MODE=embed
-NEXT_PUBLIC_SITE_URL=http://127.0.0.1:3000
+NEXT_PUBLIC_SITE_URL=https://your-domain.vercel.app
+NEXT_PUBLIC_DEPLOY_TARGET=vercel
 ```
 
-**Önemli**
+3. Deploy.
 
-- Client Secret asla `NEXT_PUBLIC_` ile yayınlanmaz ve GitHub’a yüklenmez.
-- Bu site ziyaretçiden Spotify girişi istemez; sunucu Client Credentials kullanır.
-- Development Mode uygulamalar sınırlı erişimde olabilir.
-- Popüler parçalar için varsayılan çözüm Artist Embed’dir (`SPOTIFY_TOP_TRACKS_MODE=embed`). Top Tracks API Development Mode’da güvenilir değildir.
+`lib/spotify/catalog-service.ts` Spotify albümlerini server-side çeker ve ~6 saat cache’ler (`unstable_cache` + tag `spotify-sehinsah-catalog`).
 
-## Albümler nasıl güncellenir?
+Secret değerleri asla `NEXT_PUBLIC_` ile başlamamalı.
 
-`lib/spotify/artist.ts` Spotify `/artists/{id}/albums` endpoint’ini çeker, normalize eder, duplicate temizler ve `unstable_cache` ile saklar.
+Erken yenilemek için Vercel’de Redeploy yeterlidir (cache tag yeniden dolar). GitHub Pages ile uyumluluk için ayrı API route eklenmedi.
 
-- Varsayılan cache: **6 saat** (`SPOTIFY_REVALIDATE_SECONDS=21600`)
-- Credential yoksa veya API düşerse site çökmez; Embed + “Spotify’da aç” bağlantısı kalır.
+## B. GitHub Pages — scheduled mirror
 
-## Bağlantılar ve görseller
-
-- Tüm sabit URL’ler: `data/site.ts`
-- Bubilet / Instagram / Spotify artist URL’leri burada değişir
-- Yerel görseller:
-
+```env
+NEXT_PUBLIC_DEPLOY_TARGET=github-pages
+NEXT_PUBLIC_BASE_PATH=/sehinsah-dijital-evren
+NEXT_PUBLIC_SITE_URL=https://R0YC0LD.github.io/sehinsah-dijital-evren
 ```
+
+Workflow: `.github/workflows/deploy-pages.yml`
+
+- `main` push
+- manuel dispatch
+- yaklaşık her 6 saatte `cron`
+
+Önce `scripts/sync-spotify.mjs` çalışır → `data/generated/spotify-catalog.json`  
+Sonra static export üretilir.
+
+GitHub Secrets:
+
+- `SPOTIFY_CLIENT_ID`
+- `SPOTIFY_CLIENT_SECRET`
+
+> Pages üzerinde runtime revalidation yoktur; veri build anında dondurulur.
+
+## Spotify Developer App
+
+1. https://developer.spotify.com/dashboard
+2. Create app → Client ID / Secret
+3. `.env.local` içine ekle
+4. Secret’ı GitHub’a commit etme
+
+Popüler parçalar için resmî Artist Embed kullanılır. Top Tracks API zorunlu değildir.
+
+## Preview ses dosyaları
+
+Lisanslı kısa klipleri buraya koy:
+
+```text
+public/audio/previews/track-slug.mp3
+```
+
+`data/featured-tracks.ts` içinde `previewSrc` bağla.
+
+Kullanıcı önce **SES ÖNİZLEMELERİNİ AÇ** demeden ses başlamaz. Preview yoksa satır `ÖNİZLEME YOK` gösterir.
+
+## Global düşüş
+
+`components/global/GlobalFallingLayer.tsx`
+
+- Sayfa seviyesinde `position: fixed`
+- Tek ScrollTrigger (`start: 0`, `end: max`)
+- Yalnızca dikey hareket
+- Section arka planları şeffaf/yarı saydam; karakter içerik arkasında görünür
+
+## Bağlantılar / görseller
+
+`data/site.ts`
+
+```text
 public/media/sehinsah-falling.png
 public/media/sehinsah-bubilet.png
 public/media/sehinsah-instagram.png
@@ -63,44 +104,12 @@ public/media/sehinsah-instagram.png
 ```bash
 npm run dev
 npm run lint
+npm run typecheck
+npm run sync:spotify
 npm run build
 npm start
 ```
 
-## Deployment
-
-### Vercel (önerilen)
-
-1. Repo’yu Vercel’e bağla
-2. Environment variables olarak Spotify secret’larını ekle
-3. Deploy
-
-ISR/cache ile albümler yaklaşık 6 saatte bir yenilenir.
-
-### GitHub Pages (statik export)
-
-```bash
-# Windows PowerShell
-$env:NEXT_OUTPUT="export"
-$env:NEXT_PUBLIC_BASE_PATH="/sehinsah-dijital-evren"
-$env:NEXT_PUBLIC_SITE_URL="https://R0YC0LD.github.io/sehinsah-dijital-evren"
-# opsiyonel: Spotify secret’ları build sırasında albümleri dondurur
-npm run build
-```
-
-Çıktı `out/` klasörüne yazılır. Statik ortamda runtime revalidate yoktur; albümler build anındaki veridir.
-
 ## Kaos modu
 
-Header (masaüstü) / mobil menü içinde **SADE / KAOS** toggle. Tercih `localStorage` içinde saklanır. Reduced motion açıksa kaos hareketi artırılmaz.
-
-## Mimari özet
-
-```
-app/                 page, layout, SEO
-components/hero/     tek düşüş animasyonu
-components/spotify/  embed + diskografi
-components/sections/ Bubilet, Instagram, Final
-lib/spotify/         server-only API client
-data/site.ts         sabit içerik ve URL’ler
-```
+Tam ekran menünün altında **SADE / KAOS**. Varsayılan SADE. localStorage’da saklanır.

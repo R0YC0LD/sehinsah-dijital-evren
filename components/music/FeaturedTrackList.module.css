@@ -1,0 +1,40 @@
+.wrap {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+}
+
+.enable,
+.enabled {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+}
+
+.enable {
+  color: var(--spotify);
+  border-bottom: 1px solid rgba(30, 215, 96, 0.4);
+  padding-bottom: 0.15rem;
+}
+
+.enabled {
+  color: var(--text-muted);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}

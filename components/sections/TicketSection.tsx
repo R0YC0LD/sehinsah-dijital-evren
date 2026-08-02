@@ -3,7 +3,6 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { MediaImage } from "@/components/ui/MediaImage";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { siteConfig } from "@/data/site";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -20,9 +19,9 @@ export function TicketSection() {
     const px = (e.clientX - rect.left) / rect.width - 0.5;
     const py = (e.clientY - rect.top) / rect.height - 0.5;
     gsap.to(posterRef.current, {
-      rotateY: px * 6,
-      rotateX: -py * 5,
-      scale: 1.015,
+      rotateY: px * 3,
+      rotateX: -py * 2.5,
+      scale: 1.012,
       duration: 0.35,
       ease: "power2.out",
       overwrite: "auto",
@@ -41,13 +40,16 @@ export function TicketSection() {
   };
 
   return (
-    <section id="sahne" className={styles.section} aria-label="Sahne">
-      <SectionHeading
-        title={siteConfig.tickets.title}
-        subtitle={siteConfig.tickets.subtitle}
-      />
+    <section id="sahne" className={`section-shell ${styles.section}`} aria-label="Sahne">
+      <div className={`section-backdrop ${styles.backdrop}`} aria-hidden="true">
+        <span className={`display ${styles.ghost}`}>SAHNE</span>
+      </div>
 
-      <div className={styles.scene}>
+      <div className={`section-content ${styles.content}`}>
+        <p className="meta-label">{siteConfig.tickets.meta}</p>
+        <h2 className={`display ${styles.title}`}>{siteConfig.tickets.title}</h2>
+        <p className={styles.subtitle}>{siteConfig.tickets.subtitle}</p>
+
         <a
           ref={posterRef}
           href={siteConfig.tickets.url}
@@ -64,7 +66,6 @@ export function TicketSection() {
             width={960}
             height={960}
             className={styles.image}
-            onErrorFallback={<span className={styles.fallback}>—</span>}
           />
         </a>
 
@@ -73,7 +74,6 @@ export function TicketSection() {
           target="_blank"
           rel="noopener noreferrer"
           className={`editorial-link ${styles.cta}`}
-          aria-label="Etkinlikleri Bubilet’te gör (yeni sekme)"
         >
           {siteConfig.tickets.cta}
         </a>

@@ -1,12 +1,11 @@
 .header {
   position: fixed;
   inset: 0 0 auto;
-  z-index: 60;
+  z-index: 80;
   height: var(--header-h);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
   padding: 0 clamp(1rem, 3vw, 2rem);
   border-bottom: 1px solid transparent;
   transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
@@ -15,57 +14,29 @@
 .scrolled {
   background: rgba(5, 5, 5, 0.72);
   backdrop-filter: blur(12px);
-  border-bottom-color: var(--border);
+  border-bottom-color: var(--line);
 }
 
 .brand {
-  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   letter-spacing: 0.08em;
 }
 
-.nav {
-  display: none;
+.actions {
+  display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.1rem;
 }
 
-.link {
-  font-size: 0.75rem;
+.listen {
+  font-size: 0.72rem;
   letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
+  color: var(--text-muted);
   transition: color 0.2s ease;
 }
 
-.link:hover {
-  color: var(--foreground);
-}
-
-.spotify {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  color: var(--spotify);
-  border-bottom: 1px solid transparent;
-}
-
-.spotify:hover {
-  border-bottom-color: var(--spotify);
-}
-
-.chaosDesktop {
-  margin-left: 0.25rem;
-}
-
-.mobileActions {
-  display: flex;
-  align-items: center;
-  gap: 0.9rem;
-}
-
-.spotifyCompact {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  color: var(--spotify);
+.listen:hover {
+  color: var(--text);
 }
 
 .menuBtn {
@@ -73,12 +44,8 @@
   letter-spacing: 0.18em;
 }
 
-@media (min-width: 980px) {
-  .nav {
-    display: flex;
-  }
-
-  .mobileActions {
+@media (max-width: 699px) {
+  .listen {
     display: none;
   }
 }

@@ -1,0 +1,79 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.character {
+  --fall-x: 68vw;
+  position: absolute;
+  left: var(--fall-x);
+  top: 0;
+  width: clamp(390px, 43vw, 700px);
+  transform: translate3d(-50%, -65vh, 0) rotate(-3deg);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.image,
+.shadow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+}
+
+.image {
+  position: relative;
+  z-index: 2;
+}
+
+.shadow {
+  --shadow-y: -18px;
+  --shadow-blur: 14px;
+  --shadow-opacity: 0.08;
+  z-index: 1;
+  opacity: var(--shadow-opacity);
+  filter: brightness(0) saturate(100%) blur(var(--shadow-blur));
+  transform: translate3d(0, var(--shadow-y), 0) scaleY(1.035);
+  pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+  .character {
+    --fall-x: 64vw;
+    width: clamp(340px, 48vw, 560px);
+  }
+}
+
+@media (max-width: 899px) {
+  .character {
+    --fall-x: 55vw;
+    width: min(84vw, 410px);
+    opacity: 0.84;
+  }
+
+  .shadow {
+    --shadow-opacity: 0.07;
+    --shadow-blur: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .character {
+    transform: translate3d(-50%, 12vh, 0) rotate(-3deg) !important;
+    opacity: 0.55;
+  }
+
+  .shadow {
+    opacity: 0 !important;
+  }
+}
+
+[data-chaos="true"] .shadow {
+  --shadow-opacity: 0.1;
+}

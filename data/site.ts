@@ -1,28 +1,41 @@
+const isOfficial = false;
+
 export const siteConfig = {
   artistName: "ŞEHİNŞAH",
   displayName: "Şehinşah",
-  title: "Şehinşah — Resmî Dijital Evren",
+  isOfficial,
+  title: isOfficial ? "Şehinşah — Resmî Dijital Evren" : "Şehinşah — Dijital Evren",
   description:
     "Şehinşah’ın müzik, sahne ve dijital dünyasına açılan deneyimsel internet sitesi.",
   hero: {
     lineOne: "KELİMELER YÜKSELİR.",
     lineTwo: "BEDEN DÜŞER.",
-    cta: "SPOTIFY’DA DİNLE ↗",
+    cta: "MÜZİĞE GİR",
     scrollCue: "AŞAĞI",
+    meta: "01 / DİJİTAL EVREN",
   },
   music: {
     title: "MÜZİK",
-    popularTitle: "SPOTIFY’DA POPÜLER",
-    popularSubtitle: "Şehinşah’ın Spotify üzerindeki güncel popüler parçalarını dinle.",
-    discographyTitle: "DİSKOGRAFİ",
+    subtitle: "Güncel yayınlar, kısa önizlemeler ve diskografi.",
+    listenLabel: "DİNLE ↗",
+    popularTitle: "GÜNCEL DİNLEME",
+    popularSubtitle: "Şehinşah’ın resmî müzik sayfasını burada dinle.",
     openCta: "SPOTIFY’DA AÇ ↗",
-    attribution: "Albüm ve parça bilgileri Spotify tarafından sağlanmaktadır.",
-    fallbackMessage: "Diskografiyi Spotify üzerinden görüntüleyebilirsiniz.",
+    discographyTitle: "DİSKOGRAFİ",
+    featuredTitle: "ÖNE ÇIKAN KISA ÖNİZLEMELER",
+    latestTitle: "SON YAYIN",
+    attribution: "Katalog verileri yaklaşık altı saatte bir yenilenir.",
+    fallbackTitle: "DİSKOGRAFİ YENİLENİYOR",
+    fallbackMessage: "Şehinşah’ın güncel müzik sayfasını aç.",
+    fallbackCta: "MÜZİĞE GİT ↗",
+    enableAudioLabel: "SES ÖNİZLEMELERİNİ AÇ",
+    noPreview: "ÖNİZLEME YOK",
   },
   tickets: {
     title: "SAHNE",
-    subtitle: "Güncel konserleri ve etkinlikleri Bubilet üzerinden görüntüle.",
+    subtitle: "Güncel konserleri ve etkinlikleri görüntüle.",
     cta: "ETKİNLİKLERİ GÖR ↗",
+    meta: "CANLI / ETKİNLİKLER",
     label: "Bubilet",
     url: "https://www.bubilet.com.tr/sanatci/sehinsah",
   },
@@ -36,7 +49,13 @@ export const siteConfig = {
   final: {
     lineOne: "DÜŞÜŞ BİTMEDİ.",
     lineTwo: "YALNIZCA SAYFA SONA ERDİ.",
-    backToTop: "BAŞA DÖN",
+    backToTop: "BAŞA DÖN ↑",
+  },
+  links: {
+    spotifyArtist:
+      "https://open.spotify.com/intl-tr/artist/0FUsrstJwmg4WVHQMTYuUA",
+    bubilet: "https://www.bubilet.com.tr/sanatci/sehinsah",
+    instagram: "https://www.instagram.com/sehinsah/",
   },
   spotify: {
     artistId: "0FUsrstJwmg4WVHQMTYuUA",
@@ -50,10 +69,17 @@ export const siteConfig = {
     bubilet: "/media/sehinsah-bubilet.png",
     instagram: "/media/sehinsah-instagram.png",
   },
+  audioPreview: {
+    defaultDuration: 8,
+    minDuration: 5,
+    maxDuration: 10,
+  },
   nav: [
-    { id: "hero", label: "Ana Sayfa", href: "#hero" },
-    { id: "muzik", label: "Müzik", href: "#muzik" },
-    { id: "sahne", label: "Sahne", href: "#sahne" },
-    { id: "instagram", label: "Instagram", href: "#instagram" },
+    { id: "hero", index: "01", label: "ANA SAYFA", href: "#hero", preview: "falling" as const },
+    { id: "muzik", index: "02", label: "MÜZİK", href: "#muzik", preview: "music" as const },
+    { id: "sahne", index: "03", label: "SAHNE", href: "#sahne", preview: "bubilet" as const },
+    { id: "instagram", index: "04", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
   ],
-} as const;
+};
+
+export type SiteConfig = typeof siteConfig;

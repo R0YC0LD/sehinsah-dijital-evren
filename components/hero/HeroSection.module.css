@@ -1,73 +1,74 @@
 .section {
   position: relative;
-  background: var(--background);
+  min-height: 110svh;
 }
 
-.stage {
-  position: relative;
-  min-height: 100svh;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 70% 35%, rgba(167, 25, 25, 0.08), transparent 42%),
-    var(--background);
+.backdrop {
+  background: radial-gradient(ellipse at 72% 40%, rgba(153, 25, 25, 0.1), transparent 42%);
 }
 
-.copy {
-  position: relative;
-  z-index: 4;
-  max-width: 28rem;
-  padding: calc(var(--header-h) + 3.5rem) clamp(1.25rem, 4vw, 3rem) 0;
+.axis {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: var(--fall-x, 68vw);
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(153, 25, 25, 0.4), transparent);
+  transform: translateX(-50%);
+}
+
+.content {
+  width: min(100%, 58%);
+  padding: calc(var(--header-h) + 4rem) clamp(1.25rem, 4vw, 3rem) 5rem;
+  display: grid;
+  align-content: center;
+  min-height: 110svh;
 }
 
 .title {
-  font-size: clamp(4rem, 14vw, 9.5rem);
-  margin-bottom: 1.25rem;
+  font-size: clamp(4rem, 13vw, 9rem);
+  margin: 0.85rem 0 1.25rem;
 }
 
 .lines {
-  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
   letter-spacing: 0.12em;
-  line-height: 1.7;
-  color: var(--muted);
+  color: var(--text-muted);
   max-width: 18ch;
+  line-height: 1.7;
   margin-bottom: 1.75rem;
 }
 
 .cta {
-  display: inline-flex;
-  color: var(--spotify);
+  width: fit-content;
   font-size: 0.85rem;
   letter-spacing: 0.14em;
-  border-bottom: 1px solid rgba(30, 215, 96, 0.45);
+  border-bottom: 1px solid rgba(238, 233, 223, 0.4);
   padding-bottom: 0.2rem;
 }
 
 .cue {
-  position: absolute;
-  left: clamp(1.25rem, 4vw, 3rem);
-  bottom: 2rem;
-  z-index: 4;
+  margin-top: 3.5rem;
   display: inline-flex;
   flex-direction: column;
   gap: 0.55rem;
   font-size: 0.68rem;
   letter-spacing: 0.2em;
-  color: var(--muted);
+  color: var(--text-muted);
 }
 
 .cueLine {
   width: 1px;
   height: 42px;
-  background: linear-gradient(to bottom, var(--foreground), transparent);
+  background: linear-gradient(to bottom, var(--text), transparent);
 }
 
 @media (max-width: 899px) {
-  .copy {
-    max-width: 70%;
-    padding-top: calc(var(--header-h) + 2.5rem);
+  .content {
+    width: min(100%, 70%);
+    min-height: 100svh;
   }
 
   .title {
-    font-size: clamp(3.2rem, 16vw, 5rem);
+    font-size: clamp(3.2rem, 15vw, 5rem);
   }
 }

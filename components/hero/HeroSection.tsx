@@ -1,39 +1,24 @@
-"use client";
-
-import { useRef } from "react";
-import { FallingCharacter } from "@/components/hero/FallingCharacter";
-import { ExternalLink } from "@/components/ui/ExternalLink";
 import { siteConfig } from "@/data/site";
 import styles from "./HeroSection.module.css";
 
 export function HeroSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
   return (
-    <section
-      ref={sectionRef}
-      id="hero"
-      className={styles.section}
-      aria-label="Ana sayfa"
-    >
-      <div className={styles.stage}>
-        <div className={styles.copy}>
-          <h1 className={`display ${styles.title}`}>{siteConfig.artistName}</h1>
-          <p className={styles.lines}>
-            {siteConfig.hero.lineOne}
-            <br />
-            {siteConfig.hero.lineTwo}
-          </p>
-          <ExternalLink
-            href={siteConfig.spotify.artistUrl}
-            className={styles.cta}
-            aria-label="Spotify’da dinle (yeni sekme)"
-          >
-            {siteConfig.hero.cta}
-          </ExternalLink>
-        </div>
+    <section id="hero" className={`section-shell ${styles.section}`} aria-label="Ana sayfa">
+      <div className={`section-backdrop ${styles.backdrop}`} aria-hidden="true">
+        <span className={styles.axis} />
+      </div>
 
-        <FallingCharacter sectionRef={sectionRef} />
+      <div className={`section-content ${styles.content}`}>
+        <p className="meta-label">{siteConfig.hero.meta}</p>
+        <h1 className={`display ${styles.title}`}>{siteConfig.artistName}</h1>
+        <p className={styles.lines}>
+          {siteConfig.hero.lineOne}
+          <br />
+          {siteConfig.hero.lineTwo}
+        </p>
+        <a href="#muzik" className={styles.cta}>
+          {siteConfig.hero.cta}
+        </a>
 
         <a href="#muzik" className={styles.cue}>
           <span>{siteConfig.hero.scrollCue}</span>

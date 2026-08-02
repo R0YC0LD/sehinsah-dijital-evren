@@ -1,14 +1,11 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Footer } from "@/components/layout/Footer";
+import { registerGsap } from "@/lib/gsap/register";
 import { siteConfig } from "@/data/site";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./FinalSection.module.css";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export function FinalSection() {
   const ref = useRef<HTMLElement>(null);
@@ -16,6 +13,7 @@ export function FinalSection() {
 
   useLayoutEffect(() => {
     if (!ref.current || reduced) return;
+    const { gsap } = registerGsap();
     const ctx = gsap.context(() => {
       gsap.fromTo(
         "[data-final-line]",
@@ -37,8 +35,9 @@ export function FinalSection() {
   }, [reduced]);
 
   return (
-    <section id="final" ref={ref} className={styles.section} aria-label="Final">
-      <div className={styles.stage}>
+    <section id="final" ref={ref} className={`section-shell ${styles.section}`} aria-label="Final">
+      <div className={`section-backdrop ${styles.backdrop}`} aria-hidden="true" />
+      <div className={`section-content ${styles.stage}`}>
         <div className={styles.mask}>
           <h2 className={`display ${styles.line}`} data-final-line>
             {siteConfig.final.lineOne}
@@ -49,7 +48,9 @@ export function FinalSection() {
           {siteConfig.final.backToTop}
         </a>
       </div>
-      <Footer />
+      <div className="section-content">
+        <Footer />
+      </div>
     </section>
   );
 }

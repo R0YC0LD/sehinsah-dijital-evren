@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ChaosToggle } from "@/components/ui/ChaosToggle";
-import { ExternalLink } from "@/components/ui/ExternalLink";
 import { siteConfig } from "@/data/site";
 import styles from "./Header.module.css";
 
@@ -15,7 +13,7 @@ export function Header({ menuOpen, onMenuToggle }: Props) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 20);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -27,35 +25,16 @@ export function Header({ menuOpen, onMenuToggle }: Props) {
         {siteConfig.artistName}
       </a>
 
-      <nav className={styles.nav} aria-label="Ana gezinme">
-        {siteConfig.nav.slice(1).map((item) => (
-          <a key={item.id} href={item.href} className={styles.link}>
-            {item.label}
-          </a>
-        ))}
-        <ExternalLink
-          href={siteConfig.spotify.artistUrl}
-          className={styles.spotify}
-          aria-label="Spotify’da dinle (yeni sekme)"
-        >
-          SPOTIFY’DA DİNLE ↗
-        </ExternalLink>
-        <ChaosToggle className={styles.chaosDesktop} />
-      </nav>
-
-      <div className={styles.mobileActions}>
-        <ExternalLink
-          href={siteConfig.spotify.artistUrl}
-          className={styles.spotifyCompact}
-          aria-label="Spotify’da dinle (yeni sekme)"
-        >
-          SPOTIFY ↗
-        </ExternalLink>
+      <div className={styles.actions}>
+        <a href="#muzik" className={styles.listen}>
+          DİNLE ↗
+        </a>
         <button
           type="button"
+          id="menu-trigger"
           className={styles.menuBtn}
           aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
+          aria-controls="interactive-menu"
           onClick={onMenuToggle}
         >
           {menuOpen ? "KAPAT" : "MENÜ"}

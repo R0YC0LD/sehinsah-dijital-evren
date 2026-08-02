@@ -17,7 +17,7 @@ export type SpotifyRawAlbum = {
   artists: Array<{ id: string; name: string }>;
 };
 
-export type NormalizedAlbum = {
+export type SpotifyRelease = {
   id: string;
   name: string;
   albumType: "album" | "single" | "compilation" | string;
@@ -30,9 +30,27 @@ export type NormalizedAlbum = {
   artists: string[];
 };
 
+export type MusicCatalog = {
+  releases: SpotifyRelease[];
+  albums: SpotifyRelease[];
+  singles: SpotifyRelease[];
+  latestRelease: SpotifyRelease | null;
+  counts: {
+    total: number;
+    albums: number;
+    singles: number;
+  };
+  updatedAt: string | null;
+  source: "live-cache" | "generated-json" | "fallback";
+};
+
+/** @deprecated use SpotifyRelease */
+export type NormalizedAlbum = SpotifyRelease;
+
+/** @deprecated use MusicCatalog */
 export type SpotifyCatalog = {
-  albums: NormalizedAlbum[];
-  singles: NormalizedAlbum[];
+  albums: SpotifyRelease[];
+  singles: SpotifyRelease[];
   fetchedAt: string;
   source: "api" | "unavailable";
 };

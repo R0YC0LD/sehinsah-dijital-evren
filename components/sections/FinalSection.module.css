@@ -1,9 +1,12 @@
 .section {
-  background: var(--background);
-  border-top: 1px solid var(--border);
+  position: relative;
   min-height: 90svh;
   display: flex;
   flex-direction: column;
+}
+
+.backdrop {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.05), rgba(5, 5, 5, 0.55));
 }
 
 .stage {
@@ -12,8 +15,10 @@
   place-content: center;
   justify-items: center;
   text-align: center;
-  padding: 5rem 1.25rem 3rem;
+  padding: 5rem 1.25rem 2rem;
   gap: 1rem;
+  width: min(100%, 70%);
+  margin: 0 auto;
 }
 
 .mask {
@@ -21,15 +26,15 @@
 }
 
 .line {
-  font-size: clamp(2.4rem, 9vw, 6rem);
+  font-size: clamp(2.4rem, 9vw, 5.5rem);
 }
 
 .sub {
-  color: var(--muted);
+  color: var(--text-muted);
   letter-spacing: 0.14em;
   font-size: 0.9rem;
 }
 
 .back {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }

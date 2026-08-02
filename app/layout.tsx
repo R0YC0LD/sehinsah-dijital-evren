@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
-import { SiteShell } from "@/components/SiteShell";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
@@ -51,9 +50,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" className={`${anton.variable} ${space.variable}`}>
-      <body>
-        <SiteShell>{children}</SiteShell>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

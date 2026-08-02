@@ -1,20 +1,23 @@
+import { SiteShell } from "@/components/SiteShell";
 import { HeroSection } from "@/components/hero/HeroSection";
-import { SpotifySection } from "@/components/spotify/SpotifySection";
+import { MusicSection } from "@/components/music/MusicSection";
 import { TicketSection } from "@/components/sections/TicketSection";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { FinalSection } from "@/components/sections/FinalSection";
-import { getSpotifyCatalog } from "@/lib/spotify/artist";
+import { getMusicCatalog } from "@/lib/spotify/catalog-service";
 
 export default async function HomePage() {
-  const catalog = await getSpotifyCatalog();
+  const catalog = await getMusicCatalog();
 
   return (
-    <main id="main" className="main">
-      <HeroSection />
-      <SpotifySection catalog={catalog} />
-      <TicketSection />
-      <InstagramSection />
-      <FinalSection />
-    </main>
+    <SiteShell catalog={catalog}>
+      <main id="main" className="main">
+        <HeroSection />
+        <MusicSection catalog={catalog} />
+        <TicketSection />
+        <InstagramSection />
+        <FinalSection />
+      </main>
+    </SiteShell>
   );
 }

@@ -1,0 +1,30 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  border-radius: 50%;
+  border: 1px solid rgba(30, 215, 96, 0.55);
+  background: rgba(5, 5, 5, 0.55);
+  display: grid;
+  place-items: center;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  color: var(--spotify);
+  pointer-events: none;
+  z-index: 30;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.cursor[data-visible="true"] {
+  opacity: 1;
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}

@@ -1,4 +1,4 @@
-import type { NormalizedAlbum, SpotifyImage, SpotifyRawAlbum } from "./types";
+import type { MusicCatalog, SpotifyImage, SpotifyRawAlbum, SpotifyRelease } from "./types";
 
 function pickImage(images: SpotifyImage[]): string | null {
   if (!images?.length) return null;
@@ -12,7 +12,7 @@ function releaseYear(date: string, precision: string): string {
   return date.slice(0, 4);
 }
 
-export function normalizeAlbum(raw: SpotifyRawAlbum): NormalizedAlbum {
+export function normalizeAlbum(raw: SpotifyRawAlbum): SpotifyRelease {
   return {
     id: raw.id,
     name: raw.name,
@@ -35,19 +35,18 @@ function baseTitle(name: string): string {
     .trim();
 }
 
-export function dedupeAlbums(albums: NormalizedAlbum[]): NormalizedAlbum[] {
-  const byId = new Map<string, NormalizedAlbum>();
+export function dedupeAlbums(albums: SpotifyRelease[]): SpotifyRelease[] {
+  const byId = new Map<string, SpotifyRelease>();
   for (const album of albums) {
     if (!byId.has(album.id)) byId.set(album.id, album);
   }
 
-  const result: NormalizedAlbum[] = [];
+  const result: SpotifyRelease[] = [];
   const seen = new Set<string>();
 
   for (const album of byId.values()) {
-    const key = `${baseTitle(album.name)}::${album.releaseYear}::${album.albumType}`;
-    // Keep distinct editions that still differ after soft strip
     const softKey = `${album.name.toLowerCase()}::${album.releaseYear}`;
+    const key = `${baseTitle(album.name)}::${album.releaseYear}::${album.albumType}`;
     if (seen.has(softKey) || seen.has(key)) continue;
     seen.add(softKey);
     seen.add(key);
@@ -57,8 +56,37 @@ export function dedupeAlbums(albums: NormalizedAlbum[]): NormalizedAlbum[] {
   return result.sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
 }
 
-export function splitCatalog(albums: NormalizedAlbum[]) {
-  const albumsOnly = albums.filter((a) => a.albumType === "album");
-  const singles = albums.filter((a) => a.albumType === "single");
-  return { albums: albumsOnly, singles };
+export function buildMusicCatalog(
+  releases: SpotifyRelease[],
+  source: MusicCatalog["source"],
+  updatedAt: string | null = new Date().toISOString(),
+): MusicCatalog {
+  const albums = releases.filter((r) => r.albumType === "album");
+  const singles = releases.filter((r) => r.albumType === "single");
+  const sorted = [...releases].sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
+
+  return {
+    releases: sorted,
+    albums,
+    singles,
+    latestRelease: sorted[0] ?? null,
+    counts: {
+      total: sorted.length,
+      albums: albums.length,
+      singles: singles.length,
+    },
+    updatedAt,
+    source,
+  };
+}
+
+export function emptyCatalog(source: MusicCatalog["source"] = "fallback"): MusicCatalog {
+  return buildMusicCatalog([], source, null);
+}
+
+export function splitCatalog(albums: SpotifyRelease[]) {
+  return {
+    albums: albums.filter((a) => a.albumType === "album"),
+    singles: albums.filter((a) => a.albumType === "single"),
+  };
 }

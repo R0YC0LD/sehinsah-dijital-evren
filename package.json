@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "sync:spotify": "node scripts/sync-spotify.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",

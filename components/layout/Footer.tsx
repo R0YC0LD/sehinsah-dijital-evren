@@ -7,10 +7,10 @@ export function Footer() {
     <footer className={styles.footer}>
       <p className={`display ${styles.brand}`}>{siteConfig.artistName}</p>
       <nav className={styles.links} aria-label="Footer">
-        <ExternalLink href={siteConfig.spotify.artistUrl}>SPOTIFY ↗</ExternalLink>
-        <ExternalLink href={siteConfig.tickets.url}>BUBİLET ↗</ExternalLink>
-        <ExternalLink href={siteConfig.instagram.url}>INSTAGRAM ↗</ExternalLink>
-        <a href="#hero">{siteConfig.final.backToTop}</a>
+        <a href="#muzik">MÜZİK</a>
+        <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
+        <ExternalLink href={siteConfig.links.instagram}>INSTAGRAM ↗</ExternalLink>
+        <ExternalLink href={siteConfig.links.spotifyArtist}>SPOTIFY ↗</ExternalLink>
       </nav>
     </footer>
   );

@@ -1,0 +1,29 @@
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  margin: -23px 0 0 -23px;
+  border-radius: 50%;
+  border: 1px solid rgba(238, 233, 223, 0.55);
+  display: grid;
+  place-items: center;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  pointer-events: none;
+  z-index: 120;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.cursor[data-active="true"] {
+  opacity: 1;
+  background: rgba(153, 25, 25, 0.2);
+}
+
+@media (hover: none) {
+  .cursor {
+    display: none;
+  }
+}

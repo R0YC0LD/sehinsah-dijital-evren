@@ -1,0 +1,64 @@
+.preview {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: end;
+}
+
+.caption {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.frame {
+  width: min(100%, 360px);
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  overflow: hidden;
+  position: relative;
+}
+
+.frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 0 1px rgba(153, 25, 25, 0.18);
+  pointer-events: none;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: fade 0.28s var(--ease);
+}
+
+.fallback {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  color: rgba(238, 233, 223, 0.2);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 899px) {
+  .preview {
+    justify-items: start;
+  }
+
+  .frame {
+    width: 140px;
+    aspect-ratio: 1;
+  }
+}
