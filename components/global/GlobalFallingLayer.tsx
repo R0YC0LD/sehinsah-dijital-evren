@@ -7,10 +7,18 @@ import { siteConfig } from "@/data/site";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./GlobalFallingLayer.module.css";
 
+function clamp(n: number, min: number, max: number) {
+  return Math.min(max, Math.max(min, n));
+}
+
+function lerp(a: number, b: number, t: number) {
+  return a + (b - a) * t;
+}
+
 export function GlobalFallingLayer() {
   const rootRef = useRef<HTMLDivElement>(null);
   const characterRef = useRef<HTMLDivElement>(null);
-  const shadowRef = useRef<HTMLImageElement>(null);
+  const shadowRef = useRef<HTMLSpanElement>(null);
   const reduced = useReducedMotion();
   const src = assetPath(siteConfig.media.falling);
 
@@ -19,13 +27,31 @@ export function GlobalFallingLayer() {
 
     const { gsap, ScrollTrigger } = registerGsap();
     let settleTimer: gsap.core.Tween | null = null;
+    let raf = 0;
+    let pendingSelf: ScrollTrigger | null = null;
+
+    const isMobile = () => window.matchMedia("(max-width: 899px)").matches;
 
     const ctx = gsap.context(() => {
       const character = characterRef.current!;
       const shadow = shadowRef.current!;
 
-      const getStartY = () => window.innerHeight * -0.92;
-      const getEndY = () => window.innerHeight * 1.42;
+      const getStartY = () => window.innerHeight * -0.64;
+      const getEndY = () => window.innerHeight * 1.24;
+
+      const restOpacity = () => (isMobile() ? 0.018 : 0.028);
+      const maxOpacity = () => (isMobile() ? 0.048 : 0.066);
+      const maxOffset = () => (isMobile() ? 16 : 22);
+      const maxBlur = () => (isMobile() ? 13 : 17);
+
+      const applyShadow = (y: number, blur: number, opacity: number, scaleY: number) => {
+        shadow.style.setProperty("--shadow-y", `${y.toFixed(2)}px`);
+        shadow.style.setProperty("--shadow-blur", `${blur.toFixed(2)}px`);
+        shadow.style.setProperty("--shadow-opacity", opacity.toFixed(3));
+        shadow.style.setProperty("--shadow-scale-y", scaleY.toFixed(3));
+      };
+
+      applyShadow(-6, 8, restOpacity(), 1.01);
 
       gsap.set(character, {
         y: getStartY(),
@@ -35,55 +61,46 @@ export function GlobalFallingLayer() {
         force3D: true,
       });
 
-      gsap.set(shadow, {
-        y: -18,
-        scaleY: 1.035,
-        opacity: 0.08,
-        force3D: true,
-      });
+      const updateFromTrigger = (self: ScrollTrigger) => {
+        const rawVelocity = self.getVelocity();
+        const direction = Math.sign(rawVelocity) || 1;
+        const speed = clamp(Math.abs(rawVelocity) / 2400, 0, 1);
+        const mobile = isMobile();
 
-      const shadowY = gsap.quickTo(shadow, "y", {
-        duration: 0.22,
-        ease: "power2.out",
-      });
-      const shadowScaleY = gsap.quickTo(shadow, "scaleY", {
-        duration: 0.22,
-        ease: "power2.out",
-      });
-      const shadowOpacity = gsap.quickTo(shadow, "opacity", {
-        duration: 0.22,
-        ease: "power2.out",
-      });
+        const targetOffset =
+          direction >= 0
+            ? lerp(-8, -maxOffset(), speed)
+            : lerp(6, mobile ? 14 : 18, speed);
+
+        const targetBlur = lerp(8, maxBlur(), speed);
+        const targetOpacity = lerp(restOpacity(), maxOpacity(), speed);
+        const targetScaleY = lerp(1.01, mobile ? 1.024 : 1.03, speed);
+
+        applyShadow(targetOffset, targetBlur, targetOpacity, targetScaleY);
+
+        settleTimer?.kill();
+        settleTimer = gsap.delayedCall(0.2, () => {
+          applyShadow(-6, 8, restOpacity(), 1.01);
+        });
+      };
 
       gsap.to(character, {
         y: () => getEndY(),
-        scale: 0.94,
+        scale: 0.95,
         ease: "none",
         force3D: true,
         scrollTrigger: {
           id: "global-sehinsah-fall",
           start: 0,
           end: "max",
-          scrub: 0.75,
+          scrub: 0.85,
           invalidateOnRefresh: true,
           onUpdate: (self) => {
-            const v = Math.min(Math.abs(self.getVelocity()) / 1600, 1);
-            const y = -14 - v * 10;
-            const scaleY = 1.02 + v * 0.02;
-            const opacity = 0.06 + v * 0.05;
-            const blur = 12 + v * 6;
-
-            shadowY(y);
-            shadowScaleY(scaleY);
-            shadowOpacity(opacity);
-            shadow.style.setProperty("--shadow-blur", `${blur}px`);
-
-            settleTimer?.kill();
-            settleTimer = gsap.delayedCall(0.2, () => {
-              shadowY(-18);
-              shadowScaleY(1.035);
-              shadowOpacity(0.08);
-              shadow.style.setProperty("--shadow-blur", "14px");
+            pendingSelf = self;
+            if (raf) return;
+            raf = requestAnimationFrame(() => {
+              raf = 0;
+              if (pendingSelf) updateFromTrigger(pendingSelf);
             });
           },
         },
@@ -91,13 +108,20 @@ export function GlobalFallingLayer() {
     }, rootRef);
 
     const refresh = () => ScrollTrigger.refresh();
+    const onLoadingComplete = () => {
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+    };
+
     window.addEventListener("load", refresh);
     window.addEventListener("resize", refresh);
+    window.addEventListener("sehinsah:loading-complete", onLoadingComplete);
 
     return () => {
       settleTimer?.kill();
+      if (raf) cancelAnimationFrame(raf);
       window.removeEventListener("load", refresh);
       window.removeEventListener("resize", refresh);
+      window.removeEventListener("sehinsah:loading-complete", onLoadingComplete);
       ctx.revert();
     };
   }, [reduced]);
@@ -105,16 +129,11 @@ export function GlobalFallingLayer() {
   return (
     <div ref={rootRef} className={styles.layer} aria-hidden="true">
       <div ref={characterRef} className={styles.character}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <span
           ref={shadowRef}
           className={styles.shadow}
           data-fall-shadow
-          src={src}
-          alt=""
-          width={1000}
-          height={1000}
-          draggable={false}
+          style={{ "--fall-mask": `url("${src}")` } as React.CSSProperties}
         />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

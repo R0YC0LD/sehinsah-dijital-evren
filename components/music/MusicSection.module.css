@@ -30,7 +30,21 @@
 }
 
 .content {
-  width: min(100%, 62%);
+  width: min(100%, 66%, 980px);
+}
+
+.listenRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.1rem;
+}
+
+.listenLabel {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
 }
 
 .header {
@@ -85,8 +99,20 @@
 }
 
 @media (max-width: 899px) {
+  .section {
+    padding: var(--mobile-section-y) var(--mobile-page-x);
+  }
+
   .content {
-    width: 100%;
+    width: min(100%, 680px);
+  }
+
+  .title {
+    font-size: var(--mobile-h2);
+  }
+
+  .subtitle {
+    font-size: var(--mobile-body);
   }
 
   .axis {

@@ -36,6 +36,37 @@
 @media (max-width: 899px) {
   :root {
     --fall-x: 55vw;
+    --mobile-page-x: clamp(18px, 5vw, 23px);
+    --mobile-section-y: clamp(64px, 9svh, 88px);
+    --mobile-body: clamp(0.88rem, 3.8vw, 0.96rem);
+    --mobile-h1: clamp(3.25rem, 15vw, 5.15rem);
+    --mobile-h2: clamp(2.2rem, 11vw, 3.45rem);
+    --mobile-h3: clamp(1.3rem, 6vw, 1.9rem);
+  }
+}
+
+body[data-loading="true"] {
+  overflow: hidden;
+}
+
+.content-narrow {
+  width: min(60%, 820px);
+}
+
+.content-medium {
+  width: min(66%, 980px);
+}
+
+.content-wide {
+  width: min(76%, 1180px);
+}
+
+@media (max-width: 899px) {
+  .content-narrow,
+  .content-medium,
+  .content-wide {
+    width: min(100%, 680px);
+    margin-inline: auto;
   }
 }
 

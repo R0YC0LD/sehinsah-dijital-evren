@@ -1,0 +1,83 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.link {
+  --brand: currentColor;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  background: rgba(10, 10, 10, 0.5);
+  color: var(--text-muted);
+  touch-action: manipulation;
+  transition:
+    color 0.2s var(--ease),
+    border-color 0.2s var(--ease),
+    transform 0.2s var(--ease),
+    background 0.2s var(--ease);
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.link[data-platform="spotify"]:hover,
+.link[data-platform="spotify"]:focus-visible {
+  color: #1ed760;
+}
+
+.link[data-platform="youtube"]:hover,
+.link[data-platform="youtube"]:focus-visible {
+  color: #ff0000;
+}
+
+.link[data-platform="appleMusic"]:hover,
+.link[data-platform="appleMusic"]:focus-visible {
+  color: #fa243c;
+}
+
+.link[data-platform="tiktok"]:hover,
+.link[data-platform="tiktok"]:focus-visible {
+  color: #69c9d0;
+  text-shadow: 1px 0 0 rgba(238, 29, 82, 0.35);
+}
+
+.link[data-platform="instagram"]:hover,
+.link[data-platform="instagram"]:focus-visible {
+  color: #e1306c;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+
+  .link:hover,
+  .link:focus-visible {
+    transform: none;
+  }
+}

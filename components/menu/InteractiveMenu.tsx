@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { ChaosToggle } from "@/components/ui/ChaosToggle";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { MenuCursor } from "@/components/menu/MenuCursor";
@@ -19,9 +20,16 @@ type Props = {
 
 export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) {
   const rootRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
   const firstRef = useRef<HTMLButtonElement>(null);
   const wasOpen = useRef(false);
   const [activeId, setActiveId] = useState(siteConfig.nav[0].id);
+  const [dragging, setDragging] = useState(false);
+  const pointerStart = useRef({ x: 0, y: 0 });
+  const moved = useRef(false);
+  const dragPointerId = useRef<number | null>(null);
+  const rafId = useRef(0);
+  const latestPoint = useRef({ x: 0, y: 0 });
   const isTouch = useIsTouchDevice();
 
   useEffect(() => {
@@ -33,6 +41,8 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
     } else if (wasOpen.current) {
       document.getElementById("menu-trigger")?.focus();
       wasOpen.current = false;
+      setDragging(false);
+      moved.current = false;
     }
     return () => document.body.classList.remove("menu-open");
   }, [open, onStopAudio]);
@@ -73,6 +83,59 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
     }
   };
 
+  const resolveMenuId = (x: number, y: number) => {
+    const el = document.elementFromPoint(x, y);
+    if (!el) return null;
+    const node = el.closest<HTMLElement>("[data-menu-id]");
+    return node?.dataset.menuId || null;
+  };
+
+  const onPointerDown = (e: React.PointerEvent<HTMLElement>) => {
+    if (e.pointerType !== "touch" && e.pointerType !== "pen") return;
+    pointerStart.current = { x: e.clientX, y: e.clientY };
+    latestPoint.current = { x: e.clientX, y: e.clientY };
+    moved.current = false;
+    dragPointerId.current = e.pointerId;
+    navRef.current?.setPointerCapture?.(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent<HTMLElement>) => {
+    if (dragPointerId.current !== e.pointerId) return;
+    if (e.pointerType !== "touch" && e.pointerType !== "pen") return;
+
+    latestPoint.current = { x: e.clientX, y: e.clientY };
+    const dx = e.clientX - pointerStart.current.x;
+    const dy = e.clientY - pointerStart.current.y;
+    if (!moved.current && Math.hypot(dx, dy) > 7) {
+      moved.current = true;
+      setDragging(true);
+    }
+
+    if (!moved.current) return;
+    if (rafId.current) return;
+
+    rafId.current = requestAnimationFrame(() => {
+      rafId.current = 0;
+      const id = resolveMenuId(latestPoint.current.x, latestPoint.current.y);
+      if (id) setActiveId((prev) => (prev === id ? prev : id));
+    });
+  };
+
+  const endPointer = (e: React.PointerEvent<HTMLElement>) => {
+    if (dragPointerId.current !== e.pointerId) return;
+    dragPointerId.current = null;
+    if (rafId.current) {
+      cancelAnimationFrame(rafId.current);
+      rafId.current = 0;
+    }
+    setDragging(false);
+  };
+
+  const verifiedCover =
+    catalog.latestRelease?.verified && catalog.latestRelease.imageUrl
+      ? catalog.latestRelease.imageUrl
+      : null;
+
   return (
     <div
       ref={rootRef}
@@ -81,16 +144,32 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
       aria-hidden={!open}
     >
       <div className={styles.grid}>
-        <nav className={styles.nav} aria-label="Site menüsü">
+        <nav
+          ref={navRef}
+          className={`${styles.nav} ${dragging ? styles.dragging : ""}`}
+          aria-label="Site menüsü"
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={endPointer}
+          onPointerCancel={endPointer}
+        >
           {siteConfig.nav.map((item, i) => (
             <button
               key={item.id}
               ref={i === 0 ? firstRef : undefined}
               type="button"
+              data-menu-id={item.id}
+              data-menu-index={i}
               className={`${styles.link} ${activeId === item.id ? styles.active : ""}`}
               onMouseEnter={() => setActiveId(item.id)}
               onFocus={() => setActiveId(item.id)}
-              onClick={() => go(item.href)}
+              onClick={() => {
+                if (moved.current) {
+                  moved.current = false;
+                  return;
+                }
+                go(item.href);
+              }}
             >
               <span className={styles.index}>{item.index}</span>
               <span className={`display ${styles.label}`}>{item.label}</span>
@@ -98,19 +177,18 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
           ))}
         </nav>
 
-        <MenuPreview
-          activeId={activeId}
-          latestCover={catalog.latestRelease?.imageUrl || null}
-        />
+        <MenuPreview activeId={activeId} latestCover={verifiedCover} />
       </div>
 
       <div className={styles.footer}>
-        <a href="#muzik" className={styles.listen} onClick={() => go("#muzik")}>
-          DİNLE ↗
-        </a>
-        <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
-        <ExternalLink href={siteConfig.links.instagram}>INSTAGRAM ↗</ExternalLink>
-        <ChaosToggle />
+        <div className={styles.platforms}>
+          <span className={styles.platformLabel}>DİNLE</span>
+          <PlatformLinks variant="all" placement="menu" />
+        </div>
+        <div className={styles.metaRow}>
+          <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
+          <ChaosToggle />
+        </div>
       </div>
 
       {!isTouch && open ? <MenuCursor /> : null}

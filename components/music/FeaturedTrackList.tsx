@@ -3,10 +3,15 @@
 import { useEffect, useMemo, useRef } from "react";
 import { FeaturedTrackRow } from "@/components/music/FeaturedTrackRow";
 import { PreviewCursor } from "@/components/music/PreviewCursor";
+import { RandomTrackPicker } from "@/components/music/RandomTrackPicker";
 import { useAudioPreviewContext } from "@/components/providers/AudioPreviewProvider";
-import { featuredTracks, type FeaturedTrack } from "@/data/featured-tracks";
+import {
+  featuredTrackIds,
+  type FeaturedTrack,
+} from "@/data/featured-tracks";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
+import { isDirectSpotifyTrackUrl } from "@/lib/spotify/validate-links";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 import styles from "./FeaturedTrackList.module.css";
 
@@ -22,26 +27,51 @@ export function FeaturedTrackList({ catalog }: Props) {
     useAudioPreviewContext();
 
   const tracks = useMemo(() => {
-    const fromCatalog: FeaturedTrack[] = catalog.releases.slice(0, 8).map((r) => {
-      const configured = featuredTracks.find(
-        (f) => f.id === r.id || f.title.toLowerCase() === r.name.toLowerCase(),
-      );
-      return {
-        id: r.id,
-        title: r.name,
-        releaseTitle: r.albumType === "album" ? "Albüm" : "Tekli",
-        spotifyUrl: r.spotifyUrl,
-        coverUrl: r.imageUrl || undefined,
-        previewDuration:
-          configured?.previewDuration || siteConfig.audioPreview.defaultDuration,
-        previewSrc: configured?.previewSrc,
-      };
-    });
+    const byId = new Map(catalog.tracks.map((t) => [t.id, t]));
+    const configured: FeaturedTrack[] = [];
 
-    if (fromCatalog.length >= 5) return fromCatalog;
-    if (featuredTracks.length) return featuredTracks;
-    return fromCatalog;
-  }, [catalog.releases]);
+    for (const cfg of featuredTrackIds) {
+      const t = byId.get(cfg.spotifyTrackId);
+      if (!t) continue;
+      if (!t.verified || !isDirectSpotifyTrackUrl(t.spotifyUrl, t.spotifyId || t.id)) {
+        continue;
+      }
+      configured.push({
+        id: t.id,
+        title: t.name,
+        releaseTitle: t.albumName,
+        spotifyUrl: t.spotifyUrl,
+        coverUrl: t.imageUrl || undefined,
+        previewSrc: cfg.previewSrc,
+        previewStart: cfg.previewStart,
+        previewDuration: cfg.previewDuration || siteConfig.audioPreview.defaultDuration,
+        verified: true,
+      });
+    }
+
+    if (configured.length) return configured;
+
+    return catalog.tracks
+      .filter(
+        (t) =>
+          t.verified &&
+          t.containsTargetArtist &&
+          isDirectSpotifyTrackUrl(t.spotifyUrl, t.spotifyId || t.id),
+      )
+      .slice(0, 8)
+      .map(
+        (t): FeaturedTrack => ({
+          id: t.id,
+          title: t.name,
+          releaseTitle: t.albumName,
+          spotifyUrl: t.spotifyUrl,
+          coverUrl: t.imageUrl || undefined,
+          previewSrc: undefined,
+          previewDuration: siteConfig.audioPreview.defaultDuration,
+          verified: true,
+        }),
+      );
+  }, [catalog.tracks]);
 
   useEffect(() => {
     const el = listRef.current;
@@ -62,6 +92,10 @@ export function FeaturedTrackList({ catalog }: Props) {
     },
     [],
   );
+
+  if (!tracks.length) {
+    return <RandomTrackPicker tracks={catalog.tracks} />;
+  }
 
   return (
     <div ref={listRef} className={`featured-track-list ${styles.wrap}`}>
@@ -104,6 +138,7 @@ export function FeaturedTrackList({ catalog }: Props) {
         ))}
       </ul>
 
+      <RandomTrackPicker tracks={catalog.tracks} />
       {!isTouch ? <PreviewCursor rootRef={listRef} enabled={enabled} /> : null}
     </div>
   );

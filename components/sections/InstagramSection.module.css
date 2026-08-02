@@ -32,6 +32,12 @@
   width: fit-content;
 }
 
+.socialRow {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1.25rem;
+}
+
 .portal {
   position: relative;
   width: 210px;

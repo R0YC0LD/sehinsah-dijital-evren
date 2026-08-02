@@ -1,10 +1,15 @@
 .card {
   display: grid;
+  gap: 0.45rem;
+}
+
+.link {
+  display: grid;
   gap: 0.65rem;
   transition: transform 0.3s var(--ease);
 }
 
-.card:hover {
+.link:hover {
   transform: translateY(-4px);
 }
 
@@ -16,7 +21,7 @@
   overflow: hidden;
 }
 
-.card:hover .cover {
+.link:hover .cover {
   border-color: var(--line);
 }
 
@@ -47,7 +52,7 @@
   transition: color 0.25s ease;
 }
 
-.card:hover .name {
+.link:hover .name {
   color: var(--spotify);
 }
 
@@ -63,7 +68,25 @@
   transition: transform 0.25s ease;
 }
 
-.card:hover .arrow {
+.link:hover .arrow {
   transform: translate(2px, -2px);
   color: var(--spotify);
+}
+
+.unverified {
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-align: right;
+  max-width: 9rem;
+}
+
+@media (max-width: 899px) {
+  .name {
+    font-size: 0.84rem;
+  }
+
+  .meta {
+    font-size: 0.68rem;
+  }
 }

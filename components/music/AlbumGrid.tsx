@@ -16,13 +16,26 @@ type Props = {
 
 export function AlbumGrid({ catalog }: Props) {
   const [filter, setFilter] = useState<AlbumFilter>("all");
+  const [year, setYear] = useState<string>("all");
   const [visible, setVisible] = useState(PAGE);
 
+  const years = useMemo(() => {
+    const set = new Set(
+      catalog.releases.map((r) => r.releaseYear).filter(Boolean),
+    );
+    return Array.from(set).sort((a, b) => (a < b ? 1 : -1));
+  }, [catalog.releases]);
+
   const items = useMemo(() => {
-    if (filter === "album") return catalog.albums;
-    if (filter === "single") return catalog.singles;
-    return catalog.releases;
-  }, [catalog, filter]);
+    let list =
+      filter === "album"
+        ? catalog.albums
+        : filter === "single"
+          ? catalog.singles
+          : catalog.releases;
+    if (year !== "all") list = list.filter((r) => r.releaseYear === year);
+    return list.filter((r) => r.verified);
+  }, [catalog, filter, year]);
 
   if (!catalog.releases.length) {
     return (
@@ -40,6 +53,35 @@ export function AlbumGrid({ catalog }: Props) {
 
   return (
     <div>
+      {years.length > 1 ? (
+        <div className={styles.years} role="list" aria-label="Yıl filtresi">
+          <button
+            type="button"
+            className={`${styles.year} ${year === "all" ? styles.yearActive : ""}`}
+            onClick={() => {
+              setYear("all");
+              setVisible(PAGE);
+            }}
+          >
+            TÜMÜ
+          </button>
+          {years.map((y) => (
+            <button
+              key={y}
+              type="button"
+              role="listitem"
+              className={`${styles.year} ${year === y ? styles.yearActive : ""}`}
+              onClick={() => {
+                setYear(y);
+                setVisible(PAGE);
+              }}
+            >
+              {y}
+            </button>
+          ))}
+        </div>
+      ) : null}
+
       <div className={styles.toolbar}>
         <AlbumFilters
           value={filter}
@@ -59,7 +101,7 @@ export function AlbumGrid({ catalog }: Props) {
         ) : null}
       </div>
 
-      <div key={filter} className={styles.grid}>
+      <div key={`${filter}-${year}`} className={styles.grid}>
         {shown.map((album) => (
           <AlbumCard key={album.id} album={album} />
         ))}

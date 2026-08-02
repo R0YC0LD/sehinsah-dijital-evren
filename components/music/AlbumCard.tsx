@@ -1,4 +1,6 @@
+import { ReleaseActions } from "@/components/music/ReleaseActions";
 import type { SpotifyRelease } from "@/lib/spotify/types";
+import { isDirectSpotifyAlbumUrl } from "@/lib/spotify/validate-links";
 import styles from "./AlbumCard.module.css";
 
 type Props = {
@@ -15,14 +17,12 @@ export function AlbumCard({ album }: Props) {
           ? "EP"
           : "Tekli";
 
-  return (
-    <a
-      href={album.spotifyUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={styles.card}
-      aria-label={`${album.name} albümünü Spotify’da aç`}
-    >
+  const safe =
+    album.verified === true &&
+    isDirectSpotifyAlbumUrl(album.spotifyUrl, album.spotifyId || album.id);
+
+  const body = (
+    <>
       <div className={styles.cover}>
         {album.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
@@ -43,10 +43,38 @@ export function AlbumCard({ album }: Props) {
         <span>
           {album.releaseYear} · {typeLabel}
         </span>
-        <span className={styles.arrow} aria-hidden="true">
-          ↗
-        </span>
+        {safe ? (
+          <span className={styles.arrow} aria-hidden="true">
+            ↗
+          </span>
+        ) : (
+          <span className={styles.unverified}>BAĞLANTI DOĞRULANAMADI</span>
+        )}
       </p>
-    </a>
+    </>
+  );
+
+  if (!safe) {
+    return <div className={styles.card}>{body}</div>;
+  }
+
+  return (
+    <div className={styles.card}>
+      <a
+        href={album.spotifyUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles.link}
+        aria-label={`${album.name} albümünü Spotify’da aç`}
+      >
+        {body}
+      </a>
+      <ReleaseActions
+        id={album.id}
+        type="album"
+        name={album.name}
+        spotifyUrl={album.spotifyUrl}
+      />
+    </div>
   );
 }

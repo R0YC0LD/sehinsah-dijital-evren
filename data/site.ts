@@ -1,4 +1,5 @@
 const isOfficial = false;
+const TARGET_ARTIST_ID = "0FUsrstJwmg4WVHQMTYuUA";
 
 export const siteConfig = {
   artistName: "ŞEHİNŞAH",
@@ -7,6 +8,7 @@ export const siteConfig = {
   title: isOfficial ? "Şehinşah — Resmî Dijital Evren" : "Şehinşah — Dijital Evren",
   description:
     "Şehinşah’ın müzik, sahne ve dijital dünyasına açılan deneyimsel internet sitesi.",
+  targetArtistId: TARGET_ARTIST_ID,
   hero: {
     lineOne: "KELİMELER YÜKSELİR.",
     lineTwo: "BEDEN DÜŞER.",
@@ -24,10 +26,11 @@ export const siteConfig = {
     discographyTitle: "DİSKOGRAFİ",
     featuredTitle: "ÖNE ÇIKAN KISA ÖNİZLEMELER",
     latestTitle: "SON YAYIN",
-    attribution: "Katalog verileri yaklaşık altı saatte bir yenilenir.",
+    randomTitle: "BUGÜN NE DİNLESEM?",
+    randomCta: "ŞARKIYA GİT ↗",
     fallbackTitle: "DİSKOGRAFİ YENİLENİYOR",
     fallbackMessage: "Şehinşah’ın güncel müzik sayfasını aç.",
-    fallbackCta: "MÜZİĞE GİT ↗",
+    fallbackCta: "MÜZİK SAYFASINI AÇ ↗",
     enableAudioLabel: "SES ÖNİZLEMELERİNİ AÇ",
     noPreview: "ÖNİZLEME YOK",
   },
@@ -51,18 +54,30 @@ export const siteConfig = {
     lineTwo: "YALNIZCA SAYFA SONA ERDİ.",
     backToTop: "BAŞA DÖN ↑",
   },
+  loading: {
+    enabled: true,
+    word: "ŞEHİNŞAH",
+    subtitle: "DİJİTAL EVREN",
+    fillDuration: 2.05,
+    overflowDuration: 0.32,
+    exitDuration: 0.42,
+    showOnInitialDocumentLoad: true,
+    showOnInternalNavigation: false,
+    maxCriticalAssetWaitMs: 2800,
+  },
   links: {
-    spotifyArtist:
-      "https://open.spotify.com/intl-tr/artist/0FUsrstJwmg4WVHQMTYuUA",
+    spotifyArtist: `https://open.spotify.com/intl-tr/artist/${TARGET_ARTIST_ID}`,
+    appleMusicArtist:
+      "https://music.apple.com/tr/artist/%C5%9Fehin%C5%9Fah/736313630?l=tr",
+    youtube: "https://www.youtube.com/@SEHINSAHIKARUS",
+    tiktok: "https://www.tiktok.com/@sehinsahtiktok",
     bubilet: "https://www.bubilet.com.tr/sanatci/sehinsah",
     instagram: "https://www.instagram.com/sehinsah/",
   },
   spotify: {
-    artistId: "0FUsrstJwmg4WVHQMTYuUA",
-    artistUrl:
-      "https://open.spotify.com/intl-tr/artist/0FUsrstJwmg4WVHQMTYuUA",
-    embedUrl:
-      "https://open.spotify.com/embed/artist/0FUsrstJwmg4WVHQMTYuUA?utm_source=generator&theme=0",
+    artistId: TARGET_ARTIST_ID,
+    artistUrl: `https://open.spotify.com/intl-tr/artist/${TARGET_ARTIST_ID}`,
+    embedUrl: `https://open.spotify.com/embed/artist/${TARGET_ARTIST_ID}?utm_source=generator&theme=0`,
   },
   media: {
     falling: "/media/sehinsah-falling.png",

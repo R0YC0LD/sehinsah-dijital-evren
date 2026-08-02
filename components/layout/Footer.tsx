@@ -1,3 +1,4 @@
+import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { siteConfig } from "@/data/site";
 import styles from "./Footer.module.css";
@@ -5,13 +6,15 @@ import styles from "./Footer.module.css";
 export function Footer() {
   return (
     <footer className={styles.footer}>
-      <p className={`display ${styles.brand}`}>{siteConfig.artistName}</p>
+      <div className={styles.top}>
+        <p className={`display ${styles.brand}`}>{siteConfig.artistName}</p>
+        <p className={styles.year}>{new Date().getFullYear()} · DİJİTAL EVREN</p>
+      </div>
       <nav className={styles.links} aria-label="Footer">
         <a href="#muzik">MÜZİK</a>
         <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
-        <ExternalLink href={siteConfig.links.instagram}>INSTAGRAM ↗</ExternalLink>
-        <ExternalLink href={siteConfig.links.spotifyArtist}>SPOTIFY ↗</ExternalLink>
       </nav>
+      <PlatformLinks variant="all" placement="footer" className={styles.platforms} />
     </footer>
   );
 }

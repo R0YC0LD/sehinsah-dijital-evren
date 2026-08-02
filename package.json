@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run verify:spotify",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "sync:spotify": "node scripts/sync-spotify.mjs"
+    "verify:spotify": "node scripts/verify-spotify-links.mjs",
+    "sync:spotify": "node scripts/sync-spotify.mjs",
+    "migrate:catalog": "node scripts/migrate-catalog.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",
@@ -17,7 +20,8 @@
     "next": "^15.4.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "server-only": "^0.0.1"
+    "server-only": "^0.0.1",
+    "simple-icons": "^16.28.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.6",

@@ -1,3 +1,18 @@
+/**
+ * Exact Spotify track IDs only.
+ * Never invent IDs or point to artist/search URLs.
+ *
+ * Optional licensed preview clips:
+ * public/audio/previews/... + previewSrc
+ */
+export type FeaturedTrackConfig = {
+  spotifyTrackId: string;
+  previewSrc?: string;
+  previewStart?: number;
+  previewDuration?: number;
+};
+
+/** @deprecated use FeaturedTrackConfig — kept for row rendering shape */
 export type FeaturedTrack = {
   id: string;
   title: string;
@@ -7,20 +22,14 @@ export type FeaturedTrack = {
   previewSrc?: string;
   previewStart?: number;
   previewDuration?: number;
+  verified?: boolean;
 };
 
 /**
- * Optional short preview clips.
- * Place licensed files under public/audio/previews/ and set previewSrc.
- * Without previewSrc the row shows "ÖNİZLEME YOK" and still links to Spotify.
- *
- * When Spotify catalog is available, MusicSection may enrich titles/covers
- * from latest releases automatically for empty slots.
+ * Add exact track IDs when available from Spotify API.
+ * Leave empty to hide placeholder rows and keep the artist embed.
  */
-export const featuredTracks: FeaturedTrack[] = [
-  {
-    id: "1",
-    title: "Şehinşah",
-    spotifyUrl: "https://open.spotify.com/intl-tr/artist/0FUsrstJwmg4WVHQMTYuUA",
-  },
-];
+export const featuredTrackIds: FeaturedTrackConfig[] = [];
+
+/** @deprecated empty by design — no artist-page placeholders */
+export const featuredTracks: FeaturedTrack[] = [];

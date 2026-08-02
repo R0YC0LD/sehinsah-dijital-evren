@@ -4,8 +4,14 @@ import { unstable_cache } from "next/cache";
 import { siteConfig } from "@/data/site";
 import { isVercelRuntime } from "@/lib/deploy";
 import { hasSpotifyCredentials, spotifyFetch } from "@/lib/spotify/server-client";
-import { buildMusicCatalog, dedupeAlbums, emptyCatalog, normalizeAlbum } from "@/lib/spotify/normalize";
-import type { MusicCatalog, SpotifyRawAlbum } from "@/lib/spotify/types";
+import {
+  buildMusicCatalog,
+  coerceRelease,
+  dedupeAlbums,
+  emptyCatalog,
+  normalizeAlbum,
+} from "@/lib/spotify/normalize";
+import type { MusicCatalog, SpotifyRawAlbum, SpotifyTrack } from "@/lib/spotify/types";
 
 type AlbumsPage = {
   items: SpotifyRawAlbum[];
@@ -45,7 +51,7 @@ async function loadLiveCatalog(): Promise<MusicCatalog> {
   const artistId = siteConfig.spotify.artistId;
   const market = process.env.SPOTIFY_MARKET || "TR";
   const raw = await fetchAllAlbums(artistId, market);
-  const releases = dedupeAlbums(raw.map(normalizeAlbum));
+  const releases = dedupeAlbums(raw.map(normalizeAlbum).filter((r) => r.verified));
   return buildMusicCatalog(releases, "live-cache");
 }
 
@@ -71,15 +77,27 @@ async function getLiveCachedSpotifyCatalog(): Promise<MusicCatalog> {
 
 export async function getGeneratedSpotifyCatalog(): Promise<MusicCatalog> {
   try {
-    const data = (await import("@/data/generated/spotify-catalog.json")).default as MusicCatalog;
-    if (!data?.releases?.length) return emptyCatalog("fallback");
-
-    const releases = (data.releases || []).filter(
-      (r) => r.spotifyUrl && !r.spotifyUrl.includes("/search/"),
+    const data = (await import("@/data/generated/spotify-catalog.json")).default as MusicCatalog & {
+      releases: Array<Record<string, unknown>>;
+    };
+    const releases = (data.releases || [])
+      .map((r) =>
+        coerceRelease(
+          r as Parameters<typeof coerceRelease>[0],
+        ),
+      )
+      .filter(Boolean);
+    const tracks = ((data.tracks || []) as SpotifyTrack[]).filter(
+      (t) => t?.verified && t.containsTargetArtist && !String(t.spotifyUrl || "").includes("/search/"),
     );
-    if (!releases.length) return emptyCatalog("fallback");
 
-    return buildMusicCatalog(releases, "generated-json", data.updatedAt);
+    if (!releases.length) return emptyCatalog("fallback");
+    return buildMusicCatalog(
+      releases as NonNullable<ReturnType<typeof coerceRelease>>[],
+      "generated-json",
+      data.updatedAt,
+      tracks,
+    );
   } catch {
     return emptyCatalog("fallback");
   }
@@ -92,7 +110,6 @@ export async function getMusicCatalog(): Promise<MusicCatalog> {
   return getGeneratedSpotifyCatalog();
 }
 
-/** Back-compat for older imports */
 export async function getSpotifyCatalog() {
   const catalog = await getMusicCatalog();
   return {

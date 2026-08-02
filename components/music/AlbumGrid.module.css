@@ -1,3 +1,29 @@
+.years {
+  display: flex;
+  gap: 0.55rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.year {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-height: 36px;
+  padding: 0.35rem 0.55rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  border-bottom: 1px solid transparent;
+}
+
+.yearActive {
+  color: var(--text);
+  border-bottom-color: var(--red);
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;

@@ -1,3 +1,4 @@
+import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import styles from "./InstagramSection.module.css";
@@ -24,6 +25,10 @@ export function InstagramSection() {
           >
             {siteConfig.instagram.cta}
           </a>
+          <div className={styles.socialRow}>
+            <span className="meta-label">SOSYAL</span>
+            <PlatformLinks variant="social" placement="social-section" />
+          </div>
         </div>
 
         <a

@@ -2,6 +2,8 @@
   "releases": [
     {
       "id": "2aTmzuUvKITVuP2qBnrvvD",
+      "spotifyId": "2aTmzuUvKITVuP2qBnrvvD",
+      "objectType": "album",
       "name": "Entropi",
       "albumType": "single",
       "releaseDate": "2026-07-03",
@@ -11,11 +13,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
       "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0TiW19cwPu2FnmR0WcpDXI",
+      "spotifyId": "0TiW19cwPu2FnmR0WcpDXI",
+      "objectType": "album",
       "name": "Benim Adım Arda",
       "albumType": "single",
       "releaseDate": "2026-02-27",
@@ -25,11 +34,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0TiW19cwPu2FnmR0WcpDXI",
       "uri": "spotify:album:0TiW19cwPu2FnmR0WcpDXI",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5iG9dUUVurewjfXYPhvOYB",
+      "spotifyId": "5iG9dUUVurewjfXYPhvOYB",
+      "objectType": "album",
       "name": "NASINASI?",
       "albumType": "single",
       "releaseDate": "2026-02-13",
@@ -39,11 +55,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5iG9dUUVurewjfXYPhvOYB",
       "uri": "spotify:album:5iG9dUUVurewjfXYPhvOYB",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5ht5m3cJvjGdTgDRUVrVeL",
+      "spotifyId": "5ht5m3cJvjGdTgDRUVrVeL",
+      "objectType": "album",
       "name": "Lab Cypher 6",
       "albumType": "single",
       "releaseDate": "2025-08-08",
@@ -53,11 +76,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5ht5m3cJvjGdTgDRUVrVeL",
       "uri": "spotify:album:5ht5m3cJvjGdTgDRUVrVeL",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7yXKu5sXCZmZmEAc723mIp",
+      "spotifyId": "7yXKu5sXCZmZmEAc723mIp",
+      "objectType": "album",
       "name": "INVIDIA",
       "albumType": "single",
       "releaseDate": "2025-07-18",
@@ -67,11 +97,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
       "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5IjNvRJSvWIOhqxkc8T2pG",
+      "spotifyId": "5IjNvRJSvWIOhqxkc8T2pG",
+      "objectType": "album",
       "name": "Lamine Yamal | The New Prince",
       "albumType": "single",
       "releaseDate": "2025-06-27",
@@ -81,11 +118,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5IjNvRJSvWIOhqxkc8T2pG",
       "uri": "spotify:album:5IjNvRJSvWIOhqxkc8T2pG",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3wn6SfgDifkgzusYoiH5Eg",
+      "spotifyId": "3wn6SfgDifkgzusYoiH5Eg",
+      "objectType": "album",
       "name": "Eskisi Gibi",
       "albumType": "single",
       "releaseDate": "2025-03-28",
@@ -95,11 +139,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3wn6SfgDifkgzusYoiH5Eg",
       "uri": "spotify:album:3wn6SfgDifkgzusYoiH5Eg",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "77kh4b22L5QCCIZhXsUOU2",
+      "spotifyId": "77kh4b22L5QCCIZhXsUOU2",
+      "objectType": "album",
       "name": "FUTAŞK",
       "albumType": "single",
       "releaseDate": "2025-02-14",
@@ -109,11 +160,18 @@
       "spotifyUrl": "https://open.spotify.com/album/77kh4b22L5QCCIZhXsUOU2",
       "uri": "spotify:album:77kh4b22L5QCCIZhXsUOU2",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1xNzac76pyGW65UbQ15Jpn",
+      "spotifyId": "1xNzac76pyGW65UbQ15Jpn",
+      "objectType": "album",
       "name": "6EP",
       "albumType": "single",
       "releaseDate": "2025-02-07",
@@ -123,11 +181,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1xNzac76pyGW65UbQ15Jpn",
       "uri": "spotify:album:1xNzac76pyGW65UbQ15Jpn",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "2mUZZJGMOMvL5IUIqD5anA",
+      "spotifyId": "2mUZZJGMOMvL5IUIqD5anA",
+      "objectType": "album",
       "name": "KBR",
       "albumType": "single",
       "releaseDate": "2025-01-10",
@@ -137,11 +202,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2mUZZJGMOMvL5IUIqD5anA",
       "uri": "spotify:album:2mUZZJGMOMvL5IUIqD5anA",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7uTRfHeplUuIyM0xER7BQX",
+      "spotifyId": "7uTRfHeplUuIyM0xER7BQX",
+      "objectType": "album",
       "name": "PEAK POINT",
       "albumType": "single",
       "releaseDate": "2024-12-20",
@@ -151,11 +223,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7uTRfHeplUuIyM0xER7BQX",
       "uri": "spotify:album:7uTRfHeplUuIyM0xER7BQX",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "spotifyId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "objectType": "album",
       "name": "Baban",
       "albumType": "single",
       "releaseDate": "2024-11-29",
@@ -165,11 +244,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
       "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1t5ZDQ8TsZw9bP2UQS1n2n",
+      "spotifyId": "1t5ZDQ8TsZw9bP2UQS1n2n",
+      "objectType": "album",
       "name": "Tanrıyı Kıyamete Zorlama",
       "albumType": "single",
       "releaseDate": "2024-11-01",
@@ -179,11 +265,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1t5ZDQ8TsZw9bP2UQS1n2n",
       "uri": "spotify:album:1t5ZDQ8TsZw9bP2UQS1n2n",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3ZyPooMmaV1rw9disOgtgd",
+      "spotifyId": "3ZyPooMmaV1rw9disOgtgd",
+      "objectType": "album",
       "name": "Meclis-i Ala",
       "albumType": "single",
       "releaseDate": "2024-09-06",
@@ -193,11 +286,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
       "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6ov1Z6rmcE663OhLxy5AFA",
+      "spotifyId": "6ov1Z6rmcE663OhLxy5AFA",
+      "objectType": "album",
       "name": "Deli Deli",
       "albumType": "single",
       "releaseDate": "2024-08-23",
@@ -207,11 +307,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6ov1Z6rmcE663OhLxy5AFA",
       "uri": "spotify:album:6ov1Z6rmcE663OhLxy5AFA",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6pdFHFbeC3j4QMdsuDhmWj",
+      "spotifyId": "6pdFHFbeC3j4QMdsuDhmWj",
+      "objectType": "album",
       "name": "UFUKMANIA",
       "albumType": "single",
       "releaseDate": "2024-07-05",
@@ -221,11 +328,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6pdFHFbeC3j4QMdsuDhmWj",
       "uri": "spotify:album:6pdFHFbeC3j4QMdsuDhmWj",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0FzybsrMkrplViiOHqNFvL",
+      "spotifyId": "0FzybsrMkrplViiOHqNFvL",
+      "objectType": "album",
       "name": "Sönük Kaldın",
       "albumType": "single",
       "releaseDate": "2024-06-07",
@@ -235,11 +349,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0FzybsrMkrplViiOHqNFvL",
       "uri": "spotify:album:0FzybsrMkrplViiOHqNFvL",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1zkZPiKRqqVJPKIqap3SU8",
+      "spotifyId": "1zkZPiKRqqVJPKIqap3SU8",
+      "objectType": "album",
       "name": "IKARUS",
       "albumType": "album",
       "releaseDate": "2024-05-10",
@@ -249,11 +370,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1zkZPiKRqqVJPKIqap3SU8",
       "uri": "spotify:album:1zkZPiKRqqVJPKIqap3SU8",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "049jPvA9iOQZy7Jt9KPM0q",
+      "spotifyId": "049jPvA9iOQZy7Jt9KPM0q",
+      "objectType": "album",
       "name": "DAİM",
       "albumType": "single",
       "releaseDate": "2024-03-29",
@@ -263,11 +391,18 @@
       "spotifyUrl": "https://open.spotify.com/album/049jPvA9iOQZy7Jt9KPM0q",
       "uri": "spotify:album:049jPvA9iOQZy7Jt9KPM0q",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "60KXppgH6yocRHr0UBZuxP",
+      "spotifyId": "60KXppgH6yocRHr0UBZuxP",
+      "objectType": "album",
       "name": "Kirlendi Tüm Duygularım",
       "albumType": "single",
       "releaseDate": "2024-02-06",
@@ -277,11 +412,18 @@
       "spotifyUrl": "https://open.spotify.com/album/60KXppgH6yocRHr0UBZuxP",
       "uri": "spotify:album:60KXppgH6yocRHr0UBZuxP",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4t6eu3P27YmnmM7nddmix4",
+      "spotifyId": "4t6eu3P27YmnmM7nddmix4",
+      "objectType": "album",
       "name": "Pembe Yalanlar",
       "albumType": "single",
       "releaseDate": "2024-01-12",
@@ -291,11 +433,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4t6eu3P27YmnmM7nddmix4",
       "uri": "spotify:album:4t6eu3P27YmnmM7nddmix4",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "23htijc8a6yzCdGNW0dK8V",
+      "spotifyId": "23htijc8a6yzCdGNW0dK8V",
+      "objectType": "album",
       "name": "Canım Babam",
       "albumType": "single",
       "releaseDate": "2023-09-22",
@@ -305,11 +454,18 @@
       "spotifyUrl": "https://open.spotify.com/album/23htijc8a6yzCdGNW0dK8V",
       "uri": "spotify:album:23htijc8a6yzCdGNW0dK8V",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1CPPRdILLPdn99FcwcJgMW",
+      "spotifyId": "1CPPRdILLPdn99FcwcJgMW",
+      "objectType": "album",
       "name": "Maymunlar Cehennemi",
       "albumType": "single",
       "releaseDate": "2023-06-23",
@@ -319,11 +475,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1CPPRdILLPdn99FcwcJgMW",
       "uri": "spotify:album:1CPPRdILLPdn99FcwcJgMW",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0bFFfvETEdNUfkJkCRG6d9",
+      "spotifyId": "0bFFfvETEdNUfkJkCRG6d9",
+      "objectType": "album",
       "name": "CimCimem",
       "albumType": "single",
       "releaseDate": "2023-06-09",
@@ -333,11 +496,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0bFFfvETEdNUfkJkCRG6d9",
       "uri": "spotify:album:0bFFfvETEdNUfkJkCRG6d9",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0XjW92nRHEuASd6hlA06DO",
+      "spotifyId": "0XjW92nRHEuASd6hlA06DO",
+      "objectType": "album",
       "name": "Galvanize",
       "albumType": "single",
       "releaseDate": "2023-04-28",
@@ -347,11 +517,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0XjW92nRHEuASd6hlA06DO",
       "uri": "spotify:album:0XjW92nRHEuASd6hlA06DO",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "71kPiLmNbaT0eylc5Ycvdj",
+      "spotifyId": "71kPiLmNbaT0eylc5Ycvdj",
+      "objectType": "album",
       "name": "Prenses (Remix)",
       "albumType": "single",
       "releaseDate": "2023-04-05",
@@ -361,11 +538,18 @@
       "spotifyUrl": "https://open.spotify.com/album/71kPiLmNbaT0eylc5Ycvdj",
       "uri": "spotify:album:71kPiLmNbaT0eylc5Ycvdj",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "2xhKy3Nm1eazIwWRnA9gys",
+      "spotifyId": "2xhKy3Nm1eazIwWRnA9gys",
+      "objectType": "album",
       "name": "Fırtına",
       "albumType": "single",
       "releaseDate": "2023-03-24",
@@ -375,11 +559,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2xhKy3Nm1eazIwWRnA9gys",
       "uri": "spotify:album:2xhKy3Nm1eazIwWRnA9gys",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7H6b2Etlb0ryYF7tqbFbDG",
+      "spotifyId": "7H6b2Etlb0ryYF7tqbFbDG",
+      "objectType": "album",
       "name": "Prenses",
       "albumType": "single",
       "releaseDate": "2023-03-17",
@@ -389,11 +580,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7H6b2Etlb0ryYF7tqbFbDG",
       "uri": "spotify:album:7H6b2Etlb0ryYF7tqbFbDG",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3GzZrTChFzvS4KqBNaFWCP",
+      "spotifyId": "3GzZrTChFzvS4KqBNaFWCP",
+      "objectType": "album",
       "name": "Muz Cumhuriyeti",
       "albumType": "single",
       "releaseDate": "2022-12-30",
@@ -403,11 +601,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3GzZrTChFzvS4KqBNaFWCP",
       "uri": "spotify:album:3GzZrTChFzvS4KqBNaFWCP",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "23ofnyZ4eAhpkk1YH1VVwD",
+      "spotifyId": "23ofnyZ4eAhpkk1YH1VVwD",
+      "objectType": "album",
       "name": "Ellerinde",
       "albumType": "single",
       "releaseDate": "2022-11-25",
@@ -417,11 +622,18 @@
       "spotifyUrl": "https://open.spotify.com/album/23ofnyZ4eAhpkk1YH1VVwD",
       "uri": "spotify:album:23ofnyZ4eAhpkk1YH1VVwD",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7vuH67pbtQuzNvct5WLTF1",
+      "spotifyId": "7vuH67pbtQuzNvct5WLTF1",
+      "objectType": "album",
       "name": "Dönmedin Ki",
       "albumType": "single",
       "releaseDate": "2022-09-09",
@@ -431,11 +643,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7vuH67pbtQuzNvct5WLTF1",
       "uri": "spotify:album:7vuH67pbtQuzNvct5WLTF1",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4mnBdWx2psHiTg78pclViD",
+      "spotifyId": "4mnBdWx2psHiTg78pclViD",
+      "objectType": "album",
       "name": "Meclis-i Ala İstanbul",
       "albumType": "single",
       "releaseDate": "2022-07-01",
@@ -445,11 +664,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4mnBdWx2psHiTg78pclViD",
       "uri": "spotify:album:4mnBdWx2psHiTg78pclViD",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5QWdCZD91757ow6zCrYTnr",
+      "spotifyId": "5QWdCZD91757ow6zCrYTnr",
+      "objectType": "album",
       "name": "TAK TAK TAK",
       "albumType": "single",
       "releaseDate": "2022-06-10",
@@ -459,11 +685,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5QWdCZD91757ow6zCrYTnr",
       "uri": "spotify:album:5QWdCZD91757ow6zCrYTnr",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "463e8VUKAZB5i86sUNIRGH",
+      "spotifyId": "463e8VUKAZB5i86sUNIRGH",
+      "objectType": "album",
       "name": "+28 (Tirat)",
       "albumType": "single",
       "releaseDate": "2022-04-29",
@@ -473,11 +706,18 @@
       "spotifyUrl": "https://open.spotify.com/album/463e8VUKAZB5i86sUNIRGH",
       "uri": "spotify:album:463e8VUKAZB5i86sUNIRGH",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6XdehvklsVZ5Ly5nnJAHTv",
+      "spotifyId": "6XdehvklsVZ5Ly5nnJAHTv",
+      "objectType": "album",
       "name": "Diabolico",
       "albumType": "single",
       "releaseDate": "2022-02-04",
@@ -487,11 +727,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6XdehvklsVZ5Ly5nnJAHTv",
       "uri": "spotify:album:6XdehvklsVZ5Ly5nnJAHTv",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1Aen2zuQGFR5sEWVjBmmLg",
+      "spotifyId": "1Aen2zuQGFR5sEWVjBmmLg",
+      "objectType": "album",
       "name": "Hadi Yaparsın",
       "albumType": "single",
       "releaseDate": "2022-01-05",
@@ -501,11 +748,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1Aen2zuQGFR5sEWVjBmmLg",
       "uri": "spotify:album:1Aen2zuQGFR5sEWVjBmmLg",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5SsZm0U0j5D5khXo9SKLku",
+      "spotifyId": "5SsZm0U0j5D5khXo9SKLku",
+      "objectType": "album",
       "name": "The Face Of Vision",
       "albumType": "single",
       "releaseDate": "2021-12-27",
@@ -515,11 +769,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5SsZm0U0j5D5khXo9SKLku",
       "uri": "spotify:album:5SsZm0U0j5D5khXo9SKLku",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "53KuHTKWIjUaZGCEXUeNid",
+      "spotifyId": "53KuHTKWIjUaZGCEXUeNid",
+      "objectType": "album",
       "name": "Kader Çıkmazı (45'lik)",
       "albumType": "single",
       "releaseDate": "2021-07-16",
@@ -529,11 +790,18 @@
       "spotifyUrl": "https://open.spotify.com/album/53KuHTKWIjUaZGCEXUeNid",
       "uri": "spotify:album:53KuHTKWIjUaZGCEXUeNid",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6VXZxNd3ur24KwERIBjFcs",
+      "spotifyId": "6VXZxNd3ur24KwERIBjFcs",
+      "objectType": "album",
       "name": "M.I.Ş",
       "albumType": "single",
       "releaseDate": "2021-03-12",
@@ -543,11 +811,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
       "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "69HxKUUjYmS2v2fRumhjkP",
+      "spotifyId": "69HxKUUjYmS2v2fRumhjkP",
+      "objectType": "album",
       "name": "Samanyolu",
       "albumType": "single",
       "releaseDate": "2021-03-05",
@@ -557,11 +832,18 @@
       "spotifyUrl": "https://open.spotify.com/album/69HxKUUjYmS2v2fRumhjkP",
       "uri": "spotify:album:69HxKUUjYmS2v2fRumhjkP",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "spotifyId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "objectType": "album",
       "name": "Darılmak Yok (Hamam Sessions)",
       "albumType": "single",
       "releaseDate": "2020-12-28",
@@ -571,11 +853,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
       "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "07cwiM7nU3jXF6J9UgXdCd",
+      "spotifyId": "07cwiM7nU3jXF6J9UgXdCd",
+      "objectType": "album",
       "name": "Dön Dünya",
       "albumType": "single",
       "releaseDate": "2020-12-11",
@@ -585,11 +874,18 @@
       "spotifyUrl": "https://open.spotify.com/album/07cwiM7nU3jXF6J9UgXdCd",
       "uri": "spotify:album:07cwiM7nU3jXF6J9UgXdCd",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1IOByJLwwmG0z16dSBiHAK",
+      "spotifyId": "1IOByJLwwmG0z16dSBiHAK",
+      "objectType": "album",
       "name": "Kunteper",
       "albumType": "single",
       "releaseDate": "2020-11-19",
@@ -599,11 +895,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1IOByJLwwmG0z16dSBiHAK",
       "uri": "spotify:album:1IOByJLwwmG0z16dSBiHAK",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6cWS5yrVFflrNt7o7eWgqx",
+      "spotifyId": "6cWS5yrVFflrNt7o7eWgqx",
+      "objectType": "album",
       "name": "666",
       "albumType": "album",
       "releaseDate": "2020-11-04",
@@ -613,11 +916,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6cWS5yrVFflrNt7o7eWgqx",
       "uri": "spotify:album:6cWS5yrVFflrNt7o7eWgqx",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4GLUe5UzDTd2WAkZPsqeVu",
+      "spotifyId": "4GLUe5UzDTd2WAkZPsqeVu",
+      "objectType": "album",
       "name": "Trump",
       "albumType": "single",
       "releaseDate": "2020-07-31",
@@ -627,11 +937,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4GLUe5UzDTd2WAkZPsqeVu",
       "uri": "spotify:album:4GLUe5UzDTd2WAkZPsqeVu",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4THM0v0TgGHbQClcWVLza1",
+      "spotifyId": "4THM0v0TgGHbQClcWVLza1",
+      "objectType": "album",
       "name": "İmza",
       "albumType": "single",
       "releaseDate": "2019-09-23",
@@ -641,11 +958,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4THM0v0TgGHbQClcWVLza1",
       "uri": "spotify:album:4THM0v0TgGHbQClcWVLza1",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1GIkj7GCcjfto5jWBKoTe1",
+      "spotifyId": "1GIkj7GCcjfto5jWBKoTe1",
+      "objectType": "album",
       "name": "Talep - Arz",
       "albumType": "single",
       "releaseDate": "2019-08-13",
@@ -655,11 +979,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1GIkj7GCcjfto5jWBKoTe1",
       "uri": "spotify:album:1GIkj7GCcjfto5jWBKoTe1",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3slJ2gXpniB6I4eb7NCruj",
+      "spotifyId": "3slJ2gXpniB6I4eb7NCruj",
+      "objectType": "album",
       "name": "Çocuk",
       "albumType": "single",
       "releaseDate": "2019-08-07",
@@ -669,11 +1000,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3slJ2gXpniB6I4eb7NCruj",
       "uri": "spotify:album:3slJ2gXpniB6I4eb7NCruj",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "62dW2UToWLtRNu5sSfkXpM",
+      "spotifyId": "62dW2UToWLtRNu5sSfkXpM",
+      "objectType": "album",
       "name": "Aslan Marşı",
       "albumType": "single",
       "releaseDate": "2019-05-18",
@@ -683,11 +1021,18 @@
       "spotifyUrl": "https://open.spotify.com/album/62dW2UToWLtRNu5sSfkXpM",
       "uri": "spotify:album:62dW2UToWLtRNu5sSfkXpM",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5dMbZ9ECO3Wxkpr7BWmLN3",
+      "spotifyId": "5dMbZ9ECO3Wxkpr7BWmLN3",
+      "objectType": "album",
       "name": "Pirana",
       "albumType": "single",
       "releaseDate": "2019-02-01",
@@ -697,11 +1042,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5dMbZ9ECO3Wxkpr7BWmLN3",
       "uri": "spotify:album:5dMbZ9ECO3Wxkpr7BWmLN3",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6tU5HiXjXem6qihbGElWjY",
+      "spotifyId": "6tU5HiXjXem6qihbGElWjY",
+      "objectType": "album",
       "name": "Kıskanmak (Original Soundtrack)",
       "albumType": "single",
       "releaseDate": "2019-01-11",
@@ -711,11 +1063,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6tU5HiXjXem6qihbGElWjY",
       "uri": "spotify:album:6tU5HiXjXem6qihbGElWjY",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7w23DpIjUzfefwiq0aXDNn",
+      "spotifyId": "7w23DpIjUzfefwiq0aXDNn",
+      "objectType": "album",
       "name": "Dünya'dan Atlas'a",
       "albumType": "single",
       "releaseDate": "2018-11-04",
@@ -725,11 +1084,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7w23DpIjUzfefwiq0aXDNn",
       "uri": "spotify:album:7w23DpIjUzfefwiq0aXDNn",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4tBnVWP1N4g7Hn9PYgPtWo",
+      "spotifyId": "4tBnVWP1N4g7Hn9PYgPtWo",
+      "objectType": "album",
       "name": "Milyon",
       "albumType": "single",
       "releaseDate": "2018-10-01",
@@ -739,11 +1105,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4tBnVWP1N4g7Hn9PYgPtWo",
       "uri": "spotify:album:4tBnVWP1N4g7Hn9PYgPtWo",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "61WtSUVOoxxeKeV4jOZNWi",
+      "spotifyId": "61WtSUVOoxxeKeV4jOZNWi",
+      "objectType": "album",
       "name": "Yak Yak Yak",
       "albumType": "single",
       "releaseDate": "2018-07-10",
@@ -753,11 +1126,18 @@
       "spotifyUrl": "https://open.spotify.com/album/61WtSUVOoxxeKeV4jOZNWi",
       "uri": "spotify:album:61WtSUVOoxxeKeV4jOZNWi",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "41vkDxCgMJIDSc8zauKoUW",
+      "spotifyId": "41vkDxCgMJIDSc8zauKoUW",
+      "objectType": "album",
       "name": "Karma",
       "albumType": "single",
       "releaseDate": "2017-12-09",
@@ -767,11 +1147,18 @@
       "spotifyUrl": "https://open.spotify.com/album/41vkDxCgMJIDSc8zauKoUW",
       "uri": "spotify:album:41vkDxCgMJIDSc8zauKoUW",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6zYRbnh9xKNGkaAkWPKhM8",
+      "spotifyId": "6zYRbnh9xKNGkaAkWPKhM8",
+      "objectType": "album",
       "name": "Uzulme (feat. Artz)",
       "albumType": "single",
       "releaseDate": "2016-12-16",
@@ -781,11 +1168,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
       "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "72psRaJ9JNqucQloOlHtWs",
+      "spotifyId": "72psRaJ9JNqucQloOlHtWs",
+      "objectType": "album",
       "name": "Yeşilçam Şarkıları Vol. 3 - Yıldızların Altında",
       "albumType": "single",
       "releaseDate": "2016-10-31",
@@ -795,11 +1189,18 @@
       "spotifyUrl": "https://open.spotify.com/album/72psRaJ9JNqucQloOlHtWs",
       "uri": "spotify:album:72psRaJ9JNqucQloOlHtWs",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "2q7QzY8q8OVxa5sAyyl8OF",
+      "spotifyId": "2q7QzY8q8OVxa5sAyyl8OF",
+      "objectType": "album",
       "name": "DEEV (Deluxe Edition)",
       "albumType": "album",
       "releaseDate": "2016-02-20",
@@ -809,11 +1210,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2q7QzY8q8OVxa5sAyyl8OF",
       "uri": "spotify:album:2q7QzY8q8OVxa5sAyyl8OF",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5wDw71G6My66IurTcLbULV",
+      "spotifyId": "5wDw71G6My66IurTcLbULV",
+      "objectType": "album",
       "name": "Denetimli Serbestlik Stili (Deluxe)",
       "albumType": "album",
       "releaseDate": "2012-01-01",
@@ -823,13 +1231,20 @@
       "spotifyUrl": "https://open.spotify.com/album/5wDw71G6My66IurTcLbULV",
       "uri": "spotify:album:5wDw71G6My66IurTcLbULV",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     }
   ],
   "albums": [
     {
       "id": "1zkZPiKRqqVJPKIqap3SU8",
+      "spotifyId": "1zkZPiKRqqVJPKIqap3SU8",
+      "objectType": "album",
       "name": "IKARUS",
       "albumType": "album",
       "releaseDate": "2024-05-10",
@@ -839,11 +1254,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1zkZPiKRqqVJPKIqap3SU8",
       "uri": "spotify:album:1zkZPiKRqqVJPKIqap3SU8",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6cWS5yrVFflrNt7o7eWgqx",
+      "spotifyId": "6cWS5yrVFflrNt7o7eWgqx",
+      "objectType": "album",
       "name": "666",
       "albumType": "album",
       "releaseDate": "2020-11-04",
@@ -853,11 +1275,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6cWS5yrVFflrNt7o7eWgqx",
       "uri": "spotify:album:6cWS5yrVFflrNt7o7eWgqx",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "2q7QzY8q8OVxa5sAyyl8OF",
+      "spotifyId": "2q7QzY8q8OVxa5sAyyl8OF",
+      "objectType": "album",
       "name": "DEEV (Deluxe Edition)",
       "albumType": "album",
       "releaseDate": "2016-02-20",
@@ -867,11 +1296,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2q7QzY8q8OVxa5sAyyl8OF",
       "uri": "spotify:album:2q7QzY8q8OVxa5sAyyl8OF",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5wDw71G6My66IurTcLbULV",
+      "spotifyId": "5wDw71G6My66IurTcLbULV",
+      "objectType": "album",
       "name": "Denetimli Serbestlik Stili (Deluxe)",
       "albumType": "album",
       "releaseDate": "2012-01-01",
@@ -881,13 +1317,20 @@
       "spotifyUrl": "https://open.spotify.com/album/5wDw71G6My66IurTcLbULV",
       "uri": "spotify:album:5wDw71G6My66IurTcLbULV",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     }
   ],
   "singles": [
     {
       "id": "2aTmzuUvKITVuP2qBnrvvD",
+      "spotifyId": "2aTmzuUvKITVuP2qBnrvvD",
+      "objectType": "album",
       "name": "Entropi",
       "albumType": "single",
       "releaseDate": "2026-07-03",
@@ -897,11 +1340,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
       "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0TiW19cwPu2FnmR0WcpDXI",
+      "spotifyId": "0TiW19cwPu2FnmR0WcpDXI",
+      "objectType": "album",
       "name": "Benim Adım Arda",
       "albumType": "single",
       "releaseDate": "2026-02-27",
@@ -911,11 +1361,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0TiW19cwPu2FnmR0WcpDXI",
       "uri": "spotify:album:0TiW19cwPu2FnmR0WcpDXI",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5iG9dUUVurewjfXYPhvOYB",
+      "spotifyId": "5iG9dUUVurewjfXYPhvOYB",
+      "objectType": "album",
       "name": "NASINASI?",
       "albumType": "single",
       "releaseDate": "2026-02-13",
@@ -925,11 +1382,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5iG9dUUVurewjfXYPhvOYB",
       "uri": "spotify:album:5iG9dUUVurewjfXYPhvOYB",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5ht5m3cJvjGdTgDRUVrVeL",
+      "spotifyId": "5ht5m3cJvjGdTgDRUVrVeL",
+      "objectType": "album",
       "name": "Lab Cypher 6",
       "albumType": "single",
       "releaseDate": "2025-08-08",
@@ -939,11 +1403,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5ht5m3cJvjGdTgDRUVrVeL",
       "uri": "spotify:album:5ht5m3cJvjGdTgDRUVrVeL",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7yXKu5sXCZmZmEAc723mIp",
+      "spotifyId": "7yXKu5sXCZmZmEAc723mIp",
+      "objectType": "album",
       "name": "INVIDIA",
       "albumType": "single",
       "releaseDate": "2025-07-18",
@@ -953,11 +1424,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
       "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5IjNvRJSvWIOhqxkc8T2pG",
+      "spotifyId": "5IjNvRJSvWIOhqxkc8T2pG",
+      "objectType": "album",
       "name": "Lamine Yamal | The New Prince",
       "albumType": "single",
       "releaseDate": "2025-06-27",
@@ -967,11 +1445,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5IjNvRJSvWIOhqxkc8T2pG",
       "uri": "spotify:album:5IjNvRJSvWIOhqxkc8T2pG",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3wn6SfgDifkgzusYoiH5Eg",
+      "spotifyId": "3wn6SfgDifkgzusYoiH5Eg",
+      "objectType": "album",
       "name": "Eskisi Gibi",
       "albumType": "single",
       "releaseDate": "2025-03-28",
@@ -981,11 +1466,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3wn6SfgDifkgzusYoiH5Eg",
       "uri": "spotify:album:3wn6SfgDifkgzusYoiH5Eg",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "77kh4b22L5QCCIZhXsUOU2",
+      "spotifyId": "77kh4b22L5QCCIZhXsUOU2",
+      "objectType": "album",
       "name": "FUTAŞK",
       "albumType": "single",
       "releaseDate": "2025-02-14",
@@ -995,11 +1487,18 @@
       "spotifyUrl": "https://open.spotify.com/album/77kh4b22L5QCCIZhXsUOU2",
       "uri": "spotify:album:77kh4b22L5QCCIZhXsUOU2",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1xNzac76pyGW65UbQ15Jpn",
+      "spotifyId": "1xNzac76pyGW65UbQ15Jpn",
+      "objectType": "album",
       "name": "6EP",
       "albumType": "single",
       "releaseDate": "2025-02-07",
@@ -1009,11 +1508,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1xNzac76pyGW65UbQ15Jpn",
       "uri": "spotify:album:1xNzac76pyGW65UbQ15Jpn",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "2mUZZJGMOMvL5IUIqD5anA",
+      "spotifyId": "2mUZZJGMOMvL5IUIqD5anA",
+      "objectType": "album",
       "name": "KBR",
       "albumType": "single",
       "releaseDate": "2025-01-10",
@@ -1023,11 +1529,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2mUZZJGMOMvL5IUIqD5anA",
       "uri": "spotify:album:2mUZZJGMOMvL5IUIqD5anA",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7uTRfHeplUuIyM0xER7BQX",
+      "spotifyId": "7uTRfHeplUuIyM0xER7BQX",
+      "objectType": "album",
       "name": "PEAK POINT",
       "albumType": "single",
       "releaseDate": "2024-12-20",
@@ -1037,11 +1550,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7uTRfHeplUuIyM0xER7BQX",
       "uri": "spotify:album:7uTRfHeplUuIyM0xER7BQX",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "spotifyId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "objectType": "album",
       "name": "Baban",
       "albumType": "single",
       "releaseDate": "2024-11-29",
@@ -1051,11 +1571,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
       "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1t5ZDQ8TsZw9bP2UQS1n2n",
+      "spotifyId": "1t5ZDQ8TsZw9bP2UQS1n2n",
+      "objectType": "album",
       "name": "Tanrıyı Kıyamete Zorlama",
       "albumType": "single",
       "releaseDate": "2024-11-01",
@@ -1065,11 +1592,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1t5ZDQ8TsZw9bP2UQS1n2n",
       "uri": "spotify:album:1t5ZDQ8TsZw9bP2UQS1n2n",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3ZyPooMmaV1rw9disOgtgd",
+      "spotifyId": "3ZyPooMmaV1rw9disOgtgd",
+      "objectType": "album",
       "name": "Meclis-i Ala",
       "albumType": "single",
       "releaseDate": "2024-09-06",
@@ -1079,11 +1613,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
       "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6ov1Z6rmcE663OhLxy5AFA",
+      "spotifyId": "6ov1Z6rmcE663OhLxy5AFA",
+      "objectType": "album",
       "name": "Deli Deli",
       "albumType": "single",
       "releaseDate": "2024-08-23",
@@ -1093,11 +1634,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6ov1Z6rmcE663OhLxy5AFA",
       "uri": "spotify:album:6ov1Z6rmcE663OhLxy5AFA",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6pdFHFbeC3j4QMdsuDhmWj",
+      "spotifyId": "6pdFHFbeC3j4QMdsuDhmWj",
+      "objectType": "album",
       "name": "UFUKMANIA",
       "albumType": "single",
       "releaseDate": "2024-07-05",
@@ -1107,11 +1655,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6pdFHFbeC3j4QMdsuDhmWj",
       "uri": "spotify:album:6pdFHFbeC3j4QMdsuDhmWj",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0FzybsrMkrplViiOHqNFvL",
+      "spotifyId": "0FzybsrMkrplViiOHqNFvL",
+      "objectType": "album",
       "name": "Sönük Kaldın",
       "albumType": "single",
       "releaseDate": "2024-06-07",
@@ -1121,11 +1676,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0FzybsrMkrplViiOHqNFvL",
       "uri": "spotify:album:0FzybsrMkrplViiOHqNFvL",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "049jPvA9iOQZy7Jt9KPM0q",
+      "spotifyId": "049jPvA9iOQZy7Jt9KPM0q",
+      "objectType": "album",
       "name": "DAİM",
       "albumType": "single",
       "releaseDate": "2024-03-29",
@@ -1135,11 +1697,18 @@
       "spotifyUrl": "https://open.spotify.com/album/049jPvA9iOQZy7Jt9KPM0q",
       "uri": "spotify:album:049jPvA9iOQZy7Jt9KPM0q",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "60KXppgH6yocRHr0UBZuxP",
+      "spotifyId": "60KXppgH6yocRHr0UBZuxP",
+      "objectType": "album",
       "name": "Kirlendi Tüm Duygularım",
       "albumType": "single",
       "releaseDate": "2024-02-06",
@@ -1149,11 +1718,18 @@
       "spotifyUrl": "https://open.spotify.com/album/60KXppgH6yocRHr0UBZuxP",
       "uri": "spotify:album:60KXppgH6yocRHr0UBZuxP",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4t6eu3P27YmnmM7nddmix4",
+      "spotifyId": "4t6eu3P27YmnmM7nddmix4",
+      "objectType": "album",
       "name": "Pembe Yalanlar",
       "albumType": "single",
       "releaseDate": "2024-01-12",
@@ -1163,11 +1739,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4t6eu3P27YmnmM7nddmix4",
       "uri": "spotify:album:4t6eu3P27YmnmM7nddmix4",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "23htijc8a6yzCdGNW0dK8V",
+      "spotifyId": "23htijc8a6yzCdGNW0dK8V",
+      "objectType": "album",
       "name": "Canım Babam",
       "albumType": "single",
       "releaseDate": "2023-09-22",
@@ -1177,11 +1760,18 @@
       "spotifyUrl": "https://open.spotify.com/album/23htijc8a6yzCdGNW0dK8V",
       "uri": "spotify:album:23htijc8a6yzCdGNW0dK8V",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1CPPRdILLPdn99FcwcJgMW",
+      "spotifyId": "1CPPRdILLPdn99FcwcJgMW",
+      "objectType": "album",
       "name": "Maymunlar Cehennemi",
       "albumType": "single",
       "releaseDate": "2023-06-23",
@@ -1191,11 +1781,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1CPPRdILLPdn99FcwcJgMW",
       "uri": "spotify:album:1CPPRdILLPdn99FcwcJgMW",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0bFFfvETEdNUfkJkCRG6d9",
+      "spotifyId": "0bFFfvETEdNUfkJkCRG6d9",
+      "objectType": "album",
       "name": "CimCimem",
       "albumType": "single",
       "releaseDate": "2023-06-09",
@@ -1205,11 +1802,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0bFFfvETEdNUfkJkCRG6d9",
       "uri": "spotify:album:0bFFfvETEdNUfkJkCRG6d9",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "0XjW92nRHEuASd6hlA06DO",
+      "spotifyId": "0XjW92nRHEuASd6hlA06DO",
+      "objectType": "album",
       "name": "Galvanize",
       "albumType": "single",
       "releaseDate": "2023-04-28",
@@ -1219,11 +1823,18 @@
       "spotifyUrl": "https://open.spotify.com/album/0XjW92nRHEuASd6hlA06DO",
       "uri": "spotify:album:0XjW92nRHEuASd6hlA06DO",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "71kPiLmNbaT0eylc5Ycvdj",
+      "spotifyId": "71kPiLmNbaT0eylc5Ycvdj",
+      "objectType": "album",
       "name": "Prenses (Remix)",
       "albumType": "single",
       "releaseDate": "2023-04-05",
@@ -1233,11 +1844,18 @@
       "spotifyUrl": "https://open.spotify.com/album/71kPiLmNbaT0eylc5Ycvdj",
       "uri": "spotify:album:71kPiLmNbaT0eylc5Ycvdj",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "2xhKy3Nm1eazIwWRnA9gys",
+      "spotifyId": "2xhKy3Nm1eazIwWRnA9gys",
+      "objectType": "album",
       "name": "Fırtına",
       "albumType": "single",
       "releaseDate": "2023-03-24",
@@ -1247,11 +1865,18 @@
       "spotifyUrl": "https://open.spotify.com/album/2xhKy3Nm1eazIwWRnA9gys",
       "uri": "spotify:album:2xhKy3Nm1eazIwWRnA9gys",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7H6b2Etlb0ryYF7tqbFbDG",
+      "spotifyId": "7H6b2Etlb0ryYF7tqbFbDG",
+      "objectType": "album",
       "name": "Prenses",
       "albumType": "single",
       "releaseDate": "2023-03-17",
@@ -1261,11 +1886,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7H6b2Etlb0ryYF7tqbFbDG",
       "uri": "spotify:album:7H6b2Etlb0ryYF7tqbFbDG",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3GzZrTChFzvS4KqBNaFWCP",
+      "spotifyId": "3GzZrTChFzvS4KqBNaFWCP",
+      "objectType": "album",
       "name": "Muz Cumhuriyeti",
       "albumType": "single",
       "releaseDate": "2022-12-30",
@@ -1275,11 +1907,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3GzZrTChFzvS4KqBNaFWCP",
       "uri": "spotify:album:3GzZrTChFzvS4KqBNaFWCP",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "23ofnyZ4eAhpkk1YH1VVwD",
+      "spotifyId": "23ofnyZ4eAhpkk1YH1VVwD",
+      "objectType": "album",
       "name": "Ellerinde",
       "albumType": "single",
       "releaseDate": "2022-11-25",
@@ -1289,11 +1928,18 @@
       "spotifyUrl": "https://open.spotify.com/album/23ofnyZ4eAhpkk1YH1VVwD",
       "uri": "spotify:album:23ofnyZ4eAhpkk1YH1VVwD",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7vuH67pbtQuzNvct5WLTF1",
+      "spotifyId": "7vuH67pbtQuzNvct5WLTF1",
+      "objectType": "album",
       "name": "Dönmedin Ki",
       "albumType": "single",
       "releaseDate": "2022-09-09",
@@ -1303,11 +1949,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7vuH67pbtQuzNvct5WLTF1",
       "uri": "spotify:album:7vuH67pbtQuzNvct5WLTF1",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4mnBdWx2psHiTg78pclViD",
+      "spotifyId": "4mnBdWx2psHiTg78pclViD",
+      "objectType": "album",
       "name": "Meclis-i Ala İstanbul",
       "albumType": "single",
       "releaseDate": "2022-07-01",
@@ -1317,11 +1970,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4mnBdWx2psHiTg78pclViD",
       "uri": "spotify:album:4mnBdWx2psHiTg78pclViD",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5QWdCZD91757ow6zCrYTnr",
+      "spotifyId": "5QWdCZD91757ow6zCrYTnr",
+      "objectType": "album",
       "name": "TAK TAK TAK",
       "albumType": "single",
       "releaseDate": "2022-06-10",
@@ -1331,11 +1991,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5QWdCZD91757ow6zCrYTnr",
       "uri": "spotify:album:5QWdCZD91757ow6zCrYTnr",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "463e8VUKAZB5i86sUNIRGH",
+      "spotifyId": "463e8VUKAZB5i86sUNIRGH",
+      "objectType": "album",
       "name": "+28 (Tirat)",
       "albumType": "single",
       "releaseDate": "2022-04-29",
@@ -1345,11 +2012,18 @@
       "spotifyUrl": "https://open.spotify.com/album/463e8VUKAZB5i86sUNIRGH",
       "uri": "spotify:album:463e8VUKAZB5i86sUNIRGH",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6XdehvklsVZ5Ly5nnJAHTv",
+      "spotifyId": "6XdehvklsVZ5Ly5nnJAHTv",
+      "objectType": "album",
       "name": "Diabolico",
       "albumType": "single",
       "releaseDate": "2022-02-04",
@@ -1359,11 +2033,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6XdehvklsVZ5Ly5nnJAHTv",
       "uri": "spotify:album:6XdehvklsVZ5Ly5nnJAHTv",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1Aen2zuQGFR5sEWVjBmmLg",
+      "spotifyId": "1Aen2zuQGFR5sEWVjBmmLg",
+      "objectType": "album",
       "name": "Hadi Yaparsın",
       "albumType": "single",
       "releaseDate": "2022-01-05",
@@ -1373,11 +2054,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1Aen2zuQGFR5sEWVjBmmLg",
       "uri": "spotify:album:1Aen2zuQGFR5sEWVjBmmLg",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5SsZm0U0j5D5khXo9SKLku",
+      "spotifyId": "5SsZm0U0j5D5khXo9SKLku",
+      "objectType": "album",
       "name": "The Face Of Vision",
       "albumType": "single",
       "releaseDate": "2021-12-27",
@@ -1387,11 +2075,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5SsZm0U0j5D5khXo9SKLku",
       "uri": "spotify:album:5SsZm0U0j5D5khXo9SKLku",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "53KuHTKWIjUaZGCEXUeNid",
+      "spotifyId": "53KuHTKWIjUaZGCEXUeNid",
+      "objectType": "album",
       "name": "Kader Çıkmazı (45'lik)",
       "albumType": "single",
       "releaseDate": "2021-07-16",
@@ -1401,11 +2096,18 @@
       "spotifyUrl": "https://open.spotify.com/album/53KuHTKWIjUaZGCEXUeNid",
       "uri": "spotify:album:53KuHTKWIjUaZGCEXUeNid",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6VXZxNd3ur24KwERIBjFcs",
+      "spotifyId": "6VXZxNd3ur24KwERIBjFcs",
+      "objectType": "album",
       "name": "M.I.Ş",
       "albumType": "single",
       "releaseDate": "2021-03-12",
@@ -1415,11 +2117,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
       "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "69HxKUUjYmS2v2fRumhjkP",
+      "spotifyId": "69HxKUUjYmS2v2fRumhjkP",
+      "objectType": "album",
       "name": "Samanyolu",
       "albumType": "single",
       "releaseDate": "2021-03-05",
@@ -1429,11 +2138,18 @@
       "spotifyUrl": "https://open.spotify.com/album/69HxKUUjYmS2v2fRumhjkP",
       "uri": "spotify:album:69HxKUUjYmS2v2fRumhjkP",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "spotifyId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "objectType": "album",
       "name": "Darılmak Yok (Hamam Sessions)",
       "albumType": "single",
       "releaseDate": "2020-12-28",
@@ -1443,11 +2159,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
       "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "07cwiM7nU3jXF6J9UgXdCd",
+      "spotifyId": "07cwiM7nU3jXF6J9UgXdCd",
+      "objectType": "album",
       "name": "Dön Dünya",
       "albumType": "single",
       "releaseDate": "2020-12-11",
@@ -1457,11 +2180,18 @@
       "spotifyUrl": "https://open.spotify.com/album/07cwiM7nU3jXF6J9UgXdCd",
       "uri": "spotify:album:07cwiM7nU3jXF6J9UgXdCd",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1IOByJLwwmG0z16dSBiHAK",
+      "spotifyId": "1IOByJLwwmG0z16dSBiHAK",
+      "objectType": "album",
       "name": "Kunteper",
       "albumType": "single",
       "releaseDate": "2020-11-19",
@@ -1471,11 +2201,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1IOByJLwwmG0z16dSBiHAK",
       "uri": "spotify:album:1IOByJLwwmG0z16dSBiHAK",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4GLUe5UzDTd2WAkZPsqeVu",
+      "spotifyId": "4GLUe5UzDTd2WAkZPsqeVu",
+      "objectType": "album",
       "name": "Trump",
       "albumType": "single",
       "releaseDate": "2020-07-31",
@@ -1485,11 +2222,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4GLUe5UzDTd2WAkZPsqeVu",
       "uri": "spotify:album:4GLUe5UzDTd2WAkZPsqeVu",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4THM0v0TgGHbQClcWVLza1",
+      "spotifyId": "4THM0v0TgGHbQClcWVLza1",
+      "objectType": "album",
       "name": "İmza",
       "albumType": "single",
       "releaseDate": "2019-09-23",
@@ -1499,11 +2243,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4THM0v0TgGHbQClcWVLza1",
       "uri": "spotify:album:4THM0v0TgGHbQClcWVLza1",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "1GIkj7GCcjfto5jWBKoTe1",
+      "spotifyId": "1GIkj7GCcjfto5jWBKoTe1",
+      "objectType": "album",
       "name": "Talep - Arz",
       "albumType": "single",
       "releaseDate": "2019-08-13",
@@ -1513,11 +2264,18 @@
       "spotifyUrl": "https://open.spotify.com/album/1GIkj7GCcjfto5jWBKoTe1",
       "uri": "spotify:album:1GIkj7GCcjfto5jWBKoTe1",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "3slJ2gXpniB6I4eb7NCruj",
+      "spotifyId": "3slJ2gXpniB6I4eb7NCruj",
+      "objectType": "album",
       "name": "Çocuk",
       "albumType": "single",
       "releaseDate": "2019-08-07",
@@ -1527,11 +2285,18 @@
       "spotifyUrl": "https://open.spotify.com/album/3slJ2gXpniB6I4eb7NCruj",
       "uri": "spotify:album:3slJ2gXpniB6I4eb7NCruj",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "62dW2UToWLtRNu5sSfkXpM",
+      "spotifyId": "62dW2UToWLtRNu5sSfkXpM",
+      "objectType": "album",
       "name": "Aslan Marşı",
       "albumType": "single",
       "releaseDate": "2019-05-18",
@@ -1541,11 +2306,18 @@
       "spotifyUrl": "https://open.spotify.com/album/62dW2UToWLtRNu5sSfkXpM",
       "uri": "spotify:album:62dW2UToWLtRNu5sSfkXpM",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "5dMbZ9ECO3Wxkpr7BWmLN3",
+      "spotifyId": "5dMbZ9ECO3Wxkpr7BWmLN3",
+      "objectType": "album",
       "name": "Pirana",
       "albumType": "single",
       "releaseDate": "2019-02-01",
@@ -1555,11 +2327,18 @@
       "spotifyUrl": "https://open.spotify.com/album/5dMbZ9ECO3Wxkpr7BWmLN3",
       "uri": "spotify:album:5dMbZ9ECO3Wxkpr7BWmLN3",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6tU5HiXjXem6qihbGElWjY",
+      "spotifyId": "6tU5HiXjXem6qihbGElWjY",
+      "objectType": "album",
       "name": "Kıskanmak (Original Soundtrack)",
       "albumType": "single",
       "releaseDate": "2019-01-11",
@@ -1569,11 +2348,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6tU5HiXjXem6qihbGElWjY",
       "uri": "spotify:album:6tU5HiXjXem6qihbGElWjY",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "7w23DpIjUzfefwiq0aXDNn",
+      "spotifyId": "7w23DpIjUzfefwiq0aXDNn",
+      "objectType": "album",
       "name": "Dünya'dan Atlas'a",
       "albumType": "single",
       "releaseDate": "2018-11-04",
@@ -1583,11 +2369,18 @@
       "spotifyUrl": "https://open.spotify.com/album/7w23DpIjUzfefwiq0aXDNn",
       "uri": "spotify:album:7w23DpIjUzfefwiq0aXDNn",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "4tBnVWP1N4g7Hn9PYgPtWo",
+      "spotifyId": "4tBnVWP1N4g7Hn9PYgPtWo",
+      "objectType": "album",
       "name": "Milyon",
       "albumType": "single",
       "releaseDate": "2018-10-01",
@@ -1597,11 +2390,18 @@
       "spotifyUrl": "https://open.spotify.com/album/4tBnVWP1N4g7Hn9PYgPtWo",
       "uri": "spotify:album:4tBnVWP1N4g7Hn9PYgPtWo",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "61WtSUVOoxxeKeV4jOZNWi",
+      "spotifyId": "61WtSUVOoxxeKeV4jOZNWi",
+      "objectType": "album",
       "name": "Yak Yak Yak",
       "albumType": "single",
       "releaseDate": "2018-07-10",
@@ -1611,11 +2411,18 @@
       "spotifyUrl": "https://open.spotify.com/album/61WtSUVOoxxeKeV4jOZNWi",
       "uri": "spotify:album:61WtSUVOoxxeKeV4jOZNWi",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "41vkDxCgMJIDSc8zauKoUW",
+      "spotifyId": "41vkDxCgMJIDSc8zauKoUW",
+      "objectType": "album",
       "name": "Karma",
       "albumType": "single",
       "releaseDate": "2017-12-09",
@@ -1625,11 +2432,18 @@
       "spotifyUrl": "https://open.spotify.com/album/41vkDxCgMJIDSc8zauKoUW",
       "uri": "spotify:album:41vkDxCgMJIDSc8zauKoUW",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "6zYRbnh9xKNGkaAkWPKhM8",
+      "spotifyId": "6zYRbnh9xKNGkaAkWPKhM8",
+      "objectType": "album",
       "name": "Uzulme (feat. Artz)",
       "albumType": "single",
       "releaseDate": "2016-12-16",
@@ -1639,11 +2453,18 @@
       "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
       "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     },
     {
       "id": "72psRaJ9JNqucQloOlHtWs",
+      "spotifyId": "72psRaJ9JNqucQloOlHtWs",
+      "objectType": "album",
       "name": "Yeşilçam Şarkıları Vol. 3 - Yıldızların Altında",
       "albumType": "single",
       "releaseDate": "2016-10-31",
@@ -1653,12 +2474,20 @@
       "spotifyUrl": "https://open.spotify.com/album/72psRaJ9JNqucQloOlHtWs",
       "uri": "spotify:album:72psRaJ9JNqucQloOlHtWs",
       "artists": [
-        "Şehinşah"
-      ]
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
     }
   ],
+  "tracks": [],
   "latestRelease": {
     "id": "2aTmzuUvKITVuP2qBnrvvD",
+    "spotifyId": "2aTmzuUvKITVuP2qBnrvvD",
+    "objectType": "album",
     "name": "Entropi",
     "albumType": "single",
     "releaseDate": "2026-07-03",
@@ -1668,13 +2497,19 @@
     "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
     "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
     "artists": [
-      "Şehinşah"
-    ]
+      {
+        "id": "0FUsrstJwmg4WVHQMTYuUA",
+        "name": "Şehinşah"
+      }
+    ],
+    "containsTargetArtist": true,
+    "verified": true
   },
   "counts": {
     "total": 59,
     "albums": 4,
-    "singles": 55
+    "singles": 55,
+    "tracks": 0
   },
   "updatedAt": "2026-08-02T12:57:00.727Z",
   "source": "generated-json"

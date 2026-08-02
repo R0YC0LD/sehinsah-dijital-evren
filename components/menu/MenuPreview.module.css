@@ -25,30 +25,70 @@
   inset: 0;
   box-shadow: inset 0 0 0 1px rgba(153, 25, 25, 0.18);
   pointer-events: none;
+  z-index: 3;
+}
+
+.image,
+.fallback {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .image {
-  width: 100%;
-  height: 100%;
   object-fit: contain;
-  animation: fade 0.28s var(--ease);
 }
 
 .fallback {
-  width: 100%;
-  height: 100%;
   display: grid;
   place-items: center;
   font-size: 3rem;
   color: rgba(238, 233, 223, 0.2);
 }
 
-@keyframes fade {
+.layerPrev,
+.layerCurr {
+  transition:
+    opacity 0.22s var(--ease),
+    transform 0.22s var(--ease),
+    filter 0.22s var(--ease);
+}
+
+.layerPrev {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  z-index: 1;
+}
+
+.layerCurr {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+  z-index: 2;
+}
+
+.fading .layerPrev {
+  opacity: 0;
+  transform: translateY(-6px);
+  filter: blur(2px);
+}
+
+.fading .layerCurr {
+  animation: enter 0.24s var(--ease);
+}
+
+@keyframes enter {
   from {
-    opacity: 0.4;
+    opacity: 0;
+    transform: translateY(6px);
+    filter: blur(3px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
   }
 }
 
@@ -58,7 +98,23 @@
   }
 
   .frame {
-    width: 140px;
+    width: min(140px, 34vw);
     aspect-ratio: 1;
+  }
+}
+
+@media (max-height: 720px) {
+  .frame {
+    width: 108px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layerPrev,
+  .layerCurr,
+  .fading .layerCurr {
+    transition: none;
+    animation: none;
+    filter: none;
   }
 }

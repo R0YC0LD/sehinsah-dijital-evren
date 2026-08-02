@@ -1,0 +1,29 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+}
+
+.btn {
+  min-height: 36px;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.55rem;
+}
+
+.btn[aria-pressed="true"],
+.btn:hover,
+.btn:focus-visible {
+  color: var(--text);
+  border-color: rgba(153, 25, 25, 0.45);
+}
+
+.note {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  color: var(--spotify);
+}

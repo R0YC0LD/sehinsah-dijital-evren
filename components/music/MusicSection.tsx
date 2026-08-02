@@ -3,6 +3,7 @@ import { CatalogSummary } from "@/components/music/CatalogSummary";
 import { FeaturedTrackList } from "@/components/music/FeaturedTrackList";
 import { LatestRelease } from "@/components/music/LatestRelease";
 import { SpotifyArtistEmbed } from "@/components/music/SpotifyArtistEmbed";
+import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import styles from "./MusicSection.module.css";
@@ -12,6 +13,9 @@ type Props = {
 };
 
 export function MusicSection({ catalog }: Props) {
+  const latest =
+    catalog.latestRelease?.verified === true ? catalog.latestRelease : null;
+
   return (
     <section id="muzik" className={`section-shell ${styles.section}`} aria-label="Müzik">
       <div className={`section-backdrop ${styles.backdrop}`} aria-hidden="true">
@@ -19,18 +23,22 @@ export function MusicSection({ catalog }: Props) {
         <span className={styles.axis} />
       </div>
 
-      <div className={`section-content ${styles.content}`}>
+      <div className={`section-content content-medium ${styles.content}`}>
         <div className={styles.header}>
           <div>
             <p className="meta-label">02 / MÜZİK</p>
             <h2 className={`display ${styles.title}`}>{siteConfig.music.title}</h2>
             <p className={styles.subtitle}>{siteConfig.music.subtitle}</p>
+            <div className={styles.listenRow}>
+              <span className={styles.listenLabel}>DİNLE</span>
+              <PlatformLinks variant="listen" placement="music" />
+            </div>
           </div>
           <CatalogSummary catalog={catalog} />
         </div>
 
         <div className={styles.topGrid}>
-          <LatestRelease release={catalog.latestRelease} />
+          <LatestRelease release={latest} />
           <FeaturedTrackList catalog={catalog} />
         </div>
 

@@ -4,6 +4,11 @@ export type SpotifyImage = {
   width: number | null;
 };
 
+export type SpotifyArtistRef = {
+  id: string;
+  name: string;
+};
+
 export type SpotifyRawAlbum = {
   id: string;
   name: string;
@@ -14,11 +19,13 @@ export type SpotifyRawAlbum = {
   images: SpotifyImage[];
   external_urls: { spotify: string };
   uri: string;
-  artists: Array<{ id: string; name: string }>;
+  artists: SpotifyArtistRef[];
 };
 
 export type SpotifyRelease = {
   id: string;
+  spotifyId: string;
+  objectType: "album";
   name: string;
   albumType: "album" | "single" | "compilation" | string;
   releaseDate: string;
@@ -27,18 +34,40 @@ export type SpotifyRelease = {
   imageUrl: string | null;
   spotifyUrl: string;
   uri: string;
-  artists: string[];
+  artists: SpotifyArtistRef[];
+  containsTargetArtist: boolean;
+  verified: boolean;
+};
+
+export type SpotifyTrack = {
+  id: string;
+  spotifyId: string;
+  objectType: "track";
+  name: string;
+  trackNumber: number;
+  durationMs: number;
+  explicit: boolean;
+  spotifyUrl: string;
+  uri: string;
+  imageUrl: string | null;
+  albumId: string;
+  albumName: string;
+  artists: SpotifyArtistRef[];
+  containsTargetArtist: boolean;
+  verified: boolean;
 };
 
 export type MusicCatalog = {
   releases: SpotifyRelease[];
   albums: SpotifyRelease[];
   singles: SpotifyRelease[];
+  tracks: SpotifyTrack[];
   latestRelease: SpotifyRelease | null;
   counts: {
     total: number;
     albums: number;
     singles: number;
+    tracks: number;
   };
   updatedAt: string | null;
   source: "live-cache" | "generated-json" | "fallback";
@@ -46,11 +75,3 @@ export type MusicCatalog = {
 
 /** @deprecated use SpotifyRelease */
 export type NormalizedAlbum = SpotifyRelease;
-
-/** @deprecated use MusicCatalog */
-export type SpotifyCatalog = {
-  albums: SpotifyRelease[];
-  singles: SpotifyRelease[];
-  fetchedAt: string;
-  source: "api" | "unavailable";
-};

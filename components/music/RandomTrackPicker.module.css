@@ -1,0 +1,107 @@
+.wrap {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.button {
+  justify-self: start;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 0.7rem 0.95rem;
+  min-height: 44px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  border-color: rgba(153, 25, 25, 0.55);
+  color: var(--red);
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: center;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  border: 1px solid transparent;
+  position: relative;
+  transition:
+    max-height 0.4s var(--ease),
+    opacity 0.35s var(--ease),
+    border-color 0.35s ease,
+    padding 0.35s ease;
+}
+
+.open {
+  max-height: 140px;
+  opacity: 1;
+  padding: 0.85rem;
+  border-color: var(--line);
+  background: rgba(10, 10, 10, 0.55);
+}
+
+.scan {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 2px;
+  background: var(--red);
+  opacity: 0;
+}
+
+.open .scan {
+  animation: scan 0.45s var(--ease);
+}
+
+@keyframes scan {
+  from {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(220px);
+  }
+}
+
+.cover {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.45rem;
+}
+
+.cta {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.cta:hover {
+  color: var(--spotify);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel,
+  .open .scan {
+    transition: none;
+    animation: none;
+  }
+}
