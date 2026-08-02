@@ -270,19 +270,30 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
           }
           controllerRef.current = controller;
           registerController(controller);
+          // Mark ready as soon as the controller exists so the gate CTA can call play().
+          setReady(true);
           controller.addListener("playback_update", onPlaybackUpdate);
           controller.addListener("playback_started", onPlaybackStarted);
           controller.addListener("ready", () => {
             setReady(true);
-            emitPlayback("ready", {
-              playingURI: startTrack.uri,
-              position: 0,
-              duration: 0,
-              isPaused: true,
-              isBuffering: false,
-            }, { playing: false, isPaused: true, isBuffering: false });
+            emitPlayback(
+              "ready",
+              {
+                playingURI: startTrack.uri,
+                position: 0,
+                duration: 0,
+                isPaused: true,
+                isBuffering: false,
+              },
+              { playing: false, isPaused: true, isBuffering: false },
+            );
 
-            // Probe autoplay (session re-check). Gate stays if this fails.
+            // Soft autoplay probe only when gate is disabled.
+            if (siteConfig.audioGate.enabled) {
+              setNeedsGesture(true);
+              return;
+            }
+
             window.setTimeout(() => {
               if (destroyed || userActivatedRef.current) return;
               try {

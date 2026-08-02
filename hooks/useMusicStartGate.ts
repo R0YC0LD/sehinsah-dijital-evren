@@ -10,13 +10,14 @@ export type MusicGatePhase = "hidden" | "visible" | "starting" | "retry" | "clos
 
 export function useMusicStartGate() {
   const { ready, playFromUserGesture, subscribe, setUnlocked } = useSpotifyPlayback();
-  const [phase, setPhase] = useState<MusicGatePhase>("hidden");
+  // Visible on first client render so the gate is never lost to ready/remount races.
+  const [phase, setPhase] = useState<MusicGatePhase>(() =>
+    siteConfig.audioGate.enabled ? "visible" : "hidden",
+  );
   const startingRef = useRef(false);
   const playbackLiveRef = useRef(false);
-  const revealScheduled = useRef(false);
   const closeTimer = useRef<number | null>(null);
   const fallbackTimer = useRef<number | null>(null);
-  const revealTimer = useRef<number | null>(null);
 
   const closeGate = useCallback(() => {
     setPhase("closing");
@@ -67,32 +68,8 @@ export function useMusicStartGate() {
       unsub();
       if (closeTimer.current != null) window.clearTimeout(closeTimer.current);
       if (fallbackTimer.current != null) window.clearTimeout(fallbackTimer.current);
-      if (revealTimer.current != null) window.clearTimeout(revealTimer.current);
     };
   }, [subscribe, setUnlocked]);
-
-  useEffect(() => {
-    if (!siteConfig.audioGate.enabled) return;
-    if (!ready || revealScheduled.current) return;
-    revealScheduled.current = true;
-
-    // Session key may exist, but autoplay can still fail after hard reload.
-    // Only real playback keeps the gate hidden.
-    revealTimer.current = window.setTimeout(() => {
-      if (playbackLiveRef.current) {
-        setPhase("hidden");
-        return;
-      }
-      setPhase((current) => (current === "hidden" ? "visible" : current));
-    }, 900);
-
-    return () => {
-      if (revealTimer.current != null) {
-        window.clearTimeout(revealTimer.current);
-        revealTimer.current = null;
-      }
-    };
-  }, [ready]);
 
   const handleStartExperience = useCallback(() => {
     if (startingRef.current) return;
@@ -125,6 +102,7 @@ export function useMusicStartGate() {
 
   return {
     phase,
+    ready,
     visible: phase === "visible" || phase === "starting" || phase === "retry" || phase === "closing",
     closing: phase === "closing",
     starting: phase === "starting",

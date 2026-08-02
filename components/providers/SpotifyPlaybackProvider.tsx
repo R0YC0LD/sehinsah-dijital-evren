@@ -4,6 +4,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useRef,
   useState,
@@ -47,12 +48,33 @@ type Ctx = {
 
 const SpotifyPlaybackContext = createContext<Ctx | null>(null);
 
+const IFRAME_API = "https://open.spotify.com/embed/iframe-api/v1";
+const SCRIPT_FLAG = "__sehinsahSpotifyIframeApiLoading";
+
+declare global {
+  interface Window {
+    [SCRIPT_FLAG]?: boolean;
+  }
+}
+
 export function SpotifyPlaybackProvider({ children }: { children: React.ReactNode }) {
   const controllerRef = useRef<SpotifyEmbedController | null>(null);
   const listeners = useRef(new Set<Listener>());
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
+
+  // Preload Spotify iframe API early so the gate is not stuck on HAZIRLANIYOR.
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (document.querySelector(`script[src="${IFRAME_API}"]`)) return;
+    if (window[SCRIPT_FLAG]) return;
+    window[SCRIPT_FLAG] = true;
+    const script = document.createElement("script");
+    script.src = IFRAME_API;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
 
   const registerController = useCallback((controller: SpotifyEmbedController | null) => {
     controllerRef.current = controller;

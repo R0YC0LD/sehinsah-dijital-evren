@@ -11,6 +11,7 @@ export function MusicStartGate() {
     closing,
     starting,
     retry,
+    ready,
     handleStartExperience,
     handleSilentContinue,
   } = useMusicStartGate();
@@ -61,9 +62,15 @@ export function MusicStartGate() {
             type="button"
             className={styles.startButton}
             onClick={handleStartExperience}
-            disabled={starting}
+            disabled={starting || !ready}
           >
-            {starting ? "BAŞLATILIYOR…" : retry ? "MÜZİĞİ BAŞLAT" : "DENEYİMİ BAŞLAT"}
+            {starting
+              ? "BAŞLATILIYOR…"
+              : !ready
+                ? "HAZIRLANIYOR…"
+                : retry
+                  ? "MÜZİĞİ BAŞLAT"
+                  : "DENEYİMİ BAŞLAT"}
           </button>
           <button type="button" className={styles.silent} onClick={handleSilentContinue}>
             SESSİZ DEVAM ET
