@@ -3,6 +3,7 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import { siteConfig } from "@/data/site";
 import { isVercelRuntime } from "@/lib/deploy";
+import { getDeezerCatalog } from "@/lib/spotify/deezer-catalog";
 import { hasSpotifyCredentials, spotifyFetch } from "@/lib/spotify/server-client";
 import { buildMusicCatalog, dedupeAlbums, emptyCatalog, normalizeAlbum } from "@/lib/spotify/normalize";
 import type { MusicCatalog, SpotifyRawAlbum } from "@/lib/spotify/types";
@@ -38,18 +39,19 @@ async function fetchAllAlbums(artistId: string, market: string): Promise<Spotify
 }
 
 async function loadLiveCatalog(): Promise<MusicCatalog> {
-  if (!hasSpotifyCredentials()) {
-    if (process.env.NODE_ENV === "development") {
-      console.warn("[spotify] Missing SPOTIFY_CLIENT_ID / SPOTIFY_CLIENT_SECRET");
-    }
-    return getGeneratedSpotifyCatalog();
+  if (hasSpotifyCredentials()) {
+    const artistId = siteConfig.spotify.artistId;
+    const market = process.env.SPOTIFY_MARKET || "TR";
+    const raw = await fetchAllAlbums(artistId, market);
+    const releases = dedupeAlbums(raw.map(normalizeAlbum));
+    return buildMusicCatalog(releases, "live-cache");
   }
 
-  const artistId = siteConfig.spotify.artistId;
-  const market = process.env.SPOTIFY_MARKET || "TR";
-  const raw = await fetchAllAlbums(artistId, market);
-  const releases = dedupeAlbums(raw.map(normalizeAlbum));
-  return buildMusicCatalog(releases, "live-cache");
+  if (process.env.NODE_ENV === "development") {
+    console.warn("[catalog] Spotify credentials missing — using Deezer live catalog");
+  }
+
+  return getDeezerCatalog();
 }
 
 function revalidateSeconds() {
@@ -66,9 +68,13 @@ async function getLiveCachedSpotifyCatalog(): Promise<MusicCatalog> {
     return await cached();
   } catch (error) {
     if (process.env.NODE_ENV === "development") {
-      console.warn("[spotify] live catalog failed", error);
+      console.warn("[catalog] live catalog failed", error);
     }
-    return getGeneratedSpotifyCatalog();
+    try {
+      return await getDeezerCatalog();
+    } catch {
+      return getGeneratedSpotifyCatalog();
+    }
   }
 }
 

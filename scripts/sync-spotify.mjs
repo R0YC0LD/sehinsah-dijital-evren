@@ -4,8 +4,10 @@ import path from "node:path";
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, "data", "generated", "spotify-catalog.json");
 const ARTIST_ID = "0FUsrstJwmg4WVHQMTYuUA";
+const DEEZER_ARTIST_ID = "10003428";
 const MARKET = process.env.SPOTIFY_MARKET || "TR";
 const MAX_PAGES = 4;
+const DISPLAY_NAME = "Şehinşah";
 
 async function getToken(clientId, clientSecret) {
   const basic = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
@@ -27,7 +29,7 @@ function pickImage(images = []) {
   return preferred?.url || images[0]?.url || null;
 }
 
-function normalize(raw) {
+function normalizeSpotify(raw) {
   return {
     id: raw.id,
     name: raw.name,
@@ -42,7 +44,31 @@ function normalize(raw) {
   };
 }
 
-async function fetchAlbums(token) {
+function mapDeezerType(recordType) {
+  const t = (recordType || "").toLowerCase();
+  if (t === "album") return "album";
+  if (t === "compile" || t === "compilation") return "compilation";
+  return "single";
+}
+
+function normalizeDeezer(raw) {
+  const releaseDate = raw.release_date || "";
+  const q = encodeURIComponent(`${raw.title} ${DISPLAY_NAME}`);
+  return {
+    id: `deezer-${raw.id}`,
+    name: raw.title,
+    albumType: mapDeezerType(raw.record_type),
+    releaseDate,
+    releaseYear: releaseDate.slice(0, 4),
+    totalTracks: raw.nb_tracks || 0,
+    imageUrl: raw.cover_xl || raw.cover_big || raw.cover_medium || null,
+    spotifyUrl: `https://open.spotify.com/intl-tr/search/${q}`,
+    uri: `deezer:album:${raw.id}`,
+    artists: [DISPLAY_NAME],
+  };
+}
+
+async function fetchSpotifyAlbums(token) {
   const collected = [];
   let next =
     `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums?include_groups=album,single&market=${MARKET}&limit=50`;
@@ -59,7 +85,29 @@ async function fetchAlbums(token) {
     pages += 1;
   }
 
-  return collected;
+  return collected.map(normalizeSpotify);
+}
+
+async function fetchDeezerAlbums() {
+  const collected = [];
+  let next = `https://api.deezer.com/artist/${DEEZER_ARTIST_ID}/albums?limit=50`;
+  let pages = 0;
+
+  while (next && pages < MAX_PAGES) {
+    const res = await fetch(next, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "SehinsahDijitalEvren/1.0 (catalog sync)",
+      },
+    });
+    if (!res.ok) throw new Error(`deezer_${res.status}`);
+    const data = await res.json();
+    collected.push(...(data.data || []));
+    next = data.next || null;
+    pages += 1;
+  }
+
+  return collected.map(normalizeDeezer);
 }
 
 function dedupe(items) {
@@ -86,50 +134,62 @@ async function keepExisting() {
   }
 }
 
+async function writeCatalog(releases) {
+  const albums = releases.filter((r) => r.albumType === "album");
+  const singles = releases.filter((r) => r.albumType === "single");
+
+  if (!releases.length) {
+    console.warn("[sync-spotify] Empty response — keeping previous file");
+    await keepExisting();
+    return false;
+  }
+
+  const catalog = {
+    releases,
+    albums,
+    singles,
+    latestRelease: releases[0] || null,
+    counts: {
+      total: releases.length,
+      albums: albums.length,
+      singles: singles.length,
+    },
+    updatedAt: new Date().toISOString(),
+    source: "generated-json",
+  };
+
+  await mkdir(path.dirname(OUT), { recursive: true });
+  await writeFile(OUT, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+  console.log(`[sync-spotify] Wrote ${releases.length} releases → ${OUT}`);
+  return true;
+}
+
 async function main() {
   const clientId = process.env.SPOTIFY_CLIENT_ID?.trim();
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET?.trim();
 
-  if (!clientId || !clientSecret) {
-    console.warn("[sync-spotify] Missing credentials — skip");
-    await keepExisting();
-    return;
-  }
-
   try {
-    const token = await getToken(clientId, clientSecret);
-    const raw = await fetchAlbums(token);
-    const releases = dedupe(raw.map(normalize));
-    const albums = releases.filter((r) => r.albumType === "album");
-    const singles = releases.filter((r) => r.albumType === "single");
-
-    if (!releases.length) {
-      console.warn("[sync-spotify] Empty response — keeping previous file");
-      await keepExisting();
+    if (clientId && clientSecret) {
+      const token = await getToken(clientId, clientSecret);
+      const releases = dedupe(await fetchSpotifyAlbums(token));
+      await writeCatalog(releases);
       return;
     }
 
-    const catalog = {
-      releases,
-      albums,
-      singles,
-      latestRelease: releases[0] || null,
-      counts: {
-        total: releases.length,
-        albums: albums.length,
-        singles: singles.length,
-      },
-      updatedAt: new Date().toISOString(),
-      source: "generated-json",
-    };
-
-    await mkdir(path.dirname(OUT), { recursive: true });
-    await writeFile(OUT, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
-    console.log(`[sync-spotify] Wrote ${releases.length} releases → ${OUT}`);
+    console.warn("[sync-spotify] Spotify credentials missing — syncing via Deezer");
+    const releases = dedupe(await fetchDeezerAlbums());
+    await writeCatalog(releases);
   } catch (error) {
     console.error("[sync-spotify] Failed:", error.message);
-    await keepExisting();
-    process.exitCode = 0;
+    try {
+      console.warn("[sync-spotify] Trying Deezer fallback…");
+      const releases = dedupe(await fetchDeezerAlbums());
+      await writeCatalog(releases);
+    } catch (fallbackError) {
+      console.error("[sync-spotify] Fallback failed:", fallbackError.message);
+      await keepExisting();
+      process.exitCode = 0;
+    }
   }
 }
 

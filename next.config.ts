@@ -20,6 +20,8 @@ const nextConfig: NextConfig = {
             { protocol: "https", hostname: "mosaic.scdn.co", pathname: "/**" },
             { protocol: "https", hostname: "image-cdn-ak.spotifycdn.com", pathname: "/**" },
             { protocol: "https", hostname: "image-cdn-fa.spotifycdn.com", pathname: "/**" },
+            { protocol: "https", hostname: "cdn-images.dzcdn.net", pathname: "/**" },
+            { protocol: "https", hostname: "api.deezer.com", pathname: "/**" },
           ],
         },
       }),
