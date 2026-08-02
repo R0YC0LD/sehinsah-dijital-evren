@@ -1,0 +1,149 @@
+.section {
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(5rem, 12vh, 8rem) clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(0, 214, 107, 0.08), transparent 35%),
+    var(--void);
+  overflow: hidden;
+}
+
+.copy {
+  max-width: 34ch;
+}
+
+.index {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--silver);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(3rem, 9vw, 6.5rem);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: var(--bone);
+  margin-bottom: 0.75rem;
+  max-width: 32ch;
+}
+
+.note {
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  color: var(--ticket-green);
+}
+
+.posterScene {
+  position: relative;
+  perspective: 1000px;
+  display: grid;
+  place-items: center;
+  min-height: 420px;
+}
+
+.ghost {
+  position: absolute;
+  width: min(68vw, 620px);
+  aspect-ratio: 1;
+  background: var(--blood);
+  transform: translate(18px, 18px);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.bigIndex {
+  position: absolute;
+  left: -0.2em;
+  top: -0.15em;
+  font-size: clamp(6rem, 18vw, 12rem);
+  color: rgba(233, 229, 220, 0.06);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.poster {
+  position: relative;
+  z-index: 2;
+  width: min(68vw, 640px);
+  aspect-ratio: 1;
+  display: block;
+  transform-style: preserve-3d;
+  will-change: transform;
+  outline-offset: 6px;
+}
+
+.poster:hover,
+.poster:focus-visible {
+  box-shadow: 0 0 0 1px var(--ticket-green);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #0a0a0a;
+}
+
+.fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px dashed rgba(0, 214, 107, 0.4);
+  color: var(--ticket-green);
+  letter-spacing: 0.18em;
+}
+
+.floatLabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.55rem 0.9rem;
+  background: var(--ticket-green);
+  color: var(--ink);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.poster:hover .floatLabel,
+.poster:focus-visible .floatLabel {
+  opacity: 1;
+}
+
+.ctaWrap {
+  margin-top: 1.5rem;
+  z-index: 3;
+}
+
+.cta {
+  color: var(--ticket-green);
+}
+
+@media (max-width: 899px) {
+  .section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .poster,
+  .ghost {
+    width: min(88vw, 420px);
+  }
+
+  .posterScene {
+    min-height: auto;
+    padding-bottom: 1rem;
+  }
+}

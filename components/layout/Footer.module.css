@@ -1,0 +1,38 @@
+.footer {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem clamp(1.25rem, 4vw, 3rem) calc(2rem + var(--safe-bottom));
+  border-top: 1px solid rgba(233, 229, 220, 0.1);
+  display: grid;
+  gap: 1.5rem;
+}
+
+.brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.85rem;
+}
+
+.name {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  color: var(--silver);
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.75rem;
+}
+
+.disclaimer {
+  font-size: 0.72rem;
+  color: var(--silver);
+  letter-spacing: 0.04em;
+  max-width: 36ch;
+}

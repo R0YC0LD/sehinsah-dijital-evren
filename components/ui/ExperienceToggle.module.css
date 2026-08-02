@@ -1,0 +1,121 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: none;
+}
+
+.label {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--bone);
+  min-width: 2.4rem;
+}
+
+.modeToggle {
+  --off: #5c6270;
+  --mid: #8a1f1f;
+  --on: #d7ff3f;
+  --transDur: 0.5s;
+  --timing: cubic-bezier(0.6, 0, 0.4, 1);
+
+  width: 3rem;
+  height: 2rem;
+  border-radius: 999px;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: none;
+  background: var(--off);
+  flex-shrink: 0;
+  transition: background var(--transDur) var(--timing);
+}
+
+body.is-touch .toggle,
+body.is-touch .modeToggle,
+body.reduce-motion .toggle,
+body.reduce-motion .modeToggle {
+  cursor: pointer;
+}
+
+.modeToggle::before {
+  content: "";
+  position: absolute;
+  top: 0.28rem;
+  left: 0.28rem;
+  width: 1.44rem;
+  height: 1.44rem;
+  border-radius: 999px;
+  background: var(--paper);
+  transition:
+    left var(--transDur) var(--timing),
+    width calc(var(--transDur) * 0.5) var(--timing),
+    transform calc(var(--transDur) * 0.5) var(--timing);
+}
+
+.modeToggle:checked {
+  background: var(--on);
+}
+
+.modeToggle:checked::before {
+  left: calc(100% - 1.72rem);
+  background: var(--ink);
+}
+
+.modeToggle:not(.pristine):active::before {
+  width: 1.9rem;
+}
+
+.modeToggle:not(.pristine):checked:active::before {
+  left: calc(100% - 2.18rem);
+}
+
+.modeToggle:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 3px;
+}
+
+/* Mid-color flash while transitioning (non-pristine) */
+.modeToggle:not(.pristine) {
+  animation: none;
+}
+
+.modeToggle:not(.pristine):checked {
+  animation: bgOn var(--transDur) var(--timing) 1;
+}
+
+.modeToggle:not(.pristine):not(:checked) {
+  animation: bgOff var(--transDur) var(--timing) 1;
+}
+
+@keyframes bgOn {
+  0% {
+    background: var(--off);
+  }
+  45% {
+    background: var(--mid);
+  }
+  100% {
+    background: var(--on);
+  }
+}
+
+@keyframes bgOff {
+  0% {
+    background: var(--on);
+  }
+  45% {
+    background: var(--mid);
+  }
+  100% {
+    background: var(--off);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modeToggle,
+  .modeToggle::before {
+    transition: none;
+    animation: none !important;
+  }
+}

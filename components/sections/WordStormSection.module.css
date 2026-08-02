@@ -1,0 +1,80 @@
+.section {
+  position: relative;
+  padding: clamp(5rem, 12vh, 8rem) 0;
+  background:
+    linear-gradient(180deg, var(--void) 0%, #0a0707 40%, var(--void) 100%);
+  overflow: hidden;
+}
+
+.header {
+  padding: 0 clamp(1.25rem, 4vw, 3rem) 2.5rem;
+}
+
+.index {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  color: var(--silver);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2.4rem, 8vw, 6rem);
+  max-width: 12ch;
+}
+
+.marqueeBlock {
+  display: grid;
+  gap: 0.85rem;
+  margin: 2rem 0 3rem;
+  color: rgba(233, 229, 220, 0.35);
+  font-size: clamp(1.4rem, 4vw, 2.8rem);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  gap: 1.4rem;
+}
+
+.item {
+  max-width: 28ch;
+}
+
+.item:nth-child(2) {
+  margin-left: 12vw;
+}
+
+.item:nth-child(3) {
+  margin-left: 4vw;
+}
+
+.item:nth-child(4) {
+  margin-left: 22vw;
+}
+
+.item:nth-child(5) {
+  margin-left: 8vw;
+}
+
+.word {
+  font-size: var(--size);
+  letter-spacing: 0.04em;
+  cursor: none;
+}
+
+@media (max-width: 899px) {
+  .item:nth-child(n) {
+    margin-left: 0;
+  }
+
+  .word {
+    font-size: clamp(1.1rem, 5.5vw, 1.6rem) !important;
+  }
+}
+
+body.is-touch .word,
+body.reduce-motion .word {
+  cursor: pointer;
+}
