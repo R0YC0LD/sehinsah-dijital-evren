@@ -1,0 +1,23 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid transparent;
+}
+
+.tab:hover {
+  color: var(--foreground);
+}
+
+.active {
+  color: var(--spotify);
+  border-bottom-color: var(--spotify);
+}

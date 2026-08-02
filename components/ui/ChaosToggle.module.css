@@ -1,0 +1,107 @@
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.label {
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  min-width: 2.4rem;
+}
+
+.input {
+  --off: #5c6270;
+  --mid: #8a1f1f;
+  --on: #1ed760;
+  --transDur: 0.5s;
+  --timing: cubic-bezier(0.6, 0, 0.4, 1);
+
+  width: 2.75rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background: var(--off);
+  transition: background var(--transDur) var(--timing);
+}
+
+.input::before {
+  content: "";
+  position: absolute;
+  top: 0.22rem;
+  left: 0.22rem;
+  width: 1.26rem;
+  height: 1.26rem;
+  border-radius: 999px;
+  background: var(--foreground);
+  transition:
+    left var(--transDur) var(--timing),
+    width calc(var(--transDur) * 0.5) var(--timing);
+}
+
+.input:checked {
+  background: var(--on);
+}
+
+.input:checked::before {
+  left: calc(100% - 1.48rem);
+  background: #04140a;
+}
+
+.input:not(.pristine):active::before {
+  width: 1.7rem;
+}
+
+.input:not(.pristine):checked:active::before {
+  left: calc(100% - 1.92rem);
+}
+
+.input:focus-visible {
+  outline: 2px solid var(--spotify);
+  outline-offset: 3px;
+}
+
+.input:not(.pristine):checked {
+  animation: bgOn var(--transDur) var(--timing) 1;
+}
+
+.input:not(.pristine):not(:checked) {
+  animation: bgOff var(--transDur) var(--timing) 1;
+}
+
+@keyframes bgOn {
+  0% {
+    background: var(--off);
+  }
+  45% {
+    background: var(--mid);
+  }
+  100% {
+    background: var(--on);
+  }
+}
+
+@keyframes bgOff {
+  0% {
+    background: var(--on);
+  }
+  45% {
+    background: var(--mid);
+  }
+  100% {
+    background: var(--off);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .input,
+  .input::before {
+    transition: none;
+    animation: none !important;
+  }
+}

@@ -1,0 +1,73 @@
+.section {
+  position: relative;
+  background: var(--background);
+}
+
+.stage {
+  position: relative;
+  min-height: 100svh;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 70% 35%, rgba(167, 25, 25, 0.08), transparent 42%),
+    var(--background);
+}
+
+.copy {
+  position: relative;
+  z-index: 4;
+  max-width: 28rem;
+  padding: calc(var(--header-h) + 3.5rem) clamp(1.25rem, 4vw, 3rem) 0;
+}
+
+.title {
+  font-size: clamp(4rem, 14vw, 9.5rem);
+  margin-bottom: 1.25rem;
+}
+
+.lines {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  letter-spacing: 0.12em;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 18ch;
+  margin-bottom: 1.75rem;
+}
+
+.cta {
+  display: inline-flex;
+  color: var(--spotify);
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  border-bottom: 1px solid rgba(30, 215, 96, 0.45);
+  padding-bottom: 0.2rem;
+}
+
+.cue {
+  position: absolute;
+  left: clamp(1.25rem, 4vw, 3rem);
+  bottom: 2rem;
+  z-index: 4;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+}
+
+.cueLine {
+  width: 1px;
+  height: 42px;
+  background: linear-gradient(to bottom, var(--foreground), transparent);
+}
+
+@media (max-width: 899px) {
+  .copy {
+    max-width: 70%;
+    padding-top: calc(var(--header-h) + 2.5rem);
+  }
+
+  .title {
+    font-size: clamp(3.2rem, 16vw, 5rem);
+  }
+}

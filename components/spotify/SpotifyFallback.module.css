@@ -1,0 +1,8 @@
+.box {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  color: var(--muted);
+  max-width: 36rem;
+}

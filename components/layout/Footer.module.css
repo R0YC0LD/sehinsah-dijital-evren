@@ -1,23 +1,26 @@
 .footer {
-  position: relative;
-  z-index: 2;
-  padding: 2rem clamp(1.25rem, 4vw, 3rem) calc(1.75rem + var(--safe-bottom));
-  border-top: 1px solid rgba(233, 229, 220, 0.08);
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: space-between;
-  gap: 1.25rem 2rem;
+  gap: 1rem 2rem;
+  padding: 2rem clamp(1.25rem, 4vw, 3rem) calc(1.5rem + var(--safe-bottom));
+  border-top: 1px solid var(--border);
 }
 
-.name {
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  letter-spacing: 0.06em;
+.brand {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem 1.5rem;
-  font-size: 0.8rem;
+  gap: 1rem 1.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
+
+.links a:hover {
+  color: var(--foreground);
 }

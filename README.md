@@ -1,36 +1,56 @@
 # Şehinşah — Dijital Evren
 
-Şehinşah için karanlık, katmanlı, scroll tabanlı sinematik sanatçı deneyimi.
+Karanlık, sade ve sinematik sanatçı sitesi. Tek gerçekçi düşüş animasyonu, Spotify Web API diskografisi ve kontrollü kaos.
 
-Konsept: **YERÇEKİMİNE KARŞI SÖZLER** — beden aşağı düşer, sözler yukarı yükselir.
+## Teknolojiler
 
-> Bağımsız dijital konsept çalışma. Resmî yayın için `data/site.ts` içindeki `isOfficial` alanını `true` yapın.
+- Next.js App Router + TypeScript
+- GSAP ScrollTrigger + Lenis
+- Spotify Web API (Client Credentials, server-only)
+- CSS Modules
 
 ## Kurulum
 
 ```bash
 npm install
-```
-
-## Geliştirme
-
-```bash
+cp .env.example .env.local
 npm run dev
 ```
 
-Tarayıcıda: [http://localhost:3000](http://localhost:3000)
+## Spotify Developer App
 
-## Production build
+1. [Spotify Developer Dashboard](https://developer.spotify.com/dashboard) → Create app
+2. Client ID ve Client Secret’ı kopyala
+3. `.env.local` içine ekle:
 
-```bash
-npm run build
+```env
+SPOTIFY_CLIENT_ID=...
+SPOTIFY_CLIENT_SECRET=...
+SPOTIFY_MARKET=TR
+SPOTIFY_REVALIDATE_SECONDS=21600
+SPOTIFY_TOP_TRACKS_MODE=embed
+NEXT_PUBLIC_SITE_URL=http://127.0.0.1:3000
 ```
 
-Statik çıktı `out/` klasörüne yazılır (`output: "export"`).
+**Önemli**
 
-## Görseller
+- Client Secret asla `NEXT_PUBLIC_` ile yayınlanmaz ve GitHub’a yüklenmez.
+- Bu site ziyaretçiden Spotify girişi istemez; sunucu Client Credentials kullanır.
+- Development Mode uygulamalar sınırlı erişimde olabilir.
+- Popüler parçalar için varsayılan çözüm Artist Embed’dir (`SPOTIFY_TOP_TRACKS_MODE=embed`). Top Tracks API Development Mode’da güvenilir değildir.
 
-Görselleri şu yollara koyun:
+## Albümler nasıl güncellenir?
+
+`lib/spotify/artist.ts` Spotify `/artists/{id}/albums` endpoint’ini çeker, normalize eder, duplicate temizler ve `unstable_cache` ile saklar.
+
+- Varsayılan cache: **6 saat** (`SPOTIFY_REVALIDATE_SECONDS=21600`)
+- Credential yoksa veya API düşerse site çökmez; Embed + “Spotify’da aç” bağlantısı kalır.
+
+## Bağlantılar ve görseller
+
+- Tüm sabit URL’ler: `data/site.ts`
+- Bubilet / Instagram / Spotify artist URL’leri burada değişir
+- Yerel görseller:
 
 ```
 public/media/sehinsah-falling.png
@@ -38,98 +58,49 @@ public/media/sehinsah-bubilet.png
 public/media/sehinsah-instagram.png
 ```
 
-Orijinal dosya adları proje kökünde varsa kopyalanmış olmalıdır:
+## Komutlar
 
-- `1000x1000-Photoroom.png` → `sehinsah-falling.png`
-- `image (31).png` → `sehinsah-bubilet.png`
-- `image (32).png` → `sehinsah-instagram.png`
-
-Görsel yoksa ilgili bölüm fallback alanı gösterir; uygulama çökmez.
-
-## Bağlantıları değiştirme
-
-`data/site.ts`:
-
-- `links.bubilet`
-- `links.instagram`
-- Menü / bölüm metinleri
-- Footer ve disclaimer
-
-## Arşiv öğesi ekleme
-
-`data/archive.ts` içine yeni obje ekleyin:
-
-```ts
-{
-  id: "yeni",
-  index: "04",
-  title: "BAŞLIK",
-  description: "Açıklama",
-  layout: "wide", // "wide" | "tall" | "strip"
-  href: "https://...", // opsiyonel
-}
+```bash
+npm run dev
+npm run lint
+npm run build
+npm start
 ```
 
-## Konser / Bubilet
+## Deployment
 
-Bubilet URL’sini `data/site.ts` → `links.bubilet` üzerinden güncelleyin. Poster görseli `public/media/sehinsah-bubilet.png`.
+### Vercel (önerilen)
 
-## Kaos modu
+1. Repo’yu Vercel’e bağla
+2. Environment variables olarak Spotify secret’larını ekle
+3. Deploy
 
-Sağ alttaki control dock içindeki toggle:
+ISR/cache ile albümler yaklaşık 6 saatte bir yenilenir.
 
-- **SADE**: düşük grain / glitch
-- **KAOS**: kontrollü bozulma artar
-
-Tercih `localStorage` (`sehinsah-chaos-mode`) içinde saklanır. `prefers-reduced-motion` açıksa kaos görsel hareketleri artırılmaz.
-
-## Environment variables
-
-| Değişken | Açıklama |
-|---|---|
-| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (SEO, sitemap, OG) |
-| `NEXT_PUBLIC_BASE_PATH` | GitHub Pages proje yolu (ör. `/sehinsah-dijital-evren`) |
-
-Yerel geliştirmede her ikisini boş bırakabilirsiniz.
-
-## GitHub Pages
-
-- Repo: https://github.com/R0YC0LD/sehinsah-dijital-evren
-- Canlı site: https://R0YC0LD.github.io/sehinsah-dijital-evren/
-
-Şu an yayın `gh-pages` branch’inden yapılıyor (statik `out/` çıktısı).
-
-Yerel yeniden deploy:
+### GitHub Pages (statik export)
 
 ```bash
 # Windows PowerShell
+$env:NEXT_OUTPUT="export"
 $env:NEXT_PUBLIC_BASE_PATH="/sehinsah-dijital-evren"
 $env:NEXT_PUBLIC_SITE_URL="https://R0YC0LD.github.io/sehinsah-dijital-evren"
+# opsiyonel: Spotify secret’ları build sırasında albümleri dondurur
 npm run build
-# ardından out/ içeriğini gh-pages branch'ine push edin
 ```
 
-İsteğe bağlı: `.github/workflows/deploy.yml` dosyası GitHub Actions deploy’u için hazır. Token’da `workflow` scope yoksa bu dosya push edilemez; GitHub CLI ile `gh auth refresh -s workflow` sonrası Actions’a geçilebilir.
+Çıktı `out/` klasörüne yazılır. Statik ortamda runtime revalidate yoktur; albümler build anındaki veridir.
 
-## Teknolojiler
+## Kaos modu
 
-- Next.js App Router + TypeScript
-- GSAP + ScrollTrigger
-- Lenis smooth scroll
-- CSS Modules + global design tokens
-- next/font (Bebas Neue + Space Grotesk)
+Header (masaüstü) / mobil menü içinde **SADE / KAOS** toggle. Tercih `localStorage` içinde saklanır. Reduced motion açıksa kaos hareketi artırılmaz.
 
-## Dosya ağacı (özet)
+## Mimari özet
 
 ```
-app/                 layout, page, globals, SEO
-components/
-  loading/           IntroLoader
-  layout/            Header, Menu, Cursor, Dock...
-  sections/          Hero, Falling, Words, Ticket...
-  effects/           Noise, Feathers, Glitch...
-  ui/                Toggle, Marquee, ExternalLink
-data/                site.ts, archive.ts
-hooks/               Lenis, reduced motion, pointer...
-public/media/        sanatçı görselleri
+app/                 page, layout, SEO
+components/hero/     tek düşüş animasyonu
+components/spotify/  embed + diskografi
+components/sections/ Bubilet, Instagram, Final
+lib/spotify/         server-only API client
+data/site.ts         sabit içerik ve URL’ler
 ```

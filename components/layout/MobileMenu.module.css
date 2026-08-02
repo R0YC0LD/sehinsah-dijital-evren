@@ -1,0 +1,49 @@
+.menu {
+  position: fixed;
+  inset: 0;
+  z-index: 55;
+  background: rgba(5, 5, 5, 0.96);
+  padding: calc(var(--header-h) + 1.5rem) clamp(1.25rem, 5vw, 2.5rem)
+    calc(2rem + var(--safe-bottom));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.link {
+  font-size: clamp(2.4rem, 12vw, 3.8rem);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.35rem;
+}
+
+.meta {
+  display: grid;
+  gap: 1rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+}
+
+.spotify {
+  color: var(--spotify);
+}
+
+@media (min-width: 980px) {
+  .menu {
+    display: none;
+  }
+}

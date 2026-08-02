@@ -1,44 +1,55 @@
 "use client";
 
+import { useLayoutEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Footer } from "@/components/layout/Footer";
-import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
+import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./FinalSection.module.css";
 
-type Props = {
-  onBackTop: () => void;
-};
+gsap.registerPlugin(ScrollTrigger);
 
-export function FinalSection({ onBackTop }: Props) {
+export function FinalSection() {
+  const ref = useRef<HTMLElement>(null);
+  const reduced = useReducedMotion();
+
+  useLayoutEffect(() => {
+    if (!ref.current || reduced) return;
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        "[data-final-line]",
+        { yPercent: 110, opacity: 0 },
+        {
+          yPercent: 0,
+          opacity: 1,
+          duration: 0.9,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 75%",
+            once: true,
+          },
+        },
+      );
+    }, ref);
+    return () => ctx.revert();
+  }, [reduced]);
+
   return (
-    <section
-      id="sonsuzluk"
-      className={styles.section}
-      data-section="sonsuzluk"
-      aria-label="Sonsuzluk"
-    >
+    <section id="final" ref={ref} className={styles.section} aria-label="Final">
       <div className={styles.stage}>
-        <MediaImage
-          src={siteConfig.media.falling}
-          alt=""
-          width={1000}
-          height={1000}
-          className={styles.ghost}
-        />
-
-        <h2 className={`display ${styles.lineOne}`}>{siteConfig.final.lineOne}</h2>
-
-        <button
-          type="button"
-          className={`editorial-link ${styles.back}`}
-          onClick={onBackTop}
-          data-cursor="AÇ"
-        >
+        <div className={styles.mask}>
+          <h2 className={`display ${styles.line}`} data-final-line>
+            {siteConfig.final.lineOne}
+          </h2>
+        </div>
+        <p className={styles.sub}>{siteConfig.final.lineTwo}</p>
+        <a href="#hero" className={`editorial-link ${styles.back}`}>
           {siteConfig.final.backToTop}
-        </button>
+        </a>
       </div>
-
-      <Footer onBackTop={onBackTop} />
+      <Footer />
     </section>
   );
 }

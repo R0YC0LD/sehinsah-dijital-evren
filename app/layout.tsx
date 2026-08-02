@@ -1,42 +1,35 @@
 import type { Metadata, Viewport } from "next";
-import { Bebas_Neue, Space_Grotesk } from "next/font/google";
+import { Anton, Space_Grotesk } from "next/font/google";
+import { SiteShell } from "@/components/SiteShell";
 import { siteConfig } from "@/data/site";
 import "./globals.css";
 
-const bebas = Bebas_Neue({
+const anton = Anton({
   weight: "400",
   subsets: ["latin"],
-  variable: "--font-bebas",
+  variable: "--font-anton",
   display: "swap",
 });
 
 const space = Space_Grotesk({
   subsets: ["latin"],
+  weight: ["400", "500", "700"],
   variable: "--font-space",
   display: "swap",
 });
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://127.0.0.1:3000";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: siteConfig.title,
   description: siteConfig.description,
-  applicationName: siteConfig.title,
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
     type: "website",
     locale: "tr_TR",
-    images: [
-      {
-        url: siteConfig.media.bubilet,
-        width: 960,
-        height: 960,
-        alt: "Şehinşah",
-      },
-    ],
+    images: [{ url: siteConfig.media.bubilet, width: 960, height: 960 }],
   },
   twitter: {
     card: "summary_large_image",
@@ -44,10 +37,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.media.bubilet],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {
@@ -58,12 +48,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="tr" className={`${bebas.variable} ${space.variable}`}>
-      <body>{children}</body>
+    <html lang="tr" className={`${anton.variable} ${space.variable}`}>
+      <body>
+        <SiteShell>{children}</SiteShell>
+      </body>
     </html>
   );
 }

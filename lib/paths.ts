@@ -1,6 +1,3 @@
-/**
- * Prefix asset paths with NEXT_PUBLIC_BASE_PATH for GitHub Pages.
- */
 export function withBasePath(path: string): string {
   const base = process.env.NEXT_PUBLIC_BASE_PATH || "";
   if (!path) return base || "/";

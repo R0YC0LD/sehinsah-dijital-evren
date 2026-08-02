@@ -1,46 +1,66 @@
 "use client";
 
-import { siteConfig, sections } from "@/data/site";
+import { useEffect, useState } from "react";
+import { ChaosToggle } from "@/components/ui/ChaosToggle";
+import { ExternalLink } from "@/components/ui/ExternalLink";
+import { siteConfig } from "@/data/site";
 import styles from "./Header.module.css";
 
 type Props = {
-  scrolled: boolean;
-  activeId: string;
   menuOpen: boolean;
   onMenuToggle: () => void;
 };
 
-export function Header({
-  scrolled,
-  activeId,
-  menuOpen,
-  onMenuToggle,
-}: Props) {
-  const current =
-    sections.find((s) => s.id === activeId) ?? sections[0];
+export function Header({ menuOpen, onMenuToggle }: Props) {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-      <a href="#bosluk" className={styles.mark} data-cursor="AÇ">
-        <span>{siteConfig.shortMark}</span>
-        <span className={styles.slash}>/</span>
-        <span>{current.index}</span>
+      <a href="#hero" className={`display ${styles.brand}`}>
+        {siteConfig.artistName}
       </a>
 
-      <p className={styles.sectionName} aria-live="polite">
-        {current.label}
-      </p>
+      <nav className={styles.nav} aria-label="Ana gezinme">
+        {siteConfig.nav.slice(1).map((item) => (
+          <a key={item.id} href={item.href} className={styles.link}>
+            {item.label}
+          </a>
+        ))}
+        <ExternalLink
+          href={siteConfig.spotify.artistUrl}
+          className={styles.spotify}
+          aria-label="Spotify’da dinle (yeni sekme)"
+        >
+          SPOTIFY’DA DİNLE ↗
+        </ExternalLink>
+        <ChaosToggle className={styles.chaosDesktop} />
+      </nav>
 
-      <button
-        type="button"
-        className={styles.menuBtn}
-        onClick={onMenuToggle}
-        aria-expanded={menuOpen}
-        aria-controls="site-menu"
-        data-cursor="AÇ"
-      >
-        {menuOpen ? "KAPAT" : "MENÜ"}
-      </button>
+      <div className={styles.mobileActions}>
+        <ExternalLink
+          href={siteConfig.spotify.artistUrl}
+          className={styles.spotifyCompact}
+          aria-label="Spotify’da dinle (yeni sekme)"
+        >
+          SPOTIFY ↗
+        </ExternalLink>
+        <button
+          type="button"
+          className={styles.menuBtn}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          onClick={onMenuToggle}
+        >
+          {menuOpen ? "KAPAT" : "MENÜ"}
+        </button>
+      </div>
     </header>
   );
 }

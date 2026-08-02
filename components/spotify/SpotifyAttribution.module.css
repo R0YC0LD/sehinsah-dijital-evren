@@ -1,0 +1,10 @@
+.attr {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.link {
+  color: var(--spotify);
+}

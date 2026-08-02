@@ -1,0 +1,111 @@
+.section {
+  min-height: 80svh;
+  padding: clamp(4.5rem, 10vh, 7rem) clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  text-align: center;
+  gap: 1rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.title {
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  margin-bottom: 0.5rem;
+}
+
+.portal {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  display: grid;
+  place-items: center;
+  margin: 0.5rem 0;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  animation: spin 22s linear infinite;
+}
+
+.portal:hover .ring {
+  animation-duration: 12s;
+}
+
+.ring svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ringText {
+  fill: var(--muted);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-family: var(--font-body);
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s var(--ease);
+}
+
+.portal:hover .avatar {
+  transform: scale(1.03);
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-display);
+  font-size: 2rem;
+}
+
+.handle {
+  letter-spacing: 0.14em;
+  color: var(--muted);
+}
+
+.cta {
+  margin-top: 0.15rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 899px) {
+  .portal {
+    width: 180px;
+    height: 180px;
+  }
+
+  .avatar {
+    width: 96px;
+    height: 96px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring {
+    animation: none;
+  }
+}

@@ -13,11 +13,6 @@ type Props = {
   onErrorFallback?: React.ReactNode;
 };
 
-/**
- * Public media images for static GitHub Pages.
- * Uses native img + basePath because next/image may skip basePath
- * on unoptimized public assets during static export.
- */
 export function MediaImage({
   src,
   alt,
@@ -28,7 +23,6 @@ export function MediaImage({
   onErrorFallback,
 }: Props) {
   const [failed, setFailed] = useState(false);
-
   if (failed && onErrorFallback) return <>{onErrorFallback}</>;
   if (failed) return null;
 

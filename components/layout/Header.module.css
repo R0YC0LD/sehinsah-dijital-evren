@@ -1,75 +1,84 @@
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  inset: 0 0 auto;
   z-index: 60;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
   height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   padding: 0 clamp(1rem, 3vw, 2rem);
-  pointer-events: none;
-  transition: background 0.35s ease, backdrop-filter 0.35s ease;
-}
-
-.header > * {
-  pointer-events: auto;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .scrolled {
-  background: rgba(5, 5, 5, 0.35);
-  backdrop-filter: blur(8px);
+  background: rgba(5, 5, 5, 0.72);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--border);
 }
 
-.mark {
-  justify-self: start;
-  display: inline-flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  letter-spacing: 0.12em;
+.brand {
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  letter-spacing: 0.08em;
 }
 
-.slash {
-  color: var(--blood);
+.nav {
+  display: none;
+  align-items: center;
+  gap: 1.25rem;
 }
 
-.sectionName {
-  justify-self: center;
-  font-size: 0.68rem;
-  letter-spacing: 0.28em;
-  color: var(--silver);
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.link {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  transition: color 0.2s ease;
 }
 
-.scrolled .sectionName {
-  opacity: 1;
-  transform: translateY(0);
+.link:hover {
+  color: var(--foreground);
+}
+
+.spotify {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  color: var(--spotify);
+  border-bottom: 1px solid transparent;
+}
+
+.spotify:hover {
+  border-bottom-color: var(--spotify);
+}
+
+.chaosDesktop {
+  margin-left: 0.25rem;
+}
+
+.mobileActions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.spotifyCompact {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--spotify);
 }
 
 .menuBtn {
-  justify-self: end;
-  font-size: 0.78rem;
-  letter-spacing: 0.24em;
-  padding: 0.45rem 0;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.25s ease, color 0.25s ease;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
 }
 
-.menuBtn:hover {
-  border-color: var(--paper);
-}
-
-@media (max-width: 699px) {
-  .sectionName {
-    display: none;
+@media (min-width: 980px) {
+  .nav {
+    display: flex;
   }
 
-  .header {
-    grid-template-columns: 1fr auto;
+  .mobileActions {
+    display: none;
   }
 }

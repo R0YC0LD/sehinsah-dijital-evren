@@ -1,0 +1,20 @@
+.section {
+  padding: clamp(4.5rem, 10vh, 7rem) clamp(1.25rem, 4vw, 3rem);
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.listen {
+  color: var(--spotify);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+}
+
+.popular {
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.discoTitle {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  margin-bottom: 1.25rem;
+}

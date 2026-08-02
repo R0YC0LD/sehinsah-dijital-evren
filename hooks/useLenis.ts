@@ -7,36 +7,20 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-type Options = {
-  enabled?: boolean;
-  stopped?: boolean;
-};
-
-export function useLenis({ enabled = true, stopped = false }: Options = {}) {
+export function useLenis(enabled = true, stopped = false) {
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
-    if (!enabled) {
-      document.documentElement.classList.remove("lenis", "lenis-smooth");
-      return;
-    }
+    if (!enabled) return;
 
     const lenis = new Lenis({
-      duration: 1.1,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 1.05,
       smoothWheel: true,
-      touchMultiplier: 1.2,
     });
-
     lenisRef.current = lenis;
-    document.documentElement.classList.add("lenis", "lenis-smooth");
-
     lenis.on("scroll", ScrollTrigger.update);
 
-    const ticker = (time: number) => {
-      lenis.raf(time * 1000);
-    };
-
+    const ticker = (time: number) => lenis.raf(time * 1000);
     gsap.ticker.add(ticker);
     gsap.ticker.lagSmoothing(0);
 
@@ -44,7 +28,6 @@ export function useLenis({ enabled = true, stopped = false }: Options = {}) {
       gsap.ticker.remove(ticker);
       lenis.destroy();
       lenisRef.current = null;
-      document.documentElement.classList.remove("lenis", "lenis-smooth");
     };
   }, [enabled]);
 
