@@ -28,6 +28,47 @@
   letter-spacing: 0.12em;
 }
 
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem 0.9rem;
+}
+
+.control {
+  min-height: 36px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 0.35rem 0.65rem;
+}
+
+.control:hover,
+.control:focus-visible {
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.status {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+}
+
+.iframeHost {
+  width: 100%;
+  min-height: 352px;
+  background: #000;
+}
+
+.iframeHost :global(iframe) {
+  display: block;
+  border: 0;
+  width: 100%;
+  min-height: 352px;
+}
+
 .frame {
   border: 1px solid var(--line);
   background: rgba(8, 8, 8, 0.72);

@@ -9,10 +9,11 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "verify:spotify": "node scripts/verify-spotify-links.mjs",
+    "verify:spotify": "node scripts/verify-spotify-links.mjs && node scripts/verify-single-tracks.mjs",
     "sync:spotify": "node scripts/sync-spotify.mjs",
     "migrate:catalog": "node scripts/migrate-catalog.mjs",
-    "purge:catalog": "node scripts/purge-contaminated-catalog.mjs"
+    "purge:catalog": "node scripts/purge-contaminated-catalog.mjs",
+    "build:singles": "node scripts/build-single-tracks.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",

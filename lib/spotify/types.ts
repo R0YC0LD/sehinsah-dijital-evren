@@ -57,11 +57,30 @@ export type SpotifyTrack = {
   verified: boolean;
 };
 
+export type VerifiedSingleTrack = {
+  id: string;
+  spotifyId: string;
+  uri: `spotify:track:${string}`;
+  spotifyUrl: string;
+  name: string;
+  durationMs: number;
+  albumId: string;
+  albumName: string;
+  artists: Array<{
+    id: string;
+    name: string;
+  }>;
+  targetArtistIsPrimary: boolean;
+  containsTargetArtist: true;
+  verified: true;
+};
+
 export type MusicCatalog = {
   releases: SpotifyRelease[];
   albums: SpotifyRelease[];
   singles: SpotifyRelease[];
   tracks: SpotifyTrack[];
+  verifiedSingleTracks: VerifiedSingleTrack[];
   latestRelease: SpotifyRelease | null;
   counts: {
     total: number;

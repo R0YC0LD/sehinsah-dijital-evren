@@ -9,6 +9,11 @@
   --red: #991919;
   --red-soft: rgba(153, 25, 25, 0.22);
   --spotify: #1ed760;
+  --ambient-black: #050505;
+  --ambient-charcoal: #0a0a0a;
+  --ambient-soft: #111111;
+  --ambient-mid: #171717;
+  --ambient-line: rgba(255, 255, 255, 0.07);
 
   --background: var(--bg);
   --surface: transparent;
@@ -221,7 +226,8 @@ p {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(ellipse at 70% 20%, rgba(153, 25, 25, 0.08), transparent 40%),
+    radial-gradient(ellipse at 70% 20%, rgba(255, 255, 255, 0.035), transparent 40%),
+    radial-gradient(ellipse at 68% 42%, rgba(20, 20, 20, 0.72), transparent 58%),
     radial-gradient(ellipse at 20% 80%, rgba(238, 233, 223, 0.03), transparent 35%),
     var(--bg);
 }

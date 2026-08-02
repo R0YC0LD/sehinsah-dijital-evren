@@ -6,6 +6,7 @@ import type {
   SpotifyRawAlbum,
   SpotifyRelease,
   SpotifyTrack,
+  VerifiedSingleTrack,
 } from "./types";
 import { isDirectSpotifyAlbumUrl, isSpotifySearchUrl } from "./validate-links";
 
@@ -162,11 +163,37 @@ function isSingleType(type: string) {
   return type === "single" || type === "ep";
 }
 
+export function filterVerifiedSingleTracks(
+  tracks: VerifiedSingleTrack[] = [],
+): VerifiedSingleTrack[] {
+  const byId = new Map<string, VerifiedSingleTrack>();
+  for (const t of tracks) {
+    if (!t?.id) continue;
+    if (isDeniedReleaseTitle(t.name) || isDeniedReleaseTitle(t.albumName)) continue;
+    if (!t.verified || !t.containsTargetArtist || !t.targetArtistIsPrimary) continue;
+    if (!containsTargetArtist(t.artists)) continue;
+    if (t.artists[0]?.id !== TARGET) continue;
+    if (t.uri !== `spotify:track:${t.id}`) continue;
+    if (!t.spotifyUrl || isSpotifySearchUrl(t.spotifyUrl)) continue;
+    if (!t.spotifyUrl.includes(`/track/${t.id}`)) continue;
+    byId.set(t.id, {
+      ...t,
+      spotifyId: t.spotifyId || t.id,
+      uri: `spotify:track:${t.id}`,
+      containsTargetArtist: true,
+      verified: true,
+      targetArtistIsPrimary: true,
+    });
+  }
+  return [...byId.values()];
+}
+
 export function buildMusicCatalog(
   releases: SpotifyRelease[],
   source: MusicCatalog["source"],
   updatedAt: string | null = new Date().toISOString(),
   tracks: SpotifyTrack[] = [],
+  verifiedSingleTracks: VerifiedSingleTrack[] = [],
 ): MusicCatalog {
   const verified = releases.filter(
     (r) =>
@@ -185,12 +212,14 @@ export function buildMusicCatalog(
       containsTargetArtist(t.artists) &&
       !isDeniedReleaseTitle(t.name),
   );
+  const singlesQueue = filterVerifiedSingleTracks(verifiedSingleTracks);
 
   return {
     releases: sorted,
     albums,
     singles,
     tracks: verifiedTracks,
+    verifiedSingleTracks: singlesQueue,
     latestRelease: sorted[0] ?? null,
     counts: {
       total: sorted.length,
@@ -204,7 +233,7 @@ export function buildMusicCatalog(
 }
 
 export function emptyCatalog(source: MusicCatalog["source"] = "fallback"): MusicCatalog {
-  return buildMusicCatalog([], source, null, []);
+  return buildMusicCatalog([], source, null, [], []);
 }
 
 export function splitCatalog(albums: SpotifyRelease[]) {

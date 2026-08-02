@@ -11,6 +11,7 @@ import {
   emptyCatalog,
   normalizeAlbum,
 } from "@/lib/spotify/normalize";
+import { getVerifiedSingleTracks } from "@/lib/spotify/single-tracks";
 import type { MusicCatalog, SpotifyRawAlbum, SpotifyTrack } from "@/lib/spotify/types";
 
 type AlbumsPage = {
@@ -52,7 +53,8 @@ async function loadLiveCatalog(): Promise<MusicCatalog> {
   const market = process.env.SPOTIFY_MARKET || "TR";
   const raw = await fetchAllAlbums(artistId, market);
   const releases = dedupeAlbums(raw.map(normalizeAlbum).filter((r) => r.verified));
-  return buildMusicCatalog(releases, "live-cache");
+  const verifiedSingleTracks = await getVerifiedSingleTracks();
+  return buildMusicCatalog(releases, "live-cache", new Date().toISOString(), [], verifiedSingleTracks);
 }
 
 function revalidateSeconds() {
@@ -77,8 +79,9 @@ async function getLiveCachedSpotifyCatalog(): Promise<MusicCatalog> {
 
 export async function getGeneratedSpotifyCatalog(): Promise<MusicCatalog> {
   try {
-    const data = (await import("@/data/generated/spotify-catalog.json")).default as MusicCatalog & {
+    const data = (await import("@/data/generated/spotify-catalog.json")).default as unknown as {
       releases: Array<Record<string, unknown>>;
+      tracks?: SpotifyTrack[];
       schemaVersion?: number;
       targetArtistId?: string;
       source?: string;
@@ -110,11 +113,13 @@ export async function getGeneratedSpotifyCatalog(): Promise<MusicCatalog> {
     );
 
     if (!releases.length) return emptyCatalog("fallback");
+    const verifiedSingleTracks = await getVerifiedSingleTracks();
     return buildMusicCatalog(
       releases as NonNullable<ReturnType<typeof coerceRelease>>[],
       "generated-json",
       data.updatedAt || data.generatedAt || null,
       tracks,
+      verifiedSingleTracks,
     );
   } catch {
     return emptyCatalog("fallback");

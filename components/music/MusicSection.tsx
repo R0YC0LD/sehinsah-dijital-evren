@@ -43,7 +43,7 @@ export function MusicSection({ catalog }: Props) {
         </div>
 
         <div className={styles.embed}>
-          <SpotifyArtistEmbed />
+          <SpotifyArtistEmbed tracks={catalog.verifiedSingleTracks || []} />
         </div>
 
         <div className={styles.disco}>

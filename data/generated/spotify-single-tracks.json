@@ -1,0 +1,886 @@
+{
+  "schemaVersion": 1,
+  "source": "spotify-api",
+  "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
+  "allowCollaborations": false,
+  "generatedAt": "2026-08-02T14:11:42.097Z",
+  "tracks": [
+    {
+      "id": "0flGs6oE7iHhDnnynJ4mV5",
+      "spotifyId": "0flGs6oE7iHhDnnynJ4mV5",
+      "uri": "spotify:track:0flGs6oE7iHhDnnynJ4mV5",
+      "spotifyUrl": "https://open.spotify.com/track/0flGs6oE7iHhDnnynJ4mV5",
+      "name": "entropi",
+      "durationMs": 0,
+      "albumId": "2aTmzuUvKITVuP2qBnrvvD",
+      "albumName": "Entropi",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5gxVxiJ0hOwbPiFduw5M3O",
+      "spotifyId": "5gxVxiJ0hOwbPiFduw5M3O",
+      "uri": "spotify:track:5gxVxiJ0hOwbPiFduw5M3O",
+      "spotifyUrl": "https://open.spotify.com/track/5gxVxiJ0hOwbPiFduw5M3O",
+      "name": "Benim Adım Arda",
+      "durationMs": 0,
+      "albumId": "0TiW19cwPu2FnmR0WcpDXI",
+      "albumName": "Benim Adım Arda",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "77XRjnZN6DAdcWlILhauTm",
+      "spotifyId": "77XRjnZN6DAdcWlILhauTm",
+      "uri": "spotify:track:77XRjnZN6DAdcWlILhauTm",
+      "spotifyUrl": "https://open.spotify.com/track/77XRjnZN6DAdcWlILhauTm",
+      "name": "NASINASI?",
+      "durationMs": 0,
+      "albumId": "5iG9dUUVurewjfXYPhvOYB",
+      "albumName": "NASINASI?",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4r9HNQZLxMhQJtoNaFFrGr",
+      "spotifyId": "4r9HNQZLxMhQJtoNaFFrGr",
+      "uri": "spotify:track:4r9HNQZLxMhQJtoNaFFrGr",
+      "spotifyUrl": "https://open.spotify.com/track/4r9HNQZLxMhQJtoNaFFrGr",
+      "name": "Lab Cypher 6",
+      "durationMs": 0,
+      "albumId": "5ht5m3cJvjGdTgDRUVrVeL",
+      "albumName": "Lab Cypher 6",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0AYg0HCbxjwP0sT8IXOZyT",
+      "spotifyId": "0AYg0HCbxjwP0sT8IXOZyT",
+      "uri": "spotify:track:0AYg0HCbxjwP0sT8IXOZyT",
+      "spotifyUrl": "https://open.spotify.com/track/0AYg0HCbxjwP0sT8IXOZyT",
+      "name": "INVIDIA",
+      "durationMs": 0,
+      "albumId": "7yXKu5sXCZmZmEAc723mIp",
+      "albumName": "INVIDIA",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3UOyVyApCP7vGVuIsPxnZp",
+      "spotifyId": "3UOyVyApCP7vGVuIsPxnZp",
+      "uri": "spotify:track:3UOyVyApCP7vGVuIsPxnZp",
+      "spotifyUrl": "https://open.spotify.com/track/3UOyVyApCP7vGVuIsPxnZp",
+      "name": "FUTAŞK",
+      "durationMs": 0,
+      "albumId": "77kh4b22L5QCCIZhXsUOU2",
+      "albumName": "FUTAŞK",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0bvsV2THvrNj9tQm0yvfTn",
+      "spotifyId": "0bvsV2THvrNj9tQm0yvfTn",
+      "uri": "spotify:track:0bvsV2THvrNj9tQm0yvfTn",
+      "spotifyUrl": "https://open.spotify.com/track/0bvsV2THvrNj9tQm0yvfTn",
+      "name": "ESKİ OKUL",
+      "durationMs": 0,
+      "albumId": "1xNzac76pyGW65UbQ15Jpn",
+      "albumName": "6EP",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3riHsraRxIFfLLy7n3T8mq",
+      "spotifyId": "3riHsraRxIFfLLy7n3T8mq",
+      "uri": "spotify:track:3riHsraRxIFfLLy7n3T8mq",
+      "spotifyUrl": "https://open.spotify.com/track/3riHsraRxIFfLLy7n3T8mq",
+      "name": "KBR",
+      "durationMs": 0,
+      "albumId": "2mUZZJGMOMvL5IUIqD5anA",
+      "albumName": "KBR",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0uTmb3dc18w4Ues60lkhXZ",
+      "spotifyId": "0uTmb3dc18w4Ues60lkhXZ",
+      "uri": "spotify:track:0uTmb3dc18w4Ues60lkhXZ",
+      "spotifyUrl": "https://open.spotify.com/track/0uTmb3dc18w4Ues60lkhXZ",
+      "name": "PEAK POINT",
+      "durationMs": 0,
+      "albumId": "7uTRfHeplUuIyM0xER7BQX",
+      "albumName": "PEAK POINT",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0stSrcHk2lZdjp03JpP6A2",
+      "spotifyId": "0stSrcHk2lZdjp03JpP6A2",
+      "uri": "spotify:track:0stSrcHk2lZdjp03JpP6A2",
+      "spotifyUrl": "https://open.spotify.com/track/0stSrcHk2lZdjp03JpP6A2",
+      "name": "Baban",
+      "durationMs": 0,
+      "albumId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "albumName": "Baban",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3Pj1t1EuAF7dBeuco1S7ai",
+      "spotifyId": "3Pj1t1EuAF7dBeuco1S7ai",
+      "uri": "spotify:track:3Pj1t1EuAF7dBeuco1S7ai",
+      "spotifyUrl": "https://open.spotify.com/track/3Pj1t1EuAF7dBeuco1S7ai",
+      "name": "Tanrıyı Kıyamete Zorlama",
+      "durationMs": 0,
+      "albumId": "1t5ZDQ8TsZw9bP2UQS1n2n",
+      "albumName": "Tanrıyı Kıyamete Zorlama",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3tMsxep3pRGMUyCCkg5p9Y",
+      "spotifyId": "3tMsxep3pRGMUyCCkg5p9Y",
+      "uri": "spotify:track:3tMsxep3pRGMUyCCkg5p9Y",
+      "spotifyUrl": "https://open.spotify.com/track/3tMsxep3pRGMUyCCkg5p9Y",
+      "name": "Meclis",
+      "durationMs": 0,
+      "albumId": "3ZyPooMmaV1rw9disOgtgd",
+      "albumName": "Meclis-i Ala",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "7wMfoWCqNIkyvsUsWUHtYy",
+      "spotifyId": "7wMfoWCqNIkyvsUsWUHtYy",
+      "uri": "spotify:track:7wMfoWCqNIkyvsUsWUHtYy",
+      "spotifyUrl": "https://open.spotify.com/track/7wMfoWCqNIkyvsUsWUHtYy",
+      "name": "UFUKMANIA",
+      "durationMs": 0,
+      "albumId": "6pdFHFbeC3j4QMdsuDhmWj",
+      "albumName": "UFUKMANIA",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1HtT0CVW7SbMiECVEPOiO5",
+      "spotifyId": "1HtT0CVW7SbMiECVEPOiO5",
+      "uri": "spotify:track:1HtT0CVW7SbMiECVEPOiO5",
+      "spotifyUrl": "https://open.spotify.com/track/1HtT0CVW7SbMiECVEPOiO5",
+      "name": "Sönük Kaldın",
+      "durationMs": 0,
+      "albumId": "0FzybsrMkrplViiOHqNFvL",
+      "albumName": "Sönük Kaldın",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "6EtJWgmED5K4zL55g6hxfF",
+      "spotifyId": "6EtJWgmED5K4zL55g6hxfF",
+      "uri": "spotify:track:6EtJWgmED5K4zL55g6hxfF",
+      "spotifyUrl": "https://open.spotify.com/track/6EtJWgmED5K4zL55g6hxfF",
+      "name": "DAİM",
+      "durationMs": 0,
+      "albumId": "049jPvA9iOQZy7Jt9KPM0q",
+      "albumName": "DAİM",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5wCEnLiq9TeKTNvbc3wSqG",
+      "spotifyId": "5wCEnLiq9TeKTNvbc3wSqG",
+      "uri": "spotify:track:5wCEnLiq9TeKTNvbc3wSqG",
+      "spotifyUrl": "https://open.spotify.com/track/5wCEnLiq9TeKTNvbc3wSqG",
+      "name": "Kirlendi Tüm Duygularım",
+      "durationMs": 0,
+      "albumId": "60KXppgH6yocRHr0UBZuxP",
+      "albumName": "Kirlendi Tüm Duygularım",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0lR72E0ERIhqDi4ZmJcVwq",
+      "spotifyId": "0lR72E0ERIhqDi4ZmJcVwq",
+      "uri": "spotify:track:0lR72E0ERIhqDi4ZmJcVwq",
+      "spotifyUrl": "https://open.spotify.com/track/0lR72E0ERIhqDi4ZmJcVwq",
+      "name": "Pembe Yalanlar",
+      "durationMs": 0,
+      "albumId": "4t6eu3P27YmnmM7nddmix4",
+      "albumName": "Pembe Yalanlar",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "6qfjxJ7Hi8k0fT8ZhkRDds",
+      "spotifyId": "6qfjxJ7Hi8k0fT8ZhkRDds",
+      "uri": "spotify:track:6qfjxJ7Hi8k0fT8ZhkRDds",
+      "spotifyUrl": "https://open.spotify.com/track/6qfjxJ7Hi8k0fT8ZhkRDds",
+      "name": "Canım Babam",
+      "durationMs": 0,
+      "albumId": "23htijc8a6yzCdGNW0dK8V",
+      "albumName": "Canım Babam",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0LDnrAj2X5Tpk3zxrvHZ1U",
+      "spotifyId": "0LDnrAj2X5Tpk3zxrvHZ1U",
+      "uri": "spotify:track:0LDnrAj2X5Tpk3zxrvHZ1U",
+      "spotifyUrl": "https://open.spotify.com/track/0LDnrAj2X5Tpk3zxrvHZ1U",
+      "name": "Maymunlar Cehennemi",
+      "durationMs": 0,
+      "albumId": "1CPPRdILLPdn99FcwcJgMW",
+      "albumName": "Maymunlar Cehennemi",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0QPJqRMBqaJrOUPVT8FfJc",
+      "spotifyId": "0QPJqRMBqaJrOUPVT8FfJc",
+      "uri": "spotify:track:0QPJqRMBqaJrOUPVT8FfJc",
+      "spotifyUrl": "https://open.spotify.com/track/0QPJqRMBqaJrOUPVT8FfJc",
+      "name": "CimCimem",
+      "durationMs": 0,
+      "albumId": "0bFFfvETEdNUfkJkCRG6d9",
+      "albumName": "CimCimem",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "51v8TQVKyIqdRXwqZ2m8C3",
+      "spotifyId": "51v8TQVKyIqdRXwqZ2m8C3",
+      "uri": "spotify:track:51v8TQVKyIqdRXwqZ2m8C3",
+      "spotifyUrl": "https://open.spotify.com/track/51v8TQVKyIqdRXwqZ2m8C3",
+      "name": "Galvanize",
+      "durationMs": 0,
+      "albumId": "0XjW92nRHEuASd6hlA06DO",
+      "albumName": "Galvanize",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4Q5qlkIG6dbFuvH8J6C90H",
+      "spotifyId": "4Q5qlkIG6dbFuvH8J6C90H",
+      "uri": "spotify:track:4Q5qlkIG6dbFuvH8J6C90H",
+      "spotifyUrl": "https://open.spotify.com/track/4Q5qlkIG6dbFuvH8J6C90H",
+      "name": "Prenses",
+      "durationMs": 0,
+      "albumId": "71kPiLmNbaT0eylc5Ycvdj",
+      "albumName": "Prenses (Remix)",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "6aFrqlLs6LUiXE49ApOTOB",
+      "spotifyId": "6aFrqlLs6LUiXE49ApOTOB",
+      "uri": "spotify:track:6aFrqlLs6LUiXE49ApOTOB",
+      "spotifyUrl": "https://open.spotify.com/track/6aFrqlLs6LUiXE49ApOTOB",
+      "name": "Fırtına",
+      "durationMs": 0,
+      "albumId": "2xhKy3Nm1eazIwWRnA9gys",
+      "albumName": "Fırtına",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2DR7yVGQpSzrtM2ZmHkfeR",
+      "spotifyId": "2DR7yVGQpSzrtM2ZmHkfeR",
+      "uri": "spotify:track:2DR7yVGQpSzrtM2ZmHkfeR",
+      "spotifyUrl": "https://open.spotify.com/track/2DR7yVGQpSzrtM2ZmHkfeR",
+      "name": "Prenses",
+      "durationMs": 0,
+      "albumId": "7H6b2Etlb0ryYF7tqbFbDG",
+      "albumName": "Prenses",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0SATCnv3Wp0WHXK1JrWXjS",
+      "spotifyId": "0SATCnv3Wp0WHXK1JrWXjS",
+      "uri": "spotify:track:0SATCnv3Wp0WHXK1JrWXjS",
+      "spotifyUrl": "https://open.spotify.com/track/0SATCnv3Wp0WHXK1JrWXjS",
+      "name": "Muz Cumhuriyeti",
+      "durationMs": 0,
+      "albumId": "3GzZrTChFzvS4KqBNaFWCP",
+      "albumName": "Muz Cumhuriyeti",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3SymptT0pmueiBoA3GmyOJ",
+      "spotifyId": "3SymptT0pmueiBoA3GmyOJ",
+      "uri": "spotify:track:3SymptT0pmueiBoA3GmyOJ",
+      "spotifyUrl": "https://open.spotify.com/track/3SymptT0pmueiBoA3GmyOJ",
+      "name": "Ellerinde",
+      "durationMs": 0,
+      "albumId": "23ofnyZ4eAhpkk1YH1VVwD",
+      "albumName": "Ellerinde",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "54mscLN8V5gJtu9lxthzKc",
+      "spotifyId": "54mscLN8V5gJtu9lxthzKc",
+      "uri": "spotify:track:54mscLN8V5gJtu9lxthzKc",
+      "spotifyUrl": "https://open.spotify.com/track/54mscLN8V5gJtu9lxthzKc",
+      "name": "Dönmedin Ki",
+      "durationMs": 0,
+      "albumId": "7vuH67pbtQuzNvct5WLTF1",
+      "albumName": "Dönmedin Ki",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1chtG5ZGNpsSQMi1p4nr2H",
+      "spotifyId": "1chtG5ZGNpsSQMi1p4nr2H",
+      "uri": "spotify:track:1chtG5ZGNpsSQMi1p4nr2H",
+      "spotifyUrl": "https://open.spotify.com/track/1chtG5ZGNpsSQMi1p4nr2H",
+      "name": "+28",
+      "durationMs": 0,
+      "albumId": "463e8VUKAZB5i86sUNIRGH",
+      "albumName": "+28 (Tirat)",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5NNBCzWMniheJGRkgNrS0v",
+      "spotifyId": "5NNBCzWMniheJGRkgNrS0v",
+      "uri": "spotify:track:5NNBCzWMniheJGRkgNrS0v",
+      "spotifyUrl": "https://open.spotify.com/track/5NNBCzWMniheJGRkgNrS0v",
+      "name": "Diabolico",
+      "durationMs": 0,
+      "albumId": "6XdehvklsVZ5Ly5nnJAHTv",
+      "albumName": "Diabolico",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3KApIHvSkLWAkAQ0hlkZcO",
+      "spotifyId": "3KApIHvSkLWAkAQ0hlkZcO",
+      "uri": "spotify:track:3KApIHvSkLWAkAQ0hlkZcO",
+      "spotifyUrl": "https://open.spotify.com/track/3KApIHvSkLWAkAQ0hlkZcO",
+      "name": "Hadi Yaparsın",
+      "durationMs": 0,
+      "albumId": "1Aen2zuQGFR5sEWVjBmmLg",
+      "albumName": "Hadi Yaparsın",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0SvfsAwKvSrmWa8qANBgbd",
+      "spotifyId": "0SvfsAwKvSrmWa8qANBgbd",
+      "uri": "spotify:track:0SvfsAwKvSrmWa8qANBgbd",
+      "spotifyUrl": "https://open.spotify.com/track/0SvfsAwKvSrmWa8qANBgbd",
+      "name": "The Face Of Vision",
+      "durationMs": 0,
+      "albumId": "5SsZm0U0j5D5khXo9SKLku",
+      "albumName": "The Face Of Vision",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2nEJSn67dyQ1N464MYOYTd",
+      "spotifyId": "2nEJSn67dyQ1N464MYOYTd",
+      "uri": "spotify:track:2nEJSn67dyQ1N464MYOYTd",
+      "spotifyUrl": "https://open.spotify.com/track/2nEJSn67dyQ1N464MYOYTd",
+      "name": "M.I.Ş",
+      "durationMs": 0,
+      "albumId": "6VXZxNd3ur24KwERIBjFcs",
+      "albumName": "M.I.Ş",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4Rl0Y1L2HKyIJr3L0jM3e6",
+      "spotifyId": "4Rl0Y1L2HKyIJr3L0jM3e6",
+      "uri": "spotify:track:4Rl0Y1L2HKyIJr3L0jM3e6",
+      "spotifyUrl": "https://open.spotify.com/track/4Rl0Y1L2HKyIJr3L0jM3e6",
+      "name": "Darılmak Yok",
+      "durationMs": 0,
+      "albumId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "albumName": "Darılmak Yok (Hamam Sessions)",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "07WeKoN0DFcUOEbctyLvG9",
+      "spotifyId": "07WeKoN0DFcUOEbctyLvG9",
+      "uri": "spotify:track:07WeKoN0DFcUOEbctyLvG9",
+      "spotifyUrl": "https://open.spotify.com/track/07WeKoN0DFcUOEbctyLvG9",
+      "name": "Dön Dünya",
+      "durationMs": 0,
+      "albumId": "07cwiM7nU3jXF6J9UgXdCd",
+      "albumName": "Dön Dünya",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1cinkFhTDqovUNDqmS0wir",
+      "spotifyId": "1cinkFhTDqovUNDqmS0wir",
+      "uri": "spotify:track:1cinkFhTDqovUNDqmS0wir",
+      "spotifyUrl": "https://open.spotify.com/track/1cinkFhTDqovUNDqmS0wir",
+      "name": "Kunteper",
+      "durationMs": 0,
+      "albumId": "1IOByJLwwmG0z16dSBiHAK",
+      "albumName": "Kunteper",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3zgyg8bLpOKP08GuhpKiC0",
+      "spotifyId": "3zgyg8bLpOKP08GuhpKiC0",
+      "uri": "spotify:track:3zgyg8bLpOKP08GuhpKiC0",
+      "spotifyUrl": "https://open.spotify.com/track/3zgyg8bLpOKP08GuhpKiC0",
+      "name": "Trump",
+      "durationMs": 0,
+      "albumId": "4GLUe5UzDTd2WAkZPsqeVu",
+      "albumName": "Trump",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5cJ30Ohp1oh5JUTNmU82IO",
+      "spotifyId": "5cJ30Ohp1oh5JUTNmU82IO",
+      "uri": "spotify:track:5cJ30Ohp1oh5JUTNmU82IO",
+      "spotifyUrl": "https://open.spotify.com/track/5cJ30Ohp1oh5JUTNmU82IO",
+      "name": "İmza",
+      "durationMs": 0,
+      "albumId": "4THM0v0TgGHbQClcWVLza1",
+      "albumName": "İmza",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4iNbwWxqMqI7FB7F6fSY6Z",
+      "spotifyId": "4iNbwWxqMqI7FB7F6fSY6Z",
+      "uri": "spotify:track:4iNbwWxqMqI7FB7F6fSY6Z",
+      "spotifyUrl": "https://open.spotify.com/track/4iNbwWxqMqI7FB7F6fSY6Z",
+      "name": "Talep",
+      "durationMs": 0,
+      "albumId": "1GIkj7GCcjfto5jWBKoTe1",
+      "albumName": "Talep - Arz",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5DtmpaV6YrqM0VNODAXnYm",
+      "spotifyId": "5DtmpaV6YrqM0VNODAXnYm",
+      "uri": "spotify:track:5DtmpaV6YrqM0VNODAXnYm",
+      "spotifyUrl": "https://open.spotify.com/track/5DtmpaV6YrqM0VNODAXnYm",
+      "name": "Çocuk",
+      "durationMs": 0,
+      "albumId": "3slJ2gXpniB6I4eb7NCruj",
+      "albumName": "Çocuk",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3bkVzwvdIXJAH98Cjc9h2O",
+      "spotifyId": "3bkVzwvdIXJAH98Cjc9h2O",
+      "uri": "spotify:track:3bkVzwvdIXJAH98Cjc9h2O",
+      "spotifyUrl": "https://open.spotify.com/track/3bkVzwvdIXJAH98Cjc9h2O",
+      "name": "Aslan Marşı",
+      "durationMs": 0,
+      "albumId": "62dW2UToWLtRNu5sSfkXpM",
+      "albumName": "Aslan Marşı",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5DoXysLpOybG1vYiJ7JLUu",
+      "spotifyId": "5DoXysLpOybG1vYiJ7JLUu",
+      "uri": "spotify:track:5DoXysLpOybG1vYiJ7JLUu",
+      "spotifyUrl": "https://open.spotify.com/track/5DoXysLpOybG1vYiJ7JLUu",
+      "name": "Pirana",
+      "durationMs": 0,
+      "albumId": "5dMbZ9ECO3Wxkpr7BWmLN3",
+      "albumName": "Pirana",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "6yIVuAAf9xC2xxxIGTkFKp",
+      "spotifyId": "6yIVuAAf9xC2xxxIGTkFKp",
+      "uri": "spotify:track:6yIVuAAf9xC2xxxIGTkFKp",
+      "spotifyUrl": "https://open.spotify.com/track/6yIVuAAf9xC2xxxIGTkFKp",
+      "name": "Dünya&#x27;dan Atlas&#x27;a",
+      "durationMs": 0,
+      "albumId": "7w23DpIjUzfefwiq0aXDNn",
+      "albumName": "Dünya'dan Atlas'a",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3h2mPEhOJinAnH2LJMw69X",
+      "spotifyId": "3h2mPEhOJinAnH2LJMw69X",
+      "uri": "spotify:track:3h2mPEhOJinAnH2LJMw69X",
+      "spotifyUrl": "https://open.spotify.com/track/3h2mPEhOJinAnH2LJMw69X",
+      "name": "Milyon",
+      "durationMs": 0,
+      "albumId": "4tBnVWP1N4g7Hn9PYgPtWo",
+      "albumName": "Milyon",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2OjntwakXOAW2vqkqKkKaR",
+      "spotifyId": "2OjntwakXOAW2vqkqKkKaR",
+      "uri": "spotify:track:2OjntwakXOAW2vqkqKkKaR",
+      "spotifyUrl": "https://open.spotify.com/track/2OjntwakXOAW2vqkqKkKaR",
+      "name": "Yak Yak Yak",
+      "durationMs": 0,
+      "albumId": "61WtSUVOoxxeKeV4jOZNWi",
+      "albumName": "Yak Yak Yak",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0Gg4FphbvPhJKpSm8KsBBD",
+      "spotifyId": "0Gg4FphbvPhJKpSm8KsBBD",
+      "uri": "spotify:track:0Gg4FphbvPhJKpSm8KsBBD",
+      "spotifyUrl": "https://open.spotify.com/track/0Gg4FphbvPhJKpSm8KsBBD",
+      "name": "Karma",
+      "durationMs": 0,
+      "albumId": "41vkDxCgMJIDSc8zauKoUW",
+      "albumName": "Karma",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5BimeOrk4ZVykYomUndTdM",
+      "spotifyId": "5BimeOrk4ZVykYomUndTdM",
+      "uri": "spotify:track:5BimeOrk4ZVykYomUndTdM",
+      "spotifyUrl": "https://open.spotify.com/track/5BimeOrk4ZVykYomUndTdM",
+      "name": "Uzulme (feat. Artz)",
+      "durationMs": 0,
+      "albumId": "6zYRbnh9xKNGkaAkWPKhM8",
+      "albumName": "Uzulme (feat. Artz)",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    }
+  ],
+  "counts": {
+    "total": 46
+  }
+}

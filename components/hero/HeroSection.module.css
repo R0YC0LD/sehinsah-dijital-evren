@@ -4,7 +4,7 @@
 }
 
 .backdrop {
-  background: radial-gradient(ellipse at 72% 40%, rgba(153, 25, 25, 0.1), transparent 42%);
+  background: radial-gradient(ellipse at 72% 40%, rgba(28, 28, 28, 0.58), transparent 42%);
 }
 
 .axis {
@@ -13,7 +13,7 @@
   bottom: 10%;
   left: var(--fall-x, 68vw);
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(153, 25, 25, 0.4), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.12), transparent);
   transform: translateX(-50%);
 }
 
