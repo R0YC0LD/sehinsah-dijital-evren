@@ -1,3 +1,4 @@
+import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { siteConfig } from "@/data/site";
 import styles from "./HeroSection.module.css";
 
@@ -25,6 +26,7 @@ export function HeroSection() {
           <span className={styles.cueLine} aria-hidden="true" />
         </a>
       </div>
+      <EntropyBrain id="hero-lower-left" />
     </section>
   );
 }

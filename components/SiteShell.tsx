@@ -11,6 +11,7 @@ import {
   useAudioPreviewContext,
 } from "@/components/providers/AudioPreviewProvider";
 import { ChaosProvider } from "@/components/providers/ChaosProvider";
+import { EntropyProvider } from "@/components/easteregg/EntropyProvider";
 import { SpotifyPlaybackProvider } from "@/components/providers/SpotifyPlaybackProvider";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { useLenis } from "@/hooks/useLenis";
@@ -54,7 +55,9 @@ export function SiteShell({ children, catalog }: Props) {
     <ChaosProvider>
       <AudioPreviewProvider>
         <SpotifyPlaybackProvider>
-          <ShellInner catalog={catalog}>{children}</ShellInner>
+          <EntropyProvider>
+            <ShellInner catalog={catalog}>{children}</ShellInner>
+          </EntropyProvider>
         </SpotifyPlaybackProvider>
       </AudioPreviewProvider>
     </ChaosProvider>

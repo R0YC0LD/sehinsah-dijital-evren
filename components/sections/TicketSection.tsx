@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import gsap from "gsap";
+import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
@@ -78,6 +79,7 @@ export function TicketSection() {
           {siteConfig.tickets.cta}
         </a>
       </div>
+      <EntropyBrain id="stage-poster-edge" />
     </section>
   );
 }

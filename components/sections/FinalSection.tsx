@@ -1,6 +1,7 @@
 "use client";
 
 import { useLayoutEffect, useRef } from "react";
+import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { Footer } from "@/components/layout/Footer";
 import { registerGsap } from "@/lib/gsap/register";
 import { siteConfig } from "@/data/site";
@@ -47,6 +48,7 @@ export function FinalSection() {
         <a href="#hero" className={`editorial-link ${styles.back}`}>
           {siteConfig.final.backToTop}
         </a>
+        <EntropyBrain id="final-copy-corner" />
       </div>
       <div className="section-content">
         <Footer />

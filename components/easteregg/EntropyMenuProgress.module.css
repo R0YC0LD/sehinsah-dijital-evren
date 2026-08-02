@@ -1,0 +1,29 @@
+.wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem 0.85rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+}
+
+.label {
+  color: rgba(49, 247, 125, 0.78);
+}
+
+.replay {
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  min-height: 36px;
+  padding: 0;
+}
+
+.replay:hover,
+.replay:focus-visible {
+  color: #31f77d;
+}

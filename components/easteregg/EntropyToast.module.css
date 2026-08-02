@@ -1,0 +1,115 @@
+.toast {
+  position: fixed;
+  z-index: 1200;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(22px, calc(16px + env(safe-area-inset-bottom)));
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 12px;
+  align-items: center;
+  min-width: min(88vw, 290px);
+  padding: 12px 14px;
+  border-radius: 8px;
+  color: var(--text);
+  background: linear-gradient(
+    135deg,
+    rgba(49, 247, 125, 0.08),
+    rgba(5, 5, 5, 0.94)
+  );
+  border: 1px solid rgba(49, 247, 125, 0.26);
+  box-shadow:
+    0 16px 42px rgba(0, 0, 0, 0.52),
+    0 0 24px rgba(49, 247, 125, 0.1);
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(49, 247, 125, 0.2));
+}
+
+.copy {
+  min-width: 0;
+}
+
+.title {
+  display: block;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: var(--sehinsah-green, #31f77d);
+}
+
+.counter {
+  display: block;
+  margin-top: 2px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.subtitle {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.progress {
+  grid-column: 1 / -1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--sehinsah-green, #31f77d);
+  box-shadow: 0 0 10px rgba(49, 247, 125, 0.28);
+  transition: width 220ms ease;
+}
+
+@media (max-width: 640px) {
+  .toast {
+    left: 50%;
+    right: auto;
+    bottom: max(18px, calc(12px + env(safe-area-inset-bottom)));
+    transform: translate(-50%, 10px);
+    width: min(92vw, 320px);
+  }
+
+  .visible {
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toast {
+    transition: opacity 160ms ease;
+    transform: none;
+  }
+
+  .visible {
+    transform: none;
+  }
+
+  @media (max-width: 640px) {
+    .toast,
+    .visible {
+      transform: translateX(-50%);
+    }
+  }
+}

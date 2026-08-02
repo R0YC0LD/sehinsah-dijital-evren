@@ -29,6 +29,12 @@
   flex: 1;
 }
 
+.previewSlot {
+  position: relative;
+  min-height: 0;
+  align-self: stretch;
+}
+
 .nav {
   display: grid;
   gap: 0.35rem;

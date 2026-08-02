@@ -1,3 +1,4 @@
+import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
@@ -62,6 +63,7 @@ export function InstagramSection() {
           </div>
         </a>
       </div>
+      <EntropyBrain id="instagram-ring-side" />
     </section>
   );
 }

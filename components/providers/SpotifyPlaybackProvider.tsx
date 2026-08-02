@@ -42,6 +42,8 @@ type Ctx = {
   setPlaying: (playing: boolean) => void;
   setUnlocked: (unlocked: boolean) => void;
   playFromUserGesture: () => boolean;
+  pausePlayback: () => boolean;
+  resumePlayback: () => boolean;
   emit: (event: PlaybackEvent) => void;
   subscribe: (listener: Listener) => () => void;
 };
@@ -93,6 +95,31 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
     }
   }, []);
 
+  const pausePlayback = useCallback(() => {
+    const controller = controllerRef.current;
+    if (!controller) return false;
+    try {
+      controller.pause();
+      setPlaying(false);
+      return true;
+    } catch {
+      return false;
+    }
+  }, []);
+
+  const resumePlayback = useCallback(() => {
+    const controller = controllerRef.current;
+    if (!controller) return false;
+    try {
+      controller.resume?.();
+      controller.play();
+      setPlaying(true);
+      return true;
+    } catch {
+      return false;
+    }
+  }, []);
+
   const emit = useCallback((event: PlaybackEvent) => {
     if (event.playing) setPlaying(true);
     if (event.isPaused) setPlaying(false);
@@ -120,6 +147,8 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
       setPlaying,
       setUnlocked,
       playFromUserGesture,
+      pausePlayback,
+      resumePlayback,
       emit,
       subscribe,
     }),
@@ -129,6 +158,8 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
       unlocked,
       registerController,
       playFromUserGesture,
+      pausePlayback,
+      resumePlayback,
       emit,
       subscribe,
     ],

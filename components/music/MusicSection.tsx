@@ -1,3 +1,4 @@
+import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { AlbumGrid } from "@/components/music/AlbumGrid";
 import { CatalogSummary } from "@/components/music/CatalogSummary";
 import { FeaturedTrackList } from "@/components/music/FeaturedTrackList";
@@ -35,6 +36,7 @@ export function MusicSection({ catalog }: Props) {
             </div>
           </div>
           <CatalogSummary catalog={catalog} />
+          <EntropyBrain id="music-heading-edge" />
         </div>
 
         <div className={styles.topGrid}>
@@ -50,6 +52,7 @@ export function MusicSection({ catalog }: Props) {
           <h3 className={`display ${styles.discoTitle}`}>
             {siteConfig.music.discographyTitle}
           </h3>
+          <EntropyBrain id="discography-divider" />
           <AlbumGrid catalog={catalog} />
         </div>
       </div>

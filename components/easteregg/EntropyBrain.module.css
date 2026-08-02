@@ -1,0 +1,232 @@
+.brain {
+  --brain-delay: 0s;
+  position: absolute;
+  z-index: 18;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.72;
+  touch-action: manipulation;
+  filter: drop-shadow(0 0 8px rgba(70, 255, 120, 0.1));
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    filter 180ms ease;
+  animation: brainBreath 11s ease-in-out var(--brain-delay) infinite;
+}
+
+.brain img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.brain:hover,
+.brain:focus-visible {
+  opacity: 1;
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 12px rgba(49, 247, 125, 0.22));
+}
+
+.brain:focus-visible {
+  outline: 1px solid rgba(49, 247, 125, 0.55);
+  outline-offset: 3px;
+}
+
+.collecting {
+  animation: none;
+  pointer-events: none;
+}
+
+.collecting img {
+  animation: brainCollect 300ms ease forwards;
+}
+
+.ring {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 1px solid rgba(49, 247, 125, 0.42);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.collecting .ring {
+  animation: brainRing 300ms ease forwards;
+}
+
+@keyframes brainBreath {
+  0%,
+  92%,
+  100% {
+    transform: scale(1);
+  }
+  96% {
+    transform: scale(1.035);
+  }
+}
+
+@keyframes brainCollect {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1.14);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(0.78);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes brainRing {
+  0% {
+    width: 18px;
+    height: 18px;
+    margin: -9px 0 0 -9px;
+    opacity: 0.32;
+  }
+  100% {
+    width: 52px;
+    height: 52px;
+    margin: -26px 0 0 -26px;
+    opacity: 0;
+  }
+}
+
+/* Safe slots — avoid fall corridor (desktop right / mobile center). */
+.slot-menu-preview-corner {
+  left: 12px;
+  bottom: 12px;
+}
+
+.slot-hero-lower-left {
+  left: clamp(12px, 3vw, 28px);
+  bottom: clamp(18%, 22vh, 30%);
+}
+
+.slot-music-heading-edge {
+  top: 12%;
+  right: clamp(18px, 6vw, 7%);
+}
+
+.slot-discography-divider {
+  top: -8px;
+  left: clamp(12px, 4vw, 40px);
+}
+
+.slot-stage-poster-edge {
+  left: clamp(12px, 4vw, 36px);
+  bottom: 18%;
+}
+
+.slot-instagram-ring-side {
+  left: clamp(10px, 3vw, 24px);
+  top: 42%;
+}
+
+.slot-final-copy-corner {
+  top: 18%;
+  left: clamp(12px, 4vw, 32px);
+}
+
+.slot-footer-credit-nearby {
+  left: 0;
+  bottom: 8px;
+}
+
+@media (max-width: 1199px) {
+  .brain {
+    width: 42px;
+    height: 42px;
+  }
+
+  .brain img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .slot-music-heading-edge {
+    top: 10%;
+    right: 8%;
+  }
+}
+
+@media (max-width: 899px) {
+  .brain {
+    width: 40px;
+    height: 40px;
+    opacity: 0.68;
+  }
+
+  .brain img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .slot-hero-lower-left {
+    left: 14px;
+    bottom: 26%;
+  }
+
+  .slot-music-heading-edge {
+    top: 8%;
+    right: 14px;
+  }
+
+  .slot-stage-poster-edge {
+    left: 14px;
+    bottom: 22%;
+  }
+
+  .slot-instagram-ring-side {
+    left: 12px;
+    top: 58%;
+  }
+
+  .slot-menu-preview-corner {
+    left: 8px;
+    bottom: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brain {
+    animation: none;
+  }
+
+  .collecting img {
+    animation: brainCollectFade 180ms ease forwards;
+  }
+
+  .collecting .ring {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+@keyframes brainCollectFade {
+  to {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}

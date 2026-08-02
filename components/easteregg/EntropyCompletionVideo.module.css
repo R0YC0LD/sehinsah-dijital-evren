@@ -1,0 +1,122 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1500;
+  display: grid;
+  place-items: center;
+  padding: max(16px, env(safe-area-inset-top))
+    max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom))
+    max(16px, env(safe-area-inset-left));
+  background: rgba(0, 0, 0, 0.91);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.panel {
+  position: relative;
+  width: min(88vw, 980px);
+  aspect-ratio: 848 / 478;
+  max-height: 82svh;
+  background: #000;
+  border: 1px solid rgba(49, 247, 125, 0.22);
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(49, 247, 125, 0.08);
+}
+
+.heading {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  z-index: 2;
+  margin: 0;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  color: rgba(238, 233, 223, 0.78);
+  pointer-events: none;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.closeButton {
+  position: absolute;
+  top: max(14px, env(safe-area-inset-top));
+  right: max(14px, env(safe-area-inset-right));
+  z-index: 3;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(49, 247, 125, 0.32);
+  background: rgba(5, 5, 5, 0.82);
+  color: #31f77d;
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus-visible {
+  border-color: rgba(49, 247, 125, 0.55);
+  box-shadow: 0 0 18px rgba(49, 247, 125, 0.16);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid #31f77d;
+  outline-offset: 2px;
+}
+
+.playFallback {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.playButton {
+  min-height: 44px;
+  padding: 12px 18px;
+  border: 1px solid rgba(49, 247, 125, 0.45);
+  background: rgba(5, 5, 5, 0.86);
+  color: #31f77d;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.errorPanel {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  color: var(--text);
+  text-align: center;
+  padding: 24px;
+}
+
+.errorPanel strong {
+  letter-spacing: 0.14em;
+  color: #31f77d;
+}
+
+@media (max-width: 899px) {
+  .panel {
+    width: min(94vw, 760px);
+    max-height: 74svh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+}

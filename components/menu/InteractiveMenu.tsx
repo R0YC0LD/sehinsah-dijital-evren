@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
+import { EntropyMenuProgress } from "@/components/easteregg/EntropyMenuProgress";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { ChaosToggle } from "@/components/ui/ChaosToggle";
 import { ExternalLink } from "@/components/ui/ExternalLink";
@@ -177,7 +179,10 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
           ))}
         </nav>
 
-        <MenuPreview activeId={activeId} latestCover={verifiedCover} />
+        <div className={styles.previewSlot}>
+          <MenuPreview activeId={activeId} latestCover={verifiedCover} />
+          <EntropyBrain id="menu-preview-corner" />
+        </div>
       </div>
 
       <div className={styles.footer}>
@@ -188,6 +193,7 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
         <div className={styles.metaRow}>
           <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
           <ChaosToggle />
+          <EntropyMenuProgress />
         </div>
       </div>
 

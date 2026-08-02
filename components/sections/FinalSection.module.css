@@ -10,6 +10,7 @@
 }
 
 .stage {
+  position: relative;
   flex: 1;
   display: grid;
   place-content: center;

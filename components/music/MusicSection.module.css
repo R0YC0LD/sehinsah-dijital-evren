@@ -48,6 +48,7 @@
 }
 
 .header {
+  position: relative;
   display: grid;
   gap: 1.5rem;
   margin-bottom: 2.5rem;
@@ -78,6 +79,10 @@
 
 .embed {
   margin-bottom: 2.75rem;
+}
+
+.disco {
+  position: relative;
 }
 
 .discoTitle {

@@ -172,6 +172,48 @@ Glow opacity stays low (`≤ ~0.16` on small UI, character edge glow `≤ 0.035`
 
 Outer fall wrapper (ScrollTrigger Y / X / rotation) is untouched. Inner `[data-audio-reactive]` scales smoothly from bass/kick energy (continuous equalizer envelope — **not** a double heartbeat). Authored maps: `data/audio-analysis/`; missing maps use BPM/kick-pattern fallback (`lib/audio/energy-map.ts`). Spotify iframe audio is never wired to `AnalyserNode`.
 
+## Entropi Avcısı easter egg
+
+Hidden hunt for `entropyConfig.total` (default 5) green brain icons.
+
+### How to replace beyin.png
+
+1. Put source at `public/media/easteregg/source/beyin.png`
+2. Alpha-crop + export 256 WebP to `public/media/easteregg/entropy-brain.webp` (keep transparency)
+3. Wide transparent padding should be cropped before use as a tiny icon
+
+### How to add efekt.mp3
+
+Place at `public/audio/easteregg/efekt.mp3`. Single shared `Audio` instance; missing file does not break collecting.
+
+### How to replace video.mp4
+
+Replace `public/media/easteregg/entropy-complete.mp4` (prefer `faststart`). Poster: `public/media/easteregg/entropy-complete-poster.webp`.
+
+### How to change total Entropi count
+
+Edit `data/entropy.ts` → `entropyConfig.total`. Slot pool lives in `data/entropy-slots.ts`; menu slot is always included.
+
+### Safe placement slot format
+
+```ts
+{ id, section, placement, required? }
+```
+
+Positions are CSS classes in `EntropyBrain.module.css` (`slot-*`). Session seed shuffles optional slots; refresh keeps the same set.
+
+### Session reset behavior
+
+Keys in `sessionStorage`: seed / collected / completed / video-shown. New browser session reshuffles. Dev only: `?resetEntropy=1`.
+
+### Video fallback behavior
+
+If autoplay fails, overlay still opens with **VİDEOYU BAŞLAT**. Load error shows a success panel with close. Spotify pauses while video is open and resumes only if it was playing before.
+
+### Development reset query
+
+`?resetEntropy=1` clears session entropy keys in development only.
+
 ## Motion shadow physics
 
 - Mask siluet, düşük opacity, aynı x, signed trail.
