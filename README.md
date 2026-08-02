@@ -29,11 +29,16 @@ NEXT_PUBLIC_DEPLOY_TARGET=vercel
 
 3. Deploy.
 
-`lib/spotify/catalog-service.ts` Spotify albümlerini server-side çeker ve ~6 saat cache’ler (`unstable_cache` + tag `spotify-sehinsah-catalog`).
+`lib/spotify/catalog-service.ts` katalogu server-side çeker ve ~6 saat cache’ler (`unstable_cache` + tag `spotify-sehinsah-catalog`).
+
+Öncelik sırası:
+
+1. Spotify Web API (credential varsa)
+2. Deezer public artist catalog (credential yoksa — otomatik)
+3. `data/generated/spotify-catalog.json`
+4. Kompakt fallback UI
 
 Secret değerleri asla `NEXT_PUBLIC_` ile başlamamalı.
-
-Erken yenilemek için Vercel’de Redeploy yeterlidir (cache tag yeniden dolar). GitHub Pages ile uyumluluk için ayrı API route eklenmedi.
 
 ## B. GitHub Pages — scheduled mirror
 
