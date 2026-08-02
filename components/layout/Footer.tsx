@@ -1,3 +1,4 @@
+import { DesignerCredit } from "@/components/layout/DesignerCredit";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { siteConfig } from "@/data/site";
@@ -14,7 +15,12 @@ export function Footer() {
         <a href="#muzik">MÜZİK</a>
         <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
       </nav>
-      <PlatformLinks variant="all" placement="footer" className={styles.platforms} />
+      <div className={styles.footerBottom}>
+        <PlatformLinks variant="all" placement="footer" className={styles.platforms} />
+        <div className={styles.creditSlot}>
+          <DesignerCredit />
+        </div>
+      </div>
     </footer>
   );
 }

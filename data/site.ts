@@ -99,6 +99,13 @@ export const siteConfig = {
     bubilet: "/media/sehinsah-bubilet.png",
     instagram: "/media/storiesdown.webp",
   },
+  designer: {
+    name: "@on_r19",
+    role: "WEB DESIGNER",
+    subtitle: "DESIGN & DEVELOPMENT",
+    instagram: "https://www.instagram.com/on_r19",
+    image: "/media/credits/on-r19.webp",
+  },
   audioPreview: {
     defaultDuration: 8,
     minDuration: 5,
