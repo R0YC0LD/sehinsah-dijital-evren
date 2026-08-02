@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FeatherField } from "@/components/effects/FeatherField";
+import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -16,7 +16,6 @@ export function FallingExperience() {
   const sectionRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const isTouch = useIsTouchDevice();
-  const [imgOk, setImgOk] = useState(true);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -202,23 +201,17 @@ export function FallingExperience() {
         </p>
 
         <div className={styles.characterWrap}>
-          {imgOk ? (
-            <Image
-              src={siteConfig.media.falling}
-              alt=""
-              width={1000}
-              height={1000}
-              className={`falling-character ${styles.character}`}
-              onError={() => setImgOk(false)}
-              sizes="(max-width: 899px) 78vw, 42vw"
-            />
-          ) : (
-            <div
-              className={`falling-character ${styles.fallback}`}
-              aria-hidden="true"
-            />
-          )}
-          <FeatherField count={isTouch ? 5 : 12} />
+          <MediaImage
+            src={siteConfig.media.falling}
+            alt=""
+            width={1000}
+            height={1000}
+            className={`falling-character ${styles.character}`}
+            onErrorFallback={
+              <div className={`falling-character ${styles.fallback}`} aria-hidden="true" />
+            }
+          />
+          <FeatherField count={isTouch ? 4 : 9} />
         </div>
 
         <p className={`display ${styles.titleFront}`} data-fall-title-front aria-hidden="true">
@@ -227,7 +220,6 @@ export function FallingExperience() {
 
         <div className={styles.copy}>
           <h2 className="display">{siteConfig.falling.lineOne}</h2>
-          <p>{siteConfig.falling.lineTwo}</p>
         </div>
 
         <div className={styles.fragments} aria-hidden="true">

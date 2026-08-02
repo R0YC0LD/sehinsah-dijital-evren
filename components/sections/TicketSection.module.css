@@ -54,19 +54,9 @@
   width: min(68vw, 620px);
   aspect-ratio: 1;
   background: var(--blood);
-  transform: translate(18px, 18px);
-  opacity: 0.35;
+  transform: translate(14px, 14px);
+  opacity: 0.22;
   z-index: 0;
-}
-
-.bigIndex {
-  position: absolute;
-  left: -0.2em;
-  top: -0.15em;
-  font-size: clamp(6rem, 18vw, 12rem);
-  color: rgba(233, 229, 220, 0.06);
-  z-index: 0;
-  pointer-events: none;
 }
 
 .poster {
@@ -100,26 +90,6 @@
   border: 1px dashed rgba(0, 214, 107, 0.4);
   color: var(--ticket-green);
   letter-spacing: 0.18em;
-}
-
-.floatLabel {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 0.55rem 0.9rem;
-  background: var(--ticket-green);
-  color: var(--ink);
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  opacity: 0;
-  transition: opacity 0.25s ease;
-  pointer-events: none;
-}
-
-.poster:hover .floatLabel,
-.poster:focus-visible .floatLabel {
-  opacity: 1;
 }
 
 .ctaWrap {

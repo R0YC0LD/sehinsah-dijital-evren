@@ -21,11 +21,11 @@ export function ArchiveSection() {
       const cards = ref.current!.querySelectorAll("[data-archive-card]");
       gsap.fromTo(
         cards,
-        { y: 60, opacity: 0 },
+        { y: 48, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.12,
+          stagger: 0.1,
           ease: "none",
           scrollTrigger: {
             trigger: ref.current,
@@ -49,9 +49,7 @@ export function ArchiveSection() {
       aria-label="Arşiv"
     >
       <div className={styles.header}>
-        <p className={styles.index}>05 — ARŞİV</p>
         <h2 className={`display ${styles.title}`}>{siteConfig.archive.title}</h2>
-        <p className={styles.subtitle}>{siteConfig.archive.subtitle}</p>
       </div>
 
       <div className={styles.grid}>
@@ -64,11 +62,6 @@ export function ArchiveSection() {
           >
             <span className={styles.cardIndex}>{item.index}</span>
             <h3 className={`display ${styles.cardTitle}`}>{item.title}</h3>
-            <p className={styles.cardDesc}>{item.description}</p>
-            <div className={styles.meta} aria-hidden="true">
-              <span>DURUM: BEKLEMEDE</span>
-              <span>BAĞLANTI: YOK</span>
-            </div>
           </article>
         ))}
       </div>

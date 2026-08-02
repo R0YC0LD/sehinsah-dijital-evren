@@ -1,13 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
+import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import styles from "./InstagramPortal.module.css";
 
 export function InstagramPortal() {
-  const [imgOk, setImgOk] = useState(true);
-
   return (
     <section
       id="instagram"
@@ -15,12 +12,7 @@ export function InstagramPortal() {
       data-section="instagram"
       aria-label="Instagram"
     >
-      <p className={`display ${styles.bgWord}`} aria-hidden="true">
-        TAKİP ET
-      </p>
-
       <div className={styles.content}>
-        <p className={styles.index}>06 — INSTAGRAM</p>
         <h2 className={`display ${styles.title}`}>{siteConfig.instagram.title}</h2>
 
         <a
@@ -48,18 +40,14 @@ export function InstagramPortal() {
           </div>
 
           <div className={styles.avatar}>
-            {imgOk ? (
-              <Image
-                src={siteConfig.media.instagram}
-                alt="Şehinşah Instagram profil görseli"
-                width={150}
-                height={150}
-                className={styles.avatarImg}
-                onError={() => setImgOk(false)}
-              />
-            ) : (
-              <span className={styles.avatarFallback}>ŞŞ</span>
-            )}
+            <MediaImage
+              src={siteConfig.media.instagram}
+              alt="Şehinşah Instagram profil görseli"
+              width={150}
+              height={150}
+              className={styles.avatarImg}
+              onErrorFallback={<span className={styles.avatarFallback}>ŞŞ</span>}
+            />
           </div>
         </a>
 

@@ -14,7 +14,6 @@ export function ControlDock({ indexLabel, reducedMotion }: Props) {
 
   return (
     <div className={styles.dock}>
-      <span className={styles.chaosLabel}>KAOS</span>
       <ExperienceToggle reducedMotion={reducedMotion} />
       <span className={styles.index}>{indexLabel}</span>
       {hasAudio ? (

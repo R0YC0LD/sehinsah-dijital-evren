@@ -1,8 +1,7 @@
 "use client";
 
-import Image from "next/image";
-import { useState } from "react";
 import { Footer } from "@/components/layout/Footer";
+import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import styles from "./FinalSection.module.css";
 
@@ -11,8 +10,6 @@ type Props = {
 };
 
 export function FinalSection({ onBackTop }: Props) {
-  const [imgOk, setImgOk] = useState(true);
-
   return (
     <section
       id="sonsuzluk"
@@ -21,20 +18,15 @@ export function FinalSection({ onBackTop }: Props) {
       aria-label="Sonsuzluk"
     >
       <div className={styles.stage}>
-        {imgOk ? (
-          <Image
-            src={siteConfig.media.falling}
-            alt=""
-            width={1000}
-            height={1000}
-            className={styles.ghost}
-            onError={() => setImgOk(false)}
-            aria-hidden="true"
-          />
-        ) : null}
+        <MediaImage
+          src={siteConfig.media.falling}
+          alt=""
+          width={1000}
+          height={1000}
+          className={styles.ghost}
+        />
 
         <h2 className={`display ${styles.lineOne}`}>{siteConfig.final.lineOne}</h2>
-        <p className={styles.lineTwo}>{siteConfig.final.lineTwo}</p>
 
         <button
           type="button"

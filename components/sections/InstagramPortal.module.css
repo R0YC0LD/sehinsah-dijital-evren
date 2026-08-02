@@ -8,37 +8,19 @@
   overflow: hidden;
 }
 
-.bgWord {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: clamp(4rem, 18vw, 14rem);
-  color: rgba(233, 229, 220, 0.04);
-  letter-spacing: 0.08em;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: transform 0.6s var(--ease-out), color 0.3s ease;
-}
-
 .content {
   position: relative;
   z-index: 1;
   display: grid;
   justify-items: center;
   text-align: center;
-  gap: 1rem;
-}
-
-.index {
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  color: var(--silver);
+  gap: 0.85rem;
 }
 
 .title {
-  font-size: clamp(2.2rem, 7vw, 4.5rem);
-  margin-bottom: 1rem;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.08em;
 }
 
 .portal {
@@ -48,13 +30,6 @@
   display: grid;
   place-items: center;
   margin: 0.5rem 0 1rem;
-}
-
-.portal:hover ~ .bgWord,
-.section:has(.portal:hover) .bgWord,
-.section:has(.portal:focus-visible) .bgWord {
-  color: rgba(173, 23, 23, 0.12);
-  transform: translate(-50%, -54%);
 }
 
 .ring {

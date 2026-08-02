@@ -36,17 +36,8 @@
   max-width: 12ch;
 }
 
-.lineTwo {
-  position: relative;
-  z-index: 1;
-  margin-top: 1rem;
-  letter-spacing: 0.16em;
-  color: var(--bone);
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
-}
-
 .back {
   position: relative;
   z-index: 1;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }

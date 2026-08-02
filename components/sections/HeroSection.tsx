@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { FeatherField } from "@/components/effects/FeatherField";
+import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -17,7 +17,6 @@ export function HeroSection({ ready }: Props) {
   const rootRef = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const isTouch = useIsTouchDevice();
-  const [imgOk, setImgOk] = useState(true);
   const letters = siteConfig.artistName.split("");
 
   useLayoutEffect(() => {
@@ -111,23 +110,21 @@ export function HeroSection({ ready }: Props) {
       </div>
 
       <div className={styles.figureWrap} data-hero-figure>
-        {imgOk ? (
-          <Image
-            src={siteConfig.media.falling}
-            alt="Şehinşah — şeffaf arka planlı düşüş görseli"
-            width={1000}
-            height={1000}
-            priority
-            className={styles.figure}
-            onError={() => setImgOk(false)}
-          />
-        ) : (
-          <div className={styles.fallback} role="img" aria-label="Görsel yüklenemedi">
-            GÖRSEL YOK
-          </div>
-        )}
+        <MediaImage
+          src={siteConfig.media.falling}
+          alt="Şehinşah — şeffaf arka planlı düşüş görseli"
+          width={1000}
+          height={1000}
+          priority
+          className={styles.figure}
+          onErrorFallback={
+            <div className={styles.fallback} role="img" aria-label="Görsel yüklenemedi">
+              —
+            </div>
+          }
+        />
         <div data-hero-feathers>
-          <FeatherField count={isTouch ? 4 : 10} />
+          <FeatherField count={isTouch ? 3 : 8} />
         </div>
       </div>
 

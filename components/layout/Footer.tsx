@@ -9,10 +9,7 @@ type Props = {
 export function Footer({ onBackTop }: Props) {
   return (
     <footer className={styles.footer}>
-      <div className={styles.brand}>
-        <p className={`display ${styles.name}`}>{siteConfig.footer.brand}</p>
-        <p className={styles.label}>{siteConfig.footer.label}</p>
-      </div>
+      <p className={`display ${styles.name}`}>{siteConfig.footer.brand}</p>
 
       <nav className={styles.links} aria-label="Footer bağlantıları">
         <ExternalLink
@@ -45,10 +42,6 @@ export function Footer({ onBackTop }: Props) {
           {siteConfig.final.backToTop}
         </a>
       </nav>
-
-      {!siteConfig.isOfficial ? (
-        <p className={styles.disclaimer}>{siteConfig.unofficialDisclaimer}</p>
-      ) : null}
     </footer>
   );
 }

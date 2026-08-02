@@ -94,11 +94,22 @@ Yerel geliştirmede her ikisini boş bırakabilirsiniz.
 
 ## GitHub Pages
 
-Repo: `sehinsah-dijital-evren`
+- Repo: https://github.com/R0YC0LD/sehinsah-dijital-evren
+- Canlı site: https://R0YC0LD.github.io/sehinsah-dijital-evren/
 
-1. GitHub → Settings → Pages → Source: **GitHub Actions**
-2. `main` branch’e push sonrası workflow otomatik deploy eder
-3. Site: `https://R0YC0LD.github.io/sehinsah-dijital-evren/`
+Şu an yayın `gh-pages` branch’inden yapılıyor (statik `out/` çıktısı).
+
+Yerel yeniden deploy:
+
+```bash
+# Windows PowerShell
+$env:NEXT_PUBLIC_BASE_PATH="/sehinsah-dijital-evren"
+$env:NEXT_PUBLIC_SITE_URL="https://R0YC0LD.github.io/sehinsah-dijital-evren"
+npm run build
+# ardından out/ içeriğini gh-pages branch'ine push edin
+```
+
+İsteğe bağlı: `.github/workflows/deploy.yml` dosyası GitHub Actions deploy’u için hazır. Token’da `workflow` scope yoksa bu dosya push edilemez; GitHub CLI ile `gh auth refresh -s workflow` sonrası Actions’a geçilebilir.
 
 ## Teknolojiler
 
