@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "verify:spotify": "node scripts/verify-spotify-links.mjs",
     "sync:spotify": "node scripts/sync-spotify.mjs",
-    "migrate:catalog": "node scripts/migrate-catalog.mjs"
+    "migrate:catalog": "node scripts/migrate-catalog.mjs",
+    "purge:catalog": "node scripts/purge-contaminated-catalog.mjs"
   },
   "dependencies": {
     "gsap": "^3.13.0",

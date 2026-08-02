@@ -24,24 +24,40 @@
   --font-display: var(--font-anton), "Arial Narrow", Impact, sans-serif;
   --font-body: var(--font-space), "Segoe UI", sans-serif;
   --fall-corridor: 38%;
-  --fall-x: 68vw;
+  --fall-x: 71.5vw;
+  --fall-size: clamp(430px, 38vw, 720px);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   :root {
-    --fall-x: 64vw;
+    --fall-x: 65vw;
+    --fall-size: clamp(360px, 45vw, 560px);
   }
 }
 
 @media (max-width: 899px) {
   :root {
-    --fall-x: 55vw;
+    --fall-x: 50vw;
+    --fall-size: min(92vw, 430px);
     --mobile-page-x: clamp(18px, 5vw, 23px);
     --mobile-section-y: clamp(64px, 9svh, 88px);
     --mobile-body: clamp(0.88rem, 3.8vw, 0.96rem);
     --mobile-h1: clamp(3.25rem, 15vw, 5.15rem);
     --mobile-h2: clamp(2.2rem, 11vw, 3.45rem);
     --mobile-h3: clamp(1.3rem, 6vw, 1.9rem);
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --fall-size: min(94vw, 390px);
+  }
+}
+
+@media (max-width: 899px) and (orientation: landscape) {
+  :root {
+    --fall-x: 62vw;
+    --fall-size: min(50vw, 390px);
   }
 }
 

@@ -1,10 +1,8 @@
 # Şehinşah — Dijital Evren
 
-Karanlık, sinematik sanatçı sitesi. Sıvı loading intro, global düşüş + physical motion shadow, Spotify direct-link katalog, touch-scrub menü, resmî platform ikonları.
+Karanlık, sinematik sanatçı sitesi. **Provided Entropi MP4 video loader**, global düşüş + physical motion shadow, Spotify direct-link katalog (strict artist ID), touch-scrub menü, resmî platform ikonları.
 
-**Ana üretim hedefi: Vercel** (6 saatlik server-side cache).  
-**Yedek mirror: GitHub Pages** (static export).
-
+**Ana üretim hedefi: Vercel** (6 saatlik server-side cache, catalog tag `spotify-sehinsah-catalog-v4`).  
 Production: https://sehinsah-dijital-evren.vercel.app/
 
 ## Kurulum
@@ -26,141 +24,143 @@ NEXT_PUBLIC_SITE_URL=https://sehinsah-dijital-evren.vercel.app
 NEXT_PUBLIC_DEPLOY_TARGET=vercel
 ```
 
-Secret değerleri asla `NEXT_PUBLIC_` ile başlamamalı. Browser’a gönderilmez.
-
 ### Spotify direct link guarantees
 
 - Albüm/track URL’leri yalnızca Spotify API `external_urls.spotify` veya exact ID ile üretilir.
-- `/search/`, `spotify:search:` ve Deezer→Spotify search fallback yasaktır.
-- `npm run verify:spotify` (ve `prebuild`) search URL veya ID uyuşmazlığında build’i durdurur.
-- Kart yalnızca `verified === true` ve direct album/track URL doğrulaması geçince tıklanabilir olur.
+- `/search/` ve Deezer→Spotify search fallback yasaktır.
+- `npm run verify:spotify` denylist + exact artist ID + URL eşleşmesi zorunlu.
+- Kart yalnızca `verified === true` ve direct album URL doğrulaması geçince tıklanabilir.
+
+### Strict target artist ID validation
+
+Hedef: `0FUsrstJwmg4WVHQMTYuUA`
+
+- `artists.some(a => a.id === TARGET)` zorunlu.
+- İsim eşleşmesi / varsayılan ID yazma yok.
+- `Kader Çıkmazı`, `Kamuran Akkor`, `Samanyolu` denylist + ID audit ile temizlendi.
+- Contaminated schema &lt; v4 JSON fallback olarak kabul edilmez.
+
+### Catalog contamination cleanup
+
+```bash
+npm run purge:catalog   # Spotify album page artist-ID audit
+npm run verify:spotify
+```
 
 ### Verified catalog fallback
 
-1. Vercel live Spotify cache (`unstable_cache`, ~6s)
-2. `data/generated/spotify-catalog.json` (son başarılı verified JSON)
-3. Kompakt artist-level fallback (grid gizlenir, artist CTA kalır)
+1. Vercel live Spotify cache (`spotify-sehinsah-catalog-v4`)
+2. `data/generated/spotify-catalog.json` (schemaVersion 4, source `spotify-api`)
+3. Kompakt artist CTA
 
-`npm run sync:spotify` credential yoksa mevcut verified JSON’u korur; Deezer/search yazmaz.
+### Vercel cache v4 invalidation
+
+Cache key/tag: `spotify-sehinsah-catalog-v4`. Eski yanlış katalog bu sürümle geçersizleşir. Gerekirse Vercel’de “Redeploy without build cache”.
 
 ### How to add exact featured track IDs
 
-`data/featured-tracks.ts`:
-
-```ts
-export const featuredTrackIds = [
-  { spotifyTrackId: "EXACT_TRACK_ID", previewSrc: "/audio/previews/foo.mp3" },
-];
-```
-
-ID yoksa featured satırlar katalog track listesinden gelir; track yoksa alan artist embed’e bırakılır.
+`data/featured-tracks.ts` → `featuredTrackIds: [{ spotifyTrackId: "..." }]`.
 
 ### How to add licensed audio previews
 
+`public/audio/previews/...` + `previewSrc`. Opt-in: **SES ÖNİZLEMELERİNİ AÇ**.
+
+## Provided video loader source
+
+Kaynak (kullanıcı yükledi): `bana_bir_şehinşah_entropi_kapa.mp4`  
+ASCII kopya: `public/media/loading/sehinsah-entropi-loader-source.mp4`
+
+Production assets:
+
 ```text
-public/audio/previews/track-slug.mp3
+public/media/loading/sehinsah-entropi-loader.mp4
+public/media/loading/sehinsah-entropi-loader-mobile.mp4
+public/media/loading/sehinsah-entropi-loader.webm
+public/media/loading/sehinsah-entropi-loader-poster.webp
 ```
 
-`featuredTrackIds` içinde `previewSrc` bağla. Kullanıcı **SES ÖNİZLEMELERİNİ AÇ** demeden ses başlamaz.
+Components:
 
-## Loading animation architecture
+- `VideoLoadingScreen.tsx`
+- `useVideoLoadingIntro.ts`
+- `VideoLoaderFallback.tsx`
+- Legacy `LoadingScreen.tsx` / `LiquidWordmark.tsx` ana akışta kullanılmaz (SVG slime primary değil).
 
-`components/loading/`
+### Production video optimization commands
 
-- `LoadingScreen.tsx` — fixed overlay (`z-index: 1400`), clip-path exit
-- `LiquidWordmark.tsx` — SVG mask + yeşil sıvı dolum + kontrollü slime taşması
-- `useLoadingIntro.ts` — sessionStorage ile yalnızca ilk document load; font/image race + timeout
+```bash
+ffmpeg -i sehinsah-entropi-loader-source.mp4 -an -vf "scale=1280:-2:flags=lanczos" -c:v libx264 -preset slow -crf 24 -movflags +faststart sehinsah-entropi-loader.mp4
+ffmpeg -i sehinsah-entropi-loader-source.mp4 -an -vf "scale=854:-2:flags=lanczos" -c:v libx264 -preset slow -crf 26 -movflags +faststart sehinsah-entropi-loader-mobile.mp4
+ffmpeg -i sehinsah-entropi-loader-source.mp4 -an -vf "scale=1280:-2:flags=lanczos" -c:v libvpx-vp9 -b:v 0 -crf 35 sehinsah-entropi-loader.webm
+ffmpeg -ss 0.20 -i sehinsah-entropi-loader-source.mp4 -frames:v 1 -vf "scale=1280:-2:flags=lanczos" sehinsah-entropi-loader-poster.webp
+```
 
-### Liquid fill timing
+### Why audio is removed
 
-- Fill ~2.05s, overflow ~0.32s, exit ~0.42s (`siteConfig.loading`)
-- Dolum bitince ekstra bekleme yok; overlay açılır
+Autoplay politikaları ve kullanıcı deneyimi için production loader dosyalarında AAC stream yok (`-an`). HTML ayrıca `muted` + `volume = 0`.
 
-### Slime overflow configuration
+### Playback segment timing
 
-- %86 civarında 3–4 damla / kısa iplik
-- Mobilde daha kısa süre ve daha az damla
+```text
+0.05–0.90 @ 1.45x
+0.90–7.80 @ 1.90x
+7.80–9.65 @ 2.25x
+```
 
-### Loader reduced-motion behavior
+Finale ~9.65s → exit (~0.44s). Max visible 5500ms. Min ~2400ms.
 
-- Hızlı dolu yazı + kısa fade; toplam ~600ms altı hedef
+### Video fallback behavior
 
-### Loader cleanup and ScrollTrigger refresh
+`canplay` timeout / autoplay reject / codec fail → poster + kısa wipe → Hero. Yeni SVG wordmark üretilmez.
 
-- `body[data-loading]` scroll lock
-- Complete → overlay unmount, `sehinsah:loading-complete` event, `ScrollTrigger.refresh()`
+### Save-Data behavior
+
+`navigator.connection.saveData` → kısa poster fallback (~1–1.2s), ağır video zorlanmaz.
+
+### Session loader key
+
+`sehinsah-video-intro-v3` — session başına bir kez. Dev: `?intro=1`.
+
+### Loader reduced-motion / cleanup
+
+- Reduced motion: poster + kısa reveal (&lt;700ms), video autoplay yok.
+- Exit → listener/RVFC cleanup, `ScrollTrigger.refresh()`, `sehinsah:loading-complete`.
 
 ## Motion shadow physics
 
-`components/global/GlobalFallingLayer.tsx`
+- Mask siluet, düşük opacity, aynı x, signed trail.
+- Desktop rest ~0.028 / max ≤0.066; mobile rest ~0.018 / max ≤0.048.
 
-- Tek fixed layer, tek ScrollTrigger, yalnızca Y hareketi
-- Shadow mask tabanlı koyu bordo siluet (`#551014`), PNG kopyası değil
-- `x` offset = 0; karakterle aynı dikey hat
+### Desktop fall corridor
 
-### Motion shadow opacity limits
+`--fall-x: 71.5vw`, `--fall-size: clamp(430px, 38vw, 720px)` — sağ boş koridor.
 
-- Desktop rest ~0.028, max ≤ 0.066
-- Mobile rest ~0.018, max ≤ 0.048
+### Mobile centered fall axis
 
-### Signed scroll direction behavior
+Portrait: `--fall-x: 50vw` (tam merkez). Landscape istisna: `62vw`.
 
-- Aşağı scroll: trail yukarıda (negatif Y)
-- Yukarı scroll: trail aşağıda (pozitif Y)
-- Durunca rest değerlerine yumuşak dönüş
+### Reference screenshot responsive interpretation
+
+Desktop sağ koridor + sol içerik; mobil portrait tam orta eksen; tek kaynak CSS değişkenleri (`globals.css`).
 
 ## Official platform links
 
-Config: `data/site.ts` → `links`
+Config: `data/site.ts`
 
 - YouTube: `https://www.youtube.com/@SEHINSAHIKARUS`
-- TikTok: `https://www.tiktok.com/@sehinsahtiktok` (tracking params yok)
-- Apple Music: `https://music.apple.com/tr/artist/.../736313630?l=tr` (Instagram redirect yok)
-- Spotify artist / Instagram / Bubilet aynı config üzerinden
+- TikTok: `https://www.tiktok.com/@sehinsahtiktok`
+- Apple Music: artist `736313630` direct URL
+- Spotify / Instagram / Bubilet aynı config
 
-### Brand icon source and license notes
-
-`simple-icons` paketinden resmi marka path geometrileri (`BrandIcon.tsx`). CDN hotlink yok.
-
-### Platform icon placement rules
-
-- Menü footer: tüm platformlar
-- Müzik: Spotify / Apple Music / YouTube
-- Instagram section: Instagram / TikTok / YouTube
-- Footer: tüm platformlar (metin tekrarı azaltılmış)
-
-### Platform link accessibility
-
-- Meaningful `aria-label`
-- Min 44×44px touch
-- Focus-visible + monochrome → controlled brand-color hover
-
-### Platform analytics placements
-
-Opsiyonel `data-analytics` / `data-placement` (`menu` | `music` | `footer` | `social-section`). Analytics linki geciktirmez.
+Brand icons: `simple-icons` (`BrandIcon.tsx`). Placement: menü / müzik dinle / footer / sosyal.
 
 ## How touch menu scrubbing works
 
-`InteractiveMenu` nav:
-
-- Touch/pen pointer scrub (`elementFromPoint` + rAF throttle)
-- Drag leave → navigate etmez; kısa tap → section’a gider
-- Platform ikonları scrub alanının dışında (`touch-action: manipulation`)
-- Preview: iki katmanlı crossfade
+Touch/pen scrub on nav only; platform icons outside; drag ≠ navigate; tap navigates; preview crossfade.
 
 ## Mobile design tokens
 
-`app/globals.css` (`max-width: 899px`):
-
-```css
---mobile-page-x, --mobile-section-y, --mobile-body, --mobile-h1/h2/h3
-```
-
-Global `transform: scale()` kullanılmaz.
-
-## Analytics events
-
-Privacy-friendly / optional. Örnekler: `menu_open`, `album_open`, `track_open`, `random_track`, `favorite_add`, `youtube_open`, `tiktok_open`, `apple_music_open`, `spotify_artist_open`, `instagram_open`, `bubilet_open`.
+`--mobile-page-x/y/body/h1/h2/h3` — global `transform: scale()` yok.
 
 ## Link verification command
 
@@ -168,15 +168,11 @@ Privacy-friendly / optional. Örnekler: `menu_open`, `album_open`, `track_open`,
 npm run verify:spotify
 ```
 
-`prebuild` içinde otomatik çalışır.
-
 ## Vercel deployment
 
 ```bash
 vercel --prod
 ```
-
-Env: Spotify credentials + `NEXT_PUBLIC_DEPLOY_TARGET=vercel`.
 
 ## Komutlar
 
@@ -185,12 +181,7 @@ npm run dev
 npm run lint
 npm run typecheck
 npm run verify:spotify
+npm run purge:catalog
 npm run sync:spotify
-npm run migrate:catalog
 npm run build
-npm start
 ```
-
-## Kaos modu
-
-Tam ekran menünün altında **SADE / KAOS**. Varsayılan SADE. localStorage’da saklanır.

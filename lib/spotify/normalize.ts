@@ -11,6 +11,18 @@ import { isDirectSpotifyAlbumUrl, isSpotifySearchUrl } from "./validate-links";
 
 const TARGET = siteConfig.targetArtistId;
 
+/** Emergency denylist — primary gate remains exact artist ID. */
+const TITLE_DENYLIST = [
+  "kader çıkmazı",
+  "kamuran akkor",
+  "samanyolu",
+];
+
+export function isDeniedReleaseTitle(name = ""): boolean {
+  const n = name.toLowerCase();
+  return TITLE_DENYLIST.some((d) => n.includes(d));
+}
+
 function pickImage(images: SpotifyImage[]): string | null {
   if (!images?.length) return null;
   const preferred = images.find((img) => (img.width ?? 0) >= 500 && (img.width ?? 0) <= 700);
@@ -28,6 +40,7 @@ function normalizeArtists(
 ): SpotifyArtistRef[] {
   if (!artists?.length) return [];
   if (typeof artists[0] === "string") {
+    // Legacy string-only artists are unverified — never invent IDs.
     return (artists as string[]).map((name) => ({ id: "", name }));
   }
   return (artists as Array<{ id?: string; name: string }>).map((a) => ({
@@ -37,18 +50,19 @@ function normalizeArtists(
 }
 
 export function containsTargetArtist(artists: SpotifyArtistRef[]): boolean {
-  return artists.some((a) => a.id === TARGET || a.name.toLowerCase().includes("şehinşah"));
+  return artists.some((a) => a.id === TARGET);
 }
 
 export function normalizeAlbum(raw: SpotifyRawAlbum): SpotifyRelease {
   const artists = normalizeArtists(raw.artists);
   const spotifyUrl = raw.external_urls?.spotify || `https://open.spotify.com/album/${raw.id}`;
-  const hasTarget = artists.some((a) => a.id === TARGET);
+  const hasTarget = containsTargetArtist(artists);
   const verified =
     Boolean(raw.id) &&
     !isSpotifySearchUrl(spotifyUrl) &&
     isDirectSpotifyAlbumUrl(spotifyUrl, raw.id) &&
-    hasTarget;
+    hasTarget &&
+    !isDeniedReleaseTitle(raw.name);
 
   return {
     id: raw.id,
@@ -68,10 +82,16 @@ export function normalizeAlbum(raw: SpotifyRawAlbum): SpotifyRelease {
   };
 }
 
-/** Migrate legacy generated JSON entries into verified releases when possible. */
-export function coerceRelease(raw: Partial<SpotifyRelease> & { id: string; name: string }): SpotifyRelease | null {
+/**
+ * Re-validate generated JSON. Never trust stored verified flags.
+ * Artist ID must be present and exact — name matching / defaults are rejected.
+ */
+export function coerceRelease(
+  raw: Partial<SpotifyRelease> & { id: string; name: string },
+): SpotifyRelease | null {
   const id = raw.spotifyId || raw.id;
   if (!id || id.startsWith("deezer-")) return null;
+  if (isDeniedReleaseTitle(raw.name)) return null;
 
   const spotifyUrl =
     raw.spotifyUrl && !isSpotifySearchUrl(raw.spotifyUrl)
@@ -81,19 +101,10 @@ export function coerceRelease(raw: Partial<SpotifyRelease> & { id: string; name:
   if (!isDirectSpotifyAlbumUrl(spotifyUrl, id)) return null;
 
   const artists = normalizeArtists(
-    (raw.artists as Array<{ id?: string; name: string }> | string[] | undefined) || [
-      { id: TARGET, name: siteConfig.displayName },
-    ],
+    (raw.artists as Array<{ id?: string; name: string }> | string[] | undefined) || [],
   );
 
-  // Legacy catalog entries from album IDs are treated as containing the artist
-  // when they already store a direct album URL for this project's sync.
-  const hasTarget =
-    artists.some((a) => a.id === TARGET) ||
-    artists.some((a) => a.name.toLowerCase().includes("şehinşah")) ||
-    Boolean(raw.containsTargetArtist) ||
-    isDirectSpotifyAlbumUrl(spotifyUrl, id);
-
+  const hasTarget = containsTargetArtist(artists);
   if (!hasTarget) return null;
 
   return {
@@ -108,9 +119,7 @@ export function coerceRelease(raw: Partial<SpotifyRelease> & { id: string; name:
     imageUrl: raw.imageUrl ?? null,
     spotifyUrl,
     uri: raw.uri || `spotify:album:${id}`,
-    artists: artists.length
-      ? artists.map((a) => (a.id ? a : { id: TARGET, name: a.name || siteConfig.displayName }))
-      : [{ id: TARGET, name: siteConfig.displayName }],
+    artists,
     containsTargetArtist: true,
     verified: true,
   };
@@ -159,11 +168,23 @@ export function buildMusicCatalog(
   updatedAt: string | null = new Date().toISOString(),
   tracks: SpotifyTrack[] = [],
 ): MusicCatalog {
-  const verified = releases.filter((r) => r.verified && r.containsTargetArtist);
+  const verified = releases.filter(
+    (r) =>
+      r.verified &&
+      r.containsTargetArtist &&
+      containsTargetArtist(r.artists) &&
+      !isDeniedReleaseTitle(r.name),
+  );
   const sorted = [...verified].sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
   const albums = sorted.filter((r) => isAlbumType(r.albumType));
   const singles = sorted.filter((r) => isSingleType(r.albumType));
-  const verifiedTracks = tracks.filter((t) => t.verified && t.containsTargetArtist);
+  const verifiedTracks = tracks.filter(
+    (t) =>
+      t.verified &&
+      t.containsTargetArtist &&
+      containsTargetArtist(t.artists) &&
+      !isDeniedReleaseTitle(t.name),
+  );
 
   return {
     releases: sorted,

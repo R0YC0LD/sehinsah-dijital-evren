@@ -1,0 +1,119 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1600;
+  width: 100%;
+  height: 100svh;
+  background: #020202;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  overflow: hidden;
+  will-change: clip-path, opacity;
+}
+
+.overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at center, transparent 35%, rgba(0, 0, 0, 0.55) 100%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  mix-blend-mode: overlay;
+}
+
+.loaderFrame {
+  position: relative;
+  width: min(88vw, 1180px);
+  aspect-ratio: 16 / 9;
+  z-index: 1;
+}
+
+.loaderFrame::after {
+  content: "";
+  position: absolute;
+  inset: 12% 8%;
+  background: radial-gradient(ellipse, rgba(66, 255, 138, 0.11), transparent 68%);
+  filter: blur(26px);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.video,
+.poster {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.video {
+  filter: contrast(1.05) saturate(1.06) brightness(0.93);
+  background: #020202;
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.fallback .poster {
+  width: min(88vw, 1180px);
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.fallbackWipe {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(30, 215, 96, 0.22), transparent 55%);
+  transform: translateX(-110%);
+  animation: wipe 0.8s var(--ease) forwards;
+  pointer-events: none;
+}
+
+.fallbackReduced .fallbackWipe {
+  animation-duration: 0.35s;
+}
+
+@keyframes wipe {
+  to {
+    transform: translateX(110%);
+  }
+}
+
+.exiting .loaderFrame {
+  transform: scale(1.025);
+  transition: transform 0.44s var(--ease);
+}
+
+@media (max-width: 899px) {
+  .loaderFrame,
+  .fallback .poster {
+    width: min(96vw, 760px);
+    max-height: 58svh;
+  }
+
+  .loaderFrame::after {
+    filter: blur(16px);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loaderFrame::after,
+  .fallbackWipe {
+    animation: none;
+    filter: none;
+  }
+
+  .exiting .loaderFrame {
+    transform: none;
+    transition: none;
+  }
+}

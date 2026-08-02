@@ -1,4 +1,8 @@
 {
+  "schemaVersion": 4,
+  "source": "spotify-api",
+  "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
+  "generatedAt": "2026-08-02T13:34:41.960Z",
   "releases": [
     {
       "id": "2aTmzuUvKITVuP2qBnrvvD",
@@ -96,48 +100,6 @@
       "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02a03b41f0232b90458b87e376",
       "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
       "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "5IjNvRJSvWIOhqxkc8T2pG",
-      "spotifyId": "5IjNvRJSvWIOhqxkc8T2pG",
-      "objectType": "album",
-      "name": "Lamine Yamal | The New Prince",
-      "albumType": "single",
-      "releaseDate": "2025-06-27",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d34e984f52c8e21f84b23837",
-      "spotifyUrl": "https://open.spotify.com/album/5IjNvRJSvWIOhqxkc8T2pG",
-      "uri": "spotify:album:5IjNvRJSvWIOhqxkc8T2pG",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "3wn6SfgDifkgzusYoiH5Eg",
-      "spotifyId": "3wn6SfgDifkgzusYoiH5Eg",
-      "objectType": "album",
-      "name": "Eskisi Gibi",
-      "albumType": "single",
-      "releaseDate": "2025-03-28",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0210e25ac1457f3d4f5a681f44",
-      "spotifyUrl": "https://open.spotify.com/album/3wn6SfgDifkgzusYoiH5Eg",
-      "uri": "spotify:album:3wn6SfgDifkgzusYoiH5Eg",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -285,27 +247,6 @@
       "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025a79c7ded3876d207b6ad07d",
       "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
       "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "6ov1Z6rmcE663OhLxy5AFA",
-      "spotifyId": "6ov1Z6rmcE663OhLxy5AFA",
-      "objectType": "album",
-      "name": "Deli Deli",
-      "albumType": "single",
-      "releaseDate": "2024-08-23",
-      "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02797ef610a6b76a0b0817e696",
-      "spotifyUrl": "https://open.spotify.com/album/6ov1Z6rmcE663OhLxy5AFA",
-      "uri": "spotify:album:6ov1Z6rmcE663OhLxy5AFA",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -652,48 +593,6 @@
       "verified": true
     },
     {
-      "id": "4mnBdWx2psHiTg78pclViD",
-      "spotifyId": "4mnBdWx2psHiTg78pclViD",
-      "objectType": "album",
-      "name": "Meclis-i Ala İstanbul",
-      "albumType": "single",
-      "releaseDate": "2022-07-01",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a8179ed4fe988d51e76438ee",
-      "spotifyUrl": "https://open.spotify.com/album/4mnBdWx2psHiTg78pclViD",
-      "uri": "spotify:album:4mnBdWx2psHiTg78pclViD",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "5QWdCZD91757ow6zCrYTnr",
-      "spotifyId": "5QWdCZD91757ow6zCrYTnr",
-      "objectType": "album",
-      "name": "TAK TAK TAK",
-      "albumType": "single",
-      "releaseDate": "2022-06-10",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022b570cac7049d9ac64af30a0",
-      "spotifyUrl": "https://open.spotify.com/album/5QWdCZD91757ow6zCrYTnr",
-      "uri": "spotify:album:5QWdCZD91757ow6zCrYTnr",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "463e8VUKAZB5i86sUNIRGH",
       "spotifyId": "463e8VUKAZB5i86sUNIRGH",
       "objectType": "album",
@@ -778,27 +677,6 @@
       "verified": true
     },
     {
-      "id": "53KuHTKWIjUaZGCEXUeNid",
-      "spotifyId": "53KuHTKWIjUaZGCEXUeNid",
-      "objectType": "album",
-      "name": "Kader Çıkmazı (45'lik)",
-      "albumType": "single",
-      "releaseDate": "2021-07-16",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be173e48cb8687a6ed6b645c",
-      "spotifyUrl": "https://open.spotify.com/album/53KuHTKWIjUaZGCEXUeNid",
-      "uri": "spotify:album:53KuHTKWIjUaZGCEXUeNid",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "6VXZxNd3ur24KwERIBjFcs",
       "spotifyId": "6VXZxNd3ur24KwERIBjFcs",
       "objectType": "album",
@@ -810,27 +688,6 @@
       "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0207c7d578b213d0bc03f6e889",
       "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
       "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "69HxKUUjYmS2v2fRumhjkP",
-      "spotifyId": "69HxKUUjYmS2v2fRumhjkP",
-      "objectType": "album",
-      "name": "Samanyolu",
-      "albumType": "single",
-      "releaseDate": "2021-03-05",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0249771818ecc38e66eebe891e",
-      "spotifyUrl": "https://open.spotify.com/album/69HxKUUjYmS2v2fRumhjkP",
-      "uri": "spotify:album:69HxKUUjYmS2v2fRumhjkP",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1051,27 +908,6 @@
       "verified": true
     },
     {
-      "id": "6tU5HiXjXem6qihbGElWjY",
-      "spotifyId": "6tU5HiXjXem6qihbGElWjY",
-      "objectType": "album",
-      "name": "Kıskanmak (Original Soundtrack)",
-      "albumType": "single",
-      "releaseDate": "2019-01-11",
-      "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c17ee6fbbb8415b321ba0c5b",
-      "spotifyUrl": "https://open.spotify.com/album/6tU5HiXjXem6qihbGElWjY",
-      "uri": "spotify:album:6tU5HiXjXem6qihbGElWjY",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "7w23DpIjUzfefwiq0aXDNn",
       "spotifyId": "7w23DpIjUzfefwiq0aXDNn",
       "objectType": "album",
@@ -1167,27 +1003,6 @@
       "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027573b15341f457146202a978",
       "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
       "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "72psRaJ9JNqucQloOlHtWs",
-      "spotifyId": "72psRaJ9JNqucQloOlHtWs",
-      "objectType": "album",
-      "name": "Yeşilçam Şarkıları Vol. 3 - Yıldızların Altında",
-      "albumType": "single",
-      "releaseDate": "2016-10-31",
-      "releaseYear": "2016",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026a124d78e3ff6240abb34eba",
-      "spotifyUrl": "https://open.spotify.com/album/72psRaJ9JNqucQloOlHtWs",
-      "uri": "spotify:album:72psRaJ9JNqucQloOlHtWs",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1433,48 +1248,6 @@
       "verified": true
     },
     {
-      "id": "5IjNvRJSvWIOhqxkc8T2pG",
-      "spotifyId": "5IjNvRJSvWIOhqxkc8T2pG",
-      "objectType": "album",
-      "name": "Lamine Yamal | The New Prince",
-      "albumType": "single",
-      "releaseDate": "2025-06-27",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d34e984f52c8e21f84b23837",
-      "spotifyUrl": "https://open.spotify.com/album/5IjNvRJSvWIOhqxkc8T2pG",
-      "uri": "spotify:album:5IjNvRJSvWIOhqxkc8T2pG",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "3wn6SfgDifkgzusYoiH5Eg",
-      "spotifyId": "3wn6SfgDifkgzusYoiH5Eg",
-      "objectType": "album",
-      "name": "Eskisi Gibi",
-      "albumType": "single",
-      "releaseDate": "2025-03-28",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0210e25ac1457f3d4f5a681f44",
-      "spotifyUrl": "https://open.spotify.com/album/3wn6SfgDifkgzusYoiH5Eg",
-      "uri": "spotify:album:3wn6SfgDifkgzusYoiH5Eg",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "77kh4b22L5QCCIZhXsUOU2",
       "spotifyId": "77kh4b22L5QCCIZhXsUOU2",
       "objectType": "album",
@@ -1612,27 +1385,6 @@
       "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025a79c7ded3876d207b6ad07d",
       "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
       "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "6ov1Z6rmcE663OhLxy5AFA",
-      "spotifyId": "6ov1Z6rmcE663OhLxy5AFA",
-      "objectType": "album",
-      "name": "Deli Deli",
-      "albumType": "single",
-      "releaseDate": "2024-08-23",
-      "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02797ef610a6b76a0b0817e696",
-      "spotifyUrl": "https://open.spotify.com/album/6ov1Z6rmcE663OhLxy5AFA",
-      "uri": "spotify:album:6ov1Z6rmcE663OhLxy5AFA",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1958,48 +1710,6 @@
       "verified": true
     },
     {
-      "id": "4mnBdWx2psHiTg78pclViD",
-      "spotifyId": "4mnBdWx2psHiTg78pclViD",
-      "objectType": "album",
-      "name": "Meclis-i Ala İstanbul",
-      "albumType": "single",
-      "releaseDate": "2022-07-01",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02a8179ed4fe988d51e76438ee",
-      "spotifyUrl": "https://open.spotify.com/album/4mnBdWx2psHiTg78pclViD",
-      "uri": "spotify:album:4mnBdWx2psHiTg78pclViD",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "5QWdCZD91757ow6zCrYTnr",
-      "spotifyId": "5QWdCZD91757ow6zCrYTnr",
-      "objectType": "album",
-      "name": "TAK TAK TAK",
-      "albumType": "single",
-      "releaseDate": "2022-06-10",
-      "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022b570cac7049d9ac64af30a0",
-      "spotifyUrl": "https://open.spotify.com/album/5QWdCZD91757ow6zCrYTnr",
-      "uri": "spotify:album:5QWdCZD91757ow6zCrYTnr",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "463e8VUKAZB5i86sUNIRGH",
       "spotifyId": "463e8VUKAZB5i86sUNIRGH",
       "objectType": "album",
@@ -2084,27 +1794,6 @@
       "verified": true
     },
     {
-      "id": "53KuHTKWIjUaZGCEXUeNid",
-      "spotifyId": "53KuHTKWIjUaZGCEXUeNid",
-      "objectType": "album",
-      "name": "Kader Çıkmazı (45'lik)",
-      "albumType": "single",
-      "releaseDate": "2021-07-16",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be173e48cb8687a6ed6b645c",
-      "spotifyUrl": "https://open.spotify.com/album/53KuHTKWIjUaZGCEXUeNid",
-      "uri": "spotify:album:53KuHTKWIjUaZGCEXUeNid",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "6VXZxNd3ur24KwERIBjFcs",
       "spotifyId": "6VXZxNd3ur24KwERIBjFcs",
       "objectType": "album",
@@ -2116,27 +1805,6 @@
       "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0207c7d578b213d0bc03f6e889",
       "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
       "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "69HxKUUjYmS2v2fRumhjkP",
-      "spotifyId": "69HxKUUjYmS2v2fRumhjkP",
-      "objectType": "album",
-      "name": "Samanyolu",
-      "albumType": "single",
-      "releaseDate": "2021-03-05",
-      "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0249771818ecc38e66eebe891e",
-      "spotifyUrl": "https://open.spotify.com/album/69HxKUUjYmS2v2fRumhjkP",
-      "uri": "spotify:album:69HxKUUjYmS2v2fRumhjkP",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -2336,27 +2004,6 @@
       "verified": true
     },
     {
-      "id": "6tU5HiXjXem6qihbGElWjY",
-      "spotifyId": "6tU5HiXjXem6qihbGElWjY",
-      "objectType": "album",
-      "name": "Kıskanmak (Original Soundtrack)",
-      "albumType": "single",
-      "releaseDate": "2019-01-11",
-      "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c17ee6fbbb8415b321ba0c5b",
-      "spotifyUrl": "https://open.spotify.com/album/6tU5HiXjXem6qihbGElWjY",
-      "uri": "spotify:album:6tU5HiXjXem6qihbGElWjY",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
       "id": "7w23DpIjUzfefwiq0aXDNn",
       "spotifyId": "7w23DpIjUzfefwiq0aXDNn",
       "objectType": "album",
@@ -2460,27 +2107,6 @@
       ],
       "containsTargetArtist": true,
       "verified": true
-    },
-    {
-      "id": "72psRaJ9JNqucQloOlHtWs",
-      "spotifyId": "72psRaJ9JNqucQloOlHtWs",
-      "objectType": "album",
-      "name": "Yeşilçam Şarkıları Vol. 3 - Yıldızların Altında",
-      "albumType": "single",
-      "releaseDate": "2016-10-31",
-      "releaseYear": "2016",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026a124d78e3ff6240abb34eba",
-      "spotifyUrl": "https://open.spotify.com/album/72psRaJ9JNqucQloOlHtWs",
-      "uri": "spotify:album:72psRaJ9JNqucQloOlHtWs",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
     }
   ],
   "tracks": [],
@@ -2506,11 +2132,10 @@
     "verified": true
   },
   "counts": {
-    "total": 59,
+    "total": 50,
     "albums": 4,
-    "singles": 55,
+    "singles": 46,
     "tracks": 0
   },
-  "updatedAt": "2026-08-02T12:57:00.727Z",
-  "source": "generated-json"
+  "updatedAt": "2026-08-02T13:34:41.972Z"
 }

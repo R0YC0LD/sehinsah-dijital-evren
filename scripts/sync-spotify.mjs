@@ -144,6 +144,10 @@ async function writeCatalog(releases, tracks = []) {
   }
 
   const catalog = {
+    schemaVersion: 4,
+    source: "spotify-api",
+    targetArtistId: ARTIST_ID,
+    generatedAt: new Date().toISOString(),
     releases: verified,
     albums,
     singles,
@@ -156,7 +160,6 @@ async function writeCatalog(releases, tracks = []) {
       tracks: verifiedTracks.length,
     },
     updatedAt: new Date().toISOString(),
-    source: "generated-json",
   };
 
   await mkdir(path.dirname(OUT), { recursive: true });

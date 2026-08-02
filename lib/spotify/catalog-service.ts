@@ -62,9 +62,9 @@ function revalidateSeconds() {
 
 async function getLiveCachedSpotifyCatalog(): Promise<MusicCatalog> {
   try {
-    const cached = unstable_cache(loadLiveCatalog, ["spotify-sehinsah-catalog"], {
+    const cached = unstable_cache(loadLiveCatalog, ["spotify-sehinsah-catalog-v4"], {
       revalidate: revalidateSeconds(),
-      tags: ["spotify-sehinsah-catalog"],
+      tags: ["spotify-sehinsah-catalog-v4"],
     });
     return await cached();
   } catch (error) {
@@ -79,7 +79,20 @@ export async function getGeneratedSpotifyCatalog(): Promise<MusicCatalog> {
   try {
     const data = (await import("@/data/generated/spotify-catalog.json")).default as MusicCatalog & {
       releases: Array<Record<string, unknown>>;
+      schemaVersion?: number;
+      targetArtistId?: string;
+      source?: string;
+      updatedAt?: string | null;
+      generatedAt?: string;
     };
+
+    if (data.targetArtistId && data.targetArtistId !== siteConfig.targetArtistId) {
+      return emptyCatalog("fallback");
+    }
+    if (data.schemaVersion != null && Number(data.schemaVersion) < 4) {
+      return emptyCatalog("fallback");
+    }
+
     const releases = (data.releases || [])
       .map((r) =>
         coerceRelease(
@@ -88,14 +101,19 @@ export async function getGeneratedSpotifyCatalog(): Promise<MusicCatalog> {
       )
       .filter(Boolean);
     const tracks = ((data.tracks || []) as SpotifyTrack[]).filter(
-      (t) => t?.verified && t.containsTargetArtist && !String(t.spotifyUrl || "").includes("/search/"),
+      (t) =>
+        t?.verified &&
+        t.containsTargetArtist &&
+        Array.isArray(t.artists) &&
+        t.artists.some((a) => a.id === siteConfig.targetArtistId) &&
+        !String(t.spotifyUrl || "").includes("/search/"),
     );
 
     if (!releases.length) return emptyCatalog("fallback");
     return buildMusicCatalog(
       releases as NonNullable<ReturnType<typeof coerceRelease>>[],
       "generated-json",
-      data.updatedAt,
+      data.updatedAt || data.generatedAt || null,
       tracks,
     );
   } catch {

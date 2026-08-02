@@ -7,11 +7,10 @@
 }
 
 .character {
-  --fall-x: 68vw;
   position: absolute;
   left: var(--fall-x);
   top: 0;
-  width: clamp(380px, 41vw, 680px);
+  width: var(--fall-size);
   transform: translate3d(-50%, -64vh, 0) rotate(-3deg);
   transform-origin: center;
   will-change: transform;
@@ -53,12 +52,7 @@
   will-change: transform, opacity, filter;
 }
 
-@media (max-width: 1024px) {
-  .character {
-    --fall-x: 64vw;
-    width: clamp(330px, 46vw, 560px);
-  }
-
+@media (max-width: 1199px) {
   .shadow {
     --shadow-opacity: 0.022;
   }
@@ -66,8 +60,6 @@
 
 @media (max-width: 899px) {
   .character {
-    --fall-x: 55vw;
-    width: min(78vw, 390px);
     opacity: 0.84;
   }
 
