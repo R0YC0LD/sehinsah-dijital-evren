@@ -55,7 +55,7 @@ export const siteConfig = {
     backToTop: "BAŞA DÖN ↑",
   },
   loading: {
-    enabled: true,
+    enabled: false,
     mode: "provided-video" as const,
     showOncePerSession: true,
     sessionKey: "sehinsah-video-intro-v3",

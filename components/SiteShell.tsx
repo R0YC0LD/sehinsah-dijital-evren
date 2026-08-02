@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { GlobalFallingLayer } from "@/components/global/GlobalFallingLayer";
 import { ScrollProgress } from "@/components/global/ScrollProgress";
-import { VideoLoadingScreen } from "@/components/loading/VideoLoadingScreen";
 import { Header } from "@/components/layout/Header";
 import { InteractiveMenu } from "@/components/menu/InteractiveMenu";
 import {
@@ -31,7 +30,6 @@ function ShellInner({ children, catalog }: Props) {
       <a className="skip-link" href="#main">
         İçeriğe geç
       </a>
-      <VideoLoadingScreen />
       <div className="page-background" aria-hidden="true" />
       <div className="site-grain" aria-hidden="true" />
       <Header menuOpen={menuOpen} onMenuToggle={() => setMenuOpen((v) => !v)} />
