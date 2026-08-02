@@ -44,8 +44,9 @@ function ShellInner({ children, catalog }: Props) {
       />
       <GlobalFallingLayer />
       <ScrollProgress />
-      {children}
+      {/* Gate mounts before page content so Spotify host exists before the player boots. */}
       <MusicStartGate />
+      {children}
     </>
   );
 }
