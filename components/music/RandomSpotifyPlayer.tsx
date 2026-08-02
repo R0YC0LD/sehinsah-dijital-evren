@@ -58,12 +58,9 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
   const { stopPreview, activeId } = useAudioPreviewContext();
   const {
     registerController,
-    registerHostElement,
-    hostElement,
     setReady,
     setPlaying: setPlaybackPlaying,
     setUnlocked,
-    setCurrentUri,
     emit,
     playFromUserGesture,
   } = useSpotifyPlayback();
@@ -106,14 +103,8 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
     }
   }, [activeId, emit, setPlaybackPlaying]);
 
-  // Prefer the gate-visible host so play() works under autoplay policies.
-  const preferGateHost = siteConfig.audioGate.enabled;
-  const activeHost = preferGateHost
-    ? hostElement
-    : hostElement || hostRef.current;
-
   useEffect(() => {
-    if (!verified.length) {
+    if (!verified.length || !hostRef.current) {
       setFailed(true);
       return;
     }
@@ -124,14 +115,10 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       return;
     }
 
-    // Wait until a host exists (gate dock mounts first when audioGate is on).
-    if (!activeHost) return;
-
     currentRef.current = startTrack;
     setNowPlaying(startTrack);
     setUpcoming(peekNext());
     persistOpeningTrack(startTrack.id);
-    setCurrentUri(startTrack.uri);
 
     let destroyed = false;
     let playLockTimer: number | null = null;
@@ -272,11 +259,10 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
     };
 
     const setupController = (IFrameAPI: IFrameAPI) => {
-      if (destroyed || !activeHost || controllerRef.current) return;
-      const embedHeight = activeHost.id === "sehinsah-spotify-gate-host" ? 80 : 352;
+      if (destroyed || !hostRef.current || controllerRef.current) return;
       IFrameAPI.createController(
-        activeHost,
-        { uri: startTrack.uri, width: "100%", height: embedHeight },
+        hostRef.current,
+        { uri: startTrack.uri, width: "100%", height: 352 },
         (controller) => {
           if (destroyed) {
             controller.destroy();
@@ -284,7 +270,6 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
           }
           controllerRef.current = controller;
           registerController(controller);
-          setCurrentUri(startTrack.uri);
           // Mark ready as soon as the controller exists so the gate CTA can call play().
           setReady(true);
           controller.addListener("playback_update", onPlaybackUpdate);
@@ -384,9 +369,9 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       registerController(null);
       setReady(false);
     };
-    // Boot when track list / host becomes available
+    // Mount-only queue bootstrap
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [verified.length, activeHost]);
+  }, [verified.length]);
 
   const startManually = () => {
     userActivatedRef.current = true;
@@ -486,19 +471,7 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       </div>
 
       <div className={styles.frame}>
-        <div
-          ref={(el) => {
-            hostRef.current = el;
-            if (!preferGateHost && !hostElement) registerHostElement(el);
-          }}
-          className={styles.iframeHost}
-        />
-        {preferGateHost ? (
-          <p className={styles.sub} style={{ padding: "0.85rem 1rem" }}>
-            Spotify oynatıcı giriş ekranından yönetilir. Müzik başladıysa burada sıradaki
-            parçaya geçebilirsin.
-          </p>
-        ) : null}
+        <div ref={hostRef} className={styles.iframeHost} />
       </div>
     </div>
   );

@@ -37,15 +37,10 @@ type Ctx = {
   ready: boolean;
   playing: boolean;
   unlocked: boolean;
-  gateOpen: boolean;
-  hostElement: HTMLElement | null;
   registerController: (controller: SpotifyEmbedController | null) => void;
-  registerHostElement: (el: HTMLElement | null) => void;
   setReady: (ready: boolean) => void;
   setPlaying: (playing: boolean) => void;
   setUnlocked: (unlocked: boolean) => void;
-  setGateOpen: (open: boolean) => void;
-  setCurrentUri: (uri: string | null) => void;
   playFromUserGesture: () => boolean;
   pausePlayback: () => boolean;
   resumePlayback: () => boolean;
@@ -66,14 +61,12 @@ declare global {
 
 export function SpotifyPlaybackProvider({ children }: { children: React.ReactNode }) {
   const controllerRef = useRef<SpotifyEmbedController | null>(null);
-  const currentUriRef = useRef<string | null>(null);
   const listeners = useRef(new Set<Listener>());
   const [ready, setReady] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
-  const [gateOpen, setGateOpen] = useState(false);
-  const [hostElement, setHostElement] = useState<HTMLElement | null>(null);
 
+  // Preload Spotify iframe API early so the gate is not stuck on HAZIRLANIYOR.
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (document.querySelector(`script[src="${IFRAME_API}"]`)) return;
@@ -90,43 +83,16 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
     if (!controller) setReady(false);
   }, []);
 
-  const registerHostElement = useCallback((el: HTMLElement | null) => {
-    setHostElement(el);
-  }, []);
-
-  const setCurrentUri = useCallback((uri: string | null) => {
-    currentUriRef.current = uri;
-  }, []);
-
   const playFromUserGesture = useCallback(() => {
     const controller = controllerRef.current;
     if (!controller) return false;
-
-    const uri = currentUriRef.current;
-    let attempted = false;
-
-    const tryCall = (fn: () => void) => {
-      try {
-        fn();
-        attempted = true;
-      } catch {
-        /* continue */
-      }
-    };
-
-    // Aggressive start sequence inside the same user-gesture stack.
-    tryCall(() => controller.play());
-    tryCall(() => controller.resume());
-    if (uri) {
-      tryCall(() => controller.loadUri(uri));
-      tryCall(() => controller.play());
-      tryCall(() => controller.resume());
+    try {
+      controller.play();
+      setUnlocked(true);
+      return true;
+    } catch {
+      return false;
     }
-    tryCall(() => controller.play());
-
-    if (!attempted) return false;
-    setUnlocked(true);
-    return true;
   }, []);
 
   const pausePlayback = useCallback(() => {
@@ -161,7 +127,6 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
       setPlaying(true);
       setUnlocked(true);
     }
-    if (event.trackUri) currentUriRef.current = event.trackUri;
     listeners.current.forEach((fn) => fn(event));
   }, []);
 
@@ -177,15 +142,10 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
       ready,
       playing,
       unlocked,
-      gateOpen,
-      hostElement,
       registerController,
-      registerHostElement,
       setReady,
       setPlaying,
       setUnlocked,
-      setGateOpen,
-      setCurrentUri,
       playFromUserGesture,
       pausePlayback,
       resumePlayback,
@@ -196,11 +156,7 @@ export function SpotifyPlaybackProvider({ children }: { children: React.ReactNod
       ready,
       playing,
       unlocked,
-      gateOpen,
-      hostElement,
       registerController,
-      registerHostElement,
-      setCurrentUri,
       playFromUserGesture,
       pausePlayback,
       resumePlayback,
