@@ -16,10 +16,10 @@
   will-change: transform;
 }
 
-.audioPulse {
+.audioReactive {
   position: relative;
   width: 100%;
-  transform-origin: 50% 45%;
+  transform-origin: 50% 48%;
   transform: scale3d(1, 1, 1);
 }
 
@@ -32,6 +32,7 @@
   opacity: 1;
   filter:
     brightness(var(--audio-brightness, 1))
+    contrast(var(--audio-contrast, 1))
     drop-shadow(
       0 0 var(--audio-glow-blur, 0px)
       rgba(49, 247, 125, var(--audio-glow-opacity, 0))

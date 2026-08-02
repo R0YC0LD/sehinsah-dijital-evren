@@ -3,12 +3,12 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import {
-  buildBpmBeatMap,
-  findBeatIndex,
-  type TrackBeatMap,
-} from "@/lib/audio/beat-map";
+  buildBpmEnergyMap,
+  sampleEnergyAt,
+  type TrackEnergyMap,
+} from "@/lib/audio/energy-map";
 import { createPlaybackClock } from "@/lib/audio/playback-clock";
-import { loadBeatMap } from "@/data/audio-analysis";
+import { loadEnergyMap } from "@/data/audio-analysis";
 import { useSpotifyPlayback } from "@/components/providers/SpotifyPlaybackProvider";
 import { siteConfig } from "@/data/site";
 
@@ -16,8 +16,10 @@ function clamp(n: number, min: number, max: number) {
   return Math.min(max, Math.max(min, n));
 }
 
-function lerp(a: number, b: number, t: number) {
-  return a + (b - a) * t;
+function compressEnergy(value: number) {
+  const v = clamp(value, 0, 1);
+  if (v < 0.65) return v;
+  return 0.65 + (v - 0.65) * 0.45;
 }
 
 function trackIdFromUri(uri: string) {
@@ -25,8 +27,11 @@ function trackIdFromUri(uri: string) {
   return parts[parts.length - 1] || "";
 }
 
-function isMobileViewport() {
-  return typeof window !== "undefined" && window.matchMedia("(max-width: 899px)").matches;
+function viewportTier(): "mobile" | "tablet" | "desktop" {
+  if (typeof window === "undefined") return "desktop";
+  if (window.matchMedia("(max-width: 899px)").matches) return "mobile";
+  if (window.matchMedia("(max-width: 1199px)").matches) return "tablet";
+  return "desktop";
 }
 
 function prefersReducedMotion() {
@@ -42,7 +47,25 @@ function lowPowerMode() {
   return Boolean(conn?.saveData) || (navigator.hardwareConcurrency || 8) <= 4;
 }
 
-export function useCharacterAudioPulse(audioPulseRef: React.RefObject<HTMLElement | null>) {
+function smoothToward(
+  current: number,
+  target: number,
+  dtMs: number,
+  attackMs: number,
+  releaseMs: number,
+) {
+  const tau = target > current ? attackMs : releaseMs;
+  const alpha = 1 - Math.exp(-dtMs / Math.max(1, tau));
+  return current + (target - current) * alpha;
+}
+
+/**
+ * Continuous bass/kick equalizer scale on the inner wrapper.
+ * No heartbeat / double-pulse timelines.
+ */
+export function useCharacterAudioPulse(
+  audioReactiveRef: React.RefObject<HTMLElement | null>,
+) {
   const { subscribe, unlocked } = useSpotifyPlayback();
   const unlockedRef = useRef(unlocked);
   unlockedRef.current = unlocked;
@@ -51,15 +74,19 @@ export function useCharacterAudioPulse(audioPulseRef: React.RefObject<HTMLElemen
     if (!siteConfig.audioPulse.enabled) return;
 
     const clock = createPlaybackClock();
-    let map: TrackBeatMap | null = null;
-    let beatIndex = 0;
-    let raf = 0;
-    let lastPulseAt = 0;
+    let map: TrackEnergyMap | null = null;
     let activeTrackId = "";
+    let raf = 0;
     let destroyed = false;
+    let lastFrameAt = performance.now();
+    let smoothedBass = 0;
+    let smoothedKick = 0;
+    let prevKickSample = 0;
+    let currentScaleX = 1;
+    let currentScaleY = 1;
+    let returningToNeutral = false;
     let debugEl: HTMLDivElement | null = null;
-    let pulseCount = 0;
-    let dropped = 0;
+    let lastRafMs = 0;
 
     const debug =
       process.env.NODE_ENV === "development" &&
@@ -73,89 +100,56 @@ export function useCharacterAudioPulse(audioPulseRef: React.RefObject<HTMLElemen
       document.body.appendChild(debugEl);
     }
 
-    const resetVisual = (duration = 0.15) => {
-      const el = audioPulseRef.current;
-      if (!el) return;
-      gsap.killTweensOf(el, "scaleX,scaleY");
-      gsap.to(el, { scaleX: 1, scaleY: 1, duration, ease: "power2.out", overwrite: "auto" });
-      el.style.removeProperty("--audio-brightness");
-      el.style.removeProperty("--audio-glow-blur");
-      el.style.removeProperty("--audio-glow-opacity");
-      el.classList.remove("audioPulseActive");
+    let setScaleX: ((v: number) => void) | null = null;
+    let setScaleY: ((v: number) => void) | null = null;
+
+    const bindSetters = () => {
+      const el = audioReactiveRef.current;
+      if (!el) return false;
+      setScaleX = gsap.quickSetter(el, "scaleX") as (v: number) => void;
+      setScaleY = gsap.quickSetter(el, "scaleY") as (v: number) => void;
+      return true;
     };
 
-    const triggerHeartbeat = (strength: number) => {
-      const el = audioPulseRef.current;
-      if (!el || !unlockedRef.current) return;
-
-      const now = performance.now();
-      const minGap = isMobileViewport() ? 280 : 220;
-      if (now - lastPulseAt < minGap) {
-        dropped += 1;
+    const resetVisual = (animate = true) => {
+      returningToNeutral = true;
+      smoothedBass = 0;
+      smoothedKick = 0;
+      prevKickSample = 0;
+      const el = audioReactiveRef.current;
+      if (!el) return;
+      if (!animate) {
+        currentScaleX = 1;
+        currentScaleY = 1;
+        setScaleX?.(1);
+        setScaleY?.(1);
+        el.style.removeProperty("--audio-brightness");
+        el.style.removeProperty("--audio-contrast");
+        el.style.removeProperty("--audio-glow-blur");
+        el.style.removeProperty("--audio-glow-opacity");
+        el.style.willChange = "auto";
+        returningToNeutral = false;
         return;
       }
-      lastPulseAt = now;
-      pulseCount += 1;
-
-      const eased = Math.pow(clamp(strength, 0, 1), 0.72);
-      const mobile = isMobileViewport();
-      const maxY = mobile ? 1.016 : 1.024;
-      const maxX = mobile ? 1.013 : 1.02;
-      const primaryY = lerp(mobile ? 1.004 : 1.008, maxY, eased);
-      const primaryX = lerp(mobile ? 1.004 : 1.006, maxX, eased);
-      const secondaryY = lerp(1.003, mobile ? 1.008 : 1.013, eased);
-      const secondaryX = lerp(1.002, mobile ? 1.006 : 1.01, eased);
-      const reduced = prefersReducedMotion();
-      const simple = lowPowerMode();
-
-      el.classList.add("audioPulseActive");
-      el.style.setProperty("--audio-brightness", String(lerp(1, mobile ? 1.022 : 1.03, eased)));
-      el.style.setProperty("--audio-glow-blur", `${lerp(0, 8, eased)}px`);
-      el.style.setProperty("--audio-glow-opacity", String(lerp(0, 0.035, eased)));
-
-      if (reduced) {
-        gsap.killTweensOf(el, "scaleX,scaleY");
-        el.style.setProperty("--audio-brightness", "1.01");
-        window.setTimeout(() => {
-          el.style.setProperty("--audio-brightness", "1");
-          el.style.setProperty("--audio-glow-opacity", "0");
-          el.style.setProperty("--audio-glow-blur", "0px");
-        }, 150);
-        return;
-      }
-
-      gsap.killTweensOf(el, "scaleX,scaleY");
-      const tl = gsap.timeline({ defaults: { overwrite: "auto" } });
-      tl.to(el, {
-        scaleX: primaryX,
-        scaleY: primaryY,
-        duration: 0.055,
-        ease: "power2.out",
-      }).to(el, {
-        scaleX: 0.998,
-        scaleY: 0.997,
-        duration: 0.09,
-        ease: "power2.inOut",
-      });
-
-      if (!simple) {
-        tl.to(el, {
-          scaleX: secondaryX,
-          scaleY: secondaryY,
-          duration: 0.065,
-          ease: "power2.out",
-        });
-      }
-
-      tl.to(el, {
+      gsap.to(el, {
         scaleX: 1,
         scaleY: 1,
-        duration: 0.16,
+        duration: 0.18,
         ease: "power2.out",
+        overwrite: "auto",
+        onUpdate: () => {
+          currentScaleX = Number(gsap.getProperty(el, "scaleX")) || 1;
+          currentScaleY = Number(gsap.getProperty(el, "scaleY")) || 1;
+        },
         onComplete: () => {
-          el.style.setProperty("--audio-brightness", "1");
-          el.style.setProperty("--audio-glow-opacity", "0");
-          el.style.setProperty("--audio-glow-blur", "0px");
+          currentScaleX = 1;
+          currentScaleY = 1;
+          returningToNeutral = false;
+          el.style.removeProperty("--audio-brightness");
+          el.style.removeProperty("--audio-contrast");
+          el.style.removeProperty("--audio-glow-blur");
+          el.style.removeProperty("--audio-glow-opacity");
+          el.style.willChange = "auto";
         },
       });
     };
@@ -163,68 +157,158 @@ export function useCharacterAudioPulse(audioPulseRef: React.RefObject<HTMLElemen
     const ensureMap = async (trackId: string, durationMs: number) => {
       if (!trackId || trackId === activeTrackId) return;
       activeTrackId = trackId;
-      beatIndex = 0;
-      const authored = await loadBeatMap(trackId);
+      smoothedBass = 0;
+      smoothedKick = 0;
+      prevKickSample = 0;
+      const authored = await loadEnergyMap(trackId);
       if (destroyed) return;
-      map = authored || buildBpmBeatMap(trackId, durationMs);
-      const pos = clock.estimate() ?? 0;
-      beatIndex = findBeatIndex(map.beats, pos);
+      map = authored || buildBpmEnergyMap(trackId, durationMs);
     };
 
-    const tick = () => {
+    const tick = (now: number) => {
       if (destroyed) return;
-      const state = clock.get();
-      const el = audioPulseRef.current;
 
-      if (!state || state.isPaused || state.isBuffering || !unlockedRef.current || !map) {
+      const lowPower = lowPowerMode();
+      const minFrameMs = lowPower ? 33 : 0;
+      if (minFrameMs && now - lastRafMs < minFrameMs) {
+        raf = requestAnimationFrame(tick);
+        return;
+      }
+      lastRafMs = now;
+
+      const dtMs = clamp(now - lastFrameAt, 0, 48);
+      lastFrameAt = now;
+
+      if (!setScaleX || !setScaleY) bindSetters();
+
+      const state = clock.get();
+      const el = audioReactiveRef.current;
+      const active =
+        Boolean(state) &&
+        unlockedRef.current &&
+        Boolean(map) &&
+        !state!.isPaused &&
+        !state!.isBuffering &&
+        !returningToNeutral;
+
+      if (!active || !el || !setScaleX || !setScaleY) {
         if (debugEl && state) {
-          debugEl.textContent = `paused/buffer · ${state.trackId}\npulse:${pulseCount} drop:${dropped}`;
+          debugEl.textContent = `idle · ${state.trackId}\nscale ${currentScaleX.toFixed(3)}/${currentScaleY.toFixed(3)}`;
         }
         raf = requestAnimationFrame(tick);
         return;
       }
 
-      const pos = clock.estimate() ?? state.positionMs;
-      while (map && beatIndex < map.beats.length && map.beats[beatIndex].timeMs <= pos) {
-        const beat = map.beats[beatIndex];
-        beatIndex += 1;
-        if (beat.type === "secondary" && lowPowerMode()) continue;
-        triggerHeartbeat(beat.strength);
+      const pos = clock.estimate() ?? state!.positionMs;
+      const sample = sampleEnergyAt(map!, pos);
+
+      const kickTransient = Math.max(0, sample.kick - prevKickSample * 0.72);
+      prevKickSample = sample.kick;
+      const kickGate = kickTransient < 0.22 ? 0 : kickTransient;
+
+      let bassTarget = compressEnergy(Math.pow(clamp(sample.bass, 0, 1), 0.72));
+      let kickTarget = compressEnergy(Math.pow(clamp(kickGate, 0, 1), 0.78));
+
+      if (lowPower) {
+        kickTarget *= 0.45;
       }
 
-      if (el) {
-        if (!state.isPaused) el.style.willChange = "transform, filter";
-        else el.style.willChange = "auto";
+      smoothedBass = smoothToward(smoothedBass, bassTarget, dtMs, 55, 180);
+      smoothedKick = smoothToward(smoothedKick, kickTarget, dtMs, 40, 130);
+
+      const tier = viewportTier();
+      const reduced = prefersReducedMotion();
+
+      let minX = 0.996;
+      let maxX = 1.016;
+      let minY = 0.996;
+      let maxY = 1.026;
+      let brightMax = 1.025;
+      let glowMax = 0.025;
+
+      if (tier === "tablet") {
+        minX = 0.997;
+        maxX = 1.014;
+        minY = 0.997;
+        maxY = 1.021;
+        brightMax = 1.02;
+        glowMax = 0.018;
+      } else if (tier === "mobile") {
+        minX = 0.998;
+        maxX = 1.01;
+        minY = 0.998;
+        maxY = 1.016;
+        brightMax = 1.018;
+        glowMax = 0.01;
+      }
+
+      const targetX = clamp(
+        1 + smoothedBass * 0.009 + smoothedKick * 0.007,
+        minX,
+        maxX,
+      );
+      const targetY = clamp(
+        1 + smoothedBass * 0.014 + smoothedKick * 0.012,
+        minY,
+        maxY,
+      );
+
+      if (reduced) {
+        currentScaleX = 1;
+        currentScaleY = 1;
+        setScaleX(1);
+        setScaleY(1);
+        const b = 1 + (smoothedBass + smoothedKick) * 0.008;
+        el.style.setProperty("--audio-brightness", String(clamp(b, 1, 1.01)));
+        el.style.setProperty("--audio-glow-opacity", "0");
+      } else {
+        currentScaleX = smoothToward(currentScaleX, targetX, dtMs, 45, 160);
+        currentScaleY = smoothToward(currentScaleY, targetY, dtMs, 45, 160);
+        setScaleX(currentScaleX);
+        setScaleY(currentScaleY);
+
+        const energy = clamp(smoothedBass * 0.7 + smoothedKick * 0.5, 0, 1);
+        el.style.setProperty(
+          "--audio-brightness",
+          String(clamp(1 + energy * (brightMax - 1), 1, brightMax)),
+        );
+        el.style.setProperty(
+          "--audio-contrast",
+          String(clamp(1 + energy * 0.018, 1, 1.018)),
+        );
+        if (tier === "mobile" || lowPower) {
+          el.style.setProperty("--audio-glow-opacity", "0");
+          el.style.setProperty("--audio-glow-blur", "0px");
+        } else {
+          el.style.setProperty("--audio-glow-opacity", String(energy * glowMax));
+          el.style.setProperty("--audio-glow-blur", `${(energy * 8).toFixed(2)}px`);
+        }
+        el.style.willChange = "transform, filter";
       }
 
       if (debugEl) {
-        const next = map?.beats[beatIndex];
         debugEl.textContent = [
-          `id ${state.trackId}`,
-          `pos ${Math.round(pos)} / est`,
-          `next ${next ? Math.round(next.timeMs) : "-"}`,
-          `bpm ${map?.bpm ?? "-"}`,
-          `pulse ${pulseCount} drop ${dropped}`,
+          `id ${state!.trackId}`,
+          `pos ${Math.round(pos)}`,
+          `bass ${smoothedBass.toFixed(3)} kick ${smoothedKick.toFixed(3)}`,
+          `scale ${currentScaleX.toFixed(4)} / ${currentScaleY.toFixed(4)}`,
         ].join("\n");
       }
 
       raf = requestAnimationFrame(tick);
     };
 
+    bindSetters();
     raf = requestAnimationFrame(tick);
 
     const unsub = subscribe((event) => {
       const trackId = event.trackId || trackIdFromUri(event.trackUri);
       if (!event.trackUri || !trackId) {
-        resetVisual(0.14);
+        resetVisual(true);
         clock.reset();
         map = null;
         activeTrackId = "";
         return;
-      }
-
-      if (!siteConfig.audioPulse.verifiedOnly) {
-        /* keep going */
       }
 
       clock.update({
@@ -237,17 +321,14 @@ export function useCharacterAudioPulse(audioPulseRef: React.RefObject<HTMLElemen
       });
 
       if (event.type === "started" || trackId !== activeTrackId) {
-        void ensureMap(trackId, event.durationMs);
-      } else if (map) {
-        const estimated = clock.estimate() ?? event.positionMs;
-        const drift = event.positionMs - estimated;
-        if (Math.abs(drift) > 450) {
-          beatIndex = findBeatIndex(map.beats, event.positionMs);
+        if (trackId !== activeTrackId) {
+          resetVisual(true);
         }
+        void ensureMap(trackId, event.durationMs);
       }
 
       if (event.isPaused || event.isBuffering || event.type === "stopped") {
-        resetVisual(0.14);
+        resetVisual(true);
       }
     });
 
@@ -255,8 +336,8 @@ export function useCharacterAudioPulse(audioPulseRef: React.RefObject<HTMLElemen
       destroyed = true;
       cancelAnimationFrame(raf);
       unsub();
-      resetVisual(0);
+      resetVisual(false);
       debugEl?.remove();
     };
-  }, [audioPulseRef, subscribe]);
+  }, [audioReactiveRef, subscribe]);
 }

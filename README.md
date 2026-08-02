@@ -168,9 +168,9 @@ Black base (`--bg: #030303`) is preserved. Green is limited to music/active acce
 
 Glow opacity stays low (`≤ ~0.16` on small UI, character edge glow `≤ 0.035` / blur `≤ 8px`). No full-screen green bloom.
 
-### Character audio pulse
+### Character audio-reactive equalizer
 
-Outer fall wrapper (ScrollTrigger Y / X / rotation) is untouched. Inner `[data-audio-pulse]` runs the double-heartbeat scale envelope only. Beat maps live under `data/audio-analysis/`; missing maps use BPM fallback (`lib/audio/beat-map.ts`). Spotify iframe audio is never wired to `AnalyserNode`.
+Outer fall wrapper (ScrollTrigger Y / X / rotation) is untouched. Inner `[data-audio-reactive]` scales smoothly from bass/kick energy (continuous equalizer envelope — **not** a double heartbeat). Authored maps: `data/audio-analysis/`; missing maps use BPM/kick-pattern fallback (`lib/audio/energy-map.ts`). Spotify iframe audio is never wired to `AnalyserNode`.
 
 ## Motion shadow physics
 

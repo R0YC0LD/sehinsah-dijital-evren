@@ -19,12 +19,12 @@ function lerp(a: number, b: number, t: number) {
 export function GlobalFallingLayer() {
   const rootRef = useRef<HTMLDivElement>(null);
   const characterRef = useRef<HTMLDivElement>(null);
-  const audioPulseRef = useRef<HTMLDivElement>(null);
+  const audioReactiveRef = useRef<HTMLDivElement>(null);
   const shadowRef = useRef<HTMLSpanElement>(null);
   const reduced = useReducedMotion();
   const src = assetPath(siteConfig.media.falling);
 
-  useCharacterAudioPulse(audioPulseRef);
+  useCharacterAudioPulse(audioReactiveRef);
 
   useLayoutEffect(() => {
     if (reduced || !characterRef.current || !shadowRef.current) return;
@@ -133,7 +133,7 @@ export function GlobalFallingLayer() {
   return (
     <div ref={rootRef} className={styles.layer} aria-hidden="true">
       <div ref={characterRef} className={styles.character}>
-        <div ref={audioPulseRef} className={styles.audioPulse} data-audio-pulse>
+        <div ref={audioReactiveRef} className={styles.audioReactive} data-audio-reactive>
           <span
             ref={shadowRef}
             className={styles.shadow}
