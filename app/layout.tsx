@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import { siteConfig } from "@/data/site";
+import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
 const anton = Anton({
@@ -17,7 +18,7 @@ const space = Space_Grotesk({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://127.0.0.1:3000";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
