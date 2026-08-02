@@ -1,22 +1,29 @@
 :root {
-  --bg: #050505;
-  --bg-soft: #0b0b0b;
+  --sehinsah-green: #31f77d;
+  --sehinsah-green-soft: rgba(49, 247, 125, 0.14);
+  --sehinsah-green-faint: rgba(49, 247, 125, 0.055);
+  --sehinsah-green-line: rgba(86, 255, 149, 0.24);
+  --sehinsah-green-glow: rgba(49, 247, 125, 0.16);
+
+  --bg: #030303;
+  --bg-soft: #070907;
   --panel: rgba(13, 13, 13, 0.76);
   --panel-strong: rgba(13, 13, 13, 0.92);
   --text: #eee9df;
-  --text-muted: #969188;
+  --text-muted: #969a94;
   --line: rgba(255, 255, 255, 0.13);
   --red: #991919;
   --red-soft: rgba(153, 25, 25, 0.22);
-  --spotify: #1ed760;
-  --ambient-black: #050505;
-  --ambient-charcoal: #0a0a0a;
-  --ambient-soft: #111111;
-  --ambient-mid: #171717;
+  --spotify: var(--sehinsah-green);
+  --ambient-black: #030303;
+  --ambient-charcoal: #080a08;
+  --ambient-soft: #0b0e0c;
+  --ambient-mid: #101311;
   --ambient-line: rgba(255, 255, 255, 0.07);
 
   --background: var(--bg);
   --surface: transparent;
+  --surface-solid: #0a0d0b;
   --foreground: var(--text);
   --muted: var(--text-muted);
   --border: var(--line);

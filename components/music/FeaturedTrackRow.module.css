@@ -16,7 +16,7 @@
 .row:hover .title,
 .active .title {
   transform: translateX(6px);
-  color: var(--red);
+  color: var(--sehinsah-green);
 }
 
 .index {

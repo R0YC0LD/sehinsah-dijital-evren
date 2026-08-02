@@ -13,6 +13,7 @@
 }
 
 .active {
-  color: var(--spotify);
-  border-bottom-color: var(--spotify);
+  color: var(--sehinsah-green);
+  border-bottom-color: var(--sehinsah-green-line);
+  text-shadow: 0 0 16px rgba(49, 247, 125, 0.12);
 }

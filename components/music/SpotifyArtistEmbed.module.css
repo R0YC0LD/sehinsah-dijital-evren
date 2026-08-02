@@ -47,13 +47,19 @@
 
 .control:hover,
 .control:focus-visible {
-  border-color: rgba(255, 255, 255, 0.28);
+  border-color: var(--sehinsah-green-line);
+  color: var(--sehinsah-green);
 }
 
 .status {
   font-size: 0.68rem;
   letter-spacing: 0.14em;
   color: var(--text-muted);
+}
+
+.statusLive {
+  color: var(--sehinsah-green);
+  text-shadow: 0 0 16px rgba(49, 247, 125, 0.12);
 }
 
 .iframeHost {

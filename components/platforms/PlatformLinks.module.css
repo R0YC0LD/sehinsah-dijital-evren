@@ -47,7 +47,9 @@
 
 .link[data-platform="spotify"]:hover,
 .link[data-platform="spotify"]:focus-visible {
-  color: #1ed760;
+  color: var(--sehinsah-green);
+  border-color: var(--sehinsah-green-line);
+  box-shadow: 0 0 18px var(--sehinsah-green-glow);
 }
 
 .link[data-platform="youtube"]:hover,

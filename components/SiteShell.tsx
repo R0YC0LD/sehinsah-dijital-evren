@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { MusicStartGate } from "@/components/audio/MusicStartGate";
 import { GlobalFallingLayer } from "@/components/global/GlobalFallingLayer";
 import { ScrollProgress } from "@/components/global/ScrollProgress";
 import { Header } from "@/components/layout/Header";
@@ -10,6 +11,7 @@ import {
   useAudioPreviewContext,
 } from "@/components/providers/AudioPreviewProvider";
 import { ChaosProvider } from "@/components/providers/ChaosProvider";
+import { SpotifyPlaybackProvider } from "@/components/providers/SpotifyPlaybackProvider";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { useLenis } from "@/hooks/useLenis";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
@@ -42,6 +44,7 @@ function ShellInner({ children, catalog }: Props) {
       <GlobalFallingLayer />
       <ScrollProgress />
       {children}
+      <MusicStartGate />
     </>
   );
 }
@@ -50,7 +53,9 @@ export function SiteShell({ children, catalog }: Props) {
   return (
     <ChaosProvider>
       <AudioPreviewProvider>
-        <ShellInner catalog={catalog}>{children}</ShellInner>
+        <SpotifyPlaybackProvider>
+          <ShellInner catalog={catalog}>{children}</ShellInner>
+        </SpotifyPlaybackProvider>
       </AudioPreviewProvider>
     </ChaosProvider>
   );

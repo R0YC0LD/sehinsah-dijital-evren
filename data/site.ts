@@ -104,6 +104,16 @@ export const siteConfig = {
     minDuration: 5,
     maxDuration: 10,
   },
+  audioGate: {
+    enabled: true,
+    showOncePerSession: true,
+    sessionKey: "sehinsah-audio-unlocked-v1",
+    requirePlaybackStartedBeforeClose: true,
+  },
+  audioPulse: {
+    enabled: true,
+    verifiedOnly: true,
+  },
   nav: [
     { id: "hero", index: "01", label: "ANA SAYFA", href: "#hero", preview: "falling" as const },
     { id: "muzik", index: "02", label: "MÜZİK", href: "#muzik", preview: "music" as const },

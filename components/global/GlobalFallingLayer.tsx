@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef } from "react";
 import { registerGsap } from "@/lib/gsap/register";
 import { assetPath } from "@/lib/paths/assetPath";
 import { siteConfig } from "@/data/site";
+import { useCharacterAudioPulse } from "@/hooks/useCharacterAudioPulse";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./GlobalFallingLayer.module.css";
 
@@ -18,9 +19,12 @@ function lerp(a: number, b: number, t: number) {
 export function GlobalFallingLayer() {
   const rootRef = useRef<HTMLDivElement>(null);
   const characterRef = useRef<HTMLDivElement>(null);
+  const audioPulseRef = useRef<HTMLDivElement>(null);
   const shadowRef = useRef<HTMLSpanElement>(null);
   const reduced = useReducedMotion();
   const src = assetPath(siteConfig.media.falling);
+
+  useCharacterAudioPulse(audioPulseRef);
 
   useLayoutEffect(() => {
     if (reduced || !characterRef.current || !shadowRef.current) return;
@@ -129,23 +133,25 @@ export function GlobalFallingLayer() {
   return (
     <div ref={rootRef} className={styles.layer} aria-hidden="true">
       <div ref={characterRef} className={styles.character}>
-        <span
-          ref={shadowRef}
-          className={styles.shadow}
-          data-fall-shadow
-          style={{ "--fall-mask": `url("${src}")` } as React.CSSProperties}
-        />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className={styles.image}
-          src={src}
-          alt=""
-          width={1000}
-          height={1000}
-          draggable={false}
-          fetchPriority="high"
-          decoding="async"
-        />
+        <div ref={audioPulseRef} className={styles.audioPulse} data-audio-pulse>
+          <span
+            ref={shadowRef}
+            className={styles.shadow}
+            data-fall-shadow
+            style={{ "--fall-mask": `url("${src}")` } as React.CSSProperties}
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className={styles.image}
+            src={src}
+            alt=""
+            width={1000}
+            height={1000}
+            draggable={false}
+            fetchPriority="high"
+            decoding="async"
+          />
+        </div>
       </div>
     </div>
   );

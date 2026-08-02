@@ -16,6 +16,13 @@
   will-change: transform;
 }
 
+.audioPulse {
+  position: relative;
+  width: 100%;
+  transform-origin: 50% 45%;
+  transform: scale3d(1, 1, 1);
+}
+
 .image {
   position: relative;
   z-index: 2;
@@ -23,7 +30,12 @@
   height: auto;
   object-fit: contain;
   opacity: 1;
-  filter: none;
+  filter:
+    brightness(var(--audio-brightness, 1))
+    drop-shadow(
+      0 0 var(--audio-glow-blur, 0px)
+      rgba(49, 247, 125, var(--audio-glow-opacity, 0))
+    );
   user-select: none;
 }
 

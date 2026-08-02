@@ -7,6 +7,10 @@ import {
   useRandomSpotifyQueue,
 } from "@/components/music/useRandomSpotifyQueue";
 import { useAudioPreviewContext } from "@/components/providers/AudioPreviewProvider";
+import {
+  useSpotifyPlayback,
+  type SpotifyEmbedController,
+} from "@/components/providers/SpotifyPlaybackProvider";
 import { siteConfig } from "@/data/site";
 import type { VerifiedSingleTrack } from "@/lib/spotify/types";
 import styles from "./SpotifyArtistEmbed.module.css";
@@ -15,15 +19,7 @@ const END_THRESHOLD_MS = 700;
 const IFRAME_API = "https://open.spotify.com/embed/iframe-api/v1";
 const SCRIPT_FLAG = "__sehinsahSpotifyIframeApiLoading";
 
-type EmbedController = {
-  loadUri: (uri: string) => void;
-  play: () => void;
-  pause: () => void;
-  resume: () => void;
-  destroy: () => void;
-  addListener: (event: string, cb: (e: { data: Record<string, unknown> }) => void) => void;
-  removeListener: (event: string, cb: (e: { data: Record<string, unknown> }) => void) => void;
-};
+type EmbedController = SpotifyEmbedController;
 
 type IFrameAPI = {
   createController: (
@@ -45,6 +41,11 @@ type Props = {
   tracks: VerifiedSingleTrack[];
 };
 
+function trackIdFromUri(uri: string) {
+  const parts = uri.split(":");
+  return parts[parts.length - 1] || "";
+}
+
 export function RandomSpotifyPlayer({ tracks }: Props) {
   const hostRef = useRef<HTMLDivElement>(null);
   const controllerRef = useRef<EmbedController | null>(null);
@@ -55,6 +56,14 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
   const retryCount = useRef(0);
   const mountedRef = useRef(true);
   const { stopPreview, activeId } = useAudioPreviewContext();
+  const {
+    registerController,
+    setReady,
+    setPlaying: setPlaybackPlaying,
+    setUnlocked,
+    emit,
+    playFromUserGesture,
+  } = useSpotifyPlayback();
 
   const { verified, verifiedUriSet, getCurrent, getNext, peekNext } =
     useRandomSpotifyQueue(tracks);
@@ -80,8 +89,19 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
         /* ignore */
       }
       setPlaying(false);
+      setPlaybackPlaying(false);
+      emit({
+        type: "stopped",
+        trackUri: currentRef.current?.uri || "",
+        trackId: currentRef.current?.id || "",
+        positionMs: 0,
+        durationMs: 0,
+        isPaused: true,
+        isBuffering: false,
+        playing: false,
+      });
     }
-  }, [activeId]);
+  }, [activeId, emit, setPlaybackPlaying]);
 
   useEffect(() => {
     if (!verified.length || !hostRef.current) {
@@ -103,6 +123,25 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
     let destroyed = false;
     let playLockTimer: number | null = null;
 
+    const emitPlayback = (
+      type: "update" | "started" | "ready" | "stopped",
+      data: Record<string, unknown>,
+      extras?: Partial<{ playing: boolean; isPaused: boolean; isBuffering: boolean }>,
+    ) => {
+      const playingURI = String(data.playingURI || currentRef.current?.uri || "");
+      const trackId = trackIdFromUri(playingURI) || currentRef.current?.id || "";
+      emit({
+        type,
+        trackUri: playingURI,
+        trackId,
+        positionMs: Number(data.position) || 0,
+        durationMs: Number(data.duration) || 0,
+        isPaused: extras?.isPaused ?? Boolean(data.isPaused),
+        isBuffering: extras?.isBuffering ?? Boolean(data.isBuffering),
+        playing: extras?.playing ?? (!data.isPaused && !data.isBuffering),
+      });
+    };
+
     const onPlaybackUpdate = (event: { data: Record<string, unknown> }) => {
       if (destroyed || !mountedRef.current) return;
       const data = event.data || {};
@@ -118,16 +157,36 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
           retryCount.current += 1;
           controllerRef.current?.loadUri(currentRef.current.uri);
         }
+        emit({
+          type: "stopped",
+          trackUri: playingURI,
+          trackId: trackIdFromUri(playingURI),
+          positionMs: position,
+          durationMs: duration,
+          isPaused: true,
+          isBuffering: false,
+          playing: false,
+        });
         return;
       }
 
+      emitPlayback("update", data, {
+        playing: !isPaused && !isBuffering,
+        isPaused,
+        isBuffering,
+      });
+
       if (isPaused) {
         setPlaying(false);
+        setPlaybackPlaying(false);
         return;
       }
 
       setPlaying(true);
+      setPlaybackPlaying(true);
       setNeedsGesture(false);
+      userActivatedRef.current = true;
+      setUnlocked(true);
 
       if (
         duration > 0 &&
@@ -154,7 +213,15 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       retryCount.current = 0;
       transitioningRef.current = false;
       setPlaying(true);
+      setPlaybackPlaying(true);
       setNeedsGesture(false);
+      userActivatedRef.current = true;
+      setUnlocked(true);
+      emitPlayback("started", event.data || {}, {
+        playing: true,
+        isPaused: false,
+        isBuffering: false,
+      });
       if (playLockTimer != null) window.clearTimeout(playLockTimer);
     };
 
@@ -202,14 +269,28 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
             return;
           }
           controllerRef.current = controller;
+          registerController(controller);
           controller.addListener("playback_update", onPlaybackUpdate);
           controller.addListener("playback_started", onPlaybackStarted);
-              controller.addListener("ready", () => {
+          controller.addListener("ready", () => {
+            setReady(true);
+            emitPlayback("ready", {
+              playingURI: startTrack.uri,
+              position: 0,
+              duration: 0,
+              isPaused: true,
+              isBuffering: false,
+            }, { playing: false, isPaused: true, isBuffering: false });
+
+            // Probe autoplay (session re-check). Gate stays if this fails.
             window.setTimeout(() => {
+              if (destroyed || userActivatedRef.current) return;
               try {
                 controller.play();
                 window.setTimeout(() => {
-                  if (!userActivatedRef.current) setNeedsGesture(true);
+                  if (!userActivatedRef.current && !destroyed) {
+                    setNeedsGesture(true);
+                  }
                 }, 1000);
               } catch {
                 setNeedsGesture(true);
@@ -243,7 +324,9 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       }
     }
 
+    // Global gesture unlock is owned by MusicStartGate when enabled.
     const onFirstGesture = () => {
+      if (siteConfig.audioGate.enabled) return;
       userActivatedRef.current = true;
       setNeedsGesture(false);
       stopPreview();
@@ -254,8 +337,10 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       }
     };
 
-    window.addEventListener("pointerdown", onFirstGesture, { once: true });
-    window.addEventListener("keydown", onFirstGesture, { once: true });
+    if (!siteConfig.audioGate.enabled) {
+      window.addEventListener("pointerdown", onFirstGesture, { once: true });
+      window.addEventListener("keydown", onFirstGesture, { once: true });
+    }
 
     return () => {
       destroyed = true;
@@ -270,6 +355,8 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
         /* ignore */
       }
       controllerRef.current = null;
+      registerController(null);
+      setReady(false);
     };
     // Mount-only queue bootstrap
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -279,10 +366,12 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
     userActivatedRef.current = true;
     setNeedsGesture(false);
     stopPreview();
-    try {
-      controllerRef.current?.play();
+    const ok = playFromUserGesture();
+    if (ok) {
       setPlaying(true);
-    } catch {
+      setPlaybackPlaying(true);
+      setUnlocked(true);
+    } else {
       setNeedsGesture(true);
     }
   };
@@ -351,7 +440,9 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
               MÜZİĞİ BAŞLAT
             </button>
           ) : (
-            <span className={styles.status}>{playing ? "ÇALIYOR" : "HAZIR"}</span>
+            <span className={`${styles.status} ${playing ? styles.statusLive : ""}`}>
+              {playing ? "ÇALIYOR" : "HAZIR"}
+            </span>
           )}
           <button type="button" className={styles.control} onClick={skipNext}>
             SIRADAKİ

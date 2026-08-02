@@ -126,6 +126,52 @@ Finale ~9.65s → exit (~0.44s). Max visible 5500ms. Min ~2400ms.
 - Reduced motion: poster + kısa reveal (&lt;700ms), video autoplay yok.
 - Exit → listener/RVFC cleanup, `ScrollTrigger.refresh()`, `sehinsah:loading-complete`.
 
+## Music start gate
+
+### Why autoplay requires a user gesture
+
+Browsers block audible autoplay until a real user click/tap/key gesture. Spotify’s embed `controller.play()` must therefore run inside that gesture’s call stack — not after `setTimeout` / `requestAnimationFrame` / long async prep.
+
+### Music start gate flow
+
+1. Video loading (if enabled) finishes first — gate never stacks under the loader.
+2. Random verified single is preloaded into the Spotify iframe.
+3. `MusicStartGate` appears (`z-index` ~1000) after the player reports ready.
+4. User taps **DENEYİMİ BAŞLAT** → `play()` in the click handler.
+5. Gate closes on `playback_started` (fallback retry at ~1.6s if playback never starts).
+6. Falling character audio-pulse binds to playback position.
+
+Files: `components/audio/MusicStartGate.tsx`, `MusicStartGate.module.css`, `hooks/useMusicStartGate.ts`.
+
+### Playback_started close condition
+
+Gate closes only after a live `playback_started` / playing update. Failed starts show retry (**MÜZİĞİ BAŞLAT**) without freezing the site.
+
+### Silent continue behavior
+
+**SESSİZ DEVAM ET** dismisses the gate without starting Spotify. Pulse stays off until the user later starts the player manually.
+
+### Session re-check logic
+
+`sessionStorage` key `sehinsah-audio-unlocked-v1` is written after real playback. On hard reload the player may probe autoplay; if that fails the gate shows again even when the session key exists. LocalStorage alone never skips the gate.
+
+### Neon green design tokens
+
+```css
+--sehinsah-green: #31f77d;
+--sehinsah-green-soft / -faint / -line / -glow
+```
+
+Black base (`--bg: #030303`) is preserved. Green is limited to music/active accents (gate CTA, filters, playing status, progress rail, Spotify hover).
+
+### Neon glow limits
+
+Glow opacity stays low (`≤ ~0.16` on small UI, character edge glow `≤ 0.035` / blur `≤ 8px`). No full-screen green bloom.
+
+### Character audio pulse
+
+Outer fall wrapper (ScrollTrigger Y / X / rotation) is untouched. Inner `[data-audio-pulse]` runs the double-heartbeat scale envelope only. Beat maps live under `data/audio-analysis/`; missing maps use BPM fallback (`lib/audio/beat-map.ts`). Spotify iframe audio is never wired to `AnalyserNode`.
+
 ## Motion shadow physics
 
 - Mask siluet, düşük opacity, aynı x, signed trail.

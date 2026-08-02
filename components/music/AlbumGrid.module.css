@@ -20,8 +20,9 @@
 }
 
 .yearActive {
-  color: var(--text);
-  border-bottom-color: var(--red);
+  color: var(--sehinsah-green);
+  border-bottom-color: var(--sehinsah-green-line);
+  text-shadow: 0 0 16px rgba(49, 247, 125, 0.12);
 }
 
 .toolbar {
