@@ -104,7 +104,7 @@ export function buildBpmEnergyMap(
   const beatMs = 60000 / Math.max(40, fallback.bpm);
   const pattern = fallback.kickPattern.length ? fallback.kickPattern : DEFAULT_FALLBACK.kickPattern;
   const stepMs = beatMs / pattern.length;
-  const frameStep = 60;
+  const frameStep = 16;
   const frames: TrackEnergyMap["frames"] = [];
 
   for (let t = 0; t <= end; t += frameStep) {
