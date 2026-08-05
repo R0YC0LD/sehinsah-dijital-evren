@@ -112,7 +112,7 @@ export const siteConfig = {
     maxDuration: 10,
   },
   audioGate: {
-    enabled: true,
+    enabled: false,
     showOncePerSession: true,
     sessionKey: "sehinsah-audio-unlocked-v1",
     requirePlaybackStartedBeforeClose: true,
