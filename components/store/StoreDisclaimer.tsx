@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import styles from "./StoreDisclaimer.module.css";
 
 const STORAGE_KEY = "sehinsah-store-disclaimer-v1";
+const SHOW_DELAY_MS = 950;
 
 export function StoreDisclaimer() {
   const [visible, setVisible] = useState(false);
@@ -12,13 +13,16 @@ export function StoreDisclaimer() {
   const closeRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
+    let dismissed = false;
     try {
-      if (sessionStorage.getItem(STORAGE_KEY) !== "1") {
-        setVisible(true);
-      }
+      dismissed = sessionStorage.getItem(STORAGE_KEY) === "1";
     } catch {
-      setVisible(true);
+      dismissed = false;
     }
+    if (dismissed) return;
+
+    const t = window.setTimeout(() => setVisible(true), SHOW_DELAY_MS);
+    return () => window.clearTimeout(t);
   }, []);
 
   useEffect(() => {

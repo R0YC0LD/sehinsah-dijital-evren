@@ -18,7 +18,7 @@ export async function GET(request: Request) {
   if (!isValidProductId(productId)) {
     return NextResponse.json({ error: "invalid_product" }, { status: 400 });
   }
-  return NextResponse.json({ comments: listComments(productId) });
+  return NextResponse.json({ comments: await listComments(productId) });
 }
 
 export async function POST(request: Request) {
@@ -51,6 +51,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "inappropriate_text" }, { status: 400 });
   }
 
-  const comment = addComment({ productId, name: trimmedName, text: trimmedText });
+  const comment = await addComment({ productId, name: trimmedName, text: trimmedText });
   return NextResponse.json({ comment }, { status: 201 });
 }
