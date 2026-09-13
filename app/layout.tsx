@@ -25,9 +25,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: siteConfig.title,
   description: siteConfig.description,
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     title: siteConfig.title,
     description: siteConfig.description,
+    url: siteUrl,
     type: "website",
     locale: "tr_TR",
     images: [{ url: siteConfig.media.bubilet, width: 960, height: 960 }],
@@ -39,6 +43,26 @@ export const metadata: Metadata = {
     images: [siteConfig.media.bubilet],
   },
   robots: { index: true, follow: true },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+  },
+};
+
+const musicGroupJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  name: siteConfig.displayName,
+  alternateName: siteConfig.artistName,
+  url: siteUrl,
+  image: `${siteUrl}${siteConfig.media.bubilet}`,
+  genre: "Hip Hop",
+  sameAs: [
+    siteConfig.links.spotifyArtist,
+    siteConfig.links.appleMusicArtist,
+    siteConfig.links.youtube,
+    siteConfig.links.tiktok,
+    siteConfig.links.instagram,
+  ],
 };
 
 export const viewport: Viewport = {
@@ -53,6 +77,10 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${anton.variable} ${space.variable}`}>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
+        />
         {children}
         <Analytics />
       </body>
