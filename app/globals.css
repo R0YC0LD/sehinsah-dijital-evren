@@ -171,22 +171,6 @@ p {
   border: 0;
 }
 
-.skip-link {
-  position: absolute;
-  left: 1rem;
-  top: -4rem;
-  z-index: 10000;
-  padding: 0.7rem 1rem;
-  background: var(--text);
-  color: var(--bg);
-  font-size: 0.85rem;
-  letter-spacing: 0.06em;
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
 :focus-visible {
   outline: 2px solid var(--spotify);
   outline-offset: 3px;

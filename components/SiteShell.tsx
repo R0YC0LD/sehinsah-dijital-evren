@@ -30,9 +30,6 @@ function ShellInner({ children, catalog }: Props) {
 
   return (
     <>
-      <a className="skip-link" href="#main">
-        İçeriğe geç
-      </a>
       <div className="page-background" aria-hidden="true" />
       <div className="site-grain" aria-hidden="true" />
       <Header menuOpen={menuOpen} onMenuToggle={() => setMenuOpen((v) => !v)} />
