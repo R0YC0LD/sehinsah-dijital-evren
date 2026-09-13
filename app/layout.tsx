@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { PageFadeIn } from "@/components/transition/PageFadeIn";
 import { PageTransitionOverlay } from "@/components/transition/PageTransitionOverlay";
 import { siteConfig } from "@/data/site";
 import { getSiteUrl } from "@/lib/site-url";
@@ -82,7 +83,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
         />
-        {children}
+        <PageFadeIn>{children}</PageFadeIn>
         <PageTransitionOverlay />
         <Analytics />
       </body>

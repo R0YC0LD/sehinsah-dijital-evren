@@ -3,11 +3,12 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { PAGE_REVEAL_EVENT } from "@/lib/transitionEvents";
 import styles from "./PageTransitionOverlay.module.css";
 
 const IMAGE_SRC = "/media/transition-loader.png";
-const HOLD_MS = 220;
-const FADE_MS = 500;
+const HOLD_MS = 300;
+const FADE_MS = 750;
 const START_DELAY_MS = 30;
 
 type Phase = "idle" | "active" | "reveal";
@@ -42,7 +43,10 @@ export function PageTransitionOverlay() {
 
       if (next >= 100) {
         timers.current.push(
-          window.setTimeout(() => setPhase("reveal"), HOLD_MS),
+          window.setTimeout(() => {
+            setPhase("reveal");
+            window.dispatchEvent(new Event(PAGE_REVEAL_EVENT));
+          }, HOLD_MS),
           window.setTimeout(() => setPhase("idle"), HOLD_MS + FADE_MS),
         );
         return;

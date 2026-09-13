@@ -4,7 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import styles from "./StoreDisclaimer.module.css";
 
 const STORAGE_KEY = "sehinsah-store-disclaimer-v1";
-const SHOW_DELAY_MS = 950;
+const SHOW_DELAY_MS = 3500;
 
 export function StoreDisclaimer() {
   const [visible, setVisible] = useState(false);
