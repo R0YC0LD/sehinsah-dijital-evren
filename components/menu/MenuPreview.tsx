@@ -26,7 +26,8 @@ function resolvePreview(activeId: string, latestCover: string | null): PreviewSt
   if (item.preview === "bubilet") src = assetPath(siteConfig.media.bubilet);
   if (item.preview === "instagram") src = assetPath(siteConfig.media.instagram);
   if (item.preview === "magaza") {
-    const cover = products[0]?.images?.[0];
+    const featured = products.find((p) => p.id === "yak-yak-yak-sweatshirt");
+    const cover = featured?.images?.[0] || products[0]?.images?.[0];
     if (cover) {
       src = assetPath(cover);
       label = "MAĞAZA";
