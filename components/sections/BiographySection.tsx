@@ -9,6 +9,8 @@ const ALBUMS = [
   { name: "DEEV (Deluxe Edition)", year: "2016" },
   { name: "666", year: "2020" },
   { name: "IKARUS", year: "2024" },
+  { name: "6EP", year: "2025" },
+  { name: "Entropi", year: "2026" },
 ];
 
 const SINGLES = [
@@ -20,6 +22,7 @@ const SINGLES = [
   "Hüsran",
   "Dönmedin Ki",
   "Deliyoo",
+  "Entropi",
 ];
 
 export function BiographySection() {
