@@ -19,6 +19,12 @@ const END_THRESHOLD_MS = 700;
 const IFRAME_API = "https://open.spotify.com/embed/iframe-api/v1";
 const SCRIPT_FLAG = "__sehinsahSpotifyIframeApiLoading";
 
+// Survives remounts (this component remounts on every client-side page
+// navigation, since SiteShell isn't part of a shared root layout). Without
+// this being module-level, the "first click plays" listener below would
+// re-arm on every navigation and fire again on the next click anywhere.
+let hasGesturedThisSession = false;
+
 type EmbedController = SpotifyEmbedController;
 
 type IFrameAPI = {
@@ -338,6 +344,7 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
     // Global gesture unlock is owned by MusicStartGate when enabled.
     const onFirstGesture = () => {
       if (siteConfig.audioGate.enabled) return;
+      hasGesturedThisSession = true;
       userActivatedRef.current = true;
       setNeedsGesture(false);
       stopPreview();
@@ -348,7 +355,10 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
       }
     };
 
-    if (!siteConfig.audioGate.enabled) {
+    // Only ever arm the global "first click anywhere plays" hijack once per
+    // browser session — otherwise every page navigation remounts this
+    // component and re-arms it, hijacking the next unrelated click too.
+    if (!siteConfig.audioGate.enabled && !hasGesturedThisSession) {
       window.addEventListener("pointerdown", onFirstGesture, { once: true });
       window.addEventListener("keydown", onFirstGesture, { once: true });
     }
