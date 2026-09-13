@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { assetPath } from "@/lib/paths/assetPath";
+import { products } from "@/data/products";
 import { siteConfig } from "@/data/site";
 import styles from "./MenuPreview.module.css";
 
@@ -24,6 +25,17 @@ function resolvePreview(activeId: string, latestCover: string | null): PreviewSt
 
   if (item.preview === "bubilet") src = assetPath(siteConfig.media.bubilet);
   if (item.preview === "instagram") src = assetPath(siteConfig.media.instagram);
+  if (item.preview === "magaza") {
+    const cover = products[0]?.images?.[0];
+    if (cover) {
+      src = assetPath(cover);
+      label = "MAĞAZA";
+    } else {
+      src = "";
+      label = "MAĞAZA";
+      mode = "fallback";
+    }
+  }
   if (item.preview === "music") {
     if (latestCover) {
       src = latestCover;
@@ -69,7 +81,7 @@ export function MenuPreview({ activeId, latestCover }: Props) {
       <div className={`${styles.frame} ${fading ? styles.fading : ""}`}>
         {previous ? (
           previous.mode === "fallback" ? (
-            <div className={`display ${styles.fallback} ${styles.layerPrev}`}>MÜZİK</div>
+            <div className={`display ${styles.fallback} ${styles.layerPrev}`}>{previous.label}</div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={previous.src} alt="" className={`${styles.image} ${styles.layerPrev}`} />
@@ -77,7 +89,7 @@ export function MenuPreview({ activeId, latestCover }: Props) {
         ) : null}
 
         {current.mode === "fallback" ? (
-          <div className={`display ${styles.fallback} ${styles.layerCurr}`}>MÜZİK</div>
+          <div className={`display ${styles.fallback} ${styles.layerCurr}`}>{current.label}</div>
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={current.src} alt="" className={`${styles.image} ${styles.layerCurr}`} />

@@ -1,0 +1,191 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 50% 45%, rgba(33, 255, 120, 0.06), transparent 42%),
+    rgba(3, 3, 3, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.panel {
+  position: relative;
+  width: min(94vw, 920px);
+  max-height: 88vh;
+  overflow-y: auto;
+  display: grid;
+  gap: clamp(20px, 3vw, 36px);
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid var(--line);
+  background: rgba(6, 6, 6, 0.9);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 22px 70px rgba(0, 0, 0, 0.62);
+}
+
+@media (min-width: 800px) {
+  .panel {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.close {
+  position: absolute;
+  top: clamp(14px, 2vw, 22px);
+  right: clamp(14px, 2vw, 22px);
+  z-index: 1;
+  min-width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  background: rgba(3, 3, 3, 0.6);
+  font-size: 0.9rem;
+}
+
+.close:hover,
+.close:focus-visible {
+  color: var(--text);
+  border-color: var(--sehinsah-green-line);
+}
+
+.gallery {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.mainImage {
+  aspect-ratio: 1;
+  background: rgba(8, 8, 8, 0.5);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.thumbs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+
+.thumb {
+  flex: 0 0 auto;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbActive {
+  opacity: 1;
+  border-color: var(--sehinsah-green-line);
+}
+
+.info {
+  display: grid;
+  align-content: start;
+  gap: 0.85rem;
+}
+
+.category {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.name {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1;
+}
+
+.price {
+  font-size: 1.15rem;
+  color: var(--sehinsah-green);
+}
+
+.description {
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 46ch;
+}
+
+.sizes {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.sizeLabel {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.sizeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.size {
+  min-width: 44px;
+  min-height: 40px;
+  padding: 0 0.75rem;
+  border: 1px solid var(--line);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.size:hover {
+  color: var(--text);
+}
+
+.sizeActive {
+  color: #051009;
+  background: var(--sehinsah-green);
+  border-color: rgba(122, 255, 174, 0.74);
+}
+
+.outOfStock {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+@media (max-width: 799px) {
+  .panel {
+    max-height: 92vh;
+  }
+}

@@ -42,6 +42,17 @@ export const siteConfig = {
     label: "Bubilet",
     url: "https://www.bubilet.com.tr/sanatci/sehinsah",
   },
+  store: {
+    meta: "MAĞAZA / KOLEKSİYON",
+    title: "MAĞAZA",
+    subtitle: "Şehinşah’ın giyim koleksiyonu.",
+    emptyTitle: "MAĞAZA ÇOK YAKINDA",
+    emptyMessage: "Yeni koleksiyon parçaları çok yakında burada olacak.",
+    sizeLabel: "BEDEN",
+    detailCta: "DETAYLARI GÖR",
+    closeLabel: "KAPAT",
+    outOfStock: "STOKTA YOK",
+  },
   instagram: {
     title: "AKIŞIN DIŞINA ÇIK",
     username: "@sehinsah",
@@ -125,7 +136,8 @@ export const siteConfig = {
     { id: "hero", index: "01", label: "ANA SAYFA", href: "#hero", preview: "falling" as const },
     { id: "muzik", index: "02", label: "MÜZİK", href: "#muzik", preview: "music" as const },
     { id: "sahne", index: "03", label: "SAHNE", href: "#sahne", preview: "bubilet" as const },
-    { id: "instagram", index: "04", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
+    { id: "magaza", index: "04", label: "MAĞAZA", href: "/magaza", preview: "magaza" as const },
+    { id: "instagram", index: "05", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
   ],
 };
 

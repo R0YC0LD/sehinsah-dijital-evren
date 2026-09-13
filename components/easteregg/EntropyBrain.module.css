@@ -139,6 +139,11 @@
   bottom: 18%;
 }
 
+.slot-store-grid-edge {
+  top: -8px;
+  right: clamp(12px, 4vw, 40px);
+}
+
 .slot-instagram-ring-side {
   left: clamp(10px, 3vw, 24px);
   top: 42%;

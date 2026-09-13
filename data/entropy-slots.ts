@@ -30,6 +30,11 @@ export const entropySlots: EntropySlot[] = [
     placement: "poster-lower-edge-safe",
   },
   {
+    id: "store-grid-edge",
+    section: "magaza",
+    placement: "grid-edge-safe",
+  },
+  {
     id: "instagram-ring-side",
     section: "instagram",
     placement: "ring-left-safe",

@@ -1,0 +1,95 @@
+.card {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.link {
+  display: grid;
+  gap: 0.65rem;
+  width: 100%;
+  text-align: left;
+  transition: transform 0.3s var(--ease);
+}
+
+.link:hover {
+  transform: translateY(-4px);
+}
+
+.cover {
+  position: relative;
+  aspect-ratio: 1;
+  background: rgba(8, 8, 8, 0.5);
+  border: 1px solid transparent;
+  transition: border-color 0.25s ease;
+  overflow: hidden;
+}
+
+.link:hover .cover {
+  border-color: var(--line);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  background: rgba(3, 3, 3, 0.78);
+  border: 1px solid var(--line);
+}
+
+.name {
+  font-size: 0.9rem;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.25s ease;
+}
+
+.link:hover .name {
+  color: var(--sehinsah-green);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.price {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 899px) {
+  .name {
+    font-size: 0.84rem;
+  }
+
+  .meta {
+    font-size: 0.68rem;
+  }
+}

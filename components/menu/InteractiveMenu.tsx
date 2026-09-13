@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { EntropyMenuProgress } from "@/components/easteregg/EntropyMenuProgress";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
@@ -21,6 +22,8 @@ type Props = {
 };
 
 export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) {
+  const router = useRouter();
+  const pathname = usePathname();
   const rootRef = useRef<HTMLDivElement>(null);
   const navRef = useRef<HTMLElement>(null);
   const firstRef = useRef<HTMLButtonElement>(null);
@@ -76,13 +79,22 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
 
   const go = (href: string) => {
     onClose();
+
+    if (!href.startsWith("#")) {
+      if (href !== pathname) router.push(href);
+      return;
+    }
+
     const id = href.replace("#", "");
     const el = document.getElementById(id);
     if (el) {
       window.setTimeout(() => {
         el.scrollIntoView({ behavior: "smooth" });
       }, 80);
+      return;
     }
+
+    if (pathname !== "/") router.push(`/${href}`);
   };
 
   const resolveMenuId = (x: number, y: number) => {

@@ -4,13 +4,14 @@ export type EntropySlotId =
   | "music-heading-edge"
   | "discography-divider"
   | "stage-poster-edge"
+  | "store-grid-edge"
   | "instagram-ring-side"
   | "final-copy-corner"
   | "footer-credit-nearby";
 
 export type EntropySlot = {
   id: EntropySlotId;
-  section: "menu" | "hero" | "music" | "stage" | "instagram" | "final" | "footer";
+  section: "menu" | "hero" | "music" | "stage" | "magaza" | "instagram" | "final" | "footer";
   placement: string;
   required?: boolean;
 };
