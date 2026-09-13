@@ -65,9 +65,9 @@ function revalidateSeconds() {
 
 async function getLiveCachedSpotifyCatalog(): Promise<MusicCatalog> {
   try {
-    const cached = unstable_cache(loadLiveCatalog, ["spotify-sehinsah-catalog-v4"], {
+    const cached = unstable_cache(loadLiveCatalog, ["spotify-sehinsah-catalog-v5"], {
       revalidate: revalidateSeconds(),
-      tags: ["spotify-sehinsah-catalog-v4"],
+      tags: ["spotify-sehinsah-catalog-v5"],
     });
     return await cached();
   } catch (error) {

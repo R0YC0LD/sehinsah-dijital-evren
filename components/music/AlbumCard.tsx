@@ -1,4 +1,5 @@
 import { ReleaseActions } from "@/components/music/ReleaseActions";
+import { isEpRelease } from "@/lib/spotify/normalize";
 import type { SpotifyRelease } from "@/lib/spotify/types";
 import { isDirectSpotifyAlbumUrl } from "@/lib/spotify/validate-links";
 import styles from "./AlbumCard.module.css";
@@ -13,7 +14,7 @@ export function AlbumCard({ album }: Props) {
       ? "Albüm"
       : album.albumType === "compilation"
         ? "Derleme"
-        : album.albumType === "ep"
+        : album.albumType === "ep" || isEpRelease(album)
           ? "EP"
           : "Tekli";
 

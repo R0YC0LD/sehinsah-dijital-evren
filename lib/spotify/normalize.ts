@@ -155,12 +155,25 @@ export function dedupeAlbums(albums: SpotifyRelease[]): SpotifyRelease[] {
   return result.sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
 }
 
-function isAlbumType(type: string) {
-  return type === "album" || type === "compilation";
+/** Spotify tags EPs as "single" — treat multi-track ones as albums instead. */
+const EP_MIN_TRACKS = 3;
+
+export function isEpRelease(release: Pick<SpotifyRelease, "albumType" | "totalTracks">) {
+  return release.albumType === "single" && release.totalTracks >= EP_MIN_TRACKS;
 }
 
-function isSingleType(type: string) {
-  return type === "single" || type === "ep";
+function isAlbumType(release: Pick<SpotifyRelease, "albumType" | "totalTracks">) {
+  return (
+    release.albumType === "album" ||
+    release.albumType === "compilation" ||
+    isEpRelease(release)
+  );
+}
+
+function isSingleType(release: Pick<SpotifyRelease, "albumType" | "totalTracks">) {
+  return (
+    (release.albumType === "single" || release.albumType === "ep") && !isEpRelease(release)
+  );
 }
 
 export function filterVerifiedSingleTracks(
@@ -203,8 +216,8 @@ export function buildMusicCatalog(
       !isDeniedReleaseTitle(r.name),
   );
   const sorted = [...verified].sort((a, b) => (a.releaseDate < b.releaseDate ? 1 : -1));
-  const albums = sorted.filter((r) => isAlbumType(r.albumType));
-  const singles = sorted.filter((r) => isSingleType(r.albumType));
+  const albums = sorted.filter((r) => isAlbumType(r));
+  const singles = sorted.filter((r) => isSingleType(r));
   const verifiedTracks = tracks.filter(
     (t) =>
       t.verified &&
@@ -238,7 +251,7 @@ export function emptyCatalog(source: MusicCatalog["source"] = "fallback"): Music
 
 export function splitCatalog(albums: SpotifyRelease[]) {
   return {
-    albums: albums.filter((a) => isAlbumType(a.albumType)),
-    singles: albums.filter((a) => isSingleType(a.albumType)),
+    albums: albums.filter((a) => isAlbumType(a)),
+    singles: albums.filter((a) => isSingleType(a)),
   };
 }
