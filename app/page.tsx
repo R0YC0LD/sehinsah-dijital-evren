@@ -1,4 +1,5 @@
 import { SiteShell } from "@/components/SiteShell";
+import { BioTeaser } from "@/components/home/BioTeaser";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { MusicSection } from "@/components/music/MusicSection";
 import { TicketSection } from "@/components/sections/TicketSection";
@@ -18,6 +19,7 @@ export default async function HomePage() {
         <InstagramSection />
         <FinalSection />
       </main>
+      <BioTeaser />
     </SiteShell>
   );
 }
