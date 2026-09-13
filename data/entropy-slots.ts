@@ -35,11 +35,6 @@ export const entropySlots: EntropySlot[] = [
     placement: "ring-left-safe",
   },
   {
-    id: "final-copy-corner",
-    section: "final",
-    placement: "copy-upper-corner-safe",
-  },
-  {
     id: "footer-credit-nearby",
     section: "footer",
     placement: "footer-safe-corner",
