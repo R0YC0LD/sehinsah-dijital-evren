@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { ProductCard } from "@/components/store/ProductCard";
 import { ProductFilters } from "@/components/store/ProductFilters";
-import { ProductModal } from "@/components/store/ProductModal";
 import { siteConfig } from "@/data/site";
 import type { Product } from "@/lib/store/types";
 import styles from "./StoreGrid.module.css";
@@ -14,7 +13,6 @@ type Props = {
 
 export function StoreGrid({ products }: Props) {
   const [filter, setFilter] = useState("all");
-  const [selected, setSelected] = useState<Product | null>(null);
 
   const categories = useMemo(
     () => Array.from(new Set(products.map((p) => p.category))),
@@ -43,11 +41,9 @@ export function StoreGrid({ products }: Props) {
 
       <div key={filter} className={styles.grid}>
         {items.map((product) => (
-          <ProductCard key={product.id} product={product} onSelect={setSelected} />
+          <ProductCard key={product.id} product={product} />
         ))}
       </div>
-
-      {selected ? <ProductModal product={selected} onClose={() => setSelected(null)} /> : null}
     </div>
   );
 }

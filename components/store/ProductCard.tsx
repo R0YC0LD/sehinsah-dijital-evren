@@ -1,35 +1,25 @@
+import Link from "next/link";
 import { formatPrice } from "@/lib/store/format";
-import { assetPath } from "@/lib/paths/assetPath";
 import { siteConfig } from "@/data/site";
+import { ProductRevealImage } from "@/components/store/ProductRevealImage";
 import type { Product } from "@/lib/store/types";
 import styles from "./ProductCard.module.css";
 
 type Props = {
   product: Product;
-  onSelect: (product: Product) => void;
 };
 
-export function ProductCard({ product, onSelect }: Props) {
+export function ProductCard({ product }: Props) {
   return (
     <div className={styles.card}>
-      <button
-        type="button"
+      <Link
+        href={`/magaza/${product.id}`}
         className={styles.link}
-        onClick={() => onSelect(product)}
-        aria-haspopup="dialog"
         aria-label={`${product.name} ürününü incele`}
       >
         <div className={styles.cover}>
           {product.images[0] ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={assetPath(product.images[0])}
-              alt={product.name}
-              width={640}
-              height={640}
-              loading="lazy"
-              className={styles.image}
-            />
+            <ProductRevealImage src={product.images[0]} alt={product.name} />
           ) : (
             <div className={styles.placeholder}>Görsel bulunamadı</div>
           )}
@@ -42,7 +32,7 @@ export function ProductCard({ product, onSelect }: Props) {
           <span>{product.category}</span>
           <span className={styles.price}>{formatPrice(product.price)}</span>
         </p>
-      </button>
+      </Link>
     </div>
   );
 }
