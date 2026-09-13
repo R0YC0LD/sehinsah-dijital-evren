@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import type { Comment } from "@/lib/comments/types";
 import styles from "./ProductComments.module.css";
 
+const NAME_MAX_LENGTH = 24;
+
 type Props = {
   productId: string;
 };
@@ -45,13 +47,27 @@ export function ProductComments({ productId }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ productId, name: name.trim(), text: text.trim() }),
       });
-      if (!res.ok) throw new Error("failed");
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error || "failed");
+      }
       const data = await res.json();
       setComments((prev) => [data.comment, ...prev]);
       setName("");
       setText("");
-    } catch {
-      setError("Yorum gönderilemedi, tekrar dene.");
+    } catch (err) {
+      const code = err instanceof Error ? err.message : "failed";
+      if (code === "inappropriate_name") {
+        setError("Girdiğin isim uygun değil, lütfen normal bir isim yaz.");
+      } else if (code === "inappropriate_text") {
+        setError("Yorumun uygunsuz veya anlamsız görünüyor, lütfen düzenleyip tekrar dene.");
+      } else if (code === "invalid_name") {
+        setError(`İsim en fazla ${NAME_MAX_LENGTH} karakter olabilir.`);
+      } else if (code === "invalid_text") {
+        setError("Yorum boş olamaz ve 500 karakteri geçemez.");
+      } else {
+        setError("Yorum gönderilemedi, tekrar dene.");
+      }
     } finally {
       setSubmitting(false);
     }
@@ -67,7 +83,7 @@ export function ProductComments({ productId }: Props) {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="İsmin"
-          maxLength={40}
+          maxLength={NAME_MAX_LENGTH}
           required
           className={styles.input}
         />

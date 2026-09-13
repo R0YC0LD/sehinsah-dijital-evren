@@ -1,44 +1,89 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./BioTeaser.module.css";
 
-const STORAGE_KEY = "sehinsah-bio-teaser-v1";
-const SHOW_DELAY_MS = 4000;
+const COUNT_KEY = "sehinsah-bio-teaser-count-v2";
+const STOPPED_KEY = "sehinsah-bio-teaser-stopped-v2";
+const MAX_SHOWS = 6;
+const INITIAL_DELAY_MS = 4000;
+const VISIBLE_MS = 10000;
+const HIDDEN_MS = 60000;
+
+function readCount(): number {
+  try {
+    return Number(sessionStorage.getItem(COUNT_KEY) || "0");
+  } catch {
+    return 0;
+  }
+}
+
+function bumpCount(): number {
+  const next = readCount() + 1;
+  try {
+    sessionStorage.setItem(COUNT_KEY, String(next));
+  } catch {
+    // ignore
+  }
+  return next;
+}
+
+function isStopped(): boolean {
+  try {
+    return sessionStorage.getItem(STOPPED_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function stopForever() {
+  try {
+    sessionStorage.setItem(STOPPED_KEY, "1");
+  } catch {
+    // ignore
+  }
+}
 
 export function BioTeaser() {
   const [visible, setVisible] = useState(false);
   const router = useRouter();
+  const timerRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    let seen = false;
-    try {
-      seen = sessionStorage.getItem(STORAGE_KEY) === "1";
-    } catch {
-      seen = false;
-    }
-    if (seen) return;
+    if (isStopped()) return;
 
-    const t = window.setTimeout(() => setVisible(true), SHOW_DELAY_MS);
-    return () => window.clearTimeout(t);
+    const scheduleShow = (delay: number) => {
+      timerRef.current = window.setTimeout(() => {
+        if (isStopped()) return;
+        const count = bumpCount();
+        setVisible(true);
+
+        timerRef.current = window.setTimeout(() => {
+          setVisible(false);
+          if (count >= MAX_SHOWS) {
+            stopForever();
+            return;
+          }
+          scheduleShow(HIDDEN_MS);
+        }, VISIBLE_MS);
+      }, delay);
+    };
+
+    scheduleShow(INITIAL_DELAY_MS);
+
+    return () => window.clearTimeout(timerRef.current);
   }, []);
 
   const dismiss = () => {
-    try {
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    } catch {
-      // ignore
-    }
+    window.clearTimeout(timerRef.current);
+    stopForever();
     setVisible(false);
   };
 
   const go = () => {
-    try {
-      sessionStorage.setItem(STORAGE_KEY, "1");
-    } catch {
-      // ignore
-    }
+    window.clearTimeout(timerRef.current);
+    stopForever();
     router.push("/hakkinda");
   };
 

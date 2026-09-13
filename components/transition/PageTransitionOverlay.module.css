@@ -1,0 +1,63 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  gap: 1.4rem;
+  background: #030303;
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s var(--ease, ease);
+}
+
+.revealing {
+  opacity: 0;
+}
+
+.imageWrap {
+  position: relative;
+  width: min(30vw, 168px);
+}
+
+.imageBase,
+.imageColor {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.imageBase {
+  filter: grayscale(1) brightness(0.3) contrast(0.95);
+  opacity: 0.6;
+}
+
+.imageColor {
+  position: absolute;
+  inset: 0;
+  clip-path: inset(100% 0 0 0);
+  filter: drop-shadow(0 0 22px var(--sehinsah-green-glow));
+  transition: clip-path 0.7s var(--ease, ease);
+}
+
+.imageColor.filled {
+  clip-path: inset(0% 0 0 0);
+}
+
+.bar {
+  width: min(30vw, 168px);
+  height: 2px;
+  overflow: hidden;
+  background: rgba(238, 233, 223, 0.1);
+}
+
+.barFill {
+  width: 0%;
+  height: 100%;
+  background: var(--sehinsah-green);
+  transition: width 0.7s var(--ease, ease);
+}
+
+.barFill.filled {
+  width: 100%;
+}

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { PageTransitionOverlay } from "@/components/transition/PageTransitionOverlay";
 import { siteConfig } from "@/data/site";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
@@ -82,6 +83,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
         />
         {children}
+        <PageTransitionOverlay />
         <Analytics />
       </body>
     </html>

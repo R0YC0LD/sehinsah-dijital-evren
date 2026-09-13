@@ -1,6 +1,10 @@
 import { NextResponse } from "next/server";
 import { products } from "@/data/products";
 import { addComment, listComments } from "@/lib/comments/store";
+import { containsProfanity, isMalformedName, isMalformedText } from "@/lib/comments/moderation";
+
+const NAME_MAX_LENGTH = 24;
+const TEXT_MAX_LENGTH = 500;
 
 export const dynamic = "force-dynamic";
 
@@ -30,13 +34,23 @@ export async function POST(request: Request) {
   if (!isValidProductId(productId)) {
     return NextResponse.json({ error: "invalid_product" }, { status: 400 });
   }
-  if (typeof name !== "string" || !name.trim() || name.length > 40) {
+
+  if (typeof name !== "string" || !name.trim() || name.length > NAME_MAX_LENGTH) {
     return NextResponse.json({ error: "invalid_name" }, { status: 400 });
   }
-  if (typeof text !== "string" || !text.trim() || text.length > 500) {
-    return NextResponse.json({ error: "invalid_text" }, { status: 400 });
+  const trimmedName = name.trim();
+  if (isMalformedName(trimmedName) || containsProfanity(trimmedName)) {
+    return NextResponse.json({ error: "inappropriate_name" }, { status: 400 });
   }
 
-  const comment = addComment({ productId, name: name.trim(), text: text.trim() });
+  if (typeof text !== "string" || !text.trim() || text.length > TEXT_MAX_LENGTH) {
+    return NextResponse.json({ error: "invalid_text" }, { status: 400 });
+  }
+  const trimmedText = text.trim();
+  if (isMalformedText(trimmedText) || containsProfanity(trimmedText)) {
+    return NextResponse.json({ error: "inappropriate_text" }, { status: 400 });
+  }
+
+  const comment = addComment({ productId, name: trimmedName, text: trimmedText });
   return NextResponse.json({ comment }, { status: 201 });
 }
