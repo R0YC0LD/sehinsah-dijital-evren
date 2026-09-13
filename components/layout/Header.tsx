@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { siteConfig } from "@/data/site";
 import styles from "./Header.module.css";
 
@@ -11,6 +12,8 @@ type Props = {
 
 export function Header({ menuOpen, onMenuToggle }: Props) {
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -19,9 +22,15 @@ export function Header({ menuOpen, onMenuToggle }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const onBrandClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") return;
+    event.preventDefault();
+    router.push("/");
+  };
+
   return (
     <header className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}>
-      <a href="#hero" className={`display ${styles.brand}`}>
+      <a href="#hero" className={`display ${styles.brand}`} onClick={onBrandClick}>
         {siteConfig.artistName}
       </a>
 

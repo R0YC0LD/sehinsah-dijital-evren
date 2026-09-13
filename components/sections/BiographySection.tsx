@@ -1,10 +1,12 @@
+"use client";
+
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "./BiographySection.module.css";
 
 const ALBUMS = [
   { name: "Denetimli Serbestlik Stili (Deluxe)", year: "2012" },
   { name: "DEEV (Deluxe Edition)", year: "2016" },
-  { name: "Karma", year: "2017" },
   { name: "666", year: "2020" },
   { name: "IKARUS", year: "2024" },
 ];
@@ -21,25 +23,56 @@ const SINGLES = [
 ];
 
 export function BiographySection() {
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const root = rootRef.current;
+    if (!root) return;
+    const targets = root.querySelectorAll<HTMLElement>("[data-reveal]");
+    if (!targets.length) return;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      targets.forEach((t) => t.classList.add(styles.visible));
+      return;
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add(styles.visible);
+          io.unobserve(entry.target);
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -8% 0px" },
+    );
+    targets.forEach((t) => io.observe(t));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section className={`section-shell ${styles.section}`} aria-label="Hakkında">
       <div className={`section-backdrop ${styles.backdrop}`} aria-hidden="true">
         <span className={`display ${styles.ghost}`}>HAKKINDA</span>
       </div>
 
-      <div className={`section-content content-medium ${styles.content}`}>
+      <div ref={rootRef} className={`section-content content-medium ${styles.content}`}>
         <Link href="/" className={`editorial-link ${styles.back}`}>
           ← ANA SAYFAYA DÖN
         </Link>
 
-        <p className="meta-label">HAKKINDA</p>
-        <h1 className={`display ${styles.title}`}>ŞEHİNŞAH KİMDİR?</h1>
-        <p className={styles.lede}>
+        <p className={`meta-label ${styles.reveal}`} data-reveal>
+          HAKKINDA
+        </p>
+        <h1 className={`display ${styles.title} ${styles.reveal}`} data-reveal>
+          ŞEHİNŞAH KİMDİR?
+        </h1>
+        <p className={`${styles.lede} ${styles.reveal}`} data-reveal>
           Gerçek adıyla Ufuk Yıkılmaz — Türk rap sahnesinin karanlık, sözü güçlü
           isimlerinden biri.
         </p>
 
-        <div className={styles.body}>
+        <div className={`${styles.body} ${styles.reveal}`} data-reveal>
           <p>
             Şehinşah, sahne adıyla tanınan ve zaman zaman <strong>HSNSBBH</strong> ismini
             de kullanan <strong>Ufuk Yıkılmaz</strong>&rsquo;ın müzik kimliğidir. 27 Aralık
@@ -61,13 +94,13 @@ export function BiographySection() {
           </p>
         </div>
 
-        <div className={styles.lists}>
+        <div className={`${styles.lists} ${styles.reveal}`} data-reveal>
           <div>
             <h2 className={`display ${styles.listTitle}`}>ALBÜMLER</h2>
             <ul className={styles.list}>
-              {ALBUMS.map((a) => (
-                <li key={a.name}>
-                  <span>{a.name}</span>
+              {ALBUMS.map((a, i) => (
+                <li key={a.name} style={{ "--i": i } as React.CSSProperties}>
+                  <span className={styles.itemName}>{a.name}</span>
                   <span className={styles.year}>{a.year}</span>
                 </li>
               ))}
@@ -76,16 +109,16 @@ export function BiographySection() {
           <div>
             <h2 className={`display ${styles.listTitle}`}>ÖNE ÇIKAN ŞARKILAR</h2>
             <ul className={styles.list}>
-              {SINGLES.map((s) => (
-                <li key={s}>
-                  <span>{s}</span>
+              {SINGLES.map((s, i) => (
+                <li key={s} style={{ "--i": i } as React.CSSProperties}>
+                  <span className={styles.itemName}>{s}</span>
                 </li>
               ))}
             </ul>
           </div>
         </div>
 
-        <p className={styles.footNote}>
+        <p className={`${styles.footNote} ${styles.reveal}`} data-reveal>
           Güncel diskografinin tamamı için{" "}
           <Link href="/#muzik" className="editorial-link">
             müzik sayfasına

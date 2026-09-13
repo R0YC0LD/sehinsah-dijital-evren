@@ -77,10 +77,25 @@
 .list li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
-  padding-bottom: 0.6rem;
+  padding: 0.15rem 0 0.6rem;
   border-bottom: 1px solid var(--line);
   font-size: 0.92rem;
+  transition: border-color 0.25s var(--ease), padding-left 0.25s var(--ease);
+}
+
+.list li:hover {
+  border-color: var(--sehinsah-green-line);
+  padding-left: 0.4rem;
+}
+
+.itemName {
+  transition: color 0.25s var(--ease);
+}
+
+.list li:hover .itemName {
+  color: var(--sehinsah-green);
 }
 
 .year {
@@ -92,6 +107,41 @@
   color: var(--text-muted);
   font-size: 0.9rem;
   max-width: 60ch;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.lists.reveal .list li {
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease), border-color 0.25s var(--ease), padding-left 0.25s var(--ease);
+}
+
+.lists .list li {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.lists.visible .list li {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: calc(var(--i, 0) * 60ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .lists .list li {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 @media (max-width: 899px) {
