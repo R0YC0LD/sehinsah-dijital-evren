@@ -52,7 +52,7 @@ const musicGroupJsonLd = {
   "@context": "https://schema.org",
   "@type": "MusicGroup",
   name: siteConfig.displayName,
-  alternateName: siteConfig.artistName,
+  alternateName: [siteConfig.artistName, "Ufuk Yıkılmaz", "HSNSBBH"],
   url: siteUrl,
   image: `${siteUrl}${siteConfig.media.bubilet}`,
   genre: "Hip Hop",

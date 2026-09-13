@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { DesignerCredit } from "@/components/layout/DesignerCredit";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
@@ -14,6 +15,7 @@ export function Footer() {
       </div>
       <nav className={styles.links} aria-label="Footer">
         <a href="#muzik">MÜZİK</a>
+        <Link href="/hakkinda">HAKKINDA</Link>
         <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
       </nav>
       <div className={styles.footerBottom}>

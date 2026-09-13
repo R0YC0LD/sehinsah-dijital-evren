@@ -1,0 +1,105 @@
+.section {
+  position: relative;
+  min-height: 100svh;
+  padding: clamp(6rem, 12vh, 9rem) clamp(1.25rem, 4vw, 3rem) 5rem;
+}
+
+.backdrop {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.15), rgba(11, 11, 11, 0.5) 40%, rgba(5, 5, 5, 0.2));
+}
+
+.ghost {
+  position: absolute;
+  right: 2%;
+  top: 6%;
+  font-size: clamp(3.5rem, 13vw, 9rem);
+  color: rgba(238, 233, 223, 0.04);
+}
+
+.content {
+  position: relative;
+}
+
+.back {
+  display: inline-flex;
+  margin-bottom: 2rem;
+  color: var(--text-muted);
+}
+
+.title {
+  font-size: clamp(2.6rem, 7vw, 4.2rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.lede {
+  color: var(--text-muted);
+  max-width: 46ch;
+  font-size: 1.05rem;
+  margin-bottom: 2rem;
+}
+
+.body {
+  display: grid;
+  gap: 1.1rem;
+  max-width: 68ch;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+.body strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.lists {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 700px) {
+  .lists {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.listTitle {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.year {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.footNote {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  max-width: 60ch;
+}
+
+@media (max-width: 899px) {
+  .section {
+    padding: var(--mobile-section-y) var(--mobile-page-x) 4rem;
+  }
+
+  .title {
+    font-size: var(--mobile-h2);
+  }
+}
