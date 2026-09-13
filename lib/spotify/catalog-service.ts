@@ -19,12 +19,13 @@ type AlbumsPage = {
   next: string | null;
 };
 
-const MAX_PAGES = 4;
+const MAX_PAGES = 20;
+const ALBUMS_PAGE_LIMIT = 10;
 
 async function fetchAllAlbums(artistId: string, market: string): Promise<SpotifyRawAlbum[]> {
   const collected: SpotifyRawAlbum[] = [];
   let nextPath: string | null =
-    `/artists/${artistId}/albums?include_groups=album,single&market=${encodeURIComponent(market)}&limit=50`;
+    `/artists/${artistId}/albums?include_groups=album,single&market=${encodeURIComponent(market)}&limit=${ALBUMS_PAGE_LIMIT}`;
   let pages = 0;
 
   while (nextPath && pages < MAX_PAGES) {

@@ -5,7 +5,8 @@ const ROOT = process.cwd();
 const OUT = path.join(ROOT, "data", "generated", "spotify-catalog.json");
 const ARTIST_ID = "0FUsrstJwmg4WVHQMTYuUA";
 const MARKET = process.env.SPOTIFY_MARKET || "TR";
-const MAX_PAGES = 4;
+const ALBUMS_PAGE_LIMIT = 10;
+const MAX_PAGES = 20;
 
 async function getToken(clientId, clientSecret) {
   const basic = Buffer.from(`${clientId}:${clientSecret}`).toString("base64");
@@ -54,7 +55,7 @@ function normalize(raw) {
 async function fetchAlbums(token) {
   const collected = [];
   let next =
-    `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums?include_groups=album,single&market=${MARKET}&limit=50`;
+    `https://api.spotify.com/v1/artists/${ARTIST_ID}/albums?include_groups=album,single&market=${MARKET}&limit=${ALBUMS_PAGE_LIMIT}`;
   let pages = 0;
 
   while (next && pages < MAX_PAGES) {

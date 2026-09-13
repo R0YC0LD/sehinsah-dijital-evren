@@ -2,8 +2,29 @@
   "schemaVersion": 4,
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
-  "generatedAt": "2026-08-02T13:34:41.960Z",
+  "generatedAt": "2026-09-13T07:55:36.085Z",
   "releases": [
+    {
+      "id": "4jMISP7h6NOXiwIjdTujGK",
+      "spotifyId": "4jMISP7h6NOXiwIjdTujGK",
+      "objectType": "album",
+      "name": "mavi ay",
+      "albumType": "single",
+      "releaseDate": "2026-08-07",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739cd8e71207b211becf29a0d2",
+      "spotifyUrl": "https://open.spotify.com/album/4jMISP7h6NOXiwIjdTujGK",
+      "uri": "spotify:album:4jMISP7h6NOXiwIjdTujGK",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "2aTmzuUvKITVuP2qBnrvvD",
       "spotifyId": "2aTmzuUvKITVuP2qBnrvvD",
@@ -12,8 +33,8 @@
       "albumType": "single",
       "releaseDate": "2026-07-03",
       "releaseYear": "2026",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cfc03e0fdf23d0a055b1e6e1",
+      "totalTracks": 5,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfc03e0fdf23d0a055b1e6e1",
       "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
       "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
       "artists": [
@@ -33,10 +54,31 @@
       "albumType": "single",
       "releaseDate": "2026-02-27",
       "releaseYear": "2026",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023a125f950b8a80efd61327b5",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733a125f950b8a80efd61327b5",
       "spotifyUrl": "https://open.spotify.com/album/0TiW19cwPu2FnmR0WcpDXI",
       "uri": "spotify:album:0TiW19cwPu2FnmR0WcpDXI",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1Mo5oelvoh3LVOSEEG8QZ6",
+      "spotifyId": "1Mo5oelvoh3LVOSEEG8QZ6",
+      "objectType": "album",
+      "name": "TakaTuka Freestyle",
+      "albumType": "single",
+      "releaseDate": "2026-02-20",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273dd4736d473e9786f444ad89a",
+      "spotifyUrl": "https://open.spotify.com/album/1Mo5oelvoh3LVOSEEG8QZ6",
+      "uri": "spotify:album:1Mo5oelvoh3LVOSEEG8QZ6",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -54,31 +96,10 @@
       "albumType": "single",
       "releaseDate": "2026-02-13",
       "releaseYear": "2026",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cc7e4741f5f9b73b68e7d65f",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cc7e4741f5f9b73b68e7d65f",
       "spotifyUrl": "https://open.spotify.com/album/5iG9dUUVurewjfXYPhvOYB",
       "uri": "spotify:album:5iG9dUUVurewjfXYPhvOYB",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "5ht5m3cJvjGdTgDRUVrVeL",
-      "spotifyId": "5ht5m3cJvjGdTgDRUVrVeL",
-      "objectType": "album",
-      "name": "Lab Cypher 6",
-      "albumType": "single",
-      "releaseDate": "2025-08-08",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02de0c2848293720adabe26583",
-      "spotifyUrl": "https://open.spotify.com/album/5ht5m3cJvjGdTgDRUVrVeL",
-      "uri": "spotify:album:5ht5m3cJvjGdTgDRUVrVeL",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -96,10 +117,115 @@
       "albumType": "single",
       "releaseDate": "2025-07-18",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02a03b41f0232b90458b87e376",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a03b41f0232b90458b87e376",
       "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
       "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5zZ47YzgUVZg5UDQHjwtRj",
+      "spotifyId": "5zZ47YzgUVZg5UDQHjwtRj",
+      "objectType": "album",
+      "name": "LAMINE YAMAL",
+      "albumType": "single",
+      "releaseDate": "2025-06-27",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27333404e8f69519a76894b7d15",
+      "spotifyUrl": "https://open.spotify.com/album/5zZ47YzgUVZg5UDQHjwtRj",
+      "uri": "spotify:album:5zZ47YzgUVZg5UDQHjwtRj",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "324e9L1mSokIumw2XSrEad",
+      "spotifyId": "324e9L1mSokIumw2XSrEad",
+      "objectType": "album",
+      "name": "Memleketim",
+      "albumType": "single",
+      "releaseDate": "2025-04-04",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734d393d6feaf6707b1c6c00c2",
+      "spotifyUrl": "https://open.spotify.com/album/324e9L1mSokIumw2XSrEad",
+      "uri": "spotify:album:324e9L1mSokIumw2XSrEad",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2MwagD7XKpTnUqyRirveSx",
+      "spotifyId": "2MwagD7XKpTnUqyRirveSx",
+      "objectType": "album",
+      "name": "Eskisi Gibi",
+      "albumType": "single",
+      "releaseDate": "2025-03-28",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27366ef9a37bf14f4a6e303930e",
+      "spotifyUrl": "https://open.spotify.com/album/2MwagD7XKpTnUqyRirveSx",
+      "uri": "spotify:album:2MwagD7XKpTnUqyRirveSx",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3ZaP5zCyEwGqXYLU2MlySS",
+      "spotifyId": "3ZaP5zCyEwGqXYLU2MlySS",
+      "objectType": "album",
+      "name": "BLACKROCK",
+      "albumType": "single",
+      "releaseDate": "2025-02-28",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273808bedcb09a90d3b9fab3680",
+      "spotifyUrl": "https://open.spotify.com/album/3ZaP5zCyEwGqXYLU2MlySS",
+      "uri": "spotify:album:3ZaP5zCyEwGqXYLU2MlySS",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1W1OihzMtKpGcwXVJU2ncw",
+      "spotifyId": "1W1OihzMtKpGcwXVJU2ncw",
+      "objectType": "album",
+      "name": "Cheval Blanc",
+      "albumType": "single",
+      "releaseDate": "2025-02-21",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bdc88eeffffc7737a6ba15bf",
+      "spotifyUrl": "https://open.spotify.com/album/1W1OihzMtKpGcwXVJU2ncw",
+      "uri": "spotify:album:1W1OihzMtKpGcwXVJU2ncw",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -117,8 +243,8 @@
       "albumType": "single",
       "releaseDate": "2025-02-14",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02bdd1b4665eb2fd436d5955ba",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bdd1b4665eb2fd436d5955ba",
       "spotifyUrl": "https://open.spotify.com/album/77kh4b22L5QCCIZhXsUOU2",
       "uri": "spotify:album:77kh4b22L5QCCIZhXsUOU2",
       "artists": [
@@ -138,8 +264,8 @@
       "albumType": "single",
       "releaseDate": "2025-02-07",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02895d87353bba9ac437c7357c",
+      "totalTracks": 6,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273895d87353bba9ac437c7357c",
       "spotifyUrl": "https://open.spotify.com/album/1xNzac76pyGW65UbQ15Jpn",
       "uri": "spotify:album:1xNzac76pyGW65UbQ15Jpn",
       "artists": [
@@ -159,8 +285,8 @@
       "albumType": "single",
       "releaseDate": "2025-01-10",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028b2b010ac1257b164042c531",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738b2b010ac1257b164042c531",
       "spotifyUrl": "https://open.spotify.com/album/2mUZZJGMOMvL5IUIqD5anA",
       "uri": "spotify:album:2mUZZJGMOMvL5IUIqD5anA",
       "artists": [
@@ -180,8 +306,8 @@
       "albumType": "single",
       "releaseDate": "2024-12-20",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021b65722c213fb317b4dcf6c2",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731b65722c213fb317b4dcf6c2",
       "spotifyUrl": "https://open.spotify.com/album/7uTRfHeplUuIyM0xER7BQX",
       "uri": "spotify:album:7uTRfHeplUuIyM0xER7BQX",
       "artists": [
@@ -194,17 +320,17 @@
       "verified": true
     },
     {
-      "id": "1C3dfqkn5Q9qoMjYtJNmGX",
-      "spotifyId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "id": "5voJxrRtxgo8dvWVvggyEO",
+      "spotifyId": "5voJxrRtxgo8dvWVvggyEO",
       "objectType": "album",
-      "name": "Baban",
+      "name": "BANA NE",
       "albumType": "single",
       "releaseDate": "2024-11-29",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023d150ac9ec18e311f13dda00",
-      "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
-      "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a32e5d45ff0d06fc08f5a335",
+      "spotifyUrl": "https://open.spotify.com/album/5voJxrRtxgo8dvWVvggyEO",
+      "uri": "spotify:album:5voJxrRtxgo8dvWVvggyEO",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -222,8 +348,8 @@
       "albumType": "single",
       "releaseDate": "2024-11-01",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024ed0ef958cce8a13723754fa",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734ed0ef958cce8a13723754fa",
       "spotifyUrl": "https://open.spotify.com/album/1t5ZDQ8TsZw9bP2UQS1n2n",
       "uri": "spotify:album:1t5ZDQ8TsZw9bP2UQS1n2n",
       "artists": [
@@ -243,10 +369,31 @@
       "albumType": "single",
       "releaseDate": "2024-09-06",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025a79c7ded3876d207b6ad07d",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735a79c7ded3876d207b6ad07d",
       "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
       "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "71XO36BFl6oSFi7prjhyL3",
+      "spotifyId": "71XO36BFl6oSFi7prjhyL3",
+      "objectType": "album",
+      "name": "Deliyoo",
+      "albumType": "single",
+      "releaseDate": "2024-08-23",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732169799a7e44afe1dc5f287b",
+      "spotifyUrl": "https://open.spotify.com/album/71XO36BFl6oSFi7prjhyL3",
+      "uri": "spotify:album:71XO36BFl6oSFi7prjhyL3",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -262,10 +409,10 @@
       "objectType": "album",
       "name": "UFUKMANIA",
       "albumType": "single",
-      "releaseDate": "2024-07-05",
+      "releaseDate": "2024-06-28",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026eee746af5276cf55dee4824",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736eee746af5276cf55dee4824",
       "spotifyUrl": "https://open.spotify.com/album/6pdFHFbeC3j4QMdsuDhmWj",
       "uri": "spotify:album:6pdFHFbeC3j4QMdsuDhmWj",
       "artists": [
@@ -285,8 +432,8 @@
       "albumType": "single",
       "releaseDate": "2024-06-07",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ea3c1a257a665b58efd1a809",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ea3c1a257a665b58efd1a809",
       "spotifyUrl": "https://open.spotify.com/album/0FzybsrMkrplViiOHqNFvL",
       "uri": "spotify:album:0FzybsrMkrplViiOHqNFvL",
       "artists": [
@@ -306,10 +453,31 @@
       "albumType": "album",
       "releaseDate": "2024-05-10",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e025ac008dd77ae2ffa80895a87",
+      "totalTracks": 16,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735ac008dd77ae2ffa80895a87",
       "spotifyUrl": "https://open.spotify.com/album/1zkZPiKRqqVJPKIqap3SU8",
       "uri": "spotify:album:1zkZPiKRqqVJPKIqap3SU8",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "7judDMxvhfm8dqBae5T17i",
+      "spotifyId": "7judDMxvhfm8dqBae5T17i",
+      "objectType": "album",
+      "name": "Havadis",
+      "albumType": "single",
+      "releaseDate": "2024-04-05",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f069bd6ae64bd92e86fa6850",
+      "spotifyUrl": "https://open.spotify.com/album/7judDMxvhfm8dqBae5T17i",
+      "uri": "spotify:album:7judDMxvhfm8dqBae5T17i",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -327,10 +495,31 @@
       "albumType": "single",
       "releaseDate": "2024-03-29",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b23e508b7b13115d1aa3e6c8",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273b23e508b7b13115d1aa3e6c8",
       "spotifyUrl": "https://open.spotify.com/album/049jPvA9iOQZy7Jt9KPM0q",
       "uri": "spotify:album:049jPvA9iOQZy7Jt9KPM0q",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3cHnTYTcjEvbTVlPrVYny4",
+      "spotifyId": "3cHnTYTcjEvbTVlPrVYny4",
+      "objectType": "album",
+      "name": "IKARUS",
+      "albumType": "single",
+      "releaseDate": "2024-03-08",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a156783c4484e79c0d69f700",
+      "spotifyUrl": "https://open.spotify.com/album/3cHnTYTcjEvbTVlPrVYny4",
+      "uri": "spotify:album:3cHnTYTcjEvbTVlPrVYny4",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -348,10 +537,31 @@
       "albumType": "single",
       "releaseDate": "2024-02-06",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d8fcc6bca1b0af14cefe4de0",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d8fcc6bca1b0af14cefe4de0",
       "spotifyUrl": "https://open.spotify.com/album/60KXppgH6yocRHr0UBZuxP",
       "uri": "spotify:album:60KXppgH6yocRHr0UBZuxP",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "6gAuTTXm5dvSu8Lgs8Csoo",
+      "spotifyId": "6gAuTTXm5dvSu8Lgs8Csoo",
+      "objectType": "album",
+      "name": "#PHONKFREESTYLE",
+      "albumType": "single",
+      "releaseDate": "2024-01-26",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ddf0abafa99c9865b8832ad0",
+      "spotifyUrl": "https://open.spotify.com/album/6gAuTTXm5dvSu8Lgs8Csoo",
+      "uri": "spotify:album:6gAuTTXm5dvSu8Lgs8Csoo",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -369,10 +579,31 @@
       "albumType": "single",
       "releaseDate": "2024-01-12",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0298288dda1c1d582d1fea5f1b",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27398288dda1c1d582d1fea5f1b",
       "spotifyUrl": "https://open.spotify.com/album/4t6eu3P27YmnmM7nddmix4",
       "uri": "spotify:album:4t6eu3P27YmnmM7nddmix4",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0GB3rPFXXOG6nggS7ipwAm",
+      "spotifyId": "0GB3rPFXXOG6nggS7ipwAm",
+      "objectType": "album",
+      "name": "Hüsran",
+      "albumType": "single",
+      "releaseDate": "2023-11-10",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2737ecde2b4fcc1d0266a44a285",
+      "spotifyUrl": "https://open.spotify.com/album/0GB3rPFXXOG6nggS7ipwAm",
+      "uri": "spotify:album:0GB3rPFXXOG6nggS7ipwAm",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -390,10 +621,31 @@
       "albumType": "single",
       "releaseDate": "2023-09-22",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02b3bbbab7e0c40c8af4a9b1a7",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273b3bbbab7e0c40c8af4a9b1a7",
       "spotifyUrl": "https://open.spotify.com/album/23htijc8a6yzCdGNW0dK8V",
       "uri": "spotify:album:23htijc8a6yzCdGNW0dK8V",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "spotifyId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "objectType": "album",
+      "name": "Darılmak Yok (Hamam Sessions)",
+      "albumType": "single",
+      "releaseDate": "2023-09-01",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273866a6e154056de47bf9c5187",
+      "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
+      "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -411,8 +663,8 @@
       "albumType": "single",
       "releaseDate": "2023-06-23",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fa8204e626c3dc1bd95d39ad",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273fa8204e626c3dc1bd95d39ad",
       "spotifyUrl": "https://open.spotify.com/album/1CPPRdILLPdn99FcwcJgMW",
       "uri": "spotify:album:1CPPRdILLPdn99FcwcJgMW",
       "artists": [
@@ -432,10 +684,31 @@
       "albumType": "single",
       "releaseDate": "2023-06-09",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0226b2b5a43cb99c826ac7f42b",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27326b2b5a43cb99c826ac7f42b",
       "spotifyUrl": "https://open.spotify.com/album/0bFFfvETEdNUfkJkCRG6d9",
       "uri": "spotify:album:0bFFfvETEdNUfkJkCRG6d9",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "7xFfe4vRZ1xLcrRoTgit1W",
+      "spotifyId": "7xFfe4vRZ1xLcrRoTgit1W",
+      "objectType": "album",
+      "name": "KYOTO/GEISHA",
+      "albumType": "single",
+      "releaseDate": "2023-05-12",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a5b3c9b7b03d063238dd1ba4",
+      "spotifyUrl": "https://open.spotify.com/album/7xFfe4vRZ1xLcrRoTgit1W",
+      "uri": "spotify:album:7xFfe4vRZ1xLcrRoTgit1W",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -453,10 +726,31 @@
       "albumType": "single",
       "releaseDate": "2023-04-28",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02545a2464211a762600a65eea",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273545a2464211a762600a65eea",
       "spotifyUrl": "https://open.spotify.com/album/0XjW92nRHEuASd6hlA06DO",
       "uri": "spotify:album:0XjW92nRHEuASd6hlA06DO",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "28l0RU15yx5Y1uQ6fVU2DP",
+      "spotifyId": "28l0RU15yx5Y1uQ6fVU2DP",
+      "objectType": "album",
+      "name": "İST/TAKSÎMİ",
+      "albumType": "single",
+      "releaseDate": "2023-04-07",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738b64801fa4b043a71e29213a",
+      "spotifyUrl": "https://open.spotify.com/album/28l0RU15yx5Y1uQ6fVU2DP",
+      "uri": "spotify:album:28l0RU15yx5Y1uQ6fVU2DP",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -474,8 +768,8 @@
       "albumType": "single",
       "releaseDate": "2023-04-05",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c305c8facc0fccc80af72a25",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c305c8facc0fccc80af72a25",
       "spotifyUrl": "https://open.spotify.com/album/71kPiLmNbaT0eylc5Ycvdj",
       "uri": "spotify:album:71kPiLmNbaT0eylc5Ycvdj",
       "artists": [
@@ -495,8 +789,8 @@
       "albumType": "single",
       "releaseDate": "2023-03-24",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0285c31bf5391826549978c380",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27385c31bf5391826549978c380",
       "spotifyUrl": "https://open.spotify.com/album/2xhKy3Nm1eazIwWRnA9gys",
       "uri": "spotify:album:2xhKy3Nm1eazIwWRnA9gys",
       "artists": [
@@ -516,10 +810,31 @@
       "albumType": "single",
       "releaseDate": "2023-03-17",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0268b030b37e771b976f6aa41a",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27368b030b37e771b976f6aa41a",
       "spotifyUrl": "https://open.spotify.com/album/7H6b2Etlb0ryYF7tqbFbDG",
       "uri": "spotify:album:7H6b2Etlb0ryYF7tqbFbDG",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "73ULtfwtkYnsWG4P6iimO7",
+      "spotifyId": "73ULtfwtkYnsWG4P6iimO7",
+      "objectType": "album",
+      "name": "High 2",
+      "albumType": "single",
+      "releaseDate": "2023-01-06",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a1cf09efd0aeccc106321cbb",
+      "spotifyUrl": "https://open.spotify.com/album/73ULtfwtkYnsWG4P6iimO7",
+      "uri": "spotify:album:73ULtfwtkYnsWG4P6iimO7",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -537,8 +852,8 @@
       "albumType": "single",
       "releaseDate": "2022-12-30",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b893f34b9e34a742316ba251",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273b893f34b9e34a742316ba251",
       "spotifyUrl": "https://open.spotify.com/album/3GzZrTChFzvS4KqBNaFWCP",
       "uri": "spotify:album:3GzZrTChFzvS4KqBNaFWCP",
       "artists": [
@@ -558,8 +873,8 @@
       "albumType": "single",
       "releaseDate": "2022-11-25",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e566b41c52c20258cd0a12df",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e566b41c52c20258cd0a12df",
       "spotifyUrl": "https://open.spotify.com/album/23ofnyZ4eAhpkk1YH1VVwD",
       "uri": "spotify:album:23ofnyZ4eAhpkk1YH1VVwD",
       "artists": [
@@ -579,10 +894,94 @@
       "albumType": "single",
       "releaseDate": "2022-09-09",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02f269f464dfd1ee4c5faf00bc",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f269f464dfd1ee4c5faf00bc",
       "spotifyUrl": "https://open.spotify.com/album/7vuH67pbtQuzNvct5WLTF1",
       "uri": "spotify:album:7vuH67pbtQuzNvct5WLTF1",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5PbIpSumw8vKbYYNvvIVMt",
+      "spotifyId": "5PbIpSumw8vKbYYNvvIVMt",
+      "objectType": "album",
+      "name": "No Risk No Fun",
+      "albumType": "single",
+      "releaseDate": "2022-09-01",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27302d6656cfbd06d767dee878a",
+      "spotifyUrl": "https://open.spotify.com/album/5PbIpSumw8vKbYYNvvIVMt",
+      "uri": "spotify:album:5PbIpSumw8vKbYYNvvIVMt",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5RyMKX3buUPHkhgXT6iFgC",
+      "spotifyId": "5RyMKX3buUPHkhgXT6iFgC",
+      "objectType": "album",
+      "name": "Yaşamak",
+      "albumType": "single",
+      "releaseDate": "2022-08-25",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735a22ef54156c378740597de8",
+      "spotifyUrl": "https://open.spotify.com/album/5RyMKX3buUPHkhgXT6iFgC",
+      "uri": "spotify:album:5RyMKX3buUPHkhgXT6iFgC",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3ENXj1YMBG5r4O0VvQFIoN",
+      "spotifyId": "3ENXj1YMBG5r4O0VvQFIoN",
+      "objectType": "album",
+      "name": "Nefret",
+      "albumType": "single",
+      "releaseDate": "2022-07-01",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27337a0880e227a04b5a9c1156d",
+      "spotifyUrl": "https://open.spotify.com/album/3ENXj1YMBG5r4O0VvQFIoN",
+      "uri": "spotify:album:3ENXj1YMBG5r4O0VvQFIoN",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4U0GvHPCzwSN7UUhmtOfto",
+      "spotifyId": "4U0GvHPCzwSN7UUhmtOfto",
+      "objectType": "album",
+      "name": "Taktik",
+      "albumType": "single",
+      "releaseDate": "2022-06-10",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738f3f3b16d2d4816ef34406c5",
+      "spotifyUrl": "https://open.spotify.com/album/4U0GvHPCzwSN7UUhmtOfto",
+      "uri": "spotify:album:4U0GvHPCzwSN7UUhmtOfto",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -600,8 +999,8 @@
       "albumType": "single",
       "releaseDate": "2022-04-29",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02da93ab6a169ad28199edef84",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273da93ab6a169ad28199edef84",
       "spotifyUrl": "https://open.spotify.com/album/463e8VUKAZB5i86sUNIRGH",
       "uri": "spotify:album:463e8VUKAZB5i86sUNIRGH",
       "artists": [
@@ -621,8 +1020,8 @@
       "albumType": "single",
       "releaseDate": "2022-02-04",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0201f124e38aa2db7dea57392f",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27301f124e38aa2db7dea57392f",
       "spotifyUrl": "https://open.spotify.com/album/6XdehvklsVZ5Ly5nnJAHTv",
       "uri": "spotify:album:6XdehvklsVZ5Ly5nnJAHTv",
       "artists": [
@@ -642,8 +1041,8 @@
       "albumType": "single",
       "releaseDate": "2022-01-05",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f052fb5f8a1faefbcdf15d8d",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f052fb5f8a1faefbcdf15d8d",
       "spotifyUrl": "https://open.spotify.com/album/1Aen2zuQGFR5sEWVjBmmLg",
       "uri": "spotify:album:1Aen2zuQGFR5sEWVjBmmLg",
       "artists": [
@@ -663,10 +1062,73 @@
       "albumType": "single",
       "releaseDate": "2021-12-27",
       "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0261b798225f4fcafc0b7b9fa7",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27361b798225f4fcafc0b7b9fa7",
       "spotifyUrl": "https://open.spotify.com/album/5SsZm0U0j5D5khXo9SKLku",
       "uri": "spotify:album:5SsZm0U0j5D5khXo9SKLku",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1WqBaT9UT7Q1onJHbplcWt",
+      "spotifyId": "1WqBaT9UT7Q1onJHbplcWt",
+      "objectType": "album",
+      "name": "Kader",
+      "albumType": "single",
+      "releaseDate": "2021-07-16",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731831a576d8cf298a69b921cb",
+      "spotifyUrl": "https://open.spotify.com/album/1WqBaT9UT7Q1onJHbplcWt",
+      "uri": "spotify:album:1WqBaT9UT7Q1onJHbplcWt",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4cLPDMKyiYMzd1dLUQUHGW",
+      "spotifyId": "4cLPDMKyiYMzd1dLUQUHGW",
+      "objectType": "album",
+      "name": "MATRIX",
+      "albumType": "single",
+      "releaseDate": "2021-06-18",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ab3edba00f358c130574f90b",
+      "spotifyUrl": "https://open.spotify.com/album/4cLPDMKyiYMzd1dLUQUHGW",
+      "uri": "spotify:album:4cLPDMKyiYMzd1dLUQUHGW",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "72iWjIqFHLOdSwWOucXKWk",
+      "spotifyId": "72iWjIqFHLOdSwWOucXKWk",
+      "objectType": "album",
+      "name": "Merhamet Yok",
+      "albumType": "single",
+      "releaseDate": "2021-04-02",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e9d37525256690a80a00d2e2",
+      "spotifyUrl": "https://open.spotify.com/album/72iWjIqFHLOdSwWOucXKWk",
+      "uri": "spotify:album:72iWjIqFHLOdSwWOucXKWk",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -684,8 +1146,8 @@
       "albumType": "single",
       "releaseDate": "2021-03-12",
       "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0207c7d578b213d0bc03f6e889",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27307c7d578b213d0bc03f6e889",
       "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
       "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
       "artists": [
@@ -698,17 +1160,59 @@
       "verified": true
     },
     {
-      "id": "5v18t7RZx8i5Fr7TYkHZ6l",
-      "spotifyId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "id": "4pdyikhoyjT1MMmNlmpG1r",
+      "spotifyId": "4pdyikhoyjT1MMmNlmpG1r",
       "objectType": "album",
-      "name": "Darılmak Yok (Hamam Sessions)",
+      "name": "Lanet",
+      "albumType": "single",
+      "releaseDate": "2021-02-26",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273eb7993a937ac3b140bc9a683",
+      "spotifyUrl": "https://open.spotify.com/album/4pdyikhoyjT1MMmNlmpG1r",
+      "uri": "spotify:album:4pdyikhoyjT1MMmNlmpG1r",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0AeIqbbkmcj17mSa0Rcp2S",
+      "spotifyId": "0AeIqbbkmcj17mSa0Rcp2S",
+      "objectType": "album",
+      "name": "Eksik Olmaz",
+      "albumType": "single",
+      "releaseDate": "2021-01-08",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ad46ee838e977657113306ad",
+      "spotifyUrl": "https://open.spotify.com/album/0AeIqbbkmcj17mSa0Rcp2S",
+      "uri": "spotify:album:0AeIqbbkmcj17mSa0Rcp2S",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4U2pt8AOmhEh660yHPLMpn",
+      "spotifyId": "4U2pt8AOmhEh660yHPLMpn",
+      "objectType": "album",
+      "name": "Darilmak Yok",
       "albumType": "single",
       "releaseDate": "2020-12-28",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02866a6e154056de47bf9c5187",
-      "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
-      "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c9e060911ba5a5855393db36",
+      "spotifyUrl": "https://open.spotify.com/album/4U2pt8AOmhEh660yHPLMpn",
+      "uri": "spotify:album:4U2pt8AOmhEh660yHPLMpn",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -726,8 +1230,8 @@
       "albumType": "single",
       "releaseDate": "2020-12-11",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022caf5b4a3a42b13e3854d472",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732caf5b4a3a42b13e3854d472",
       "spotifyUrl": "https://open.spotify.com/album/07cwiM7nU3jXF6J9UgXdCd",
       "uri": "spotify:album:07cwiM7nU3jXF6J9UgXdCd",
       "artists": [
@@ -747,8 +1251,8 @@
       "albumType": "single",
       "releaseDate": "2020-11-19",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e029fdd2db5df51fa46c3b39130",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739fdd2db5df51fa46c3b39130",
       "spotifyUrl": "https://open.spotify.com/album/1IOByJLwwmG0z16dSBiHAK",
       "uri": "spotify:album:1IOByJLwwmG0z16dSBiHAK",
       "artists": [
@@ -768,10 +1272,31 @@
       "albumType": "album",
       "releaseDate": "2020-11-04",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cee143d354e75d848a05ebc",
+      "totalTracks": 10,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734cee143d354e75d848a05ebc",
       "spotifyUrl": "https://open.spotify.com/album/6cWS5yrVFflrNt7o7eWgqx",
       "uri": "spotify:album:6cWS5yrVFflrNt7o7eWgqx",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5yaxVfXufzc45KT737K90f",
+      "spotifyId": "5yaxVfXufzc45KT737K90f",
+      "objectType": "album",
+      "name": "Ihtan (Groovypedia Live)",
+      "albumType": "single",
+      "releaseDate": "2020-09-30",
+      "releaseYear": "2020",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735220521fe645faeef07ef5b9",
+      "spotifyUrl": "https://open.spotify.com/album/5yaxVfXufzc45KT737K90f",
+      "uri": "spotify:album:5yaxVfXufzc45KT737K90f",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -789,10 +1314,31 @@
       "albumType": "single",
       "releaseDate": "2020-07-31",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026e589386051cea586c07f04e",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736e589386051cea586c07f04e",
       "spotifyUrl": "https://open.spotify.com/album/4GLUe5UzDTd2WAkZPsqeVu",
       "uri": "spotify:album:4GLUe5UzDTd2WAkZPsqeVu",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "spotifyId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "objectType": "album",
+      "name": "Baban",
+      "albumType": "single",
+      "releaseDate": "2020-05-06",
+      "releaseYear": "2020",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733d150ac9ec18e311f13dda00",
+      "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
+      "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -810,8 +1356,8 @@
       "albumType": "single",
       "releaseDate": "2019-09-23",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0278264f47b7b34e2c9e0545d1",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27378264f47b7b34e2c9e0545d1",
       "spotifyUrl": "https://open.spotify.com/album/4THM0v0TgGHbQClcWVLza1",
       "uri": "spotify:album:4THM0v0TgGHbQClcWVLza1",
       "artists": [
@@ -831,8 +1377,8 @@
       "albumType": "single",
       "releaseDate": "2019-08-13",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e08693b3340d39ee8b40af03",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e08693b3340d39ee8b40af03",
       "spotifyUrl": "https://open.spotify.com/album/1GIkj7GCcjfto5jWBKoTe1",
       "uri": "spotify:album:1GIkj7GCcjfto5jWBKoTe1",
       "artists": [
@@ -852,8 +1398,8 @@
       "albumType": "single",
       "releaseDate": "2019-08-07",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028282d866aee38f5ec9c8aa83",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738282d866aee38f5ec9c8aa83",
       "spotifyUrl": "https://open.spotify.com/album/3slJ2gXpniB6I4eb7NCruj",
       "uri": "spotify:album:3slJ2gXpniB6I4eb7NCruj",
       "artists": [
@@ -866,17 +1412,59 @@
       "verified": true
     },
     {
-      "id": "62dW2UToWLtRNu5sSfkXpM",
-      "spotifyId": "62dW2UToWLtRNu5sSfkXpM",
+      "id": "3R0s0RcUY9ZhLqxLCa4VZx",
+      "spotifyId": "3R0s0RcUY9ZhLqxLCa4VZx",
+      "objectType": "album",
+      "name": "Yaz Yağmurum",
+      "albumType": "single",
+      "releaseDate": "2019-06-11",
+      "releaseYear": "2019",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f8ae4444006fedc469df6dd7",
+      "spotifyUrl": "https://open.spotify.com/album/3R0s0RcUY9ZhLqxLCa4VZx",
+      "uri": "spotify:album:3R0s0RcUY9ZhLqxLCa4VZx",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5491b8iVXuTi2ZqwePeJSH",
+      "spotifyId": "5491b8iVXuTi2ZqwePeJSH",
       "objectType": "album",
       "name": "Aslan Marşı",
       "albumType": "single",
       "releaseDate": "2019-05-18",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e25bcef3444696c8360a536c",
-      "spotifyUrl": "https://open.spotify.com/album/62dW2UToWLtRNu5sSfkXpM",
-      "uri": "spotify:album:62dW2UToWLtRNu5sSfkXpM",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c77d77d274f944c22bc8515e",
+      "spotifyUrl": "https://open.spotify.com/album/5491b8iVXuTi2ZqwePeJSH",
+      "uri": "spotify:album:5491b8iVXuTi2ZqwePeJSH",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2fgZ72CdV60LegQn2hEAHM",
+      "spotifyId": "2fgZ72CdV60LegQn2hEAHM",
+      "objectType": "album",
+      "name": "Bahaneleriniz",
+      "albumType": "single",
+      "releaseDate": "2019-05-10",
+      "releaseYear": "2019",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f5b57efa31c761ac14928b8c",
+      "spotifyUrl": "https://open.spotify.com/album/2fgZ72CdV60LegQn2hEAHM",
+      "uri": "spotify:album:2fgZ72CdV60LegQn2hEAHM",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -894,10 +1482,31 @@
       "albumType": "single",
       "releaseDate": "2019-02-01",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fda764e0a334756b49002b10",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273fda764e0a334756b49002b10",
       "spotifyUrl": "https://open.spotify.com/album/5dMbZ9ECO3Wxkpr7BWmLN3",
       "uri": "spotify:album:5dMbZ9ECO3Wxkpr7BWmLN3",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0y8RzSZigFhXQfNnFiOAd5",
+      "spotifyId": "0y8RzSZigFhXQfNnFiOAd5",
+      "objectType": "album",
+      "name": "Kıskanç",
+      "albumType": "single",
+      "releaseDate": "2019-01-11",
+      "releaseYear": "2019",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e752b75735a0a9170820df23",
+      "spotifyUrl": "https://open.spotify.com/album/0y8RzSZigFhXQfNnFiOAd5",
+      "uri": "spotify:album:0y8RzSZigFhXQfNnFiOAd5",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -915,8 +1524,8 @@
       "albumType": "single",
       "releaseDate": "2018-11-04",
       "releaseYear": "2018",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026430b3465763270bae28fccc",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736430b3465763270bae28fccc",
       "spotifyUrl": "https://open.spotify.com/album/7w23DpIjUzfefwiq0aXDNn",
       "uri": "spotify:album:7w23DpIjUzfefwiq0aXDNn",
       "artists": [
@@ -936,8 +1545,8 @@
       "albumType": "single",
       "releaseDate": "2018-10-01",
       "releaseYear": "2018",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023a7c8ef98e28dc95cf36386c",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733a7c8ef98e28dc95cf36386c",
       "spotifyUrl": "https://open.spotify.com/album/4tBnVWP1N4g7Hn9PYgPtWo",
       "uri": "spotify:album:4tBnVWP1N4g7Hn9PYgPtWo",
       "artists": [
@@ -957,10 +1566,31 @@
       "albumType": "single",
       "releaseDate": "2018-07-10",
       "releaseYear": "2018",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cbf6763af9cc073e968c388",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734cbf6763af9cc073e968c388",
       "spotifyUrl": "https://open.spotify.com/album/61WtSUVOoxxeKeV4jOZNWi",
       "uri": "spotify:album:61WtSUVOoxxeKeV4jOZNWi",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4Ab5NfuzbNt7C1J5ca7cZA",
+      "spotifyId": "4Ab5NfuzbNt7C1J5ca7cZA",
+      "objectType": "album",
+      "name": "Karma (Groovypedia Live)",
+      "albumType": "single",
+      "releaseDate": "2018-05-25",
+      "releaseYear": "2018",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273089353825929aa27a510d9ce",
+      "spotifyUrl": "https://open.spotify.com/album/4Ab5NfuzbNt7C1J5ca7cZA",
+      "uri": "spotify:album:4Ab5NfuzbNt7C1J5ca7cZA",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -976,10 +1606,10 @@
       "objectType": "album",
       "name": "Karma",
       "albumType": "single",
-      "releaseDate": "2017-12-09",
+      "releaseDate": "2017-11-27",
       "releaseYear": "2017",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ba09c4cf44f1656d12adf069",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ba09c4cf44f1656d12adf069",
       "spotifyUrl": "https://open.spotify.com/album/41vkDxCgMJIDSc8zauKoUW",
       "uri": "spotify:album:41vkDxCgMJIDSc8zauKoUW",
       "artists": [
@@ -999,10 +1629,52 @@
       "albumType": "single",
       "releaseDate": "2016-12-16",
       "releaseYear": "2016",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027573b15341f457146202a978",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2737573b15341f457146202a978",
       "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
       "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1VbXHoakMTqVv5KcSoDMHG",
+      "spotifyId": "1VbXHoakMTqVv5KcSoDMHG",
+      "objectType": "album",
+      "name": "Yeşil",
+      "albumType": "single",
+      "releaseDate": "2016-10-31",
+      "releaseYear": "2016",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27319857e490ad9484aad2cedea",
+      "spotifyUrl": "https://open.spotify.com/album/1VbXHoakMTqVv5KcSoDMHG",
+      "uri": "spotify:album:1VbXHoakMTqVv5KcSoDMHG",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "57tzaE0HATRSRptHEXDnJT",
+      "spotifyId": "57tzaE0HATRSRptHEXDnJT",
+      "objectType": "album",
+      "name": "Hayal (Groovypedia Live)",
+      "albumType": "single",
+      "releaseDate": "2016-04-21",
+      "releaseYear": "2016",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27336685cd32a4e7e74456b44e0",
+      "spotifyUrl": "https://open.spotify.com/album/57tzaE0HATRSRptHEXDnJT",
+      "uri": "spotify:album:57tzaE0HATRSRptHEXDnJT",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1020,10 +1692,31 @@
       "albumType": "album",
       "releaseDate": "2016-02-20",
       "releaseYear": "2016",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be931103920f1e2183225657",
+      "totalTracks": 22,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273be931103920f1e2183225657",
       "spotifyUrl": "https://open.spotify.com/album/2q7QzY8q8OVxa5sAyyl8OF",
       "uri": "spotify:album:2q7QzY8q8OVxa5sAyyl8OF",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "057EndApd8tJau31C7jces",
+      "spotifyId": "057EndApd8tJau31C7jces",
+      "objectType": "album",
+      "name": "Hasta Kişilikler (Remastered Version)",
+      "albumType": "single",
+      "releaseDate": "2012-08-16",
+      "releaseYear": "2012",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a7ad6c43826e2cf88d0f358b",
+      "spotifyUrl": "https://open.spotify.com/album/057EndApd8tJau31C7jces",
+      "uri": "spotify:album:057EndApd8tJau31C7jces",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1041,8 +1734,8 @@
       "albumType": "album",
       "releaseDate": "2012-01-01",
       "releaseYear": "2012",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e029326b0126a75938c8805c795",
+      "totalTracks": 127,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739326b0126a75938c8805c795",
       "spotifyUrl": "https://open.spotify.com/album/5wDw71G6My66IurTcLbULV",
       "uri": "spotify:album:5wDw71G6My66IurTcLbULV",
       "artists": [
@@ -1064,8 +1757,8 @@
       "albumType": "album",
       "releaseDate": "2024-05-10",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e025ac008dd77ae2ffa80895a87",
+      "totalTracks": 16,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735ac008dd77ae2ffa80895a87",
       "spotifyUrl": "https://open.spotify.com/album/1zkZPiKRqqVJPKIqap3SU8",
       "uri": "spotify:album:1zkZPiKRqqVJPKIqap3SU8",
       "artists": [
@@ -1085,8 +1778,8 @@
       "albumType": "album",
       "releaseDate": "2020-11-04",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cee143d354e75d848a05ebc",
+      "totalTracks": 10,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734cee143d354e75d848a05ebc",
       "spotifyUrl": "https://open.spotify.com/album/6cWS5yrVFflrNt7o7eWgqx",
       "uri": "spotify:album:6cWS5yrVFflrNt7o7eWgqx",
       "artists": [
@@ -1106,8 +1799,8 @@
       "albumType": "album",
       "releaseDate": "2016-02-20",
       "releaseYear": "2016",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02be931103920f1e2183225657",
+      "totalTracks": 22,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273be931103920f1e2183225657",
       "spotifyUrl": "https://open.spotify.com/album/2q7QzY8q8OVxa5sAyyl8OF",
       "uri": "spotify:album:2q7QzY8q8OVxa5sAyyl8OF",
       "artists": [
@@ -1127,8 +1820,8 @@
       "albumType": "album",
       "releaseDate": "2012-01-01",
       "releaseYear": "2012",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e029326b0126a75938c8805c795",
+      "totalTracks": 127,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739326b0126a75938c8805c795",
       "spotifyUrl": "https://open.spotify.com/album/5wDw71G6My66IurTcLbULV",
       "uri": "spotify:album:5wDw71G6My66IurTcLbULV",
       "artists": [
@@ -1143,6 +1836,27 @@
   ],
   "singles": [
     {
+      "id": "4jMISP7h6NOXiwIjdTujGK",
+      "spotifyId": "4jMISP7h6NOXiwIjdTujGK",
+      "objectType": "album",
+      "name": "mavi ay",
+      "albumType": "single",
+      "releaseDate": "2026-08-07",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739cd8e71207b211becf29a0d2",
+      "spotifyUrl": "https://open.spotify.com/album/4jMISP7h6NOXiwIjdTujGK",
+      "uri": "spotify:album:4jMISP7h6NOXiwIjdTujGK",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
       "id": "2aTmzuUvKITVuP2qBnrvvD",
       "spotifyId": "2aTmzuUvKITVuP2qBnrvvD",
       "objectType": "album",
@@ -1150,8 +1864,8 @@
       "albumType": "single",
       "releaseDate": "2026-07-03",
       "releaseYear": "2026",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cfc03e0fdf23d0a055b1e6e1",
+      "totalTracks": 5,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cfc03e0fdf23d0a055b1e6e1",
       "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
       "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
       "artists": [
@@ -1171,10 +1885,31 @@
       "albumType": "single",
       "releaseDate": "2026-02-27",
       "releaseYear": "2026",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023a125f950b8a80efd61327b5",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733a125f950b8a80efd61327b5",
       "spotifyUrl": "https://open.spotify.com/album/0TiW19cwPu2FnmR0WcpDXI",
       "uri": "spotify:album:0TiW19cwPu2FnmR0WcpDXI",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1Mo5oelvoh3LVOSEEG8QZ6",
+      "spotifyId": "1Mo5oelvoh3LVOSEEG8QZ6",
+      "objectType": "album",
+      "name": "TakaTuka Freestyle",
+      "albumType": "single",
+      "releaseDate": "2026-02-20",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273dd4736d473e9786f444ad89a",
+      "spotifyUrl": "https://open.spotify.com/album/1Mo5oelvoh3LVOSEEG8QZ6",
+      "uri": "spotify:album:1Mo5oelvoh3LVOSEEG8QZ6",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1192,31 +1927,10 @@
       "albumType": "single",
       "releaseDate": "2026-02-13",
       "releaseYear": "2026",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cc7e4741f5f9b73b68e7d65f",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273cc7e4741f5f9b73b68e7d65f",
       "spotifyUrl": "https://open.spotify.com/album/5iG9dUUVurewjfXYPhvOYB",
       "uri": "spotify:album:5iG9dUUVurewjfXYPhvOYB",
-      "artists": [
-        {
-          "id": "0FUsrstJwmg4WVHQMTYuUA",
-          "name": "Şehinşah"
-        }
-      ],
-      "containsTargetArtist": true,
-      "verified": true
-    },
-    {
-      "id": "5ht5m3cJvjGdTgDRUVrVeL",
-      "spotifyId": "5ht5m3cJvjGdTgDRUVrVeL",
-      "objectType": "album",
-      "name": "Lab Cypher 6",
-      "albumType": "single",
-      "releaseDate": "2025-08-08",
-      "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02de0c2848293720adabe26583",
-      "spotifyUrl": "https://open.spotify.com/album/5ht5m3cJvjGdTgDRUVrVeL",
-      "uri": "spotify:album:5ht5m3cJvjGdTgDRUVrVeL",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1234,10 +1948,115 @@
       "albumType": "single",
       "releaseDate": "2025-07-18",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02a03b41f0232b90458b87e376",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a03b41f0232b90458b87e376",
       "spotifyUrl": "https://open.spotify.com/album/7yXKu5sXCZmZmEAc723mIp",
       "uri": "spotify:album:7yXKu5sXCZmZmEAc723mIp",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5zZ47YzgUVZg5UDQHjwtRj",
+      "spotifyId": "5zZ47YzgUVZg5UDQHjwtRj",
+      "objectType": "album",
+      "name": "LAMINE YAMAL",
+      "albumType": "single",
+      "releaseDate": "2025-06-27",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27333404e8f69519a76894b7d15",
+      "spotifyUrl": "https://open.spotify.com/album/5zZ47YzgUVZg5UDQHjwtRj",
+      "uri": "spotify:album:5zZ47YzgUVZg5UDQHjwtRj",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "324e9L1mSokIumw2XSrEad",
+      "spotifyId": "324e9L1mSokIumw2XSrEad",
+      "objectType": "album",
+      "name": "Memleketim",
+      "albumType": "single",
+      "releaseDate": "2025-04-04",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734d393d6feaf6707b1c6c00c2",
+      "spotifyUrl": "https://open.spotify.com/album/324e9L1mSokIumw2XSrEad",
+      "uri": "spotify:album:324e9L1mSokIumw2XSrEad",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2MwagD7XKpTnUqyRirveSx",
+      "spotifyId": "2MwagD7XKpTnUqyRirveSx",
+      "objectType": "album",
+      "name": "Eskisi Gibi",
+      "albumType": "single",
+      "releaseDate": "2025-03-28",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27366ef9a37bf14f4a6e303930e",
+      "spotifyUrl": "https://open.spotify.com/album/2MwagD7XKpTnUqyRirveSx",
+      "uri": "spotify:album:2MwagD7XKpTnUqyRirveSx",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3ZaP5zCyEwGqXYLU2MlySS",
+      "spotifyId": "3ZaP5zCyEwGqXYLU2MlySS",
+      "objectType": "album",
+      "name": "BLACKROCK",
+      "albumType": "single",
+      "releaseDate": "2025-02-28",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273808bedcb09a90d3b9fab3680",
+      "spotifyUrl": "https://open.spotify.com/album/3ZaP5zCyEwGqXYLU2MlySS",
+      "uri": "spotify:album:3ZaP5zCyEwGqXYLU2MlySS",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1W1OihzMtKpGcwXVJU2ncw",
+      "spotifyId": "1W1OihzMtKpGcwXVJU2ncw",
+      "objectType": "album",
+      "name": "Cheval Blanc",
+      "albumType": "single",
+      "releaseDate": "2025-02-21",
+      "releaseYear": "2025",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bdc88eeffffc7737a6ba15bf",
+      "spotifyUrl": "https://open.spotify.com/album/1W1OihzMtKpGcwXVJU2ncw",
+      "uri": "spotify:album:1W1OihzMtKpGcwXVJU2ncw",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1255,8 +2074,8 @@
       "albumType": "single",
       "releaseDate": "2025-02-14",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02bdd1b4665eb2fd436d5955ba",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273bdd1b4665eb2fd436d5955ba",
       "spotifyUrl": "https://open.spotify.com/album/77kh4b22L5QCCIZhXsUOU2",
       "uri": "spotify:album:77kh4b22L5QCCIZhXsUOU2",
       "artists": [
@@ -1276,8 +2095,8 @@
       "albumType": "single",
       "releaseDate": "2025-02-07",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02895d87353bba9ac437c7357c",
+      "totalTracks": 6,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273895d87353bba9ac437c7357c",
       "spotifyUrl": "https://open.spotify.com/album/1xNzac76pyGW65UbQ15Jpn",
       "uri": "spotify:album:1xNzac76pyGW65UbQ15Jpn",
       "artists": [
@@ -1297,8 +2116,8 @@
       "albumType": "single",
       "releaseDate": "2025-01-10",
       "releaseYear": "2025",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028b2b010ac1257b164042c531",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738b2b010ac1257b164042c531",
       "spotifyUrl": "https://open.spotify.com/album/2mUZZJGMOMvL5IUIqD5anA",
       "uri": "spotify:album:2mUZZJGMOMvL5IUIqD5anA",
       "artists": [
@@ -1318,8 +2137,8 @@
       "albumType": "single",
       "releaseDate": "2024-12-20",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e021b65722c213fb317b4dcf6c2",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731b65722c213fb317b4dcf6c2",
       "spotifyUrl": "https://open.spotify.com/album/7uTRfHeplUuIyM0xER7BQX",
       "uri": "spotify:album:7uTRfHeplUuIyM0xER7BQX",
       "artists": [
@@ -1332,17 +2151,17 @@
       "verified": true
     },
     {
-      "id": "1C3dfqkn5Q9qoMjYtJNmGX",
-      "spotifyId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "id": "5voJxrRtxgo8dvWVvggyEO",
+      "spotifyId": "5voJxrRtxgo8dvWVvggyEO",
       "objectType": "album",
-      "name": "Baban",
+      "name": "BANA NE",
       "albumType": "single",
       "releaseDate": "2024-11-29",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e023d150ac9ec18e311f13dda00",
-      "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
-      "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a32e5d45ff0d06fc08f5a335",
+      "spotifyUrl": "https://open.spotify.com/album/5voJxrRtxgo8dvWVvggyEO",
+      "uri": "spotify:album:5voJxrRtxgo8dvWVvggyEO",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1360,8 +2179,8 @@
       "albumType": "single",
       "releaseDate": "2024-11-01",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024ed0ef958cce8a13723754fa",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734ed0ef958cce8a13723754fa",
       "spotifyUrl": "https://open.spotify.com/album/1t5ZDQ8TsZw9bP2UQS1n2n",
       "uri": "spotify:album:1t5ZDQ8TsZw9bP2UQS1n2n",
       "artists": [
@@ -1381,10 +2200,31 @@
       "albumType": "single",
       "releaseDate": "2024-09-06",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e025a79c7ded3876d207b6ad07d",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735a79c7ded3876d207b6ad07d",
       "spotifyUrl": "https://open.spotify.com/album/3ZyPooMmaV1rw9disOgtgd",
       "uri": "spotify:album:3ZyPooMmaV1rw9disOgtgd",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "71XO36BFl6oSFi7prjhyL3",
+      "spotifyId": "71XO36BFl6oSFi7prjhyL3",
+      "objectType": "album",
+      "name": "Deliyoo",
+      "albumType": "single",
+      "releaseDate": "2024-08-23",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732169799a7e44afe1dc5f287b",
+      "spotifyUrl": "https://open.spotify.com/album/71XO36BFl6oSFi7prjhyL3",
+      "uri": "spotify:album:71XO36BFl6oSFi7prjhyL3",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1400,10 +2240,10 @@
       "objectType": "album",
       "name": "UFUKMANIA",
       "albumType": "single",
-      "releaseDate": "2024-07-05",
+      "releaseDate": "2024-06-28",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026eee746af5276cf55dee4824",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736eee746af5276cf55dee4824",
       "spotifyUrl": "https://open.spotify.com/album/6pdFHFbeC3j4QMdsuDhmWj",
       "uri": "spotify:album:6pdFHFbeC3j4QMdsuDhmWj",
       "artists": [
@@ -1423,10 +2263,31 @@
       "albumType": "single",
       "releaseDate": "2024-06-07",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ea3c1a257a665b58efd1a809",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ea3c1a257a665b58efd1a809",
       "spotifyUrl": "https://open.spotify.com/album/0FzybsrMkrplViiOHqNFvL",
       "uri": "spotify:album:0FzybsrMkrplViiOHqNFvL",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "7judDMxvhfm8dqBae5T17i",
+      "spotifyId": "7judDMxvhfm8dqBae5T17i",
+      "objectType": "album",
+      "name": "Havadis",
+      "albumType": "single",
+      "releaseDate": "2024-04-05",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f069bd6ae64bd92e86fa6850",
+      "spotifyUrl": "https://open.spotify.com/album/7judDMxvhfm8dqBae5T17i",
+      "uri": "spotify:album:7judDMxvhfm8dqBae5T17i",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1444,10 +2305,31 @@
       "albumType": "single",
       "releaseDate": "2024-03-29",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b23e508b7b13115d1aa3e6c8",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273b23e508b7b13115d1aa3e6c8",
       "spotifyUrl": "https://open.spotify.com/album/049jPvA9iOQZy7Jt9KPM0q",
       "uri": "spotify:album:049jPvA9iOQZy7Jt9KPM0q",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3cHnTYTcjEvbTVlPrVYny4",
+      "spotifyId": "3cHnTYTcjEvbTVlPrVYny4",
+      "objectType": "album",
+      "name": "IKARUS",
+      "albumType": "single",
+      "releaseDate": "2024-03-08",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a156783c4484e79c0d69f700",
+      "spotifyUrl": "https://open.spotify.com/album/3cHnTYTcjEvbTVlPrVYny4",
+      "uri": "spotify:album:3cHnTYTcjEvbTVlPrVYny4",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1465,10 +2347,31 @@
       "albumType": "single",
       "releaseDate": "2024-02-06",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02d8fcc6bca1b0af14cefe4de0",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273d8fcc6bca1b0af14cefe4de0",
       "spotifyUrl": "https://open.spotify.com/album/60KXppgH6yocRHr0UBZuxP",
       "uri": "spotify:album:60KXppgH6yocRHr0UBZuxP",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "6gAuTTXm5dvSu8Lgs8Csoo",
+      "spotifyId": "6gAuTTXm5dvSu8Lgs8Csoo",
+      "objectType": "album",
+      "name": "#PHONKFREESTYLE",
+      "albumType": "single",
+      "releaseDate": "2024-01-26",
+      "releaseYear": "2024",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ddf0abafa99c9865b8832ad0",
+      "spotifyUrl": "https://open.spotify.com/album/6gAuTTXm5dvSu8Lgs8Csoo",
+      "uri": "spotify:album:6gAuTTXm5dvSu8Lgs8Csoo",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1486,10 +2389,31 @@
       "albumType": "single",
       "releaseDate": "2024-01-12",
       "releaseYear": "2024",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0298288dda1c1d582d1fea5f1b",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27398288dda1c1d582d1fea5f1b",
       "spotifyUrl": "https://open.spotify.com/album/4t6eu3P27YmnmM7nddmix4",
       "uri": "spotify:album:4t6eu3P27YmnmM7nddmix4",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0GB3rPFXXOG6nggS7ipwAm",
+      "spotifyId": "0GB3rPFXXOG6nggS7ipwAm",
+      "objectType": "album",
+      "name": "Hüsran",
+      "albumType": "single",
+      "releaseDate": "2023-11-10",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2737ecde2b4fcc1d0266a44a285",
+      "spotifyUrl": "https://open.spotify.com/album/0GB3rPFXXOG6nggS7ipwAm",
+      "uri": "spotify:album:0GB3rPFXXOG6nggS7ipwAm",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1507,10 +2431,31 @@
       "albumType": "single",
       "releaseDate": "2023-09-22",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02b3bbbab7e0c40c8af4a9b1a7",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273b3bbbab7e0c40c8af4a9b1a7",
       "spotifyUrl": "https://open.spotify.com/album/23htijc8a6yzCdGNW0dK8V",
       "uri": "spotify:album:23htijc8a6yzCdGNW0dK8V",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "spotifyId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "objectType": "album",
+      "name": "Darılmak Yok (Hamam Sessions)",
+      "albumType": "single",
+      "releaseDate": "2023-09-01",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273866a6e154056de47bf9c5187",
+      "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
+      "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1528,8 +2473,8 @@
       "albumType": "single",
       "releaseDate": "2023-06-23",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fa8204e626c3dc1bd95d39ad",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273fa8204e626c3dc1bd95d39ad",
       "spotifyUrl": "https://open.spotify.com/album/1CPPRdILLPdn99FcwcJgMW",
       "uri": "spotify:album:1CPPRdILLPdn99FcwcJgMW",
       "artists": [
@@ -1549,10 +2494,31 @@
       "albumType": "single",
       "releaseDate": "2023-06-09",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0226b2b5a43cb99c826ac7f42b",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27326b2b5a43cb99c826ac7f42b",
       "spotifyUrl": "https://open.spotify.com/album/0bFFfvETEdNUfkJkCRG6d9",
       "uri": "spotify:album:0bFFfvETEdNUfkJkCRG6d9",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "7xFfe4vRZ1xLcrRoTgit1W",
+      "spotifyId": "7xFfe4vRZ1xLcrRoTgit1W",
+      "objectType": "album",
+      "name": "KYOTO/GEISHA",
+      "albumType": "single",
+      "releaseDate": "2023-05-12",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a5b3c9b7b03d063238dd1ba4",
+      "spotifyUrl": "https://open.spotify.com/album/7xFfe4vRZ1xLcrRoTgit1W",
+      "uri": "spotify:album:7xFfe4vRZ1xLcrRoTgit1W",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1570,10 +2536,31 @@
       "albumType": "single",
       "releaseDate": "2023-04-28",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02545a2464211a762600a65eea",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273545a2464211a762600a65eea",
       "spotifyUrl": "https://open.spotify.com/album/0XjW92nRHEuASd6hlA06DO",
       "uri": "spotify:album:0XjW92nRHEuASd6hlA06DO",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "28l0RU15yx5Y1uQ6fVU2DP",
+      "spotifyId": "28l0RU15yx5Y1uQ6fVU2DP",
+      "objectType": "album",
+      "name": "İST/TAKSÎMİ",
+      "albumType": "single",
+      "releaseDate": "2023-04-07",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738b64801fa4b043a71e29213a",
+      "spotifyUrl": "https://open.spotify.com/album/28l0RU15yx5Y1uQ6fVU2DP",
+      "uri": "spotify:album:28l0RU15yx5Y1uQ6fVU2DP",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1591,8 +2578,8 @@
       "albumType": "single",
       "releaseDate": "2023-04-05",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02c305c8facc0fccc80af72a25",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c305c8facc0fccc80af72a25",
       "spotifyUrl": "https://open.spotify.com/album/71kPiLmNbaT0eylc5Ycvdj",
       "uri": "spotify:album:71kPiLmNbaT0eylc5Ycvdj",
       "artists": [
@@ -1612,8 +2599,8 @@
       "albumType": "single",
       "releaseDate": "2023-03-24",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0285c31bf5391826549978c380",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27385c31bf5391826549978c380",
       "spotifyUrl": "https://open.spotify.com/album/2xhKy3Nm1eazIwWRnA9gys",
       "uri": "spotify:album:2xhKy3Nm1eazIwWRnA9gys",
       "artists": [
@@ -1633,10 +2620,31 @@
       "albumType": "single",
       "releaseDate": "2023-03-17",
       "releaseYear": "2023",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0268b030b37e771b976f6aa41a",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27368b030b37e771b976f6aa41a",
       "spotifyUrl": "https://open.spotify.com/album/7H6b2Etlb0ryYF7tqbFbDG",
       "uri": "spotify:album:7H6b2Etlb0ryYF7tqbFbDG",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "73ULtfwtkYnsWG4P6iimO7",
+      "spotifyId": "73ULtfwtkYnsWG4P6iimO7",
+      "objectType": "album",
+      "name": "High 2",
+      "albumType": "single",
+      "releaseDate": "2023-01-06",
+      "releaseYear": "2023",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a1cf09efd0aeccc106321cbb",
+      "spotifyUrl": "https://open.spotify.com/album/73ULtfwtkYnsWG4P6iimO7",
+      "uri": "spotify:album:73ULtfwtkYnsWG4P6iimO7",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1654,8 +2662,8 @@
       "albumType": "single",
       "releaseDate": "2022-12-30",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02b893f34b9e34a742316ba251",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273b893f34b9e34a742316ba251",
       "spotifyUrl": "https://open.spotify.com/album/3GzZrTChFzvS4KqBNaFWCP",
       "uri": "spotify:album:3GzZrTChFzvS4KqBNaFWCP",
       "artists": [
@@ -1675,8 +2683,8 @@
       "albumType": "single",
       "releaseDate": "2022-11-25",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e566b41c52c20258cd0a12df",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e566b41c52c20258cd0a12df",
       "spotifyUrl": "https://open.spotify.com/album/23ofnyZ4eAhpkk1YH1VVwD",
       "uri": "spotify:album:23ofnyZ4eAhpkk1YH1VVwD",
       "artists": [
@@ -1696,10 +2704,94 @@
       "albumType": "single",
       "releaseDate": "2022-09-09",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02f269f464dfd1ee4c5faf00bc",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f269f464dfd1ee4c5faf00bc",
       "spotifyUrl": "https://open.spotify.com/album/7vuH67pbtQuzNvct5WLTF1",
       "uri": "spotify:album:7vuH67pbtQuzNvct5WLTF1",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5PbIpSumw8vKbYYNvvIVMt",
+      "spotifyId": "5PbIpSumw8vKbYYNvvIVMt",
+      "objectType": "album",
+      "name": "No Risk No Fun",
+      "albumType": "single",
+      "releaseDate": "2022-09-01",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27302d6656cfbd06d767dee878a",
+      "spotifyUrl": "https://open.spotify.com/album/5PbIpSumw8vKbYYNvvIVMt",
+      "uri": "spotify:album:5PbIpSumw8vKbYYNvvIVMt",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5RyMKX3buUPHkhgXT6iFgC",
+      "spotifyId": "5RyMKX3buUPHkhgXT6iFgC",
+      "objectType": "album",
+      "name": "Yaşamak",
+      "albumType": "single",
+      "releaseDate": "2022-08-25",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735a22ef54156c378740597de8",
+      "spotifyUrl": "https://open.spotify.com/album/5RyMKX3buUPHkhgXT6iFgC",
+      "uri": "spotify:album:5RyMKX3buUPHkhgXT6iFgC",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "3ENXj1YMBG5r4O0VvQFIoN",
+      "spotifyId": "3ENXj1YMBG5r4O0VvQFIoN",
+      "objectType": "album",
+      "name": "Nefret",
+      "albumType": "single",
+      "releaseDate": "2022-07-01",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27337a0880e227a04b5a9c1156d",
+      "spotifyUrl": "https://open.spotify.com/album/3ENXj1YMBG5r4O0VvQFIoN",
+      "uri": "spotify:album:3ENXj1YMBG5r4O0VvQFIoN",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4U0GvHPCzwSN7UUhmtOfto",
+      "spotifyId": "4U0GvHPCzwSN7UUhmtOfto",
+      "objectType": "album",
+      "name": "Taktik",
+      "albumType": "single",
+      "releaseDate": "2022-06-10",
+      "releaseYear": "2022",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738f3f3b16d2d4816ef34406c5",
+      "spotifyUrl": "https://open.spotify.com/album/4U0GvHPCzwSN7UUhmtOfto",
+      "uri": "spotify:album:4U0GvHPCzwSN7UUhmtOfto",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1717,8 +2809,8 @@
       "albumType": "single",
       "releaseDate": "2022-04-29",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e02da93ab6a169ad28199edef84",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273da93ab6a169ad28199edef84",
       "spotifyUrl": "https://open.spotify.com/album/463e8VUKAZB5i86sUNIRGH",
       "uri": "spotify:album:463e8VUKAZB5i86sUNIRGH",
       "artists": [
@@ -1738,8 +2830,8 @@
       "albumType": "single",
       "releaseDate": "2022-02-04",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0201f124e38aa2db7dea57392f",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27301f124e38aa2db7dea57392f",
       "spotifyUrl": "https://open.spotify.com/album/6XdehvklsVZ5Ly5nnJAHTv",
       "uri": "spotify:album:6XdehvklsVZ5Ly5nnJAHTv",
       "artists": [
@@ -1759,8 +2851,8 @@
       "albumType": "single",
       "releaseDate": "2022-01-05",
       "releaseYear": "2022",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02f052fb5f8a1faefbcdf15d8d",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f052fb5f8a1faefbcdf15d8d",
       "spotifyUrl": "https://open.spotify.com/album/1Aen2zuQGFR5sEWVjBmmLg",
       "uri": "spotify:album:1Aen2zuQGFR5sEWVjBmmLg",
       "artists": [
@@ -1780,10 +2872,73 @@
       "albumType": "single",
       "releaseDate": "2021-12-27",
       "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0261b798225f4fcafc0b7b9fa7",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27361b798225f4fcafc0b7b9fa7",
       "spotifyUrl": "https://open.spotify.com/album/5SsZm0U0j5D5khXo9SKLku",
       "uri": "spotify:album:5SsZm0U0j5D5khXo9SKLku",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1WqBaT9UT7Q1onJHbplcWt",
+      "spotifyId": "1WqBaT9UT7Q1onJHbplcWt",
+      "objectType": "album",
+      "name": "Kader",
+      "albumType": "single",
+      "releaseDate": "2021-07-16",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2731831a576d8cf298a69b921cb",
+      "spotifyUrl": "https://open.spotify.com/album/1WqBaT9UT7Q1onJHbplcWt",
+      "uri": "spotify:album:1WqBaT9UT7Q1onJHbplcWt",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4cLPDMKyiYMzd1dLUQUHGW",
+      "spotifyId": "4cLPDMKyiYMzd1dLUQUHGW",
+      "objectType": "album",
+      "name": "MATRIX",
+      "albumType": "single",
+      "releaseDate": "2021-06-18",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ab3edba00f358c130574f90b",
+      "spotifyUrl": "https://open.spotify.com/album/4cLPDMKyiYMzd1dLUQUHGW",
+      "uri": "spotify:album:4cLPDMKyiYMzd1dLUQUHGW",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "72iWjIqFHLOdSwWOucXKWk",
+      "spotifyId": "72iWjIqFHLOdSwWOucXKWk",
+      "objectType": "album",
+      "name": "Merhamet Yok",
+      "albumType": "single",
+      "releaseDate": "2021-04-02",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e9d37525256690a80a00d2e2",
+      "spotifyUrl": "https://open.spotify.com/album/72iWjIqFHLOdSwWOucXKWk",
+      "uri": "spotify:album:72iWjIqFHLOdSwWOucXKWk",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1801,8 +2956,8 @@
       "albumType": "single",
       "releaseDate": "2021-03-12",
       "releaseYear": "2021",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0207c7d578b213d0bc03f6e889",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27307c7d578b213d0bc03f6e889",
       "spotifyUrl": "https://open.spotify.com/album/6VXZxNd3ur24KwERIBjFcs",
       "uri": "spotify:album:6VXZxNd3ur24KwERIBjFcs",
       "artists": [
@@ -1815,17 +2970,59 @@
       "verified": true
     },
     {
-      "id": "5v18t7RZx8i5Fr7TYkHZ6l",
-      "spotifyId": "5v18t7RZx8i5Fr7TYkHZ6l",
+      "id": "4pdyikhoyjT1MMmNlmpG1r",
+      "spotifyId": "4pdyikhoyjT1MMmNlmpG1r",
       "objectType": "album",
-      "name": "Darılmak Yok (Hamam Sessions)",
+      "name": "Lanet",
+      "albumType": "single",
+      "releaseDate": "2021-02-26",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273eb7993a937ac3b140bc9a683",
+      "spotifyUrl": "https://open.spotify.com/album/4pdyikhoyjT1MMmNlmpG1r",
+      "uri": "spotify:album:4pdyikhoyjT1MMmNlmpG1r",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0AeIqbbkmcj17mSa0Rcp2S",
+      "spotifyId": "0AeIqbbkmcj17mSa0Rcp2S",
+      "objectType": "album",
+      "name": "Eksik Olmaz",
+      "albumType": "single",
+      "releaseDate": "2021-01-08",
+      "releaseYear": "2021",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ad46ee838e977657113306ad",
+      "spotifyUrl": "https://open.spotify.com/album/0AeIqbbkmcj17mSa0Rcp2S",
+      "uri": "spotify:album:0AeIqbbkmcj17mSa0Rcp2S",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4U2pt8AOmhEh660yHPLMpn",
+      "spotifyId": "4U2pt8AOmhEh660yHPLMpn",
+      "objectType": "album",
+      "name": "Darilmak Yok",
       "albumType": "single",
       "releaseDate": "2020-12-28",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02866a6e154056de47bf9c5187",
-      "spotifyUrl": "https://open.spotify.com/album/5v18t7RZx8i5Fr7TYkHZ6l",
-      "uri": "spotify:album:5v18t7RZx8i5Fr7TYkHZ6l",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c9e060911ba5a5855393db36",
+      "spotifyUrl": "https://open.spotify.com/album/4U2pt8AOmhEh660yHPLMpn",
+      "uri": "spotify:album:4U2pt8AOmhEh660yHPLMpn",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1843,8 +3040,8 @@
       "albumType": "single",
       "releaseDate": "2020-12-11",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e022caf5b4a3a42b13e3854d472",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2732caf5b4a3a42b13e3854d472",
       "spotifyUrl": "https://open.spotify.com/album/07cwiM7nU3jXF6J9UgXdCd",
       "uri": "spotify:album:07cwiM7nU3jXF6J9UgXdCd",
       "artists": [
@@ -1864,10 +3061,31 @@
       "albumType": "single",
       "releaseDate": "2020-11-19",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e029fdd2db5df51fa46c3b39130",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739fdd2db5df51fa46c3b39130",
       "spotifyUrl": "https://open.spotify.com/album/1IOByJLwwmG0z16dSBiHAK",
       "uri": "spotify:album:1IOByJLwwmG0z16dSBiHAK",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5yaxVfXufzc45KT737K90f",
+      "spotifyId": "5yaxVfXufzc45KT737K90f",
+      "objectType": "album",
+      "name": "Ihtan (Groovypedia Live)",
+      "albumType": "single",
+      "releaseDate": "2020-09-30",
+      "releaseYear": "2020",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2735220521fe645faeef07ef5b9",
+      "spotifyUrl": "https://open.spotify.com/album/5yaxVfXufzc45KT737K90f",
+      "uri": "spotify:album:5yaxVfXufzc45KT737K90f",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1885,10 +3103,31 @@
       "albumType": "single",
       "releaseDate": "2020-07-31",
       "releaseYear": "2020",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026e589386051cea586c07f04e",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736e589386051cea586c07f04e",
       "spotifyUrl": "https://open.spotify.com/album/4GLUe5UzDTd2WAkZPsqeVu",
       "uri": "spotify:album:4GLUe5UzDTd2WAkZPsqeVu",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "spotifyId": "1C3dfqkn5Q9qoMjYtJNmGX",
+      "objectType": "album",
+      "name": "Baban",
+      "albumType": "single",
+      "releaseDate": "2020-05-06",
+      "releaseYear": "2020",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733d150ac9ec18e311f13dda00",
+      "spotifyUrl": "https://open.spotify.com/album/1C3dfqkn5Q9qoMjYtJNmGX",
+      "uri": "spotify:album:1C3dfqkn5Q9qoMjYtJNmGX",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1906,8 +3145,8 @@
       "albumType": "single",
       "releaseDate": "2019-09-23",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0278264f47b7b34e2c9e0545d1",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27378264f47b7b34e2c9e0545d1",
       "spotifyUrl": "https://open.spotify.com/album/4THM0v0TgGHbQClcWVLza1",
       "uri": "spotify:album:4THM0v0TgGHbQClcWVLza1",
       "artists": [
@@ -1927,8 +3166,8 @@
       "albumType": "single",
       "releaseDate": "2019-08-13",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e08693b3340d39ee8b40af03",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e08693b3340d39ee8b40af03",
       "spotifyUrl": "https://open.spotify.com/album/1GIkj7GCcjfto5jWBKoTe1",
       "uri": "spotify:album:1GIkj7GCcjfto5jWBKoTe1",
       "artists": [
@@ -1948,8 +3187,8 @@
       "albumType": "single",
       "releaseDate": "2019-08-07",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e028282d866aee38f5ec9c8aa83",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2738282d866aee38f5ec9c8aa83",
       "spotifyUrl": "https://open.spotify.com/album/3slJ2gXpniB6I4eb7NCruj",
       "uri": "spotify:album:3slJ2gXpniB6I4eb7NCruj",
       "artists": [
@@ -1962,17 +3201,59 @@
       "verified": true
     },
     {
-      "id": "62dW2UToWLtRNu5sSfkXpM",
-      "spotifyId": "62dW2UToWLtRNu5sSfkXpM",
+      "id": "3R0s0RcUY9ZhLqxLCa4VZx",
+      "spotifyId": "3R0s0RcUY9ZhLqxLCa4VZx",
+      "objectType": "album",
+      "name": "Yaz Yağmurum",
+      "albumType": "single",
+      "releaseDate": "2019-06-11",
+      "releaseYear": "2019",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f8ae4444006fedc469df6dd7",
+      "spotifyUrl": "https://open.spotify.com/album/3R0s0RcUY9ZhLqxLCa4VZx",
+      "uri": "spotify:album:3R0s0RcUY9ZhLqxLCa4VZx",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "5491b8iVXuTi2ZqwePeJSH",
+      "spotifyId": "5491b8iVXuTi2ZqwePeJSH",
       "objectType": "album",
       "name": "Aslan Marşı",
       "albumType": "single",
       "releaseDate": "2019-05-18",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02e25bcef3444696c8360a536c",
-      "spotifyUrl": "https://open.spotify.com/album/62dW2UToWLtRNu5sSfkXpM",
-      "uri": "spotify:album:62dW2UToWLtRNu5sSfkXpM",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273c77d77d274f944c22bc8515e",
+      "spotifyUrl": "https://open.spotify.com/album/5491b8iVXuTi2ZqwePeJSH",
+      "uri": "spotify:album:5491b8iVXuTi2ZqwePeJSH",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "2fgZ72CdV60LegQn2hEAHM",
+      "spotifyId": "2fgZ72CdV60LegQn2hEAHM",
+      "objectType": "album",
+      "name": "Bahaneleriniz",
+      "albumType": "single",
+      "releaseDate": "2019-05-10",
+      "releaseYear": "2019",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273f5b57efa31c761ac14928b8c",
+      "spotifyUrl": "https://open.spotify.com/album/2fgZ72CdV60LegQn2hEAHM",
+      "uri": "spotify:album:2fgZ72CdV60LegQn2hEAHM",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -1990,10 +3271,31 @@
       "albumType": "single",
       "releaseDate": "2019-02-01",
       "releaseYear": "2019",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02fda764e0a334756b49002b10",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273fda764e0a334756b49002b10",
       "spotifyUrl": "https://open.spotify.com/album/5dMbZ9ECO3Wxkpr7BWmLN3",
       "uri": "spotify:album:5dMbZ9ECO3Wxkpr7BWmLN3",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "0y8RzSZigFhXQfNnFiOAd5",
+      "spotifyId": "0y8RzSZigFhXQfNnFiOAd5",
+      "objectType": "album",
+      "name": "Kıskanç",
+      "albumType": "single",
+      "releaseDate": "2019-01-11",
+      "releaseYear": "2019",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273e752b75735a0a9170820df23",
+      "spotifyUrl": "https://open.spotify.com/album/0y8RzSZigFhXQfNnFiOAd5",
+      "uri": "spotify:album:0y8RzSZigFhXQfNnFiOAd5",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -2011,8 +3313,8 @@
       "albumType": "single",
       "releaseDate": "2018-11-04",
       "releaseYear": "2018",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e026430b3465763270bae28fccc",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2736430b3465763270bae28fccc",
       "spotifyUrl": "https://open.spotify.com/album/7w23DpIjUzfefwiq0aXDNn",
       "uri": "spotify:album:7w23DpIjUzfefwiq0aXDNn",
       "artists": [
@@ -2032,8 +3334,8 @@
       "albumType": "single",
       "releaseDate": "2018-10-01",
       "releaseYear": "2018",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e023a7c8ef98e28dc95cf36386c",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2733a7c8ef98e28dc95cf36386c",
       "spotifyUrl": "https://open.spotify.com/album/4tBnVWP1N4g7Hn9PYgPtWo",
       "uri": "spotify:album:4tBnVWP1N4g7Hn9PYgPtWo",
       "artists": [
@@ -2053,10 +3355,31 @@
       "albumType": "single",
       "releaseDate": "2018-07-10",
       "releaseYear": "2018",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024cbf6763af9cc073e968c388",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2734cbf6763af9cc073e968c388",
       "spotifyUrl": "https://open.spotify.com/album/61WtSUVOoxxeKeV4jOZNWi",
       "uri": "spotify:album:61WtSUVOoxxeKeV4jOZNWi",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "4Ab5NfuzbNt7C1J5ca7cZA",
+      "spotifyId": "4Ab5NfuzbNt7C1J5ca7cZA",
+      "objectType": "album",
+      "name": "Karma (Groovypedia Live)",
+      "albumType": "single",
+      "releaseDate": "2018-05-25",
+      "releaseYear": "2018",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273089353825929aa27a510d9ce",
+      "spotifyUrl": "https://open.spotify.com/album/4Ab5NfuzbNt7C1J5ca7cZA",
+      "uri": "spotify:album:4Ab5NfuzbNt7C1J5ca7cZA",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -2072,10 +3395,10 @@
       "objectType": "album",
       "name": "Karma",
       "albumType": "single",
-      "releaseDate": "2017-12-09",
+      "releaseDate": "2017-11-27",
       "releaseYear": "2017",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02ba09c4cf44f1656d12adf069",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273ba09c4cf44f1656d12adf069",
       "spotifyUrl": "https://open.spotify.com/album/41vkDxCgMJIDSc8zauKoUW",
       "uri": "spotify:album:41vkDxCgMJIDSc8zauKoUW",
       "artists": [
@@ -2095,10 +3418,73 @@
       "albumType": "single",
       "releaseDate": "2016-12-16",
       "releaseYear": "2016",
-      "totalTracks": 0,
-      "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e027573b15341f457146202a978",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b2737573b15341f457146202a978",
       "spotifyUrl": "https://open.spotify.com/album/6zYRbnh9xKNGkaAkWPKhM8",
       "uri": "spotify:album:6zYRbnh9xKNGkaAkWPKhM8",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "1VbXHoakMTqVv5KcSoDMHG",
+      "spotifyId": "1VbXHoakMTqVv5KcSoDMHG",
+      "objectType": "album",
+      "name": "Yeşil",
+      "albumType": "single",
+      "releaseDate": "2016-10-31",
+      "releaseYear": "2016",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27319857e490ad9484aad2cedea",
+      "spotifyUrl": "https://open.spotify.com/album/1VbXHoakMTqVv5KcSoDMHG",
+      "uri": "spotify:album:1VbXHoakMTqVv5KcSoDMHG",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "57tzaE0HATRSRptHEXDnJT",
+      "spotifyId": "57tzaE0HATRSRptHEXDnJT",
+      "objectType": "album",
+      "name": "Hayal (Groovypedia Live)",
+      "albumType": "single",
+      "releaseDate": "2016-04-21",
+      "releaseYear": "2016",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27336685cd32a4e7e74456b44e0",
+      "spotifyUrl": "https://open.spotify.com/album/57tzaE0HATRSRptHEXDnJT",
+      "uri": "spotify:album:57tzaE0HATRSRptHEXDnJT",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
+      "id": "057EndApd8tJau31C7jces",
+      "spotifyId": "057EndApd8tJau31C7jces",
+      "objectType": "album",
+      "name": "Hasta Kişilikler (Remastered Version)",
+      "albumType": "single",
+      "releaseDate": "2012-08-16",
+      "releaseYear": "2012",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b273a7ad6c43826e2cf88d0f358b",
+      "spotifyUrl": "https://open.spotify.com/album/057EndApd8tJau31C7jces",
+      "uri": "spotify:album:057EndApd8tJau31C7jces",
       "artists": [
         {
           "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -2111,17 +3497,17 @@
   ],
   "tracks": [],
   "latestRelease": {
-    "id": "2aTmzuUvKITVuP2qBnrvvD",
-    "spotifyId": "2aTmzuUvKITVuP2qBnrvvD",
+    "id": "4jMISP7h6NOXiwIjdTujGK",
+    "spotifyId": "4jMISP7h6NOXiwIjdTujGK",
     "objectType": "album",
-    "name": "Entropi",
+    "name": "mavi ay",
     "albumType": "single",
-    "releaseDate": "2026-07-03",
+    "releaseDate": "2026-08-07",
     "releaseYear": "2026",
-    "totalTracks": 0,
-    "imageUrl": "https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e02cfc03e0fdf23d0a055b1e6e1",
-    "spotifyUrl": "https://open.spotify.com/album/2aTmzuUvKITVuP2qBnrvvD",
-    "uri": "spotify:album:2aTmzuUvKITVuP2qBnrvvD",
+    "totalTracks": 1,
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739cd8e71207b211becf29a0d2",
+    "spotifyUrl": "https://open.spotify.com/album/4jMISP7h6NOXiwIjdTujGK",
+    "uri": "spotify:album:4jMISP7h6NOXiwIjdTujGK",
     "artists": [
       {
         "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -2132,10 +3518,10 @@
     "verified": true
   },
   "counts": {
-    "total": 50,
+    "total": 83,
     "albums": 4,
-    "singles": 46,
+    "singles": 79,
     "tracks": 0
   },
-  "updatedAt": "2026-08-02T13:34:41.972Z"
+  "updatedAt": "2026-09-13T07:55:36.086Z"
 }
