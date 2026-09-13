@@ -7,7 +7,6 @@ import { formatPrice } from "@/lib/store/format";
 import { siteConfig } from "@/data/site";
 import type { Product } from "@/lib/store/types";
 import { ProductComments } from "@/components/store/ProductComments";
-import { ProductRevealImage } from "@/components/store/ProductRevealImage";
 import styles from "./ProductDetail.module.css";
 
 type Props = {
@@ -32,7 +31,8 @@ export function ProductDetail({ product }: Props) {
           <div className={styles.gallery}>
             <div className={styles.mainImage}>
               {image ? (
-                <ProductRevealImage src={image} alt={product.name} />
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={assetPath(image)} alt={product.name} className={styles.image} />
               ) : (
                 <div className={styles.placeholder}>Görsel bulunamadı</div>
               )}

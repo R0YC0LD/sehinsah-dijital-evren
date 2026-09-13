@@ -27,3 +27,15 @@ export function addComment(input: { productId: string; name: string; text: strin
   globalStore.__sehinsahComments!.push(comment);
   return comment;
 }
+
+export function listAllComments(): Comment[] {
+  return [...globalStore.__sehinsahComments!].sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+}
+
+export function deleteComment(id: string): boolean {
+  const arr = globalStore.__sehinsahComments!;
+  const idx = arr.findIndex((c) => c.id === id);
+  if (idx === -1) return false;
+  arr.splice(idx, 1);
+  return true;
+}

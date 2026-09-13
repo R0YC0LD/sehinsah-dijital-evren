@@ -1,0 +1,132 @@
+.loginForm {
+  display: grid;
+  gap: 0.85rem;
+  width: min(90vw, 360px);
+  margin: 20vh auto 0;
+}
+
+.title {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  padding: 0.75rem 0.9rem;
+  background: rgba(8, 8, 8, 0.5);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--sehinsah-green-line);
+}
+
+.submit {
+  min-height: 46px;
+  border: 1px solid rgba(122, 255, 174, 0.74);
+  background: var(--sehinsah-green);
+  color: #051009;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+}
+
+.submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.error {
+  color: #d8b4b4;
+  font-size: 0.82rem;
+}
+
+.status {
+  color: var(--text-muted);
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.panel {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: clamp(4.5rem, 8vh, 6rem) 1.25rem 4rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.logout {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.15rem;
+}
+
+.logout:hover {
+  color: var(--text);
+}
+
+.list {
+  display: grid;
+  gap: 1rem;
+}
+
+.comment {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--line);
+  background: rgba(8, 8, 8, 0.4);
+  display: grid;
+  gap: 0.35rem;
+}
+
+.commentHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.commentProduct {
+  color: var(--sehinsah-green);
+  text-transform: uppercase;
+}
+
+.commentName {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.commentText {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.delete {
+  justify-self: start;
+  margin-top: 0.4rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: #d8b4b4;
+  border: 1px solid rgba(216, 180, 180, 0.4);
+  padding: 0.4rem 0.75rem;
+}
+
+.delete:hover {
+  color: #ff8a8a;
+  border-color: rgba(255, 138, 138, 0.6);
+}

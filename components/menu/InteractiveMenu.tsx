@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { EntropyMenuProgress } from "@/components/easteregg/EntropyMenuProgress";
@@ -206,6 +207,9 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
           <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
           <ChaosToggle />
           <EntropyMenuProgress />
+          <Link href="/admin" className={styles.adminLink} onClick={onClose}>
+            yönetim
+          </Link>
         </div>
       </div>
 

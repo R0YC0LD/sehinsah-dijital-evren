@@ -17,7 +17,7 @@ export function ProductRevealImage({ src, alt, className }: Props) {
 
   return (
     <div
-      className={`${styles.wrap} ${className || ""}`}
+      className={`${styles.wrap} ${active ? styles.active : ""} ${className || ""}`}
       onMouseEnter={() => setActive(true)}
       onMouseLeave={() => setActive(false)}
       onTouchStart={() => setActive(true)}

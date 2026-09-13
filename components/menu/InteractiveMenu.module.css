@@ -117,6 +117,19 @@
   color: var(--text-muted);
 }
 
+.adminLink {
+  margin-left: auto;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: rgba(150, 154, 148, 0.45);
+  text-transform: none;
+}
+
+.adminLink:hover,
+.adminLink:focus-visible {
+  color: var(--text-muted);
+}
+
 @media (max-width: 899px) {
   .menu {
     padding-top: calc(var(--header-h) + 0.55rem);
