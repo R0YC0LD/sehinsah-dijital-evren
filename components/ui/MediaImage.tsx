@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { withBasePath } from "@/lib/paths";
 
 type Props = {
@@ -27,16 +28,15 @@ export function MediaImage({
   if (failed) return null;
 
   return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
+    <Image
       src={withBasePath(src)}
       alt={alt}
       width={width}
       height={height}
       className={className}
-      loading={priority ? "eager" : "lazy"}
-      decoding="async"
-      fetchPriority={priority ? "high" : "auto"}
+      quality={92}
+      priority={priority}
+      unoptimized={src.startsWith("data:") || src.startsWith("blob:")}
       onError={() => setFailed(true)}
     />
   );

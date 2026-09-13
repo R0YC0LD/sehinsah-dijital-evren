@@ -6,7 +6,7 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { PAGE_REVEAL_EVENT } from "@/lib/transitionEvents";
 import styles from "./PageTransitionOverlay.module.css";
 
-const IMAGE_SRC = "/media/transition-loader.png";
+const IMAGE_SRC = "/media/transition-loader.webp";
 const HOLD_MS = 300;
 const FADE_MS = 750;
 const START_DELAY_MS = 30;

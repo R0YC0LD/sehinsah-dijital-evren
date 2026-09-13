@@ -10,7 +10,7 @@ type Props = {
   className?: string;
 };
 
-const REVEAL_SRC = "/media/store/sehinsah-reveal.png";
+const REVEAL_SRC = "/media/store/sehinsah-reveal.webp";
 
 export function ProductRevealImage({ src, alt, className }: Props) {
   const [active, setActive] = useState(false);
