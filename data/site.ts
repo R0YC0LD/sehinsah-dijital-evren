@@ -5,7 +5,7 @@ export const siteConfig = {
   artistName: "ŞEHİNŞAH",
   displayName: "Şehinşah",
   isOfficial,
-  title: isOfficial ? "Şehinşah — Resmî Dijital Evren" : "Şehinşah — Dijital Evren",
+  title: isOfficial ? "Şehinşah — Resmî Web Sitesi" : "Şehinşah — Web Sitesi",
   description:
     "Şehinşah’ın müzik, sahne ve dijital dünyasına açılan deneyimsel internet sitesi.",
   targetArtistId: TARGET_ARTIST_ID,
