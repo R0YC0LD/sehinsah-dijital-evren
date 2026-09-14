@@ -6,10 +6,10 @@ import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./ChaosGlitch.module.css";
 
 const TARGET_SELECTOR = "img, h1, h2, h3, .meta-label";
-const SLOT_COUNT = 16;
-const MIN_DELAY_MS = 350;
-const MAX_DELAY_MS = 1600;
-const FLASH_CHANCE = 0.3;
+const SLOT_COUNT = 26;
+const MIN_DELAY_MS = 120;
+const MAX_DELAY_MS = 800;
+const FLASH_CHANCE = 0.35;
 const FALLBACK_CLEAR_MS = 900;
 
 const JITTER_VARIANTS = [
