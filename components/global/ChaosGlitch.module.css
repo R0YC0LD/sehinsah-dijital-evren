@@ -38,6 +38,21 @@
 .jitter12 {
   animation: g12 0.22s steps(1) 1;
 }
+.jitter13 {
+  animation: g13 0.24s steps(1) 1;
+}
+.jitter14 {
+  animation: g14 0.32s steps(4, jump-none) 1;
+}
+.jitter15 {
+  animation: g15 0.28s steps(1) 1;
+}
+.jitter16 {
+  animation: g16 0.2s steps(1) 1;
+}
+.jitter17 {
+  animation: g17 0.34s steps(1) 1;
+}
 .flash1 {
   animation: gFlash1 0.34s ease-in-out 1;
 }
@@ -255,6 +270,114 @@
   100% {
     transform: translate(0, 0);
     clip-path: inset(0 0 0 0);
+    filter: none;
+  }
+}
+
+@keyframes g13 {
+  0% {
+    transform: translate(0, 0);
+  }
+  30% {
+    transform: translate(4px, -34px);
+    filter: blur(1.5px) saturate(2.2);
+  }
+  60% {
+    transform: translate(-6px, 26px);
+    filter: blur(0.5px);
+  }
+  100% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+}
+
+@keyframes g14 {
+  0% {
+    clip-path: inset(4% 0 90% 0);
+    transform: translate(0, 0);
+  }
+  25% {
+    clip-path: inset(88% 0 4% 0);
+    transform: translate(10px, 0);
+    filter: hue-rotate(70deg);
+  }
+  50% {
+    clip-path: inset(40% 0 45% 0);
+    transform: translate(-10px, 0);
+  }
+  75% {
+    clip-path: inset(15% 0 70% 0);
+    transform: translate(6px, 0);
+    filter: none;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes g15 {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  35% {
+    transform: translate(-30px, -20px) rotate(4deg) scale(0.9);
+    filter: saturate(2.4) hue-rotate(-50deg);
+  }
+  70% {
+    transform: translate(18px, 14px) rotate(-2deg) scale(1.04);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    filter: none;
+  }
+}
+
+@keyframes g16 {
+  0% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+  25% {
+    transform: translate(46px, 0);
+    filter: invert(0.7) saturate(2);
+  }
+  50% {
+    transform: translate(-40px, 0);
+    filter: none;
+  }
+  75% {
+    transform: translate(14px, 0);
+    filter: invert(0.4);
+  }
+  100% {
+    transform: translate(0, 0);
+    filter: none;
+  }
+}
+
+@keyframes g17 {
+  0% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
+  }
+  20% {
+    clip-path: inset(30% 60% 30% 4%);
+    transform: translate(-6px, 4px);
+    filter: saturate(2.2) contrast(1.4);
+  }
+  45% {
+    clip-path: inset(10% 4% 55% 55%);
+    transform: translate(8px, -6px);
+  }
+  70% {
+    clip-path: inset(55% 30% 8% 20%);
+    transform: translate(-4px, 3px);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    transform: translate(0, 0);
     filter: none;
   }
 }

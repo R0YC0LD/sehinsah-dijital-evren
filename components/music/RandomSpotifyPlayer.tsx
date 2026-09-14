@@ -7,6 +7,7 @@ import {
   useRandomSpotifyQueue,
 } from "@/components/music/useRandomSpotifyQueue";
 import { useAudioPreviewContext } from "@/components/providers/AudioPreviewProvider";
+import { useChaos } from "@/components/providers/ChaosProvider";
 import {
   useSpotifyPlayback,
   type SpotifyEmbedController,
@@ -61,6 +62,11 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
   const failedIds = useRef(new Set<string>());
   const retryCount = useRef(0);
   const mountedRef = useRef(true);
+  const { chaos } = useChaos();
+  const chaosRef = useRef(chaos);
+  useEffect(() => {
+    chaosRef.current = chaos;
+  }, [chaos]);
   const { stopPreview, activeId } = useAudioPreviewContext();
   const {
     registerController,
@@ -299,9 +305,11 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
               setNeedsGesture(true);
               return;
             }
+            // Chaos mode owns playback while active — don't fight it.
+            if (chaosRef.current) return;
 
             window.setTimeout(() => {
-              if (destroyed || userActivatedRef.current) return;
+              if (destroyed || userActivatedRef.current || chaosRef.current) return;
               try {
                 controller.play();
                 window.setTimeout(() => {
@@ -343,7 +351,7 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
 
     // Global gesture unlock is owned by MusicStartGate when enabled.
     const onFirstGesture = () => {
-      if (siteConfig.audioGate.enabled) return;
+      if (siteConfig.audioGate.enabled || chaosRef.current) return;
       hasGesturedThisSession = true;
       userActivatedRef.current = true;
       setNeedsGesture(false);
