@@ -5,6 +5,7 @@ import { entropyConfig } from "@/data/entropy";
 import { assetPath } from "@/lib/paths/assetPath";
 import type { EntropySlotId } from "@/lib/entropy/types";
 import { useEntropy } from "@/components/easteregg/EntropyProvider";
+import { useChaos } from "@/components/providers/ChaosProvider";
 import styles from "./EntropyBrain.module.css";
 
 type Props = {
@@ -26,6 +27,7 @@ const SLOT_CLASS: Record<EntropySlotId, string> = {
 
 export function EntropyBrain({ id, className }: Props) {
   const { isSlotVisible, collect } = useEntropy();
+  const { chaos } = useChaos();
   const [collecting, setCollecting] = useState(false);
   const locked = useRef(false);
 
@@ -60,6 +62,7 @@ export function EntropyBrain({ id, className }: Props) {
       data-entropy-id={id}
       onClick={onClick}
     >
+      {chaos && !collecting ? <span className={styles.corruptZone} aria-hidden="true" /> : null}
       <span className={styles.ring} aria-hidden="true" />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img

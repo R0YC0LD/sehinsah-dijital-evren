@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { MusicStartGate } from "@/components/audio/MusicStartGate";
+import { ChaoticCursor } from "@/components/global/ChaoticCursor";
+import { ChaosPhotoReveal } from "@/components/global/ChaosPhotoReveal";
 import { GlobalFallingLayer } from "@/components/global/GlobalFallingLayer";
 import { ScrollProgress } from "@/components/global/ScrollProgress";
 import { Header } from "@/components/layout/Header";
@@ -41,6 +43,8 @@ function ShellInner({ children, catalog }: Props) {
       />
       <GlobalFallingLayer />
       <ScrollProgress />
+      <ChaosPhotoReveal />
+      <ChaoticCursor />
       {children}
       <MusicStartGate />
     </>
