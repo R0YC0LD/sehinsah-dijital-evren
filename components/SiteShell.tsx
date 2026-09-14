@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { MusicStartGate } from "@/components/audio/MusicStartGate";
+import { ChaosAudio } from "@/components/global/ChaosAudio";
+import { ChaosGlitch } from "@/components/global/ChaosGlitch";
 import { GlobalFallingLayer } from "@/components/global/GlobalFallingLayer";
 import { ScrollProgress } from "@/components/global/ScrollProgress";
 import { Header } from "@/components/layout/Header";
@@ -32,6 +34,7 @@ function ShellInner({ children, catalog }: Props) {
     <>
       <div className="page-background" aria-hidden="true" />
       <div className="site-grain" aria-hidden="true" />
+      <div className="chaos-red-wash" aria-hidden="true" />
       <Header menuOpen={menuOpen} onMenuToggle={() => setMenuOpen((v) => !v)} />
       <InteractiveMenu
         open={menuOpen}
@@ -41,6 +44,8 @@ function ShellInner({ children, catalog }: Props) {
       />
       <GlobalFallingLayer />
       <ScrollProgress />
+      <ChaosAudio />
+      <ChaosGlitch />
       {children}
       <MusicStartGate />
     </>

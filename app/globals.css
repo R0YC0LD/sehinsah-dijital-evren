@@ -102,6 +102,48 @@ body[data-loading="true"] {
   --grain-opacity: 0.09;
 }
 
+.chaos-red-wash {
+  position: fixed;
+  inset: 0;
+  z-index: 41;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 50% 28%, rgba(190, 20, 30, 0.24), transparent 62%),
+    linear-gradient(rgba(110, 8, 16, 0.12), rgba(110, 8, 16, 0.12));
+  mix-blend-mode: multiply;
+  transition: opacity 1.2s ease;
+}
+
+[data-chaos="true"] .chaos-red-wash {
+  opacity: 1;
+  animation: chaosRedPulse 9s ease-in-out infinite;
+}
+
+@keyframes chaosRedPulse {
+  0%,
+  62%,
+  100% {
+    opacity: 0.85;
+  }
+  71% {
+    opacity: 1.15;
+  }
+  76% {
+    opacity: 0.7;
+  }
+  88% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-chaos="true"] .chaos-red-wash {
+    animation: none;
+    opacity: 0.85;
+  }
+}
+
 *,
 *::before,
 *::after {
