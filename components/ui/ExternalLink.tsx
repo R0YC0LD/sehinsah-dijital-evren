@@ -1,3 +1,5 @@
+import { forwardRef } from "react";
+
 type Props = {
   href: string;
   children: React.ReactNode;
@@ -5,15 +7,14 @@ type Props = {
   "aria-label"?: string;
 };
 
-export function ExternalLink({
-  href,
-  children,
-  className,
-  "aria-label": ariaLabel,
-}: Props) {
+export const ExternalLink = forwardRef<HTMLAnchorElement, Props>(function ExternalLink(
+  { href, children, className, "aria-label": ariaLabel },
+  ref,
+) {
   const external = href.startsWith("http");
   return (
     <a
+      ref={ref}
       href={href}
       className={className}
       aria-label={ariaLabel}
@@ -22,4 +23,4 @@ export function ExternalLink({
       {children}
     </a>
   );
-}
+});

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
+import { useMagnetic } from "@/hooks/useMagnetic";
 import { siteConfig } from "@/data/site";
 import styles from "./Header.module.css";
 
@@ -14,6 +15,8 @@ export function Header({ menuOpen, onMenuToggle }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  const listenRef = useMagnetic<HTMLAnchorElement>({ strength: 0.25, maxOffset: 7, radius: 1.6 });
+  const menuBtnRef = useMagnetic<HTMLButtonElement>({ strength: 0.22, maxOffset: 8, radius: 1.6 });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -35,10 +38,11 @@ export function Header({ menuOpen, onMenuToggle }: Props) {
       </a>
 
       <div className={styles.actions}>
-        <a href="#muzik" className={styles.listen}>
+        <a ref={listenRef} href="#muzik" className={styles.listen}>
           DİNLE ↗
         </a>
         <button
+          ref={menuBtnRef}
           type="button"
           id="menu-trigger"
           className={styles.menuBtn}
