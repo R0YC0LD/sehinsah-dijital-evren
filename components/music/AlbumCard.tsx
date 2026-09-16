@@ -6,9 +6,11 @@ import styles from "./AlbumCard.module.css";
 
 type Props = {
   album: SpotifyRelease;
+  onOpen: () => void;
+  isActive?: boolean;
 };
 
-export function AlbumCard({ album }: Props) {
+export function AlbumCard({ album, onOpen, isActive }: Props) {
   const typeLabel =
     album.albumType === "album"
       ? "Albüm"
@@ -24,7 +26,10 @@ export function AlbumCard({ album }: Props) {
 
   const body = (
     <>
-      <div className={styles.cover}>
+      <div
+        className={styles.cover}
+        style={isActive ? undefined : { viewTransitionName: `album-cover-${album.id}` }}
+      >
         {album.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -61,15 +66,14 @@ export function AlbumCard({ album }: Props) {
 
   return (
     <div className={styles.card}>
-      <a
-        href={album.spotifyUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        type="button"
         className={styles.link}
-        aria-label={`${album.name} albümünü Spotify’da aç`}
+        aria-label={`${album.name} albümünü incele`}
+        onClick={onOpen}
       >
         {body}
-      </a>
+      </button>
       <ReleaseActions
         id={album.id}
         type="album"

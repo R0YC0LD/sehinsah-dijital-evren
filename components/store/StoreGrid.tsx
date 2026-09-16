@@ -1,10 +1,13 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { ProductCard } from "@/components/store/ProductCard";
 import { ProductFilters } from "@/components/store/ProductFilters";
+import { ProductQuickView } from "@/components/store/ProductQuickView";
 import { siteConfig } from "@/data/site";
 import type { Product } from "@/lib/store/types";
+import { withViewTransition } from "@/lib/viewTransition";
 import styles from "./StoreGrid.module.css";
 
 type Props = {
@@ -13,6 +16,7 @@ type Props = {
 
 export function StoreGrid({ products }: Props) {
   const [filter, setFilter] = useState("all");
+  const [activeId, setActiveId] = useState<string | null>(null);
 
   const categories = useMemo(
     () => Array.from(new Set(products.map((p) => p.category))),
@@ -33,6 +37,8 @@ export function StoreGrid({ products }: Props) {
     );
   }
 
+  const active = items.find((p) => p.id === activeId) ?? null;
+
   return (
     <div>
       <div className={styles.toolbar}>
@@ -41,9 +47,24 @@ export function StoreGrid({ products }: Props) {
 
       <div key={filter} className={styles.grid}>
         {items.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard
+            key={product.id}
+            product={product}
+            isActive={product.id === activeId}
+            onOpen={() => withViewTransition(() => setActiveId(product.id))}
+          />
         ))}
       </div>
+
+      {active && typeof document !== "undefined"
+        ? createPortal(
+            <ProductQuickView
+              product={active}
+              onClose={() => withViewTransition(() => setActiveId(null))}
+            />,
+            document.body,
+          )
+        : null}
     </div>
   );
 }
