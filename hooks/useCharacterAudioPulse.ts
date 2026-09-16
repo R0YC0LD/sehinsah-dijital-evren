@@ -219,36 +219,36 @@ export function useCharacterAudioPulse(
       const tier = viewportTier();
       const reduced = prefersReducedMotion();
 
-      let minX = 0.996;
-      let maxX = 1.016;
-      let minY = 0.996;
-      let maxY = 1.026;
-      let brightMax = 1.025;
-      let glowMax = 0.025;
+      let minX = 0.9;
+      let maxX = 1.14;
+      let minY = 0.88;
+      let maxY = 1.19;
+      let brightMax = 1.12;
+      let glowMax = 0.12;
 
       if (tier === "tablet") {
-        minX = 0.997;
-        maxX = 1.014;
-        minY = 0.997;
-        maxY = 1.021;
-        brightMax = 1.02;
-        glowMax = 0.018;
+        minX = 0.92;
+        maxX = 1.12;
+        minY = 0.9;
+        maxY = 1.16;
+        brightMax = 1.1;
+        glowMax = 0.1;
       } else if (tier === "mobile") {
-        minX = 0.998;
-        maxX = 1.01;
-        minY = 0.998;
-        maxY = 1.016;
-        brightMax = 1.018;
-        glowMax = 0.01;
+        minX = 0.94;
+        maxX = 1.1;
+        minY = 0.93;
+        maxY = 1.13;
+        brightMax = 1.08;
+        glowMax = 0.07;
       }
 
       const targetX = clamp(
-        1 + smoothedBass * 0.009 + smoothedKick * 0.007,
+        1 + smoothedBass * 0.05 + smoothedKick * 0.09,
         minX,
         maxX,
       );
       const targetY = clamp(
-        1 + smoothedBass * 0.014 + smoothedKick * 0.012,
+        1 + smoothedBass * 0.08 + smoothedKick * 0.14,
         minY,
         maxY,
       );
