@@ -11,7 +11,7 @@ export function ScrollProgress() {
     const update = () => {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const p = max > 0 ? window.scrollY / max : 0;
-      if (fillRef.current) fillRef.current.style.height = `${p * 100}%`;
+      if (fillRef.current) fillRef.current.style.transform = `scaleY(${p})`;
     };
     const onScroll = () => {
       cancelAnimationFrame(raf);

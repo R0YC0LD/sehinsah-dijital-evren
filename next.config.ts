@@ -15,6 +15,7 @@ const nextConfig: NextConfig = {
       }
     : {
         images: {
+          qualities: [75, 92],
           remotePatterns: [
             { protocol: "https", hostname: "i.scdn.co", pathname: "/**" },
             { protocol: "https", hostname: "mosaic.scdn.co", pathname: "/**" },

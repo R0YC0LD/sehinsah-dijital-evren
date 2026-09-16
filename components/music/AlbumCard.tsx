@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { isEpRelease } from "@/lib/spotify/normalize";
 import type { SpotifyRelease } from "@/lib/spotify/types";
@@ -27,12 +28,11 @@ export function AlbumCard({ album, onOpen }: Props) {
     <>
       <div className={styles.cover}>
         {album.imageUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={album.imageUrl}
             alt={`${album.name} albüm kapağı`}
-            width={640}
-            height={640}
+            fill
+            sizes="(max-width: 699px) 45vw, (max-width: 1099px) 30vw, 280px"
             loading="lazy"
             className={styles.image}
           />

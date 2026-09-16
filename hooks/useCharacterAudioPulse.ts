@@ -27,20 +27,6 @@ function trackIdFromUri(uri: string) {
   return parts[parts.length - 1] || "";
 }
 
-function viewportTier(): "mobile" | "tablet" | "desktop" {
-  if (typeof window === "undefined") return "desktop";
-  if (window.matchMedia("(max-width: 899px)").matches) return "mobile";
-  if (window.matchMedia("(max-width: 1199px)").matches) return "tablet";
-  return "desktop";
-}
-
-function prefersReducedMotion() {
-  return (
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches
-  );
-}
-
 function lowPowerMode() {
   if (typeof navigator === "undefined") return false;
   const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
@@ -87,6 +73,16 @@ export function useCharacterAudioPulse(
     let returningToNeutral = false;
     let debugEl: HTMLDivElement | null = null;
     let lastRafMs = 0;
+
+    const mobileMq = window.matchMedia("(max-width: 899px)");
+    const tabletMq = window.matchMedia("(max-width: 1199px)");
+    const reducedMq = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+    const computeTier = (): "mobile" | "tablet" | "desktop" =>
+      mobileMq.matches ? "mobile" : tabletMq.matches ? "tablet" : "desktop";
+
+    let cachedTier = computeTier();
+    let cachedReduced = reducedMq.matches;
 
     const debug =
       process.env.NODE_ENV === "development" &&
@@ -166,7 +162,7 @@ export function useCharacterAudioPulse(
     };
 
     const tick = (now: number) => {
-      if (destroyed) return;
+      if (destroyed || cachedReduced) return;
 
       const lowPower = lowPowerMode();
       const minFrameMs = lowPower ? 33 : 0;
@@ -216,8 +212,7 @@ export function useCharacterAudioPulse(
       smoothedBass = smoothToward(smoothedBass, bassTarget, dtMs, 55, 180);
       smoothedKick = smoothToward(smoothedKick, kickTarget, dtMs, 40, 130);
 
-      const tier = viewportTier();
-      const reduced = prefersReducedMotion();
+      const tier = cachedTier;
 
       let minX = 0.9;
       let maxX = 1.14;
@@ -253,38 +248,28 @@ export function useCharacterAudioPulse(
         maxY,
       );
 
-      if (reduced) {
-        currentScaleX = 1;
-        currentScaleY = 1;
-        setScaleX(1);
-        setScaleY(1);
-        const b = 1 + (smoothedBass + smoothedKick) * 0.008;
-        el.style.setProperty("--audio-brightness", String(clamp(b, 1, 1.01)));
-        el.style.setProperty("--audio-glow-opacity", "0");
-      } else {
-        currentScaleX = smoothToward(currentScaleX, targetX, dtMs, 45, 160);
-        currentScaleY = smoothToward(currentScaleY, targetY, dtMs, 45, 160);
-        setScaleX(currentScaleX);
-        setScaleY(currentScaleY);
+      currentScaleX = smoothToward(currentScaleX, targetX, dtMs, 45, 160);
+      currentScaleY = smoothToward(currentScaleY, targetY, dtMs, 45, 160);
+      setScaleX(currentScaleX);
+      setScaleY(currentScaleY);
 
-        const energy = clamp(smoothedBass * 0.7 + smoothedKick * 0.5, 0, 1);
-        el.style.setProperty(
-          "--audio-brightness",
-          String(clamp(1 + energy * (brightMax - 1), 1, brightMax)),
-        );
-        el.style.setProperty(
-          "--audio-contrast",
-          String(clamp(1 + energy * 0.018, 1, 1.018)),
-        );
-        if (tier === "mobile" || lowPower) {
-          el.style.setProperty("--audio-glow-opacity", "0");
-          el.style.setProperty("--audio-glow-blur", "0px");
-        } else {
-          el.style.setProperty("--audio-glow-opacity", String(energy * glowMax));
-          el.style.setProperty("--audio-glow-blur", `${(energy * 8).toFixed(2)}px`);
-        }
-        el.style.willChange = "transform, filter";
+      const energy = clamp(smoothedBass * 0.7 + smoothedKick * 0.5, 0, 1);
+      el.style.setProperty(
+        "--audio-brightness",
+        String(clamp(1 + energy * (brightMax - 1), 1, brightMax)),
+      );
+      el.style.setProperty(
+        "--audio-contrast",
+        String(clamp(1 + energy * 0.018, 1, 1.018)),
+      );
+      if (tier === "mobile" || lowPower) {
+        el.style.setProperty("--audio-glow-opacity", "0");
+        el.style.setProperty("--audio-glow-blur", "0px");
+      } else {
+        el.style.setProperty("--audio-glow-opacity", String(energy * glowMax));
+        el.style.setProperty("--audio-glow-blur", `${(energy * 8).toFixed(2)}px`);
       }
+      el.style.willChange = "transform, filter";
 
       if (debugEl) {
         debugEl.textContent = [
@@ -298,8 +283,32 @@ export function useCharacterAudioPulse(
       raf = requestAnimationFrame(tick);
     };
 
+    const onTierChange = () => {
+      cachedTier = computeTier();
+    };
+
+    const onReducedChange = () => {
+      cachedReduced = reducedMq.matches;
+      if (cachedReduced) {
+        if (raf) {
+          cancelAnimationFrame(raf);
+          raf = 0;
+        }
+        resetVisual(false);
+      } else if (!raf && !destroyed) {
+        lastFrameAt = performance.now();
+        raf = requestAnimationFrame(tick);
+      }
+    };
+
+    mobileMq.addEventListener("change", onTierChange);
+    tabletMq.addEventListener("change", onTierChange);
+    reducedMq.addEventListener("change", onReducedChange);
+
     bindSetters();
-    raf = requestAnimationFrame(tick);
+    if (!cachedReduced) {
+      raf = requestAnimationFrame(tick);
+    }
 
     const unsub = subscribe((event) => {
       const trackId = event.trackId || trackIdFromUri(event.trackUri);
@@ -335,6 +344,9 @@ export function useCharacterAudioPulse(
     return () => {
       destroyed = true;
       cancelAnimationFrame(raf);
+      mobileMq.removeEventListener("change", onTierChange);
+      tabletMq.removeEventListener("change", onTierChange);
+      reducedMq.removeEventListener("change", onReducedChange);
       unsub();
       resetVisual(false);
       debugEl?.remove();

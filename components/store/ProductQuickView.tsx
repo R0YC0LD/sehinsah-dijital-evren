@@ -29,7 +29,7 @@ export function ProductQuickView({ product, onClose }: Props) {
           ✕
         </button>
 
-        <div className={styles.cover} style={{ viewTransitionName: `product-cover-${product.id}` }}>
+        <div className={styles.cover}>
           {product.images[0] ? (
             <ProductRevealImage src={product.images[0]} alt={product.name} />
           ) : (

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { useQuickViewModal } from "@/hooks/useQuickViewModal";
 import { isEpRelease } from "@/lib/spotify/normalize";
@@ -36,12 +37,13 @@ export function AlbumQuickView({ album, onClose }: Props) {
           ✕
         </button>
 
-        <div className={styles.cover} style={{ viewTransitionName: `album-cover-${album.id}` }}>
+        <div className={styles.cover}>
           {album.imageUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
+            <Image
               src={album.imageUrl}
               alt={`${album.name} albüm kapağı`}
+              fill
+              sizes="(max-width: 719px) 90vw, 340px"
               className={styles.image}
             />
           ) : (

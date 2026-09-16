@@ -16,7 +16,9 @@
 
 .fill {
   width: 100%;
-  height: 0;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
   background: var(--sehinsah-green);
   box-shadow: 0 0 12px var(--sehinsah-green-glow);
 }
