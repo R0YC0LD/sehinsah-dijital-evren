@@ -23,6 +23,7 @@
 }
 
 .cover {
+  position: relative;
   aspect-ratio: 1;
   background: rgba(8, 8, 8, 0.5);
   border: 1px solid transparent;

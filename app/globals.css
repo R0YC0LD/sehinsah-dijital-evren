@@ -1,29 +1,29 @@
 :root {
-  --sehinsah-green: #31f77d;
-  --sehinsah-green-soft: rgba(49, 247, 125, 0.14);
-  --sehinsah-green-faint: rgba(49, 247, 125, 0.055);
-  --sehinsah-green-line: rgba(86, 255, 149, 0.24);
-  --sehinsah-green-glow: rgba(49, 247, 125, 0.16);
+  --sehinsah-green: #22ff85;
+  --sehinsah-green-soft: rgba(34, 255, 133, 0.18);
+  --sehinsah-green-faint: rgba(34, 255, 133, 0.07);
+  --sehinsah-green-line: rgba(86, 255, 149, 0.3);
+  --sehinsah-green-glow: rgba(34, 255, 133, 0.22);
 
-  --bg: #030303;
-  --bg-soft: #070907;
-  --panel: rgba(13, 13, 13, 0.76);
-  --panel-strong: rgba(13, 13, 13, 0.92);
+  --bg: #040603;
+  --bg-soft: #0a1310;
+  --panel: rgba(14, 20, 16, 0.76);
+  --panel-strong: rgba(14, 20, 16, 0.92);
   --text: #eee9df;
-  --text-muted: #969a94;
+  --text-muted: #96a498;
   --line: rgba(255, 255, 255, 0.13);
-  --red: #991919;
-  --red-soft: rgba(153, 25, 25, 0.22);
+  --red: #c41616;
+  --red-soft: rgba(196, 22, 22, 0.24);
   --spotify: var(--sehinsah-green);
-  --ambient-black: #030303;
-  --ambient-charcoal: #080a08;
-  --ambient-soft: #0b0e0c;
-  --ambient-mid: #101311;
+  --ambient-black: #040603;
+  --ambient-charcoal: #0b150e;
+  --ambient-soft: #0e1a13;
+  --ambient-mid: #172417;
   --ambient-line: rgba(255, 255, 255, 0.07);
 
   --background: var(--bg);
   --surface: transparent;
-  --surface-solid: #0a0d0b;
+  --surface-solid: #0d1912;
   --foreground: var(--text);
   --muted: var(--text-muted);
   --border: var(--line);

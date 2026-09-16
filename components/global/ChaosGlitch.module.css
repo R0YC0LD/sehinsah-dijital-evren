@@ -1,5 +1,6 @@
 .glitching {
   position: relative;
+  will-change: transform, filter, clip-path;
 }
 
 .jitter1 {

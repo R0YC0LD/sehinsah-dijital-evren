@@ -31,7 +31,7 @@
   display: grid;
   gap: clamp(1.25rem, 3vw, 2rem);
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
-  background: #0a0a0a;
+  background: var(--surface-solid);
   border: 1px solid var(--line);
   animation: panelIn 0.32s var(--ease);
 }
@@ -72,6 +72,7 @@
 }
 
 .cover {
+  position: relative;
   aspect-ratio: 1;
   background: rgba(8, 8, 8, 0.5);
   border: 1px solid var(--line);
