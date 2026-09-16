@@ -16,6 +16,13 @@
   }
 }
 
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+}
+
 .panel {
   position: relative;
   width: min(100%, 720px);
@@ -26,6 +33,14 @@
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
   background: #0a0a0a;
   border: 1px solid var(--line);
+  animation: panelIn 0.32s var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backdrop,
+  .panel {
+    animation: none;
+  }
 }
 
 @media (min-width: 720px) {

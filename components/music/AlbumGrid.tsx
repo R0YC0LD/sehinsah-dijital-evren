@@ -8,7 +8,6 @@ import { AlbumQuickView } from "@/components/music/AlbumQuickView";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { ExternalLink } from "@/components/ui/ExternalLink";
-import { withViewTransition } from "@/lib/viewTransition";
 import styles from "./AlbumGrid.module.css";
 
 const PAGE = 12;
@@ -111,18 +110,14 @@ export function AlbumGrid({ catalog }: Props) {
           <AlbumCard
             key={album.id}
             album={album}
-            isActive={album.id === activeId}
-            onOpen={() => withViewTransition(() => setActiveId(album.id))}
+            onOpen={() => setActiveId(album.id)}
           />
         ))}
       </div>
 
       {active && typeof document !== "undefined"
         ? createPortal(
-            <AlbumQuickView
-              album={active}
-              onClose={() => withViewTransition(() => setActiveId(null))}
-            />,
+            <AlbumQuickView album={active} onClose={() => setActiveId(null)} />,
             document.body,
           )
         : null}

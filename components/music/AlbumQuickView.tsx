@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
+import { useQuickViewModal } from "@/hooks/useQuickViewModal";
 import { isEpRelease } from "@/lib/spotify/normalize";
 import type { SpotifyRelease } from "@/lib/spotify/types";
 import styles from "./AlbumQuickView.module.css";
@@ -12,18 +12,7 @@ type Props = {
 };
 
 export function AlbumQuickView({ album, onClose }: Props) {
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", onKey);
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [onClose]);
+  useQuickViewModal(onClose);
 
   const typeLabel =
     album.albumType === "album"

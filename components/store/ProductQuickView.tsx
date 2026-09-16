@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
 import { formatPrice } from "@/lib/store/format";
 import { siteConfig } from "@/data/site";
 import { ProductRevealImage } from "@/components/store/ProductRevealImage";
+import { useQuickViewModal } from "@/hooks/useQuickViewModal";
 import type { Product } from "@/lib/store/types";
 import styles from "./ProductQuickView.module.css";
 
@@ -14,18 +14,7 @@ type Props = {
 };
 
 export function ProductQuickView({ product, onClose }: Props) {
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") onClose();
-    };
-    window.addEventListener("keydown", onKey);
-    const prevOverflow = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prevOverflow;
-    };
-  }, [onClose]);
+  useQuickViewModal(onClose);
 
   return (
     <div className={styles.backdrop} onClick={onClose}>

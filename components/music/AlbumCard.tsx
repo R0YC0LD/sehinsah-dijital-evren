@@ -7,10 +7,9 @@ import styles from "./AlbumCard.module.css";
 type Props = {
   album: SpotifyRelease;
   onOpen: () => void;
-  isActive?: boolean;
 };
 
-export function AlbumCard({ album, onOpen, isActive }: Props) {
+export function AlbumCard({ album, onOpen }: Props) {
   const typeLabel =
     album.albumType === "album"
       ? "Albüm"
@@ -26,10 +25,7 @@ export function AlbumCard({ album, onOpen, isActive }: Props) {
 
   const body = (
     <>
-      <div
-        className={styles.cover}
-        style={isActive ? undefined : { viewTransitionName: `album-cover-${album.id}` }}
-      >
+      <div className={styles.cover}>
         {album.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img

@@ -7,7 +7,6 @@ import { ProductFilters } from "@/components/store/ProductFilters";
 import { ProductQuickView } from "@/components/store/ProductQuickView";
 import { siteConfig } from "@/data/site";
 import type { Product } from "@/lib/store/types";
-import { withViewTransition } from "@/lib/viewTransition";
 import styles from "./StoreGrid.module.css";
 
 type Props = {
@@ -50,18 +49,14 @@ export function StoreGrid({ products }: Props) {
           <ProductCard
             key={product.id}
             product={product}
-            isActive={product.id === activeId}
-            onOpen={() => withViewTransition(() => setActiveId(product.id))}
+            onOpen={() => setActiveId(product.id)}
           />
         ))}
       </div>
 
       {active && typeof document !== "undefined"
         ? createPortal(
-            <ProductQuickView
-              product={active}
-              onClose={() => withViewTransition(() => setActiveId(null))}
-            />,
+            <ProductQuickView product={active} onClose={() => setActiveId(null)} />,
             document.body,
           )
         : null}

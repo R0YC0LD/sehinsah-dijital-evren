@@ -144,17 +144,6 @@ body[data-loading="true"] {
   }
 }
 
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 0.28s;
-  animation-timing-function: var(--ease);
-}
-
-::view-transition-old(*),
-::view-transition-new(*) {
-  animation-duration: 0.42s;
-  animation-timing-function: var(--ease);
-}
 
 *,
 *::before,
@@ -163,6 +152,7 @@ body[data-loading="true"] {
 }
 
 html {
+  scrollbar-gutter: stable;
   background: var(--bg);
   color: var(--text);
   -webkit-text-size-adjust: 100%;

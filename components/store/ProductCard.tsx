@@ -10,10 +10,9 @@ import styles from "./ProductCard.module.css";
 type Props = {
   product: Product;
   onOpen: () => void;
-  isActive?: boolean;
 };
 
-export function ProductCard({ product, onOpen, isActive }: Props) {
+export function ProductCard({ product, onOpen }: Props) {
   const href = `/magaza/${product.id}`;
 
   return (
@@ -28,10 +27,7 @@ export function ProductCard({ product, onOpen, isActive }: Props) {
           onOpen();
         }}
       >
-        <div
-          className={styles.cover}
-          style={isActive ? undefined : { viewTransitionName: `product-cover-${product.id}` }}
-        >
+        <div className={styles.cover}>
           {product.images[0] ? (
             <ProductRevealImage src={product.images[0]} alt={product.name} />
           ) : (
