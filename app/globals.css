@@ -144,6 +144,7 @@ body[data-loading="true"] {
   }
 }
 
+
 *,
 *::before,
 *::after {
@@ -151,6 +152,7 @@ body[data-loading="true"] {
 }
 
 html {
+  scrollbar-gutter: stable;
   background: var(--bg);
   color: var(--text);
   -webkit-text-size-adjust: 100%;

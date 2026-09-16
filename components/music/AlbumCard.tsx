@@ -6,9 +6,10 @@ import styles from "./AlbumCard.module.css";
 
 type Props = {
   album: SpotifyRelease;
+  onOpen: () => void;
 };
 
-export function AlbumCard({ album }: Props) {
+export function AlbumCard({ album, onOpen }: Props) {
   const typeLabel =
     album.albumType === "album"
       ? "Albüm"
@@ -61,15 +62,14 @@ export function AlbumCard({ album }: Props) {
 
   return (
     <div className={styles.card}>
-      <a
-        href={album.spotifyUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        type="button"
         className={styles.link}
-        aria-label={`${album.name} albümünü Spotify’da aç`}
+        aria-label={`${album.name} albümünü incele`}
+        onClick={onOpen}
       >
         {body}
-      </a>
+      </button>
       <ReleaseActions
         id={album.id}
         type="album"

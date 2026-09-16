@@ -1,8 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { AlbumCard } from "@/components/music/AlbumCard";
 import { AlbumFilters, type AlbumFilter } from "@/components/music/AlbumFilters";
+import { AlbumQuickView } from "@/components/music/AlbumQuickView";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { ExternalLink } from "@/components/ui/ExternalLink";
@@ -18,6 +20,7 @@ export function AlbumGrid({ catalog }: Props) {
   const [filter, setFilter] = useState<AlbumFilter>("all");
   const [year, setYear] = useState<string>("all");
   const [visible, setVisible] = useState(PAGE);
+  const [activeId, setActiveId] = useState<string | null>(null);
 
   const years = useMemo(() => {
     const set = new Set(
@@ -50,6 +53,7 @@ export function AlbumGrid({ catalog }: Props) {
   }
 
   const shown = items.slice(0, visible);
+  const active = items.find((a) => a.id === activeId) ?? null;
 
   return (
     <div>
@@ -103,9 +107,20 @@ export function AlbumGrid({ catalog }: Props) {
 
       <div key={`${filter}-${year}`} className={styles.grid}>
         {shown.map((album) => (
-          <AlbumCard key={album.id} album={album} />
+          <AlbumCard
+            key={album.id}
+            album={album}
+            onOpen={() => setActiveId(album.id)}
+          />
         ))}
       </div>
+
+      {active && typeof document !== "undefined"
+        ? createPortal(
+            <AlbumQuickView album={active} onClose={() => setActiveId(null)} />,
+            document.body,
+          )
+        : null}
     </div>
   );
 }

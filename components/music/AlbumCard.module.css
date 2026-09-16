@@ -6,6 +6,15 @@
 .link {
   display: grid;
   gap: 0.65rem;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
   transition: transform 0.3s var(--ease);
 }
 
