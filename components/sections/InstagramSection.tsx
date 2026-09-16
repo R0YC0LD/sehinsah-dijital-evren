@@ -1,10 +1,15 @@
+"use client";
+
 import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
+import { useMagnetic } from "@/hooks/useMagnetic";
 import styles from "./InstagramSection.module.css";
 
 export function InstagramSection() {
+  const ctaRef = useMagnetic<HTMLAnchorElement>({ strength: 0.25, maxOffset: 9, radius: 1.6 });
+
   return (
     <section
       id="instagram"
@@ -19,6 +24,7 @@ export function InstagramSection() {
           <h2 className={`display ${styles.title}`}>{siteConfig.instagram.title}</h2>
           <p className={styles.handle}>{siteConfig.instagram.username}</p>
           <a
+            ref={ctaRef}
             href={siteConfig.instagram.url}
             target="_blank"
             rel="noopener noreferrer"

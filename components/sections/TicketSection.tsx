@@ -6,6 +6,7 @@ import { EntropyBrain } from "@/components/easteregg/EntropyBrain";
 import { MediaImage } from "@/components/ui/MediaImage";
 import { siteConfig } from "@/data/site";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
+import { useMagnetic } from "@/hooks/useMagnetic";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./TicketSection.module.css";
 
@@ -13,6 +14,7 @@ export function TicketSection() {
   const posterRef = useRef<HTMLAnchorElement>(null);
   const isTouch = useIsTouchDevice();
   const reduced = useReducedMotion();
+  const ctaRef = useMagnetic<HTMLAnchorElement>({ strength: 0.25, maxOffset: 9, radius: 1.6 });
 
   const onMove = (e: React.PointerEvent) => {
     if (isTouch || reduced || !posterRef.current) return;
@@ -71,6 +73,7 @@ export function TicketSection() {
         </a>
 
         <a
+          ref={ctaRef}
           href={siteConfig.tickets.url}
           target="_blank"
           rel="noopener noreferrer"
