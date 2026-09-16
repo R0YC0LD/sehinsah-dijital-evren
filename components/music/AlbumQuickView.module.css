@@ -31,7 +31,7 @@
   display: grid;
   gap: clamp(1.25rem, 3vw, 2rem);
   padding: clamp(1.5rem, 3.5vw, 2.5rem);
-  background: var(--surface-solid);
+  background: #0a0a0a;
   border: 1px solid var(--line);
   animation: panelIn 0.32s var(--ease);
 }
