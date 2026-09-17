@@ -64,6 +64,8 @@ const musicGroupJsonLd = {
     siteConfig.links.youtube,
     siteConfig.links.tiktok,
     siteConfig.links.instagram,
+    "https://tr.wikipedia.org/wiki/%C5%9Eehin%C5%9Fah",
+    "https://en.wikipedia.org/wiki/%C5%9Eehin%C5%9Fah",
   ],
 };
 
