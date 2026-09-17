@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { products } from "@/data/products";
 import { addComment, listComments } from "@/lib/comments/store";
 import { containsProfanity, isMalformedName, isMalformedText } from "@/lib/comments/moderation";
+import { clientIp, isRateLimited } from "@/lib/rateLimit";
 
 const NAME_MAX_LENGTH = 24;
 const TEXT_MAX_LENGTH = 500;
@@ -22,6 +23,10 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  if (await isRateLimited(`comment:${clientIp(request)}`, 5, 60)) {
+    return NextResponse.json({ error: "rate_limited" }, { status: 429 });
+  }
+
   let body: unknown;
   try {
     body = await request.json();

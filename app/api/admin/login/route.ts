@@ -1,7 +1,12 @@
 import { NextResponse } from "next/server";
 import { ADMIN_COOKIE_NAME, checkCredentials } from "@/lib/admin/auth";
+import { clientIp, isRateLimited } from "@/lib/rateLimit";
 
 export async function POST(request: Request) {
+  if (await isRateLimited(`admin-login:${clientIp(request)}`, 5, 300)) {
+    return NextResponse.json({ error: "rate_limited" }, { status: 429 });
+  }
+
   let body: unknown;
   try {
     body = await request.json();
