@@ -47,9 +47,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
-    other: {
-      "msvalidate.01": "64510573A2D4986B670085502359BB46",
-    },
   },
 };
 
