@@ -15,13 +15,30 @@ const nextConfig: NextConfig = {
       }
     : {
         images: {
-          qualities: [75, 92],
+          formats: ["image/avif", "image/webp"],
+          // Spotify kapakları değişmez; optimize edilmiş halini 30 gün sakla.
+          minimumCacheTTL: 60 * 60 * 24 * 30,
+          qualities: [75, 80, 92],
           remotePatterns: [
             { protocol: "https", hostname: "i.scdn.co", pathname: "/**" },
             { protocol: "https", hostname: "mosaic.scdn.co", pathname: "/**" },
             { protocol: "https", hostname: "image-cdn-ak.spotifycdn.com", pathname: "/**" },
             { protocol: "https", hostname: "image-cdn-fa.spotifycdn.com", pathname: "/**" },
           ],
+        },
+        async headers() {
+          const cache = (value: string) => [{ key: "Cache-Control", value }];
+          return [
+            // Dosya adları hash'li olmadığı için 1 hafta + arka planda yenileme.
+            {
+              source: "/media/:path*",
+              headers: cache("public, max-age=604800, stale-while-revalidate=2592000"),
+            },
+            {
+              source: "/audio/:path*",
+              headers: cache("public, max-age=604800, stale-while-revalidate=2592000"),
+            },
+          ];
         },
       }),
 };

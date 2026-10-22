@@ -106,9 +106,11 @@ export const siteConfig = {
     embedUrl: `https://open.spotify.com/embed/artist/${TARGET_ARTIST_ID}?utm_source=generator&theme=0`,
   },
   media: {
-    falling: "/media/sehinsah-falling.png",
-    bubilet: "/media/sehinsah-bubilet.png",
-    instagram: "/media/storiesdown.webp",
+    falling: "/media/sehinsah-falling.webp",
+    bubilet: "/media/sehinsah-bubilet.webp",
+    /** Sosyal paylaşım önizlemesi (OG/Twitter/JSON-LD) için PNG — crawler uyumu. */
+    bubiletOg: "/media/sehinsah-bubilet.png",
+    instagram: "/media/storiesdown-640.webp",
   },
   designer: {
     name: "@on_r19",

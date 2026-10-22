@@ -85,7 +85,7 @@ export function MenuPreview({ activeId, latestCover }: Props) {
             <div className={`display ${styles.fallback} ${styles.layerPrev}`}>{previous.label}</div>
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={previous.src} alt="" className={`${styles.image} ${styles.layerPrev}`} />
+            <img src={previous.src} alt="" decoding="async" className={`${styles.image} ${styles.layerPrev}`} />
           )
         ) : null}
 
@@ -93,7 +93,7 @@ export function MenuPreview({ activeId, latestCover }: Props) {
           <div className={`display ${styles.fallback} ${styles.layerCurr}`}>{current.label}</div>
         ) : (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={current.src} alt="" className={`${styles.image} ${styles.layerCurr}`} />
+          <img src={current.src} alt="" decoding="async" className={`${styles.image} ${styles.layerCurr}`} />
         )}
       </div>
     </div>

@@ -32,7 +32,13 @@ export function ProductDetail({ product }: Props) {
             <div className={styles.mainImage}>
               {image ? (
                 // eslint-disable-next-line @next/next/no-img-element
-                <img src={assetPath(image)} alt={product.name} className={styles.image} />
+                <img
+                  src={assetPath(image)}
+                  alt={product.name}
+                  className={styles.image}
+                  decoding="async"
+                  fetchPriority="high"
+                />
               ) : (
                 <div className={styles.placeholder}>Görsel bulunamadı</div>
               )}
@@ -48,7 +54,7 @@ export function ProductDetail({ product }: Props) {
                     aria-label={`${product.name} görsel ${i + 1}`}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={assetPath(src)} alt="" />
+                    <img src={assetPath(src)} alt="" loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>

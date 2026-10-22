@@ -3,7 +3,7 @@ import type { Product } from "@/lib/store/types";
 
 /**
  * Yeni ürün eklemek için:
- * 1. Görselleri public/media/store/<id>-1.jpg, <id>-2.jpg ... şeklinde ekle.
+ * 1. Görselleri public/media/store/<id>-1.webp, <id>-2.webp ... şeklinde ekle.
  * 2. Aşağıya yeni bir obje ekle, images: galleryImages("<id>", <görsel sayısı>).
  * id, kategori/fiyat/beden dışında hiçbir yerde tekrar yazılmaz.
  */

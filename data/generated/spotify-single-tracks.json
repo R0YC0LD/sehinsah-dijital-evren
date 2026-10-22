@@ -3,8 +3,31 @@
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
   "allowCollaborations": false,
-  "generatedAt": "2026-09-13T07:54:37.188Z",
+  "generatedAt": "2026-10-23T00:00:00.000Z",
   "tracks": [
+    {
+      "id": "3byoJn9zmed6KfEUEv9Upo",
+      "spotifyId": "3byoJn9zmed6KfEUEv9Upo",
+      "uri": "spotify:track:3byoJn9zmed6KfEUEv9Upo",
+      "spotifyUrl": "https://open.spotify.com/track/3byoJn9zmed6KfEUEv9Upo",
+      "name": "Sodom & Gomore",
+      "durationMs": 0,
+      "albumId": "0wIb1zb5lU5uY6HuK2D8ZL",
+      "albumName": "Sodom & Gomore",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        },
+        {
+          "id": "3yzGegJHrOW1CndMVFoo3m",
+          "name": "Hidra"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "2676GKWWnKEGJVkTZmv2yz",
       "spotifyId": "2676GKWWnKEGJVkTZmv2yz",
@@ -1508,6 +1531,6 @@
     }
   ],
   "counts": {
-    "total": 79
+    "total": 80
   }
 }

@@ -34,7 +34,7 @@ export function MediaImage({
       width={width}
       height={height}
       className={className}
-      quality={92}
+      quality={80}
       priority={priority}
       unoptimized={src.startsWith("data:") || src.startsWith("blob:")}
       onError={() => setFailed(true)}

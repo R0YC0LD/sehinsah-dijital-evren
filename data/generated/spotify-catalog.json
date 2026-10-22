@@ -2,8 +2,33 @@
   "schemaVersion": 4,
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
-  "generatedAt": "2026-09-13T07:55:36.085Z",
+  "generatedAt": "2026-10-23T00:00:00.000Z",
   "releases": [
+    {
+      "id": "0wIb1zb5lU5uY6HuK2D8ZL",
+      "spotifyId": "0wIb1zb5lU5uY6HuK2D8ZL",
+      "objectType": "album",
+      "name": "Sodom & Gomore",
+      "albumType": "single",
+      "releaseDate": "2026-10-23",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27320f25b7044895e0b2b3866b6",
+      "spotifyUrl": "https://open.spotify.com/album/0wIb1zb5lU5uY6HuK2D8ZL",
+      "uri": "spotify:album:0wIb1zb5lU5uY6HuK2D8ZL",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        },
+        {
+          "id": "3yzGegJHrOW1CndMVFoo3m",
+          "name": "Hidra"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "4jMISP7h6NOXiwIjdTujGK",
       "spotifyId": "4jMISP7h6NOXiwIjdTujGK",
@@ -1836,6 +1861,31 @@
   ],
   "singles": [
     {
+      "id": "0wIb1zb5lU5uY6HuK2D8ZL",
+      "spotifyId": "0wIb1zb5lU5uY6HuK2D8ZL",
+      "objectType": "album",
+      "name": "Sodom & Gomore",
+      "albumType": "single",
+      "releaseDate": "2026-10-23",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27320f25b7044895e0b2b3866b6",
+      "spotifyUrl": "https://open.spotify.com/album/0wIb1zb5lU5uY6HuK2D8ZL",
+      "uri": "spotify:album:0wIb1zb5lU5uY6HuK2D8ZL",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        },
+        {
+          "id": "3yzGegJHrOW1CndMVFoo3m",
+          "name": "Hidra"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
       "id": "4jMISP7h6NOXiwIjdTujGK",
       "spotifyId": "4jMISP7h6NOXiwIjdTujGK",
       "objectType": "album",
@@ -3497,31 +3547,35 @@
   ],
   "tracks": [],
   "latestRelease": {
-    "id": "4jMISP7h6NOXiwIjdTujGK",
-    "spotifyId": "4jMISP7h6NOXiwIjdTujGK",
+    "id": "0wIb1zb5lU5uY6HuK2D8ZL",
+    "spotifyId": "0wIb1zb5lU5uY6HuK2D8ZL",
     "objectType": "album",
-    "name": "mavi ay",
+    "name": "Sodom & Gomore",
     "albumType": "single",
-    "releaseDate": "2026-08-07",
+    "releaseDate": "2026-10-23",
     "releaseYear": "2026",
     "totalTracks": 1,
-    "imageUrl": "https://i.scdn.co/image/ab67616d0000b2739cd8e71207b211becf29a0d2",
-    "spotifyUrl": "https://open.spotify.com/album/4jMISP7h6NOXiwIjdTujGK",
-    "uri": "spotify:album:4jMISP7h6NOXiwIjdTujGK",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27320f25b7044895e0b2b3866b6",
+    "spotifyUrl": "https://open.spotify.com/album/0wIb1zb5lU5uY6HuK2D8ZL",
+    "uri": "spotify:album:0wIb1zb5lU5uY6HuK2D8ZL",
     "artists": [
       {
         "id": "0FUsrstJwmg4WVHQMTYuUA",
         "name": "Şehinşah"
+      },
+      {
+        "id": "3yzGegJHrOW1CndMVFoo3m",
+        "name": "Hidra"
       }
     ],
     "containsTargetArtist": true,
     "verified": true
   },
   "counts": {
-    "total": 83,
+    "total": 84,
     "albums": 4,
-    "singles": 79,
+    "singles": 80,
     "tracks": 0
   },
-  "updatedAt": "2026-09-13T07:55:36.086Z"
+  "updatedAt": "2026-10-23T00:00:00.000Z"
 }

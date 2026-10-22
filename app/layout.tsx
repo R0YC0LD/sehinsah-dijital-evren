@@ -36,13 +36,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     type: "website",
     locale: "tr_TR",
-    images: [{ url: siteConfig.media.bubilet, width: 960, height: 960 }],
+    images: [{ url: siteConfig.media.bubiletOg, width: 960, height: 960 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    images: [siteConfig.media.bubilet],
+    images: [siteConfig.media.bubiletOg],
   },
   robots: { index: true, follow: true },
   verification: {
@@ -56,7 +56,7 @@ const musicGroupJsonLd = {
   name: siteConfig.displayName,
   alternateName: [siteConfig.artistName, "Ufuk Yıkılmaz", "HSNSBBH"],
   url: siteUrl,
-  image: `${siteUrl}${siteConfig.media.bubilet}`,
+  image: `${siteUrl}${siteConfig.media.bubiletOg}`,
   genre: "Hip Hop",
   sameAs: [
     siteConfig.links.spotifyArtist,
@@ -80,6 +80,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="tr" className={`${anton.variable} ${space.variable}`}>
+      <head>
+        {/* Spotify iframe API + embed: bağlantıyı önceden kur (müzik başlatma kapısı hızlanır). */}
+        <link rel="preconnect" href="https://open.spotify.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://i.scdn.co" />
+      </head>
       <body>
         <script
           type="application/ld+json"

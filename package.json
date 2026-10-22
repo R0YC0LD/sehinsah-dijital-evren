@@ -13,7 +13,8 @@
     "sync:spotify": "node scripts/sync-spotify.mjs",
     "migrate:catalog": "node scripts/migrate-catalog.mjs",
     "purge:catalog": "node scripts/purge-contaminated-catalog.mjs",
-    "build:singles": "node scripts/build-single-tracks.mjs"
+    "build:singles": "node scripts/build-single-tracks.mjs",
+    "optimize:images": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@upstash/redis": "^1.38.4",

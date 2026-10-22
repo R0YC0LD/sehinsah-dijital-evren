@@ -11,7 +11,10 @@ import {
   emptyCatalog,
   normalizeAlbum,
 } from "@/lib/spotify/normalize";
-import { getVerifiedSingleTracks } from "@/lib/spotify/single-tracks";
+import {
+  getVerifiedSingleTracks,
+  getVerifiedSingleTracksWithLive,
+} from "@/lib/spotify/single-tracks";
 import type { MusicCatalog, SpotifyRawAlbum, SpotifyTrack } from "@/lib/spotify/types";
 
 type AlbumsPage = {
@@ -45,7 +48,32 @@ async function fetchAllAlbums(artistId: string, market: string): Promise<Spotify
   return collected;
 }
 
-async function loadLiveCatalog(): Promise<MusicCatalog> {
+/**
+ * Build sırasında onlarca sayfa aynı anda kataloğu ister; her biri ~10 sayfalık
+ * Spotify isteği yapınca 429 (rate limit) alınıp JSON'a düşülüyordu. Aynı süreçteki
+ * çağrılar tek isteği paylaşır; başarısız olursa kısa süre tekrar denenmez
+ * (Spotify 429'da Retry-After saatlerce sürebilir, ısrar etmek süreyi uzatır).
+ */
+let liveShared: { at: number; ok: boolean; promise: Promise<MusicCatalog> } | null = null;
+const LIVE_SHARE_MS = 60_000;
+const LIVE_FAIL_COOLDOWN_MS = 5 * 60_000;
+
+function loadLiveCatalog(): Promise<MusicCatalog> {
+  if (liveShared) {
+    const age = Date.now() - liveShared.at;
+    if (age < (liveShared.ok ? LIVE_SHARE_MS : LIVE_FAIL_COOLDOWN_MS)) {
+      return liveShared.promise;
+    }
+  }
+  const entry = { at: Date.now(), ok: true, promise: fetchLiveCatalog() };
+  entry.promise.catch(() => {
+    entry.ok = false;
+  });
+  liveShared = entry;
+  return entry.promise;
+}
+
+async function fetchLiveCatalog(): Promise<MusicCatalog> {
   if (!hasSpotifyCredentials()) {
     return getGeneratedSpotifyCatalog();
   }
@@ -54,7 +82,7 @@ async function loadLiveCatalog(): Promise<MusicCatalog> {
   const market = process.env.SPOTIFY_MARKET || "TR";
   const raw = await fetchAllAlbums(artistId, market);
   const releases = dedupeAlbums(raw.map(normalizeAlbum).filter((r) => r.verified));
-  const verifiedSingleTracks = await getVerifiedSingleTracks();
+  const verifiedSingleTracks = await getVerifiedSingleTracksWithLive(releases);
   return buildMusicCatalog(releases, "live-cache", new Date().toISOString(), [], verifiedSingleTracks);
 }
 

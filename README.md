@@ -47,6 +47,17 @@ npm run purge:catalog   # Spotify album page artist-ID audit
 npm run verify:spotify
 ```
 
+### Otomatik senkronizasyon (Vercel)
+
+Yeni çıkan tekli/EP, ek bir işlem gerekmeden siteye gelir:
+
+1. Albüm listesi `SPOTIFY_REVALIDATE_SECONDS` (varsayılan 6 saat) aralığıyla Spotify API'den yenilenir.
+2. Rastgele çalma kuyruğu (`verifiedSingleTracks`), `data/generated/spotify-single-tracks.json` içinde olmayan yeni sürümlerin parçalarını aynı yenilemede API'den ekler (`getVerifiedSingleTracksWithLive`). Ana sanatçı Şehinşah olmayan parçalar kuyruğa girmez.
+3. API hata verirse (ör. 429 rate limit) site `data/generated/*.json` yedeğine düşer; aynı süreçte 5 dk tekrar denenmez.
+
+Not: Spotify 429'da `Retry-After` saatlerce sürebilir; arka arkaya `npm run build` çalıştırmak (her build API'yi çağırır) limiti tetikler.
+JSON yedeğini güncellemek için: `npm run sync:spotify` ve `npm run build:singles`.
+
 ### Verified catalog fallback
 
 1. Vercel live Spotify cache (`spotify-sehinsah-catalog-v4`)

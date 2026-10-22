@@ -24,12 +24,20 @@ export function ProductRevealImage({ src, alt, className }: Props) {
       onTouchEnd={() => setActive(false)}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={assetPath(src)} alt={alt} className={styles.base} />
+      <img
+        src={assetPath(src)}
+        alt={alt}
+        className={styles.base}
+        loading="lazy"
+        decoding="async"
+      />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={assetPath(REVEAL_SRC)}
         alt=""
         aria-hidden="true"
+        loading="lazy"
+        decoding="async"
         className={`${styles.reveal} ${active ? styles.revealActive : ""}`}
       />
     </div>
