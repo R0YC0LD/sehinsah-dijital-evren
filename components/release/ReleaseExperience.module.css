@@ -276,42 +276,6 @@
   border: 0;
 }
 
-.lyrics {
-  display: grid;
-  gap: 0.85rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--line);
-}
-
-.lyricsTitle {
-  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
-}
-
-.lyricsText {
-  white-space: pre-wrap;
-  line-height: 1.85;
-  max-width: 60ch;
-}
-
-.credit {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-.lyricsNote {
-  display: grid;
-  gap: 0.85rem;
-  justify-items: start;
-  color: var(--text-muted);
-  line-height: 1.65;
-  max-width: 52ch;
-  font-size: 0.92rem;
-}
-
-.lyricsLink {
-  color: var(--spotify);
-}
-
 .copyrights {
   display: grid;
   gap: 0.25rem;

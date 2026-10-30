@@ -8,12 +8,11 @@ import {
   type ExperienceTrack,
 } from "@/components/release/ReleaseExperience";
 import styles from "@/components/release/ReleasePage.module.css";
-import { lyrics as lyricsData } from "@/data/lyrics";
 import { siteConfig } from "@/data/site";
-import { isGitHubPages } from "@/lib/deploy";
 import { getReleaseDetail } from "@/lib/release/detail";
 import { formatDuration, formatReleaseDate, releaseTypeLabel } from "@/lib/release/format";
 import { findReleaseBySlug, releaseSlug } from "@/lib/release/slug";
+import { findVideoId } from "@/lib/youtube/match";
 import { getMusicCatalog } from "@/lib/spotify/catalog-service";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -21,13 +20,13 @@ type Params = { slug: string };
 
 export const revalidate = 21600;
 
-/** Vercel'de sayfalar ilk ziyarette üretilip cache'lenir (build'de Spotify'a yük bindirmez). */
-const PREBUILD_LATEST = 6;
-
+/**
+ * Albüm detayları data/generated/release-details.json'dan okunduğu için tüm sayfalar build'de
+ * statik üretilir (Spotify'a istek gitmez). Sonradan eklenen sürümler ilk ziyarette üretilir.
+ */
 export async function generateStaticParams() {
   const catalog = await getMusicCatalog();
-  const list = isGitHubPages() ? catalog.releases : catalog.releases.slice(0, PREBUILD_LATEST);
-  return list.map((r) => ({ slug: releaseSlug(r, catalog.releases) }));
+  return catalog.releases.map((r) => ({ slug: releaseSlug(r, catalog.releases) }));
 }
 
 async function resolve(slug: string) {
@@ -48,7 +47,8 @@ export async function generateMetadata({
   const canonicalSlug = releaseSlug(release, catalog.releases);
   const type = releaseTypeLabel(release);
   const title = `${release.name} — ${siteConfig.displayName}`;
-  const description = `${siteConfig.displayName} – ${release.name} (${type}, ${formatReleaseDate(release.releaseDate)}). Klibi izle, Spotify’da dinle, çıkış tarihi ve parça bilgileri.`;
+  const hasClip = Boolean(findVideoId(release.name, [release.id]));
+  const description = `${siteConfig.displayName} – ${release.name} (${type}, ${formatReleaseDate(release.releaseDate)}). ${hasClip ? "Klibi izle, " : ""}Spotify’da dinle, çıkış tarihi ve parça bilgileri.`;
   const images = release.imageUrl ? [{ url: release.imageUrl, width: 640, height: 640 }] : undefined;
   const url = `${getSiteUrl()}/muzik/${canonicalSlug}`;
 
@@ -97,10 +97,6 @@ export default async function ReleasePage({ params }: { params: Promise<Params> 
     spotifyUrl: t.spotifyUrl,
   }));
   const totalMs = detail.tracks.reduce((sum, t) => sum + t.durationMs, 0);
-
-  const lyricsForRelease = Object.fromEntries(
-    detail.tracks.filter((t) => lyricsData[t.id]).map((t) => [t.id, lyricsData[t.id]]),
-  );
 
   // Komşu yayınlar (iç bağlantı + keşif): bir yeni, üç eski; yoksa tamamlanır.
   const index = catalog.releases.findIndex((r) => r.id === release.id);
@@ -187,7 +183,6 @@ export default async function ReleasePage({ params }: { params: Promise<Params> 
               totalDurationLabel={formatDuration(totalMs)}
               label={detail.label}
               copyrights={detail.copyrights}
-              lyrics={lyricsForRelease}
             />
 
             {neighbours.length ? (

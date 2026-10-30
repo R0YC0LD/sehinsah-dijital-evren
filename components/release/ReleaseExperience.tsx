@@ -32,7 +32,6 @@ type Props = {
   totalDurationLabel: string;
   label: string | null;
   copyrights: string[];
-  lyrics: Record<string, { text: string; credit?: string }>;
 };
 
 type SaveDataConnection = { saveData?: boolean };
@@ -60,7 +59,6 @@ export function ReleaseExperience({
   totalDurationLabel,
   label,
   copyrights,
-  lyrics,
 }: Props) {
   const reduced = useReducedMotion();
   const { pausePlayback } = useSpotifyPlayback();
@@ -102,7 +100,6 @@ export function ReleaseExperience({
     : `https://open.spotify.com/embed/album/${release.id}?utm_source=generator&theme=0`;
   const embedHeight = activeTrack ? 152 : tracks.length > 1 ? 352 : 152;
 
-  const lyricsEntry = activeTrack ? lyrics[activeTrack.id] : undefined;
 
   const toggleSound = useCallback(() => {
     const frame = iframeRef.current?.contentWindow;
@@ -306,29 +303,6 @@ export function ReleaseExperience({
             className={styles.embedFrame}
           />
         </div>
-
-        <section className={styles.lyrics} aria-label="Sözler">
-          <h2 className={`display ${styles.lyricsTitle}`}>SÖZLER</h2>
-          {lyricsEntry ? (
-            <>
-              <p className={styles.lyricsText}>{lyricsEntry.text}</p>
-              {lyricsEntry.credit ? <p className={styles.credit}>{lyricsEntry.credit}</p> : null}
-            </>
-          ) : (
-            <p className={styles.lyricsNote}>
-              Sözler telif kapsamında olduğu için burada yayınlanmıyor. Spotify uygulamasında şarkıyı
-              açıp zamanlı sözlerle birlikte dinleyebilirsin.
-              <a
-                className={`editorial-link ${styles.lyricsLink}`}
-                href={activeTrack?.spotifyUrl ?? release.spotifyUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                SÖZLERLE DİNLE ↗
-              </a>
-            </p>
-          )}
-        </section>
 
         {copyrights.length ? (
           <div className={styles.copyrights}>

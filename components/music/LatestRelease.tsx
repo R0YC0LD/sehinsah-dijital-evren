@@ -95,7 +95,7 @@ export function LatestRelease({ release, all = [] }: Props) {
       {safe ? (
         <div className={styles.links}>
           <Link href={`/muzik/${releaseSlug(release, all)}`} className={styles.page}>
-            KLİP VE DETAYLAR →
+            PARÇA SAYFASI →
           </Link>
           <ExternalLink href={release.spotifyUrl} className={styles.cta}>
             {siteConfig.music.listenLabel}

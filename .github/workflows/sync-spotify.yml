@@ -36,6 +36,16 @@ jobs:
           SPOTIFY_MARKET: TR
         run: node scripts/auto-sync-releases.mjs
 
+      # Parça sayfaları için yeni sürümlerin parça listesi/etiket/telif bilgisi (eksik olanlar).
+      - name: Sürüm detaylarını çek
+        id: details
+        continue-on-error: true
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_MARKET: TR
+        run: node scripts/sync-release-details.mjs
+
       # Parça sayfalarındaki klipler resmî kanalın RSS'inden eşleşir. Kritik değil:
       # YouTube'a ulaşılamazsa Spotify senkronu yine de çalışır.
       - name: YouTube videolarını çek
@@ -50,7 +60,7 @@ jobs:
           node scripts/verify-single-tracks.mjs
 
       - name: Commit ve push
-        if: steps.sync.outputs.changed == 'true' || steps.yt.outputs.changed == 'true'
+        if: steps.sync.outputs.changed == 'true' || steps.details.outputs.changed == 'true' || steps.yt.outputs.changed == 'true'
         env:
           SUMMARY: ${{ steps.sync.outputs.summary }}
         run: |
@@ -60,7 +70,7 @@ jobs:
           if [ -n "${SUMMARY}" ]; then
             git commit -m "Auto-sync: yeni Spotify sürümü — ${SUMMARY}"
           else
-            git commit -m "Auto-sync: YouTube video listesi güncellendi"
+            git commit -m "Auto-sync: sürüm detayları / YouTube listesi güncellendi"
           fi
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"

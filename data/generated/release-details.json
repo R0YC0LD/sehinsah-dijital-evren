@@ -1,0 +1,3888 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-30T10:25:38.961Z",
+  "details": {
+    "5yotNaBNQlkf5VoWQc4ZaT": {
+      "tracks": [
+        {
+          "id": "57nmhwF2m4de6U9SK6SEC2",
+          "name": "70'lik",
+          "trackNumber": 1,
+          "durationMs": 151483,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/57nmhwF2m4de6U9SK6SEC2"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Şehinşah Music",
+        "℗ 2026 Şehinşah Music"
+      ]
+    },
+    "0wIb1zb5lU5uY6HuK2D8ZL": {
+      "tracks": [
+        {
+          "id": "3byoJn9zmed6KfEUEv9Upo",
+          "name": "Sodom & Gomore",
+          "trackNumber": 1,
+          "durationMs": 178025,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3byoJn9zmed6KfEUEv9Upo"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Şehinşah Music",
+        "℗ 2026 Şehinşah Music"
+      ]
+    },
+    "4jMISP7h6NOXiwIjdTujGK": {
+      "tracks": [
+        {
+          "id": "2676GKWWnKEGJVkTZmv2yz",
+          "name": "mavi ay",
+          "trackNumber": 1,
+          "durationMs": 194122,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2676GKWWnKEGJVkTZmv2yz"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Şehinşah Music",
+        "℗ 2026 Şehinşah Music"
+      ]
+    },
+    "2aTmzuUvKITVuP2qBnrvvD": {
+      "tracks": [
+        {
+          "id": "0flGs6oE7iHhDnnynJ4mV5",
+          "name": "entropi",
+          "trackNumber": 1,
+          "durationMs": 144011,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0flGs6oE7iHhDnnynJ4mV5"
+        },
+        {
+          "id": "5Q0c0aALuW0hH5WmpTgMkA",
+          "name": "bu aşk / haram",
+          "trackNumber": 2,
+          "durationMs": 192162,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5Q0c0aALuW0hH5WmpTgMkA"
+        },
+        {
+          "id": "3QQheFLmpqaVU5VAoWI9Pk",
+          "name": "çivi",
+          "trackNumber": 3,
+          "durationMs": 130360,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3QQheFLmpqaVU5VAoWI9Pk"
+        },
+        {
+          "id": "4CgnVrhceDcbOAZ7IEcjBu",
+          "name": "plajda",
+          "trackNumber": 4,
+          "durationMs": 150229,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4CgnVrhceDcbOAZ7IEcjBu"
+        },
+        {
+          "id": "3KoYKLyG6ljWIwarSi2PUi",
+          "name": "yAllah",
+          "trackNumber": 5,
+          "durationMs": 111846,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3KoYKLyG6ljWIwarSi2PUi"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Şehinşah Music",
+        "℗ 2026 Şehinşah Music"
+      ]
+    },
+    "0TiW19cwPu2FnmR0WcpDXI": {
+      "tracks": [
+        {
+          "id": "5gxVxiJ0hOwbPiFduw5M3O",
+          "name": "Benim Adım Arda",
+          "trackNumber": 1,
+          "durationMs": 142800,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "1fCfko2pBGowIzqjakqxF8",
+              "name": "Arda Gezer"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5gxVxiJ0hOwbPiFduw5M3O"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Muonwaves",
+        "℗ 2026 Muonwaves"
+      ]
+    },
+    "1Mo5oelvoh3LVOSEEG8QZ6": {
+      "tracks": [
+        {
+          "id": "3gh5hnbfkrzu67Y1fZScny",
+          "name": "TakaTuka Freestyle",
+          "trackNumber": 1,
+          "durationMs": 161307,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "419dPBqnjp9M1SPNlne291",
+              "name": "Furkan Karakılıç"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4ggPxt5YPNtQ1RgwKComXu",
+              "name": "Alara Serena"
+            },
+            {
+              "id": "6GZ5blQeNSqqLlRtyLBgbZ",
+              "name": "Armo DD"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3gh5hnbfkrzu67Y1fZScny"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Fuego House",
+        "℗ 2026 Fuego House"
+      ]
+    },
+    "5iG9dUUVurewjfXYPhvOYB": {
+      "tracks": [
+        {
+          "id": "77XRjnZN6DAdcWlILhauTm",
+          "name": "NASINASI?",
+          "trackNumber": 1,
+          "durationMs": 185806,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/77XRjnZN6DAdcWlILhauTm"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Harman Müzik",
+        "℗ 2026 Harman Müzik"
+      ]
+    },
+    "7yXKu5sXCZmZmEAc723mIp": {
+      "tracks": [
+        {
+          "id": "0AYg0HCbxjwP0sT8IXOZyT",
+          "name": "INVIDIA",
+          "trackNumber": 1,
+          "durationMs": 190800,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0AYg0HCbxjwP0sT8IXOZyT"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 SALIGIA",
+        "℗ 2025 SALIGIA"
+      ]
+    },
+    "5zZ47YzgUVZg5UDQHjwtRj": {
+      "tracks": [
+        {
+          "id": "4wzmePxgaOLUl6EM1UgMSw",
+          "name": "LAMINE YAMAL",
+          "trackNumber": 1,
+          "durationMs": 120888,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "6YbNNIHUsoTsgqNVTq3hOD",
+              "name": "Sdrk"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4wzmePxgaOLUl6EM1UgMSw"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 Sdrk x Şehinşah",
+        "℗ 2025 Sdrk x Şehinşah"
+      ]
+    },
+    "324e9L1mSokIumw2XSrEad": {
+      "tracks": [
+        {
+          "id": "1YF6UWtSijb1jb7YJzlCcR",
+          "name": "Memleketim",
+          "trackNumber": 1,
+          "durationMs": 157894,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1YF6UWtSijb1jb7YJzlCcR"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© (C) 2025 Mythic",
+        "℗ (P) 2025 MYTHIC"
+      ]
+    },
+    "2MwagD7XKpTnUqyRirveSx": {
+      "tracks": [
+        {
+          "id": "76yCAwC8ga7MHw0YwCAoFG",
+          "name": "Eskisi Gibi",
+          "trackNumber": 1,
+          "durationMs": 217402,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "5OfySHN9d6qy3USJVbrFbt",
+              "name": "Rollen"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/76yCAwC8ga7MHw0YwCAoFG"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 DMC",
+        "℗ 2025 DMC"
+      ]
+    },
+    "3ZaP5zCyEwGqXYLU2MlySS": {
+      "tracks": [
+        {
+          "id": "5AGllcYU3beNx7NdJuLtPt",
+          "name": "BLACKROCK",
+          "trackNumber": 1,
+          "durationMs": 147689,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "0OR34vxRvcPuyDK9s7EuQ8",
+              "name": "Cotard"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5AGllcYU3beNx7NdJuLtPt"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 KROMVISION",
+        "℗ 2025 KROMVISION"
+      ]
+    },
+    "1W1OihzMtKpGcwXVJU2ncw": {
+      "tracks": [
+        {
+          "id": "1tz8sYO5GWaMWf4RCJDpy4",
+          "name": "Cheval Blanc",
+          "trackNumber": 1,
+          "durationMs": 156923,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1tz8sYO5GWaMWf4RCJDpy4"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 Karma Company",
+        "℗ 2025 Karma Company"
+      ]
+    },
+    "77kh4b22L5QCCIZhXsUOU2": {
+      "tracks": [
+        {
+          "id": "3UOyVyApCP7vGVuIsPxnZp",
+          "name": "FUTAŞK",
+          "trackNumber": 1,
+          "durationMs": 121500,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3UOyVyApCP7vGVuIsPxnZp"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 Karma Company",
+        "℗ 2025 Karma Company"
+      ]
+    },
+    "1xNzac76pyGW65UbQ15Jpn": {
+      "tracks": [
+        {
+          "id": "0bvsV2THvrNj9tQm0yvfTn",
+          "name": "ESKİ OKUL",
+          "trackNumber": 1,
+          "durationMs": 198159,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "797U4xKy4p5Vi8vpWzJRD6",
+              "name": "Berkay Duman"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0bvsV2THvrNj9tQm0yvfTn"
+        },
+        {
+          "id": "55165JMHqaUWug3n2Rurpx",
+          "name": "2PAC MI WUTANG MI",
+          "trackNumber": 2,
+          "durationMs": 157611,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "797U4xKy4p5Vi8vpWzJRD6",
+              "name": "Berkay Duman"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/55165JMHqaUWug3n2Rurpx"
+        },
+        {
+          "id": "6dvoNVS71gDVpwPCpWaoY5",
+          "name": "TYGA",
+          "trackNumber": 3,
+          "durationMs": 200312,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "797U4xKy4p5Vi8vpWzJRD6",
+              "name": "Berkay Duman"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6dvoNVS71gDVpwPCpWaoY5"
+        },
+        {
+          "id": "1NAP82oVz8KjqAQCbvMNI3",
+          "name": "BU GECENİN YILDIZI KİM",
+          "trackNumber": 4,
+          "durationMs": 167032,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "797U4xKy4p5Vi8vpWzJRD6",
+              "name": "Berkay Duman"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1NAP82oVz8KjqAQCbvMNI3"
+        },
+        {
+          "id": "6DzjRYkm0TeO1sMsiFrjmB",
+          "name": "HERKES SAVAŞ İSTİYOR",
+          "trackNumber": 5,
+          "durationMs": 286153,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "797U4xKy4p5Vi8vpWzJRD6",
+              "name": "Berkay Duman"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6DzjRYkm0TeO1sMsiFrjmB"
+        },
+        {
+          "id": "6ZBWcsfaLYIQQWbG93b79V",
+          "name": "YA PARA YA CANIN",
+          "trackNumber": 6,
+          "durationMs": 240000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "797U4xKy4p5Vi8vpWzJRD6",
+              "name": "Berkay Duman"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6ZBWcsfaLYIQQWbG93b79V"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2025 helpcompany",
+        "℗ 2025 helpcompany"
+      ]
+    },
+    "2mUZZJGMOMvL5IUIqD5anA": {
+      "tracks": [
+        {
+          "id": "3riHsraRxIFfLLy7n3T8mq",
+          "name": "KBR",
+          "trackNumber": 1,
+          "durationMs": 143181,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3riHsraRxIFfLLy7n3T8mq"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Karma Company",
+        "℗ 2024 Karma Company"
+      ]
+    },
+    "7uTRfHeplUuIyM0xER7BQX": {
+      "tracks": [
+        {
+          "id": "0uTmb3dc18w4Ues60lkhXZ",
+          "name": "PEAK POINT",
+          "trackNumber": 1,
+          "durationMs": 212800,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "1dGA9uX28qcaFQOvXZno42",
+              "name": "Ohash"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0uTmb3dc18w4Ues60lkhXZ"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Sound of World",
+        "℗ 2024 Sound of World"
+      ]
+    },
+    "5voJxrRtxgo8dvWVvggyEO": {
+      "tracks": [
+        {
+          "id": "6YnoKIC8l4K9epOR9GvgwQ",
+          "name": "BANA NE",
+          "trackNumber": 1,
+          "durationMs": 195000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "4HSiNCPhdU2snKaVJytlUM",
+              "name": "Zen-G"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6YnoKIC8l4K9epOR9GvgwQ"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "℗ (P) 2024 SONY MUSIC TURKEY"
+      ]
+    },
+    "1t5ZDQ8TsZw9bP2UQS1n2n": {
+      "tracks": [
+        {
+          "id": "3Pj1t1EuAF7dBeuco1S7ai",
+          "name": "Tanrıyı Kıyamete Zorlama",
+          "trackNumber": 1,
+          "durationMs": 167653,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "02DLpTPfY9uEAEvKdz3RBZ",
+              "name": "Birand"
+            },
+            {
+              "id": "4HIZEEXzPaPFLbicwA1Uh5",
+              "name": "Auxibeatz"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3Pj1t1EuAF7dBeuco1S7ai"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Reckol Music",
+        "℗ 2024 Reckol Music"
+      ]
+    },
+    "3ZyPooMmaV1rw9disOgtgd": {
+      "tracks": [
+        {
+          "id": "3tMsxep3pRGMUyCCkg5p9Y",
+          "name": "Meclis-i Ala",
+          "trackNumber": 1,
+          "durationMs": 229090,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3tMsxep3pRGMUyCCkg5p9Y"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© (C) 2024 Sinerji",
+        "℗ (P) 2024 Sinerji"
+      ]
+    },
+    "71XO36BFl6oSFi7prjhyL3": {
+      "tracks": [
+        {
+          "id": "34zeF2M1eQT6mSr8iRLHqa",
+          "name": "Deliyoo",
+          "trackNumber": 1,
+          "durationMs": 202608,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "1fCfko2pBGowIzqjakqxF8",
+              "name": "Arda Gezer"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2r8iLFeSTuOiZualHmSXxS",
+              "name": "Patron"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/34zeF2M1eQT6mSr8iRLHqa"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Muonwaves",
+        "℗ 2024 Muonwaves"
+      ]
+    },
+    "6pdFHFbeC3j4QMdsuDhmWj": {
+      "tracks": [
+        {
+          "id": "7wMfoWCqNIkyvsUsWUHtYy",
+          "name": "UFUKMANIA",
+          "trackNumber": 1,
+          "durationMs": 143624,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7wMfoWCqNIkyvsUsWUHtYy"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "℗ (P) 2024 Imge Yapim"
+      ]
+    },
+    "0FzybsrMkrplViiOHqNFvL": {
+      "tracks": [
+        {
+          "id": "1HtT0CVW7SbMiECVEPOiO5",
+          "name": "Sönük Kaldın",
+          "trackNumber": 1,
+          "durationMs": 252000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "1RltulqsGXX8jN82sxZHpp",
+              "name": "Xentix"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1HtT0CVW7SbMiECVEPOiO5"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Balentinos",
+        "℗ 2024 Balentinos"
+      ]
+    },
+    "1zkZPiKRqqVJPKIqap3SU8": {
+      "tracks": [
+        {
+          "id": "35VWXdXlh4gIWUONVy1fX0",
+          "name": "C.IĞERTO",
+          "trackNumber": 1,
+          "durationMs": 111428,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/35VWXdXlh4gIWUONVy1fX0"
+        },
+        {
+          "id": "6z0jWOLEmVEhxvaCg04SwR",
+          "name": "CIRCUS",
+          "trackNumber": 2,
+          "durationMs": 208453,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6z0jWOLEmVEhxvaCg04SwR"
+        },
+        {
+          "id": "05GP2lRCfMoAtWT8E3g1wq",
+          "name": "DERİN AŞK",
+          "trackNumber": 3,
+          "durationMs": 226363,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/05GP2lRCfMoAtWT8E3g1wq"
+        },
+        {
+          "id": "5MAtg2Rw8u3jEdl8cFDWbG",
+          "name": "IKARUS",
+          "trackNumber": 4,
+          "durationMs": 218344,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5MAtg2Rw8u3jEdl8cFDWbG"
+        },
+        {
+          "id": "4noSWXhn3pLxl4EPKXUjC6",
+          "name": "YARIM YAMALAK",
+          "trackNumber": 5,
+          "durationMs": 178909,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4noSWXhn3pLxl4EPKXUjC6"
+        },
+        {
+          "id": "3HRKPJDoSnGTkWysb7krf2",
+          "name": "BANA SEN GEREK",
+          "trackNumber": 6,
+          "durationMs": 173419,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3HRKPJDoSnGTkWysb7krf2"
+        },
+        {
+          "id": "1UwqT7LDL8rarnQxiLu4DZ",
+          "name": "SUİKAST MEVSİMİ",
+          "trackNumber": 7,
+          "durationMs": 148153,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "6bGOmNBU1AOgttgOjh0ldf",
+              "name": "Ati242"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1UwqT7LDL8rarnQxiLu4DZ"
+        },
+        {
+          "id": "6eRrYxdVRdyDFpAAi87GTC",
+          "name": "DAİM",
+          "trackNumber": 8,
+          "durationMs": 247031,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6eRrYxdVRdyDFpAAi87GTC"
+        },
+        {
+          "id": "0A4BAe7wI41snChuUfvuWH",
+          "name": "NEFES ALAMA",
+          "trackNumber": 9,
+          "durationMs": 189060,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0A4BAe7wI41snChuUfvuWH"
+        },
+        {
+          "id": "4Ud9LlKVjksGKLveddyvjM",
+          "name": "KIRMIZI",
+          "trackNumber": 10,
+          "durationMs": 211555,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4Ud9LlKVjksGKLveddyvjM"
+        },
+        {
+          "id": "7n9ePpml2uPmOPf7N5TnVm",
+          "name": "DPRSYN/GEMİLER",
+          "trackNumber": 11,
+          "durationMs": 219197,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7n9ePpml2uPmOPf7N5TnVm"
+        },
+        {
+          "id": "2sKjgYlKYBQl8c8rKJWphA",
+          "name": "ANILAR/EFLATUN",
+          "trackNumber": 12,
+          "durationMs": 216610,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2sKjgYlKYBQl8c8rKJWphA"
+        },
+        {
+          "id": "4MAI6puiwuwi9ZT6ETSOza",
+          "name": "NEYİN UĞRUNA/TAVŞAN",
+          "trackNumber": 13,
+          "durationMs": 254040,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4MAI6puiwuwi9ZT6ETSOza"
+        },
+        {
+          "id": "7wVEpYXPQrafkTq496iLW9",
+          "name": "DAADOH",
+          "trackNumber": 14,
+          "durationMs": 223035,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "1hFmJ0sdTBcAQpjq2fx6Ky",
+              "name": "Archie"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7wVEpYXPQrafkTq496iLW9"
+        },
+        {
+          "id": "2HeRgDn3IgXBAXPsneq9do",
+          "name": "SU",
+          "trackNumber": 15,
+          "durationMs": 216681,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2HeRgDn3IgXBAXPsneq9do"
+        },
+        {
+          "id": "0QKtlVn6UKK3It7aq3GMDa",
+          "name": "BABAROBLOX",
+          "trackNumber": 16,
+          "durationMs": 160124,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "0WlggLYFu5tLA88ip484Ve",
+              "name": "Atlas"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0QKtlVn6UKK3It7aq3GMDa"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Karma Company",
+        "℗ 2024 Karma Company"
+      ]
+    },
+    "7judDMxvhfm8dqBae5T17i": {
+      "tracks": [
+        {
+          "id": "2bMqzC7XDi9HwUg3Rlv6WU",
+          "name": "Havadis",
+          "trackNumber": 1,
+          "durationMs": 192000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "3gT9Z8pVuqk2Rvl52J5W71",
+              "name": "Alba"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2bMqzC7XDi9HwUg3Rlv6WU"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 M.O.B Entertainment Associated Label Of Apollon Unity",
+        "℗ 2024 M.O.B Entertainment Associated Label Of Apollon Unity"
+      ]
+    },
+    "049jPvA9iOQZy7Jt9KPM0q": {
+      "tracks": [
+        {
+          "id": "6EtJWgmED5K4zL55g6hxfF",
+          "name": "DAİM",
+          "trackNumber": 1,
+          "durationMs": 247031,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6EtJWgmED5K4zL55g6hxfF"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Karma Company",
+        "℗ 2024 Karma Company"
+      ]
+    },
+    "3cHnTYTcjEvbTVlPrVYny4": {
+      "tracks": [
+        {
+          "id": "70UianNaU6egim5vxSSPJT",
+          "name": "IKARUS",
+          "trackNumber": 1,
+          "durationMs": 218344,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/70UianNaU6egim5vxSSPJT"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Karma Company",
+        "℗ 2024 Karma Company"
+      ]
+    },
+    "60KXppgH6yocRHr0UBZuxP": {
+      "tracks": [
+        {
+          "id": "5wCEnLiq9TeKTNvbc3wSqG",
+          "name": "Kirlendi Tüm Duygularım",
+          "trackNumber": 1,
+          "durationMs": 240500,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2u4xMsh0M2B7R8Wb3pEWae",
+              "name": "Anıl Piyancı"
+            },
+            {
+              "id": "5Pd3tsRa9fj2Q3JPQ0tYEv",
+              "name": "Keişan"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5wCEnLiq9TeKTNvbc3wSqG"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© (C) 2024 Boomers Records",
+        "℗ (P) 2024 Boomers Records"
+      ]
+    },
+    "6gAuTTXm5dvSu8Lgs8Csoo": {
+      "tracks": [
+        {
+          "id": "5kF4UK38kbz5aJ2XuqIdDb",
+          "name": "#PHONKFREESTYLE",
+          "trackNumber": 1,
+          "durationMs": 178775,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "2qW4eDZVrF6mlcuaTBEMjh",
+              "name": "DEHA INC."
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5FqTuN42w2zGw4Pzd50yaS",
+              "name": "Reckol"
+            },
+            {
+              "id": "2ivdJjs8c34cBxVmNI6zSK",
+              "name": "13 Killoki"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5kF4UK38kbz5aJ2XuqIdDb"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2024 Duetti",
+        "℗ 2024 Duetti"
+      ]
+    },
+    "4t6eu3P27YmnmM7nddmix4": {
+      "tracks": [
+        {
+          "id": "0lR72E0ERIhqDi4ZmJcVwq",
+          "name": "Pembe Yalanlar",
+          "trackNumber": 1,
+          "durationMs": 168000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "2ivdJjs8c34cBxVmNI6zSK",
+              "name": "13 Killoki"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0lR72E0ERIhqDi4ZmJcVwq"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© (C) 2023 $INKID$",
+        "℗ (P) 2024 $INKID$"
+      ]
+    },
+    "0GB3rPFXXOG6nggS7ipwAm": {
+      "tracks": [
+        {
+          "id": "6R97ZWEIAdPM733YsJETnx",
+          "name": "Hüsran",
+          "trackNumber": 1,
+          "durationMs": 192000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6R97ZWEIAdPM733YsJETnx"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 DMC",
+        "℗ 2023 DMC"
+      ]
+    },
+    "23htijc8a6yzCdGNW0dK8V": {
+      "tracks": [
+        {
+          "id": "6qfjxJ7Hi8k0fT8ZhkRDds",
+          "name": "Canım Babam",
+          "trackNumber": 1,
+          "durationMs": 140250,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6qfjxJ7Hi8k0fT8ZhkRDds"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 DMC",
+        "℗ 2023 DMC"
+      ]
+    },
+    "5v18t7RZx8i5Fr7TYkHZ6l": {
+      "tracks": [
+        {
+          "id": "4Rl0Y1L2HKyIJr3L0jM3e6",
+          "name": "Darılmak Yok - Hamam Sessions",
+          "trackNumber": 1,
+          "durationMs": 168800,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4Rl0Y1L2HKyIJr3L0jM3e6"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 Mein Global",
+        "℗ 2023 Mein Global"
+      ]
+    },
+    "1CPPRdILLPdn99FcwcJgMW": {
+      "tracks": [
+        {
+          "id": "0LDnrAj2X5Tpk3zxrvHZ1U",
+          "name": "Maymunlar Cehennemi",
+          "trackNumber": 1,
+          "durationMs": 184666,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "7J7IAR4rkzo4FcZTDid3Jk",
+              "name": "Cash Flow"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0LDnrAj2X5Tpk3zxrvHZ1U"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 BLACKFLAG",
+        "℗ 2023 BLACKFLAG"
+      ]
+    },
+    "0bFFfvETEdNUfkJkCRG6d9": {
+      "tracks": [
+        {
+          "id": "0QPJqRMBqaJrOUPVT8FfJc",
+          "name": "CimCimem",
+          "trackNumber": 1,
+          "durationMs": 179069,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0QPJqRMBqaJrOUPVT8FfJc"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 DMC",
+        "℗ 2023 DMC"
+      ]
+    },
+    "7xFfe4vRZ1xLcrRoTgit1W": {
+      "tracks": [
+        {
+          "id": "3YbEPt5omnMtMvvfIWllPd",
+          "name": "KYOTO/GEISHA",
+          "trackNumber": 1,
+          "durationMs": 190588,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "0OR34vxRvcPuyDK9s7EuQ8",
+              "name": "Cotard"
+            },
+            {
+              "id": "5J4Z1x3652wBUvuci5gVXe",
+              "name": "Emrah Turken"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3YbEPt5omnMtMvvfIWllPd"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 DMC",
+        "℗ 2023 DMC"
+      ]
+    },
+    "0XjW92nRHEuASd6hlA06DO": {
+      "tracks": [
+        {
+          "id": "51v8TQVKyIqdRXwqZ2m8C3",
+          "name": "Galvanize",
+          "trackNumber": 1,
+          "durationMs": 177007,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "0OR34vxRvcPuyDK9s7EuQ8",
+              "name": "Cotard"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/51v8TQVKyIqdRXwqZ2m8C3"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 Karma COMPANY",
+        "℗ 2023 Karma COMPANY"
+      ]
+    },
+    "28l0RU15yx5Y1uQ6fVU2DP": {
+      "tracks": [
+        {
+          "id": "3BNpMZza6f33Cyq73ga3zq",
+          "name": "İST/TAKSÎMİ",
+          "trackNumber": 1,
+          "durationMs": 173960,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            },
+            {
+              "id": "5J4Z1x3652wBUvuci5gVXe",
+              "name": "Emrah Turken"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3BNpMZza6f33Cyq73ga3zq"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 DMC",
+        "℗ 2023 DMC"
+      ]
+    },
+    "71kPiLmNbaT0eylc5Ycvdj": {
+      "tracks": [
+        {
+          "id": "4Q5qlkIG6dbFuvH8J6C90H",
+          "name": "Prenses - Remix",
+          "trackNumber": 1,
+          "durationMs": 206572,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5J4Z1x3652wBUvuci5gVXe",
+              "name": "Emrah Turken"
+            },
+            {
+              "id": "0OR34vxRvcPuyDK9s7EuQ8",
+              "name": "Cotard"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4Q5qlkIG6dbFuvH8J6C90H"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 Karma Company",
+        "℗ 2023 Karma Company"
+      ]
+    },
+    "2xhKy3Nm1eazIwWRnA9gys": {
+      "tracks": [
+        {
+          "id": "6aFrqlLs6LUiXE49ApOTOB",
+          "name": "Fırtına",
+          "trackNumber": 1,
+          "durationMs": 171573,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3ijnQoOmFlFrGvYgUZC8tq",
+              "name": "ERU"
+            },
+            {
+              "id": "0OR34vxRvcPuyDK9s7EuQ8",
+              "name": "Cotard"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6aFrqlLs6LUiXE49ApOTOB"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 Karma Company",
+        "℗ 2023 Karma Company"
+      ]
+    },
+    "7H6b2Etlb0ryYF7tqbFbDG": {
+      "tracks": [
+        {
+          "id": "2DR7yVGQpSzrtM2ZmHkfeR",
+          "name": "Prenses",
+          "trackNumber": 1,
+          "durationMs": 188922,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2DR7yVGQpSzrtM2ZmHkfeR"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 Karma Company",
+        "℗ 2023 Karma Company"
+      ]
+    },
+    "73ULtfwtkYnsWG4P6iimO7": {
+      "tracks": [
+        {
+          "id": "0PuwVIrVjnUVdlOrettgyt",
+          "name": "High 2",
+          "trackNumber": 1,
+          "durationMs": 172799,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0PuwVIrVjnUVdlOrettgyt"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© (C) 2023 Mythic",
+        "℗ (P) 2023 Mythic"
+      ]
+    },
+    "3GzZrTChFzvS4KqBNaFWCP": {
+      "tracks": [
+        {
+          "id": "0SATCnv3Wp0WHXK1JrWXjS",
+          "name": "Muz Cumhuriyeti",
+          "trackNumber": 1,
+          "durationMs": 201600,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0SATCnv3Wp0WHXK1JrWXjS"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Karma Company",
+        "℗ 2022 Karma Company"
+      ]
+    },
+    "23ofnyZ4eAhpkk1YH1VVwD": {
+      "tracks": [
+        {
+          "id": "3SymptT0pmueiBoA3GmyOJ",
+          "name": "Ellerinde",
+          "trackNumber": 1,
+          "durationMs": 150000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3SymptT0pmueiBoA3GmyOJ"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Karma Company",
+        "℗ 2022 Karma Company"
+      ]
+    },
+    "7vuH67pbtQuzNvct5WLTF1": {
+      "tracks": [
+        {
+          "id": "54mscLN8V5gJtu9lxthzKc",
+          "name": "Dönmedin Ki",
+          "trackNumber": 1,
+          "durationMs": 201142,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/54mscLN8V5gJtu9lxthzKc"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Karma Company",
+        "℗ 2022 Karma Company"
+      ]
+    },
+    "5PbIpSumw8vKbYYNvvIVMt": {
+      "tracks": [
+        {
+          "id": "4aDXnpTNwKsc9SffOFyy1x",
+          "name": "No Risk No Fun",
+          "trackNumber": 1,
+          "durationMs": 154632,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "5piE2MZ1wGpBjpDud8kTOS",
+              "name": "Defkhan"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4aDXnpTNwKsc9SffOFyy1x"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Copyright Control",
+        "℗ 2022 Defkhan"
+      ]
+    },
+    "5RyMKX3buUPHkhgXT6iFgC": {
+      "tracks": [
+        {
+          "id": "4YxhgD3PhqSivaEu65A9hH",
+          "name": "Yaşamak",
+          "trackNumber": 1,
+          "durationMs": 140331,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "5SCxkbhdPRgE0BRLjODMxw",
+              "name": "Kum"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4YxhgD3PhqSivaEu65A9hH"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Universal Music Türkiye",
+        "℗ 2022 Universal Music Türkiye"
+      ]
+    },
+    "3ENXj1YMBG5r4O0VvQFIoN": {
+      "tracks": [
+        {
+          "id": "58jzAtcCmYW3hTAhSFtU08",
+          "name": "Nefret",
+          "trackNumber": 1,
+          "durationMs": 202000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "1fCfko2pBGowIzqjakqxF8",
+              "name": "Arda Gezer"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "6ppkNaM5kypGlnXcDhgU5n",
+              "name": "SALİ"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/58jzAtcCmYW3hTAhSFtU08"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Back Drop",
+        "℗ 2022 Back Drop"
+      ]
+    },
+    "4U0GvHPCzwSN7UUhmtOfto": {
+      "tracks": [
+        {
+          "id": "6Q2kQGgTN0DNfTEfFecWlK",
+          "name": "Taktik",
+          "trackNumber": 1,
+          "durationMs": 196000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "4uWefYpEJkOi45d95aMokX",
+              "name": "Ebru Keskin"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6Q2kQGgTN0DNfTEfFecWlK"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 DMC",
+        "℗ 2022 DMC"
+      ]
+    },
+    "463e8VUKAZB5i86sUNIRGH": {
+      "tracks": [
+        {
+          "id": "1chtG5ZGNpsSQMi1p4nr2H",
+          "name": "+28 - Tirat",
+          "trackNumber": 1,
+          "durationMs": 171891,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1chtG5ZGNpsSQMi1p4nr2H"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Warner Music Turkey",
+        "℗ 2022 Warner Music Turkey"
+      ]
+    },
+    "6XdehvklsVZ5Ly5nnJAHTv": {
+      "tracks": [
+        {
+          "id": "5NNBCzWMniheJGRkgNrS0v",
+          "name": "Diabolico",
+          "trackNumber": 1,
+          "durationMs": 189913,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5NNBCzWMniheJGRkgNrS0v"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Karma Company",
+        "℗ 2024 Karma Company"
+      ]
+    },
+    "1Aen2zuQGFR5sEWVjBmmLg": {
+      "tracks": [
+        {
+          "id": "3KApIHvSkLWAkAQ0hlkZcO",
+          "name": "Hadi Yaparsın",
+          "trackNumber": 1,
+          "durationMs": 195692,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3KApIHvSkLWAkAQ0hlkZcO"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2022 Karma Company",
+        "℗ 2022 Karma Company"
+      ]
+    },
+    "5SsZm0U0j5D5khXo9SKLku": {
+      "tracks": [
+        {
+          "id": "0SvfsAwKvSrmWa8qANBgbd",
+          "name": "The Face Of Vision",
+          "trackNumber": 1,
+          "durationMs": 141176,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0SvfsAwKvSrmWa8qANBgbd"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2021 Karma Company",
+        "℗ 2021 Karma Company"
+      ]
+    },
+    "1WqBaT9UT7Q1onJHbplcWt": {
+      "tracks": [
+        {
+          "id": "3F0f7Sn5dKdUHJUcyh38mY",
+          "name": "Kader",
+          "trackNumber": 1,
+          "durationMs": 189500,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "2sjnyyL9NXijL3Fr2eLikf",
+              "name": "Aspova"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3F0f7Sn5dKdUHJUcyh38mY"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2021 Masta Jam Music",
+        "℗ 2021 Masta Jam Music"
+      ]
+    },
+    "4cLPDMKyiYMzd1dLUQUHGW": {
+      "tracks": [
+        {
+          "id": "55YjBsQgMfe6t9jRr5WL5N",
+          "name": "MATRIX",
+          "trackNumber": 1,
+          "durationMs": 146483,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "7GREWMFJ4IGk3I9Sco4uDM",
+              "name": "Spade427"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/55YjBsQgMfe6t9jRr5WL5N"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2021 DMC",
+        "℗ 2021 DMC"
+      ]
+    },
+    "72iWjIqFHLOdSwWOucXKWk": {
+      "tracks": [
+        {
+          "id": "4uygtPMHsP9DBlJUb7um4s",
+          "name": "Merhamet Yok",
+          "trackNumber": 1,
+          "durationMs": 194159,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "6D4pFxSoZkmJJnFUtSkWum",
+              "name": "Orkundk"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4uygtPMHsP9DBlJUb7um4s"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2021 Orkundk'nın Tarzı",
+        "℗ 2021 Orkundk'nın Tarzı"
+      ]
+    },
+    "6VXZxNd3ur24KwERIBjFcs": {
+      "tracks": [
+        {
+          "id": "2nEJSn67dyQ1N464MYOYTd",
+          "name": "M.I.Ş",
+          "trackNumber": 1,
+          "durationMs": 155697,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2nEJSn67dyQ1N464MYOYTd"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2021 Back Drop",
+        "℗ 2021 Back Drop"
+      ]
+    },
+    "4pdyikhoyjT1MMmNlmpG1r": {
+      "tracks": [
+        {
+          "id": "64J4NcChlZMjN4YdMCUi9e",
+          "name": "Lanet",
+          "trackNumber": 1,
+          "durationMs": 189500,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "1fCfko2pBGowIzqjakqxF8",
+              "name": "Arda Gezer"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "6zZlaXYNAhaaBsAZ6E6vbv",
+              "name": "Caner Özgür"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/64J4NcChlZMjN4YdMCUi9e"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2021 Back Drop",
+        "℗ 2021 Back Drop"
+      ]
+    },
+    "0AeIqbbkmcj17mSa0Rcp2S": {
+      "tracks": [
+        {
+          "id": "5iXMLvNgau6JF8Ph9oSpaa",
+          "name": "Eksik Olmaz",
+          "trackNumber": 1,
+          "durationMs": 258206,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "3qkg0CxRAQoOSiETJw3kv9",
+              "name": "Atik"
+            },
+            {
+              "id": "3XokumF2rkfpeBOORzl9Nc",
+              "name": "Nosta"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5iXMLvNgau6JF8Ph9oSpaa"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Atik Music",
+        "℗ 2020 Atik Music"
+      ]
+    },
+    "4U2pt8AOmhEh660yHPLMpn": {
+      "tracks": [
+        {
+          "id": "4iGQPuytRzb5vOCfSAYc1f",
+          "name": "Darilmak Yok",
+          "trackNumber": 1,
+          "durationMs": 166956,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4iGQPuytRzb5vOCfSAYc1f"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Karma Company",
+        "℗ 2020 Karma Company"
+      ]
+    },
+    "07cwiM7nU3jXF6J9UgXdCd": {
+      "tracks": [
+        {
+          "id": "07WeKoN0DFcUOEbctyLvG9",
+          "name": "Dön Dünya",
+          "trackNumber": 1,
+          "durationMs": 186382,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2AWUCT9xtcvkjpFq1ZgpPj",
+              "name": "Cem Adrian"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/07WeKoN0DFcUOEbctyLvG9"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "℗ (P) 2020 Umuttan Cocuklar Dernegi"
+      ]
+    },
+    "1IOByJLwwmG0z16dSBiHAK": {
+      "tracks": [
+        {
+          "id": "1cinkFhTDqovUNDqmS0wir",
+          "name": "Kunteper",
+          "trackNumber": 1,
+          "durationMs": 230400,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1cinkFhTDqovUNDqmS0wir"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Karma Company",
+        "℗ 2020 Karma Company"
+      ]
+    },
+    "6cWS5yrVFflrNt7o7eWgqx": {
+      "tracks": [
+        {
+          "id": "2IRzFsPP8rDhiAxKQAeWwv",
+          "name": "Intro",
+          "trackNumber": 1,
+          "durationMs": 151081,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2IRzFsPP8rDhiAxKQAeWwv"
+        },
+        {
+          "id": "6oSobG42Ersf0yblZreXdF",
+          "name": "Sür Ya da Öl",
+          "trackNumber": 2,
+          "durationMs": 163513,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5G3OUmDl3R4rEn9zSWZTpw",
+              "name": "Lia Shine"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6oSobG42Ersf0yblZreXdF"
+        },
+        {
+          "id": "7dtOPFRd3b9mOyjprAGzBH",
+          "name": "Sendeliyorum",
+          "trackNumber": 3,
+          "durationMs": 261756,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7dtOPFRd3b9mOyjprAGzBH"
+        },
+        {
+          "id": "5viDChaLQOtPXZbiMfN33E",
+          "name": "En Eskiden Beri",
+          "trackNumber": 4,
+          "durationMs": 191934,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5viDChaLQOtPXZbiMfN33E"
+        },
+        {
+          "id": "1tA7LamdGgIaZc3EvHuYru",
+          "name": "Labirent",
+          "trackNumber": 5,
+          "durationMs": 194377,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1tA7LamdGgIaZc3EvHuYru"
+        },
+        {
+          "id": "0cdP17iPfCBpBREYIILzDY",
+          "name": "Rehabilite",
+          "trackNumber": 6,
+          "durationMs": 196351,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0cdP17iPfCBpBREYIILzDY"
+        },
+        {
+          "id": "75hVZKeyOHlTHz6uE9bzh5",
+          "name": "Az",
+          "trackNumber": 7,
+          "durationMs": 193513,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/75hVZKeyOHlTHz6uE9bzh5"
+        },
+        {
+          "id": "0he2EhZt69IH0KL7hCDagI",
+          "name": "Türlü Bela",
+          "trackNumber": 8,
+          "durationMs": 251891,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0he2EhZt69IH0KL7hCDagI"
+        },
+        {
+          "id": "6qEThHY9Q7vJAfHvwObcwN",
+          "name": "Dilemma x Kuytu",
+          "trackNumber": 9,
+          "durationMs": 227113,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6qEThHY9Q7vJAfHvwObcwN"
+        },
+        {
+          "id": "2enqH8Zesjg30xWrld93al",
+          "name": "Outro",
+          "trackNumber": 10,
+          "durationMs": 97297,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2enqH8Zesjg30xWrld93al"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Karma Company",
+        "℗ 2020 Karma Company"
+      ]
+    },
+    "5yaxVfXufzc45KT737K90f": {
+      "tracks": [
+        {
+          "id": "3ZppLjhSBw0pWMQU3kRee1",
+          "name": "Ihtan - Groovypedia Live",
+          "trackNumber": 1,
+          "durationMs": 234771,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2QU0UNvQvEZ2fuRUhkUNq4",
+              "name": "Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3ZppLjhSBw0pWMQU3kRee1"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Groovypedia",
+        "℗ 2020 Groovypedia"
+      ]
+    },
+    "4GLUe5UzDTd2WAkZPsqeVu": {
+      "tracks": [
+        {
+          "id": "3zgyg8bLpOKP08GuhpKiC0",
+          "name": "Trump",
+          "trackNumber": 1,
+          "durationMs": 148149,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3zgyg8bLpOKP08GuhpKiC0"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Karma Company",
+        "℗ 2020 Karma Company"
+      ]
+    },
+    "1C3dfqkn5Q9qoMjYtJNmGX": {
+      "tracks": [
+        {
+          "id": "0stSrcHk2lZdjp03JpP6A2",
+          "name": "Baban",
+          "trackNumber": 1,
+          "durationMs": 278074,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0stSrcHk2lZdjp03JpP6A2"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 DMC",
+        "℗ 2020 DMC"
+      ]
+    },
+    "4THM0v0TgGHbQClcWVLza1": {
+      "tracks": [
+        {
+          "id": "5cJ30Ohp1oh5JUTNmU82IO",
+          "name": "İmza",
+          "trackNumber": 1,
+          "durationMs": 400592,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5cJ30Ohp1oh5JUTNmU82IO"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 DMC",
+        "℗ 2019 DMC"
+      ]
+    },
+    "1GIkj7GCcjfto5jWBKoTe1": {
+      "tracks": [
+        {
+          "id": "4iNbwWxqMqI7FB7F6fSY6Z",
+          "name": "Talep - Arz",
+          "trackNumber": 1,
+          "durationMs": 186275,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4iNbwWxqMqI7FB7F6fSY6Z"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 DMC",
+        "℗ 2019 DMC"
+      ]
+    },
+    "3slJ2gXpniB6I4eb7NCruj": {
+      "tracks": [
+        {
+          "id": "5DtmpaV6YrqM0VNODAXnYm",
+          "name": "Çocuk",
+          "trackNumber": 1,
+          "durationMs": 302769,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5DtmpaV6YrqM0VNODAXnYm"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 DMC",
+        "℗ 2019 DMC"
+      ]
+    },
+    "3R0s0RcUY9ZhLqxLCa4VZx": {
+      "tracks": [
+        {
+          "id": "1ypIilwN9nLoSXo95PWHrk",
+          "name": "Yaz Yağmurum",
+          "trackNumber": 1,
+          "durationMs": 211278,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2FgYmWG15ykfcyhUnG61Nw",
+              "name": "Onur Betin"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1ypIilwN9nLoSXo95PWHrk"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 DMC",
+        "℗ 2019 DMC"
+      ]
+    },
+    "5491b8iVXuTi2ZqwePeJSH": {
+      "tracks": [
+        {
+          "id": "59jlT9MTrRWc7qewY9szuJ",
+          "name": "Aslan Marşı",
+          "trackNumber": 1,
+          "durationMs": 220972,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/59jlT9MTrRWc7qewY9szuJ"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 DMC",
+        "℗ 2019 DMC"
+      ]
+    },
+    "2fgZ72CdV60LegQn2hEAHM": {
+      "tracks": [
+        {
+          "id": "7IcUQHFGfgAxJei9zDhzM0",
+          "name": "Bahaneleriniz",
+          "trackNumber": 1,
+          "durationMs": 250080,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "7lJmtLRTNOIYB1vh1ZlwsX",
+              "name": "Muşta"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7IcUQHFGfgAxJei9zDhzM0"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 Wovie",
+        "℗ 2019 Wovie"
+      ]
+    },
+    "5dMbZ9ECO3Wxkpr7BWmLN3": {
+      "tracks": [
+        {
+          "id": "5DoXysLpOybG1vYiJ7JLUu",
+          "name": "Pirana",
+          "trackNumber": 1,
+          "durationMs": 214983,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5DoXysLpOybG1vYiJ7JLUu"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 DMC",
+        "℗ 2019 DMC"
+      ]
+    },
+    "0y8RzSZigFhXQfNnFiOAd5": {
+      "tracks": [
+        {
+          "id": "3HqEsZNC9ufF2Qc4DtR9UK",
+          "name": "Kıskanç",
+          "trackNumber": 1,
+          "durationMs": 202527,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "2pbct1ni3yLLAfzrSXQDrH",
+              "name": "Kubilay Karça"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3HqEsZNC9ufF2Qc4DtR9UK"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2019 Wovie",
+        "℗ 2019 Wovie"
+      ]
+    },
+    "7w23DpIjUzfefwiq0aXDNn": {
+      "tracks": [
+        {
+          "id": "6yIVuAAf9xC2xxxIGTkFKp",
+          "name": "Dünya'dan Atlas'a",
+          "trackNumber": 1,
+          "durationMs": 245040,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6yIVuAAf9xC2xxxIGTkFKp"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2018 Karma Company",
+        "℗ 2018 Karma Company"
+      ]
+    },
+    "4tBnVWP1N4g7Hn9PYgPtWo": {
+      "tracks": [
+        {
+          "id": "3h2mPEhOJinAnH2LJMw69X",
+          "name": "Milyon",
+          "trackNumber": 1,
+          "durationMs": 240999,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3h2mPEhOJinAnH2LJMw69X"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2018 Karma Company",
+        "℗ 2018 Karma Company"
+      ]
+    },
+    "61WtSUVOoxxeKeV4jOZNWi": {
+      "tracks": [
+        {
+          "id": "2OjntwakXOAW2vqkqKkKaR",
+          "name": "Yak Yak Yak",
+          "trackNumber": 1,
+          "durationMs": 283200,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2OjntwakXOAW2vqkqKkKaR"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2018 Sofistikal Music",
+        "℗ 2018 Sofistikal Music"
+      ]
+    },
+    "4Ab5NfuzbNt7C1J5ca7cZA": {
+      "tracks": [
+        {
+          "id": "3mDCYIT9MEsMALREGN38sH",
+          "name": "Karma - Groovypedia Live",
+          "trackNumber": 1,
+          "durationMs": 313000,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3mDCYIT9MEsMALREGN38sH"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2018 Groovypedia",
+        "℗ 2018 Groovypedia"
+      ]
+    },
+    "41vkDxCgMJIDSc8zauKoUW": {
+      "tracks": [
+        {
+          "id": "0Gg4FphbvPhJKpSm8KsBBD",
+          "name": "Karma",
+          "trackNumber": 1,
+          "durationMs": 312000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0Gg4FphbvPhJKpSm8KsBBD"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2017 Karma Company",
+        "℗ 2017 Karma Company"
+      ]
+    },
+    "6zYRbnh9xKNGkaAkWPKhM8": {
+      "tracks": [
+        {
+          "id": "5BimeOrk4ZVykYomUndTdM",
+          "name": "Uzulme (feat. Artz)",
+          "trackNumber": 1,
+          "durationMs": 250626,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2QU0UNvQvEZ2fuRUhkUNq4",
+              "name": "Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5BimeOrk4ZVykYomUndTdM"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2016 Karma Company",
+        "℗ 2016 Karma Company"
+      ]
+    },
+    "1VbXHoakMTqVv5KcSoDMHG": {
+      "tracks": [
+        {
+          "id": "7tORPrzvBrdVJMJP9UpRRU",
+          "name": "Yeşil",
+          "trackNumber": 1,
+          "durationMs": 141688,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "3tChlx5I5JhZfY55Hp0Wa1",
+              "name": "Veron Algos"
+            },
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2QU0UNvQvEZ2fuRUhkUNq4",
+              "name": "Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7tORPrzvBrdVJMJP9UpRRU"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2016 OSC ENM.",
+        "℗ 2016 OSC ENM."
+      ]
+    },
+    "57tzaE0HATRSRptHEXDnJT": {
+      "tracks": [
+        {
+          "id": "5TDArwn6bBURDUBGU7IbbB",
+          "name": "Hayal - Groovypedia Live",
+          "trackNumber": 1,
+          "durationMs": 202000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5TDArwn6bBURDUBGU7IbbB"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2016 Groovypedia",
+        "℗ 2016 Groovypedia"
+      ]
+    },
+    "2q7QzY8q8OVxa5sAyyl8OF": {
+      "tracks": [
+        {
+          "id": "1KVQzQeqSBYZI96Jvn9Xgm",
+          "name": "Boş",
+          "trackNumber": 1,
+          "durationMs": 273913,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1KVQzQeqSBYZI96Jvn9Xgm"
+        },
+        {
+          "id": "60Dx7rjna77SIUX1dYM58p",
+          "name": "Ne Varsa Kafada Var",
+          "trackNumber": 2,
+          "durationMs": 219392,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/60Dx7rjna77SIUX1dYM58p"
+        },
+        {
+          "id": "2snIASNHnZr0pjJkyqWnmq",
+          "name": "Krang",
+          "trackNumber": 3,
+          "durationMs": 234666,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3yzGegJHrOW1CndMVFoo3m",
+              "name": "Hidra"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2snIASNHnZr0pjJkyqWnmq"
+        },
+        {
+          "id": "59iWKc6op8XVrsMc9AhgyD",
+          "name": "Hepsi Benim 2",
+          "trackNumber": 4,
+          "durationMs": 154736,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/59iWKc6op8XVrsMc9AhgyD"
+        },
+        {
+          "id": "2Wr5lDDbkMiP5txsNvaNix",
+          "name": "Çok Hızlısın Kanka (Skit)",
+          "trackNumber": 5,
+          "durationMs": 16695,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2Wr5lDDbkMiP5txsNvaNix"
+        },
+        {
+          "id": "6J86yrEcM4YupPOSRMSFT9",
+          "name": "Var Arantım",
+          "trackNumber": 6,
+          "durationMs": 192000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6J86yrEcM4YupPOSRMSFT9"
+        },
+        {
+          "id": "4nw9oRUfvtCP33zKTfMUnt",
+          "name": "Sayın Türk",
+          "trackNumber": 7,
+          "durationMs": 242758,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4nw9oRUfvtCP33zKTfMUnt"
+        },
+        {
+          "id": "6lzEo3oXTGL0ryLWVLBVmF",
+          "name": "Rec, Play, Pause",
+          "trackNumber": 8,
+          "durationMs": 268888,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            },
+            {
+              "id": "1eQzZsJAtBVhN9WP62oXM2",
+              "name": "Xir"
+            },
+            {
+              "id": "6hxb4rGrYXtrAZbUK7uzt9",
+              "name": "Sansar Salvo"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6lzEo3oXTGL0ryLWVLBVmF"
+        },
+        {
+          "id": "650KeFKXzH4kt5OvZ45jXk",
+          "name": "Skit Baltalayıcısı (Skit)",
+          "trackNumber": 9,
+          "durationMs": 54911,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/650KeFKXzH4kt5OvZ45jXk"
+        },
+        {
+          "id": "4m8x7GgJjmmcxB4MpAm6sq",
+          "name": "Evim",
+          "trackNumber": 10,
+          "durationMs": 156000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4m8x7GgJjmmcxB4MpAm6sq"
+        },
+        {
+          "id": "7DGkPOlZI0wOzgyshtKU6x",
+          "name": "U.A.A.",
+          "trackNumber": 11,
+          "durationMs": 210000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "6LnJKrtFnTEGdbWQ2riWCL",
+              "name": "Ezhel"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7DGkPOlZI0wOzgyshtKU6x"
+        },
+        {
+          "id": "4P5WwFkCxxti2DjVxhdmzP",
+          "name": "İstiklal",
+          "trackNumber": 12,
+          "durationMs": 178285,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            },
+            {
+              "id": "1XxdJaLo6jXdFbgR1zKJ3x",
+              "name": "Bugy"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4P5WwFkCxxti2DjVxhdmzP"
+        },
+        {
+          "id": "6e2ysJdulS3tOZ6nK5TVqz",
+          "name": "Nergis TV (Skit)",
+          "trackNumber": 13,
+          "durationMs": 52907,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6e2ysJdulS3tOZ6nK5TVqz"
+        },
+        {
+          "id": "0pRYtJxgimC2ns261wYR7m",
+          "name": "Yerim Rahat",
+          "trackNumber": 14,
+          "durationMs": 233996,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            },
+            {
+              "id": "1Kb8Eb6SbHbzUYSqhhDtx5",
+              "name": "Emrah Karakuyu"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0pRYtJxgimC2ns261wYR7m"
+        },
+        {
+          "id": "5Pq7x3s3GQvlxb5LcKODKv",
+          "name": "İstiklal - Dub Remix",
+          "trackNumber": 15,
+          "durationMs": 224582,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5uWSTChLUg0pNhLuAA13H3",
+              "name": "Ben Büdü"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5Pq7x3s3GQvlxb5LcKODKv"
+        },
+        {
+          "id": "0zTmZ27Ty5JEVn4ENB5ucz",
+          "name": "U.a.a. - Remix",
+          "trackNumber": 16,
+          "durationMs": 238734,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5uWSTChLUg0pNhLuAA13H3",
+              "name": "Ben Büdü"
+            },
+            {
+              "id": "6LnJKrtFnTEGdbWQ2riWCL",
+              "name": "Ezhel"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0zTmZ27Ty5JEVn4ENB5ucz"
+        },
+        {
+          "id": "2UcBgMb9zGBBhZdXOjMfVo",
+          "name": "Rec, Play, Pause - Remix",
+          "trackNumber": 17,
+          "durationMs": 266205,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5uWSTChLUg0pNhLuAA13H3",
+              "name": "Ben Büdü"
+            },
+            {
+              "id": "1eQzZsJAtBVhN9WP62oXM2",
+              "name": "Xir"
+            },
+            {
+              "id": "6hxb4rGrYXtrAZbUK7uzt9",
+              "name": "Sansar Salvo"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2UcBgMb9zGBBhZdXOjMfVo"
+        },
+        {
+          "id": "2bByQ0St9xKzKQKaW9FKnb",
+          "name": "Var Arantım - Remix",
+          "trackNumber": 18,
+          "durationMs": 175932,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5uWSTChLUg0pNhLuAA13H3",
+              "name": "Ben Büdü"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2bByQ0St9xKzKQKaW9FKnb"
+        },
+        {
+          "id": "2myVf26niHUJjqjhISnOoF",
+          "name": "Hadi Görüşürüz (Skit)",
+          "trackNumber": 19,
+          "durationMs": 16292,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2myVf26niHUJjqjhISnOoF"
+        },
+        {
+          "id": "5m8XiXEsK0dTd0VB1cYT1Z",
+          "name": "Plüton",
+          "trackNumber": 20,
+          "durationMs": 263239,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5m8XiXEsK0dTd0VB1cYT1Z"
+        },
+        {
+          "id": "1O8Sd8SEkcfhxRjJJiXSXu",
+          "name": "Arkadaş",
+          "trackNumber": 21,
+          "durationMs": 295131,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1O8Sd8SEkcfhxRjJJiXSXu"
+        },
+        {
+          "id": "797b9Nbjjpn89fgmnyZOj2",
+          "name": "Satın Alıcazzz",
+          "trackNumber": 22,
+          "durationMs": 229800,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4Bx6CNFD4W2Bctwm0k8Q9e",
+              "name": "DJ Artz"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/797b9Nbjjpn89fgmnyZOj2"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2016 Karma Company",
+        "℗ 2016 Karma Company"
+      ]
+    },
+    "057EndApd8tJau31C7jces": {
+      "tracks": [
+        {
+          "id": "4e7DQcpD8dgxgwhKWd3xRx",
+          "name": "Hasta Kişilikler - Remastered Version",
+          "trackNumber": 1,
+          "durationMs": 122000,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4e7DQcpD8dgxgwhKWd3xRx"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2020 Dreamroad Music",
+        "℗ 2020 Dreamroad Music"
+      ]
+    },
+    "5wDw71G6My66IurTcLbULV": {
+      "tracks": [
+        {
+          "id": "5lAtUfwdxMDg1hjULn586H",
+          "name": "Koyu",
+          "trackNumber": 1,
+          "durationMs": 171874,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5lAtUfwdxMDg1hjULn586H"
+        },
+        {
+          "id": "6D8ROFkIhorwQ12kXAKWG9",
+          "name": "Boing",
+          "trackNumber": 2,
+          "durationMs": 174532,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6D8ROFkIhorwQ12kXAKWG9"
+        },
+        {
+          "id": "4MEFpwBdTu0Bv6F3EEZPlk",
+          "name": "İstila",
+          "trackNumber": 3,
+          "durationMs": 226092,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4MEFpwBdTu0Bv6F3EEZPlk"
+        },
+        {
+          "id": "4Tf4oNYidxzoxpbqgdmXLM",
+          "name": "Güller Ve Rhyme",
+          "trackNumber": 4,
+          "durationMs": 281825,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4Tf4oNYidxzoxpbqgdmXLM"
+        },
+        {
+          "id": "0mTpkaKOFV6UTES6KI0lub",
+          "name": "Eksik Sonbahar",
+          "trackNumber": 5,
+          "durationMs": 127698,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2r8iLFeSTuOiZualHmSXxS",
+              "name": "Patron"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0mTpkaKOFV6UTES6KI0lub"
+        },
+        {
+          "id": "4ZapQx76lEcFRPv0yQkioq",
+          "name": "Hayal",
+          "trackNumber": 6,
+          "durationMs": 174207,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4ZapQx76lEcFRPv0yQkioq"
+        },
+        {
+          "id": "7jvmKuGS9NSNg7uRVKJ0hA",
+          "name": "Hiphop Okulu",
+          "trackNumber": 7,
+          "durationMs": 210837,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7jvmKuGS9NSNg7uRVKJ0hA"
+        },
+        {
+          "id": "79XNHqYvQHNogsRocNCUNM",
+          "name": "Marslı Kadın",
+          "trackNumber": 8,
+          "durationMs": 232164,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/79XNHqYvQHNogsRocNCUNM"
+        },
+        {
+          "id": "21Y4gR9tgtLkEx4wUy93tA",
+          "name": "Senden Nefret Ediyorum",
+          "trackNumber": 9,
+          "durationMs": 182021,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/21Y4gR9tgtLkEx4wUy93tA"
+        },
+        {
+          "id": "5bjIZg4dTfC7MjF7WeLxqY",
+          "name": "Milyon",
+          "trackNumber": 10,
+          "durationMs": 207888,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5bjIZg4dTfC7MjF7WeLxqY"
+        },
+        {
+          "id": "5JEAGWzByMNVQSxqmlgvrD",
+          "name": "H.A.G.G.G",
+          "trackNumber": 11,
+          "durationMs": 179919,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "7KNVmvcr2zkla9pKxJSrf3",
+              "name": "Pit10"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5JEAGWzByMNVQSxqmlgvrD"
+        },
+        {
+          "id": "5IYt28TQFrtoeJ8ETjsMs0",
+          "name": "Kendine Hayran Pezevenk",
+          "trackNumber": 12,
+          "durationMs": 281367,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5IYt28TQFrtoeJ8ETjsMs0"
+        },
+        {
+          "id": "6vT3gPAgS4FP9M8LrNCh5C",
+          "name": "Ahlaka Mugayir",
+          "trackNumber": 13,
+          "durationMs": 278802,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6vT3gPAgS4FP9M8LrNCh5C"
+        },
+        {
+          "id": "6NcINfOto9A9rWsXO8IxGp",
+          "name": "Vah Vahap Vah",
+          "trackNumber": 14,
+          "durationMs": 114009,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6NcINfOto9A9rWsXO8IxGp"
+        },
+        {
+          "id": "6U45mYjDRwcQHh6yczQGRR",
+          "name": "Haşşaşin Marşı",
+          "trackNumber": 15,
+          "durationMs": 90128,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6U45mYjDRwcQHh6yczQGRR"
+        },
+        {
+          "id": "4jzm8txkFtnVIX8UQdgVYP",
+          "name": "Shredder'ı Krang'in",
+          "trackNumber": 16,
+          "durationMs": 106916,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4jzm8txkFtnVIX8UQdgVYP"
+        },
+        {
+          "id": "1kr9UjGuPPU5JDJKCQCdVv",
+          "name": "Duygusal Olmaya Gerek Yok",
+          "trackNumber": 17,
+          "durationMs": 396747,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "6hxb4rGrYXtrAZbUK7uzt9",
+              "name": "Sansar Salvo"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1kr9UjGuPPU5JDJKCQCdVv"
+        },
+        {
+          "id": "08zIKo4fz0kk8AyKkDmp1P",
+          "name": "Dilemma",
+          "trackNumber": 18,
+          "durationMs": 85008,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/08zIKo4fz0kk8AyKkDmp1P"
+        },
+        {
+          "id": "1OJMY1AYxOFLhwccNunYVQ",
+          "name": "15 Bin Firistelesi",
+          "trackNumber": 19,
+          "durationMs": 74663,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1OJMY1AYxOFLhwccNunYVQ"
+        },
+        {
+          "id": "4Hnm7bR0HyO2SiWKJxsRBk",
+          "name": "100 De 100",
+          "trackNumber": 20,
+          "durationMs": 175182,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4Hnm7bR0HyO2SiWKJxsRBk"
+        },
+        {
+          "id": "77XZsWv0bAw2vUJujPAsP3",
+          "name": "Apartman Savaşları",
+          "trackNumber": 21,
+          "durationMs": 112849,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/77XZsWv0bAw2vUJujPAsP3"
+        },
+        {
+          "id": "6rYJEckQxZeq5cKNj7N1VL",
+          "name": "Asayiş Berkemal",
+          "trackNumber": 22,
+          "durationMs": 196475,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6rYJEckQxZeq5cKNj7N1VL"
+        },
+        {
+          "id": "3QWDwt6XTviJZI5y9BWdCg",
+          "name": "Buu Mushroom",
+          "trackNumber": 23,
+          "durationMs": 120836,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3QWDwt6XTviJZI5y9BWdCg"
+        },
+        {
+          "id": "0mSgeRNEayA3pJBj11fNGc",
+          "name": "Ramazan Dünyasına Hediye",
+          "trackNumber": 24,
+          "durationMs": 84056,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0mSgeRNEayA3pJBj11fNGc"
+        },
+        {
+          "id": "1BKU6Rc3qlQvY83z7i9cW7",
+          "name": "Cehennem Senfoni",
+          "trackNumber": 25,
+          "durationMs": 220496,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1BKU6Rc3qlQvY83z7i9cW7"
+        },
+        {
+          "id": "082S5xOnAJcpClXwPLXUZt",
+          "name": "ConCon",
+          "trackNumber": 26,
+          "durationMs": 204277,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/082S5xOnAJcpClXwPLXUZt"
+        },
+        {
+          "id": "10G1X4SCBg70QJQpX0BTRQ",
+          "name": "Çıplak Taşakdaş",
+          "trackNumber": 27,
+          "durationMs": 49087,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/10G1X4SCBg70QJQpX0BTRQ"
+        },
+        {
+          "id": "2sK20suYzW8CVCcVd938sL",
+          "name": "Deli Bu Mic",
+          "trackNumber": 28,
+          "durationMs": 148723,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2sK20suYzW8CVCcVd938sL"
+        },
+        {
+          "id": "0tkL4kDKJlvYeeaulLNyba",
+          "name": "Fame Peşindeki Çocuğun Dramı",
+          "trackNumber": 29,
+          "durationMs": 81385,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0tkL4kDKJlvYeeaulLNyba"
+        },
+        {
+          "id": "2IPvzexqfBZWWeq1DlCNY5",
+          "name": "Freestyle",
+          "trackNumber": 30,
+          "durationMs": 116436,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/2IPvzexqfBZWWeq1DlCNY5"
+        },
+        {
+          "id": "1oiS9bD4TVO0qYlmug4Vko",
+          "name": "Hani Bana Battle",
+          "trackNumber": 31,
+          "durationMs": 52593,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1oiS9bD4TVO0qYlmug4Vko"
+        },
+        {
+          "id": "04vXi9IzlQlKDkwJxUo69T",
+          "name": "Harbe Davet",
+          "trackNumber": 32,
+          "durationMs": 51118,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/04vXi9IzlQlKDkwJxUo69T"
+        },
+        {
+          "id": "0YmOJDNcEPcQ0fedjcpsnp",
+          "name": "Haremeyn 3 Kağıt",
+          "trackNumber": 33,
+          "durationMs": 273542,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0YmOJDNcEPcQ0fedjcpsnp"
+        },
+        {
+          "id": "0owEY3JKocX51gX0D8njTS",
+          "name": "İddialı Cümleler Ülkesi & Enstantaneler Hapishanesi",
+          "trackNumber": 34,
+          "durationMs": 150024,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/0owEY3JKocX51gX0D8njTS"
+        },
+        {
+          "id": "7428RehC6HU32BEOkF1lpC",
+          "name": "Kötüyüm",
+          "trackNumber": 35,
+          "durationMs": 94899,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7428RehC6HU32BEOkF1lpC"
+        },
+        {
+          "id": "6UgDcJsXFlF1zbki6xq9fv",
+          "name": "Tebligat Verin",
+          "trackNumber": 36,
+          "durationMs": 51722,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6UgDcJsXFlF1zbki6xq9fv"
+        },
+        {
+          "id": "3wn0VE666TCt21IPp2RD3M",
+          "name": "İktidar Biziz",
+          "trackNumber": 37,
+          "durationMs": 218534,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "2TgPHu6qLcUAYX1EvC8xQP",
+              "name": "Lain Nefer"
+            },
+            {
+              "id": "1HKUjJ5jE0pWgH06GHk5H3",
+              "name": "Anestesi"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3wn0VE666TCt21IPp2RD3M"
+        },
+        {
+          "id": "3zEEoThPl26vF5VkXe9Zvh",
+          "name": "Kenar Mahalle",
+          "trackNumber": 38,
+          "durationMs": 121695,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "135qHf1beatGQlQp0uPlw5",
+              "name": "Anıl Seçmen"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3zEEoThPl26vF5VkXe9Zvh"
+        },
+        {
+          "id": "7AGOoU0Cb7rxB3EuomWZQq",
+          "name": "Aranızda Casus Var",
+          "trackNumber": 39,
+          "durationMs": 155515,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "0KeXbooGtVX0DJPZIRPTfp",
+              "name": "Bitkin Ronin"
+            },
+            {
+              "id": "7nuBtq4d3IOuKgNwOugavW",
+              "name": "Seyit Ali"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7AGOoU0Cb7rxB3EuomWZQq"
+        },
+        {
+          "id": "59aA1CqBhdf79VPDShwbjv",
+          "name": "Aşk Dediğin",
+          "trackNumber": 40,
+          "durationMs": 186026,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "1MpG2n0NMHZT9d3grVyCUD",
+              "name": "Bunt"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/59aA1CqBhdf79VPDShwbjv"
+        },
+        {
+          "id": "7GJjJ4iBPitjrO9OkZwGbG",
+          "name": "Aşk-ı Mecmua Rap",
+          "trackNumber": 41,
+          "durationMs": 199076,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "1T5waY7uhJR9tIbFiGZX9j",
+              "name": "Buura"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7GJjJ4iBPitjrO9OkZwGbG"
+        },
+        {
+          "id": "6We3PIgDeLNwceHmgnhAph",
+          "name": "29 Kişilik 20 Ton Basınçlı Kurgum",
+          "trackNumber": 42,
+          "durationMs": 141142,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5GUAk6swqUbGZBqwO90wOa",
+              "name": "Chernobil"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6We3PIgDeLNwceHmgnhAph"
+        },
+        {
+          "id": "5iPpdXPsk8REb5iaI3jo95",
+          "name": "Endikasyon",
+          "trackNumber": 43,
+          "durationMs": 131703,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "5GUAk6swqUbGZBqwO90wOa",
+              "name": "Chernobil"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/5iPpdXPsk8REb5iaI3jo95"
+        },
+        {
+          "id": "7Bmws6e3vM1JpdTBrAysNn",
+          "name": "Hiphop Emmi",
+          "trackNumber": 44,
+          "durationMs": 118352,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "4RGmYUzRBVsYDnoOg0jEjV",
+              "name": "Corpse Yılmaztürk"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7Bmws6e3vM1JpdTBrAysNn"
+        },
+        {
+          "id": "4WkSdnTRpSwSx8EDbM6fT4",
+          "name": "Kırmızıda Geç",
+          "trackNumber": 45,
+          "durationMs": 256859,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "78pmfdUUxdBdEmQur8lGE9",
+              "name": "Crab"
+            },
+            {
+              "id": "1DAXVWh0ucx6zpW97XExNU",
+              "name": "Emce"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/4WkSdnTRpSwSx8EDbM6fT4"
+        },
+        {
+          "id": "3ftLiCxYn3M3epyVKWcjhV",
+          "name": "Devası Fahişem",
+          "trackNumber": 46,
+          "durationMs": 103978,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "3vU5wT87tSKIiuiUBx0Ig8",
+              "name": "DF"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/3ftLiCxYn3M3epyVKWcjhV"
+        },
+        {
+          "id": "1yJhMPtUDssLnGxvrzup8d",
+          "name": "Fly Flow",
+          "trackNumber": 47,
+          "durationMs": 247164,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "7ADuwfS2SHjhYqFpZZNtLW",
+              "name": "Doğu Ryhme Killa"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/1yJhMPtUDssLnGxvrzup8d"
+        },
+        {
+          "id": "6MGhPKZgGCKe2dUhE8dGLC",
+          "name": "Git Burdan",
+          "trackNumber": 48,
+          "durationMs": 270013,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "46hx90gobBnj0JbvAihJBB",
+              "name": "Duman Yak"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/6MGhPKZgGCKe2dUhE8dGLC"
+        },
+        {
+          "id": "7zWyeHvA6IqOwzyIJ6wjDH",
+          "name": "Emotional Motion",
+          "trackNumber": 49,
+          "durationMs": 232942,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "46hx90gobBnj0JbvAihJBB",
+              "name": "Duman Yak"
+            },
+            {
+              "id": "0cv5eNa0KIV7xNLsdNv3jH",
+              "name": "Mestefe"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7zWyeHvA6IqOwzyIJ6wjDH"
+        },
+        {
+          "id": "79UEVTELkjnq648f5dH99z",
+          "name": "Hasta Kişilikler",
+          "trackNumber": 50,
+          "durationMs": 176216,
+          "explicit": true,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            },
+            {
+              "id": "0eslhv2C66FSBQeIMitK6e",
+              "name": "Şermeran"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/79UEVTELkjnq648f5dH99z"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2023 Mitas Müzik",
+        "℗ 2023 Mitas Müzik"
+      ]
+    }
+  }
+}

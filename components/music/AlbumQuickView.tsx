@@ -59,7 +59,7 @@ export function AlbumQuickView({ album, pageHref, onClose }: Props) {
           </p>
           <h3 className={`display ${styles.name}`}>{album.name}</h3>
           <Link href={pageHref} className={styles.page} onClick={onClose}>
-            KLİP, SÖZ VE DETAYLAR →
+            PARÇA SAYFASINA GİT →
           </Link>
           <a
             href={album.spotifyUrl}

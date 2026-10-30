@@ -73,10 +73,9 @@ Kurulum (bir kez): GitHub repo > Settings > Secrets and variables > Actions > `S
 
 Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sürüm için otomatik oluşur, sitemap'e girer.
 
-- **Veri:** Spotify API (parça listesi, süre, etiket, telif) — `lib/release/detail.ts`. API yoksa JSON yedeğine düşer. Sayfalar ilk ziyarette üretilip 6 saat cache'lenir (build'de API'ye yük bindirmez).
+- **Veri:** Parça listesi, süre, etiket ve telif satırı `data/generated/release-details.json` içinden okunur (`scripts/sync-release-details.mjs` Spotify'dan doldurur, GitHub Action yeni sürümleri tamamlar). Böylece sayfalar statik üretilir ve ziyaretçi başına Spotify API'ye gidilmez (rate limit riski yok). JSON'da olmayan yeni bir sürüm için API denenir, olmazsa çalma kuyruğundaki parçalardan yedek kurulur — `lib/release/detail.ts`.
 - **Klip:** `data/generated/youtube-videos.json` (resmî kanal) başlıkları parça/albüm adıyla **tam eşleşirse** üstte sessiz otomatik oynar ("SESİ AÇ" ile ses açılır; Spotify çalıyorsa duraklatılır). Eşleşme yoksa kapak sahnesi + Spotify oynatıcı. Yanlış eşleşmeyi düzeltmek için `data/track-videos.ts`.
 - **YouTube listesi:** GitHub Action RSS ile günlük günceller; ilk toplu liste için `node scripts/sync-youtube.mjs --deep`.
-- **Sözler:** Spotify API söz vermez, sözler telifli olduğu için otomatik çekilmez. Hakkın varsa `data/lyrics.ts` içine Spotify parça ID'siyle ekle; yoksa sayfada "Spotify'da sözlerle dinle" bağlantısı görünür.
 
 ### Konser takvimi
 

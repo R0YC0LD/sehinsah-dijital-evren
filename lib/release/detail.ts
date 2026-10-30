@@ -1,6 +1,8 @@
 import "server-only";
 
 import { unstable_cache } from "next/cache";
+import detailsFile from "@/data/generated/release-details.json";
+import { isGitHubPages } from "@/lib/deploy";
 import { findVideoId } from "@/lib/youtube/match";
 import { hasSpotifyCredentials, spotifyFetch } from "@/lib/spotify/server-client";
 import { getVerifiedSingleTracks } from "@/lib/spotify/single-tracks";
@@ -24,8 +26,11 @@ export type ReleaseDetail = {
   copyrights: string[];
   /** Sürüm genelinde oynatılacak klip (yoksa null → klipsiz kapak sahnesi). */
   videoId: string | null;
-  source: "spotify-api" | "catalog-json";
+  source: "release-details-json" | "spotify-api" | "catalog-json";
 };
+
+type StoredTrack = Omit<ReleaseTrack, "videoId">;
+type Part = { tracks: StoredTrack[]; label: string | null; copyrights: string[] };
 
 type RawAlbumFull = {
   label?: string;
@@ -43,28 +48,38 @@ type RawAlbumFull = {
   };
 };
 
-type ApiPart = Pick<ReleaseDetail, "tracks" | "label" | "copyrights">;
+/**
+ * 1) data/generated/release-details.json (scripts/sync-release-details.mjs doldurur):
+ *    sayfalar ziyaretçi başına Spotify'a gitmez, statik üretilir.
+ * 2) JSON'da olmayan YENİ sürüm: API'den çek. Ardışık hata/429 sonrası 10 dk bekler
+ *    (Spotify 429'da saatlerce engelleyebilir; ısrar etmemek önemli).
+ * 3) Olmazsa: çalma kuyruğundaki parçalardan yedek.
+ */
+let apiCooldownUntil = 0;
+const API_COOLDOWN_MS = 10 * 60_000;
 
-/** Albüm detayı yavaş değişir: 24 saat cache. API hata verirse cache'lenmez, fallback kullanılır. */
-function fetchAlbumPart(id: string): Promise<ApiPart> {
+function fromStore(id: string): Part | null {
+  const entry = (detailsFile as { details: Record<string, Part> }).details[id];
+  return entry?.tracks?.length ? entry : null;
+}
+
+function fetchAlbumPart(id: string): Promise<Part> {
   const market = process.env.SPOTIFY_MARKET || "TR";
   return unstable_cache(
-    async (): Promise<ApiPart> => {
+    async (): Promise<Part> => {
       const album = await spotifyFetch<RawAlbumFull>(
         `/albums/${id}?market=${encodeURIComponent(market)}`,
       );
-      const tracks: ReleaseTrack[] = (album.tracks?.items ?? []).map((t) => ({
-        id: t.id,
-        name: t.name,
-        trackNumber: t.track_number,
-        durationMs: t.duration_ms,
-        explicit: Boolean(t.explicit),
-        artists: (t.artists ?? []).map((a) => ({ id: a.id ?? "", name: a.name })),
-        spotifyUrl: t.external_urls?.spotify ?? `https://open.spotify.com/track/${t.id}`,
-        videoId: null,
-      }));
       return {
-        tracks,
+        tracks: (album.tracks?.items ?? []).map((t) => ({
+          id: t.id,
+          name: t.name,
+          trackNumber: t.track_number,
+          durationMs: t.duration_ms,
+          explicit: Boolean(t.explicit),
+          artists: (t.artists ?? []).map((a) => ({ id: a.id ?? "", name: a.name })),
+          spotifyUrl: t.external_urls?.spotify ?? `https://open.spotify.com/track/${t.id}`,
+        })),
         label: album.label ?? null,
         copyrights: [
           ...new Set(
@@ -75,43 +90,55 @@ function fetchAlbumPart(id: string): Promise<ApiPart> {
         ],
       };
     },
-    ["release-detail-v1", id],
-    { revalidate: 60 * 60 * 24, tags: ["release-detail-v1"] },
+    ["release-detail-v2", id],
+    { revalidate: 60 * 60 * 24, tags: ["release-detail-v2"] },
   )();
 }
 
-/** API yoksa/başarısızsa: JSON'daki çalma kuyruğu parçalarından kurulan yedek. */
-async function fallbackPart(release: SpotifyRelease): Promise<ApiPart> {
+async function fallbackPart(release: SpotifyRelease): Promise<Part> {
   const queue = await getVerifiedSingleTracks();
-  const tracks: ReleaseTrack[] = queue
-    .filter((t) => t.albumId === release.id)
-    .map((t, i) => ({
-      id: t.id,
-      name: t.name,
-      trackNumber: i + 1,
-      durationMs: t.durationMs,
-      explicit: false,
-      artists: t.artists,
-      spotifyUrl: t.spotifyUrl,
-      videoId: null,
-    }));
-  return { tracks, label: null, copyrights: [] };
+  return {
+    tracks: queue
+      .filter((t) => t.albumId === release.id)
+      .map((t, i) => ({
+        id: t.id,
+        name: t.name,
+        trackNumber: i + 1,
+        durationMs: t.durationMs,
+        explicit: false,
+        artists: t.artists,
+        spotifyUrl: t.spotifyUrl,
+      })),
+    label: null,
+    copyrights: [],
+  };
 }
 
 export async function getReleaseDetail(release: SpotifyRelease): Promise<ReleaseDetail> {
-  let part: ApiPart;
-  let source: ReleaseDetail["source"] = "spotify-api";
+  let part = fromStore(release.id);
+  let source: ReleaseDetail["source"] = "release-details-json";
 
-  try {
-    if (!hasSpotifyCredentials()) throw new Error("no_credentials");
-    part = await fetchAlbumPart(release.id);
-    if (!part.tracks.length) throw new Error("empty_tracks");
-  } catch {
-    part = await fallbackPart(release);
-    source = "catalog-json";
+  if (!part) {
+    try {
+      if (isGitHubPages() || !hasSpotifyCredentials() || Date.now() < apiCooldownUntil) {
+        throw new Error("api_unavailable");
+      }
+      part = await fetchAlbumPart(release.id);
+      if (!part.tracks.length) throw new Error("empty_tracks");
+      source = "spotify-api";
+    } catch (error) {
+      if (!(error instanceof Error && error.message === "api_unavailable")) {
+        apiCooldownUntil = Date.now() + API_COOLDOWN_MS;
+      }
+      part = await fallbackPart(release);
+      source = "catalog-json";
+    }
   }
 
-  const tracks = part.tracks.map((t) => ({ ...t, videoId: findVideoId(t.name, [t.id]) }));
+  const tracks: ReleaseTrack[] = part.tracks.map((t) => ({
+    ...t,
+    videoId: findVideoId(t.name, [t.id]),
+  }));
   const releaseVideo =
     findVideoId(release.name, [release.id]) ??
     (tracks.length === 1 ? tracks[0].videoId : null) ??
