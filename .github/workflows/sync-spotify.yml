@@ -1,0 +1,55 @@
+name: Spotify yeni sürüm senkronu
+
+# Şehinşah profilinde yeni parça/albüm çıkmışsa data/generated/*.json'a ekler,
+# commit'ler ve main'e push eder; Vercel push'u görüp siteyi yeniden yayınlar.
+#
+# Saatler UTC. Türkiye (UTC+3) karşılığı: 01:30, 07:30, 13:30, 19:30.
+# Cron "ya da elle çalıştır" için: GitHub > Actions > "Spotify yeni sürüm senkronu" > Run workflow.
+on:
+  schedule:
+    - cron: "30 22,4,10,16 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: spotify-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Yeni sürümleri çek
+        id: sync
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_MARKET: TR
+        run: node scripts/auto-sync-releases.mjs
+
+      - name: Doğrula
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          node scripts/verify-spotify-links.mjs
+          node scripts/verify-single-tracks.mjs
+
+      - name: Commit ve push
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          SUMMARY: ${{ steps.sync.outputs.summary }}
+        run: |
+          git config user.name "sehinsah-sync-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/generated
+          git commit -m "Auto-sync: yeni Spotify sürümü — ${SUMMARY}"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

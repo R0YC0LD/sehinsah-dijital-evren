@@ -58,6 +58,17 @@ Yeni çıkan tekli/EP, ek bir işlem gerekmeden siteye gelir:
 Not: Spotify 429'da `Retry-After` saatlerce sürebilir; arka arkaya `npm run build` çalıştırmak (her build API'yi çağırır) limiti tetikler.
 JSON yedeğini güncellemek için: `npm run sync:spotify` ve `npm run build:singles`.
 
+### Otonom yeni sürüm senkronu (GitHub Actions)
+
+`.github/workflows/sync-spotify.yml` günde 4 kez (01:30, 07:30, 13:30, 19:30 TR saati) çalışır:
+
+1. `scripts/auto-sync-releases.mjs` Şehinşah profilini (artist ID `0FUsrstJwmg4WVHQMTYuUA`) Spotify API'den okur.
+2. JSON'da olmayan yeni sürüm varsa `data/generated/spotify-catalog.json` ve (ana sanatçı Şehinşah ise) `spotify-single-tracks.json` dosyalarına **ekler** — mevcut kayıtlara dokunmaz.
+3. `verify:spotify` + `verify-single-tracks` geçerse commit'ler ve `main`'e push eder; Vercel push'u görüp siteyi yeniden yayınlar.
+4. Yeni sürüm yoksa hiçbir şey commit'lenmez. Spotify 429 verirse hiçbir şey yazılmaz, sonraki çalışmada denenir.
+
+Kurulum (bir kez): GitHub repo > Settings > Secrets and variables > Actions > `SPOTIFY_CLIENT_ID` ve `SPOTIFY_CLIENT_SECRET` secret'larını ekle. Elle tetiklemek için Actions sekmesi > "Spotify yeni sürüm senkronu" > Run workflow. Yerelde denemek için `npm run sync:auto`.
+
 ### Verified catalog fallback
 
 1. Vercel live Spotify cache (`spotify-sehinsah-catalog-v4`)
