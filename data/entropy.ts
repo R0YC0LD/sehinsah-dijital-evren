@@ -23,7 +23,7 @@ export function getEntropyToastCopy(count: number, total: number = entropyConfig
     return {
       title: "TÜM ENTROPİLER TOPLANDI",
       counter: `${count}/${total}`,
-      subtitle: "Kapı açılıyor.",
+      subtitle: "Kapı açılıyor. Yayınlarda yeni izler var.",
     };
   }
 

@@ -117,6 +117,22 @@
   color: var(--text-muted);
 }
 
+.metaButton {
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.metaButton:hover,
+.metaButton:focus-visible {
+  color: var(--sehinsah-green);
+  border-color: var(--sehinsah-green-line);
+}
+
 .adminLink {
   margin-left: auto;
   font-size: 0.62rem;

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#040603" />
+    <title>Bağlantı yok — Şehinşah</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; margin: 0; }
+      body {
+        display: grid;
+        place-items: center;
+        padding: 1.5rem;
+        background: radial-gradient(ellipse at 50% 40%, rgba(49, 247, 125, 0.14), transparent 60%), #040603;
+        color: #eee9df;
+        font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+        text-align: center;
+      }
+      main { display: grid; gap: 1.1rem; justify-items: center; max-width: 26rem; }
+      img { width: 6.5rem; height: 6.5rem; border-radius: 22%; box-shadow: 0 0 46px rgba(49, 247, 125, 0.25); }
+      h1 { margin: 0; font-family: Impact, "Arial Narrow", sans-serif; font-weight: 400; letter-spacing: 0.04em; font-size: clamp(2rem, 9vw, 3rem); text-transform: uppercase; }
+      p { margin: 0; color: #96a498; line-height: 1.6; }
+      button {
+        min-height: 3rem; padding: 0 1.6rem; cursor: pointer;
+        font: inherit; font-size: 0.78rem; letter-spacing: 0.18em;
+        color: #051009; background: #31f77d; border: 1px solid rgba(122, 255, 174, 0.74);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="/icons/icon-192.png" alt="" width="104" height="104" />
+      <h1>Bağlantı yok</h1>
+      <p>İnternet bağlantın kesilmiş görünüyor. Bağlantı gelince müzik, konser takvimi ve mağaza yeniden açılır.</p>
+      <button type="button" onclick="location.reload()">TEKRAR DENE</button>
+    </main>
+  </body>
+</html>

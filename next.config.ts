@@ -35,6 +35,13 @@ const nextConfig: NextConfig = {
               headers: cache("public, max-age=604800, stale-while-revalidate=2592000"),
             },
             {
+              source: "/sw.js",
+              headers: [
+                ...cache("public, max-age=0, must-revalidate"),
+                { key: "Service-Worker-Allowed", value: "/" },
+              ],
+            },
+            {
               source: "/audio/:path*",
               headers: cache("public, max-age=604800, stale-while-revalidate=2592000"),
             },

@@ -1,6 +1,7 @@
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextResponse } from "next/server";
 import { upcomingConcerts } from "@/lib/concerts";
+import { runNotify } from "@/lib/push/events";
 import {
   StructureChanged,
   Unreachable,
@@ -56,7 +57,14 @@ export async function GET(request: Request) {
     }
     await holdLock(1800);
 
+    // Yeni konser/sürüm bildirimi: sessiz saatlerde (22:00–09:00 TR) yalnızca kuyruğa alınır.
+    const notify = await runNotify().catch((error) => ({
+      ok: false,
+      note: error instanceof Error ? error.message : String(error),
+    }));
+
     return json({
+      notify,
       ok: true,
       changed,
       sessions,

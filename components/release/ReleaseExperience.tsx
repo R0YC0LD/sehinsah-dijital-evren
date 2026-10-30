@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import { DeepEntropyBrain } from "@/components/easteregg/DeepEntropyBrain";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { useSpotifyPlayback } from "@/components/providers/SpotifyPlaybackProvider";
 import styles from "./ReleaseExperience.module.css";
@@ -158,6 +159,8 @@ export function ReleaseExperience({
   return (
     <div className={styles.grid}>
       <div className={styles.media}>
+        <DeepEntropyBrain releaseId={release.id} placement="stage" />
+        <DeepEntropyBrain releaseId={release.id} placement="tracks" />
         <div ref={stageRef} className={styles.screen}>
           {videoId ? (
             <>
@@ -277,6 +280,7 @@ export function ReleaseExperience({
       </div>
 
       <div className={styles.info}>
+        <DeepEntropyBrain releaseId={release.id} placement="info" />
         <p className="meta-label">
           {release.dateLabel} · {release.typeLabel}
         </p>

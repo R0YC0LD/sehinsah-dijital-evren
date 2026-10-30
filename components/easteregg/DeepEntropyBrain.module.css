@@ -1,0 +1,20 @@
+/* Konumlar: ReleaseExperience .media/.info ve ReleasePage .related (position: relative) içinde. */
+.stage {
+  top: -1rem;
+  right: 0.6rem;
+}
+
+.info {
+  top: -0.6rem;
+  right: 0;
+}
+
+.tracks {
+  bottom: -0.7rem;
+  right: 0.4rem;
+}
+
+.related {
+  top: 0.5rem;
+  right: 0.5rem;
+}

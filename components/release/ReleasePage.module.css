@@ -31,6 +31,7 @@
 }
 
 .related {
+  position: relative;
   display: grid;
   gap: 1.25rem;
   padding-top: clamp(1.5rem, 4vw, 2.5rem);

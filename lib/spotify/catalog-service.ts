@@ -15,7 +15,7 @@ import {
   getVerifiedSingleTracks,
   getVerifiedSingleTracksWithLive,
 } from "@/lib/spotify/single-tracks";
-import type { MusicCatalog, SpotifyRawAlbum, SpotifyTrack } from "@/lib/spotify/types";
+import type { MusicCatalog, SpotifyRawAlbum, SpotifyRelease, SpotifyTrack } from "@/lib/spotify/types";
 
 type AlbumsPage = {
   items: SpotifyRawAlbum[];
@@ -46,6 +46,16 @@ async function fetchAllAlbums(artistId: string, market: string): Promise<Spotify
   }
 
   return collected;
+}
+
+/**
+ * Önbelleksiz, taze doğrulanmış sürüm listesi (yeni sürüm bildirimi tespiti için).
+ * Kimlik bilgisi yoksa boş döner.
+ */
+export async function fetchFreshReleases(): Promise<SpotifyRelease[]> {
+  if (!hasSpotifyCredentials()) return [];
+  const raw = await fetchAllAlbums(siteConfig.spotify.artistId, process.env.SPOTIFY_MARKET || "TR");
+  return dedupeAlbums(raw.map(normalizeAlbum).filter((r) => r.verified));
 }
 
 /**

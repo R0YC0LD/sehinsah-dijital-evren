@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
+import { DeepEntropyBrain } from "@/components/easteregg/DeepEntropyBrain";
 import { SiteShell } from "@/components/SiteShell";
 import {
   ReleaseExperience,
@@ -186,6 +187,7 @@ export default async function ReleasePage({ params }: { params: Promise<Params> 
 
             {neighbours.length ? (
               <div className={styles.related}>
+                <DeepEntropyBrain releaseId={release.id} placement="related" />
                 <h2 className={`display ${styles.relatedTitle}`}>DİĞER YAYINLAR</h2>
                 <div className={styles.relatedGrid}>
                   {neighbours.map((r) => (

@@ -13,6 +13,7 @@ import {
   useAudioPreviewContext,
 } from "@/components/providers/AudioPreviewProvider";
 import { ChaosProvider } from "@/components/providers/ChaosProvider";
+import { DeepEntropy } from "@/components/easteregg/DeepEntropyProvider";
 import { EntropyProvider } from "@/components/easteregg/EntropyProvider";
 import { SpotifyPlaybackProvider } from "@/components/providers/SpotifyPlaybackProvider";
 import type { MusicCatalog } from "@/lib/spotify/types";
@@ -58,7 +59,9 @@ export function SiteShell({ children, catalog }: Props) {
       <AudioPreviewProvider>
         <SpotifyPlaybackProvider>
           <EntropyProvider>
-            <ShellInner catalog={catalog}>{children}</ShellInner>
+            <DeepEntropy>
+              <ShellInner catalog={catalog}>{children}</ShellInner>
+            </DeepEntropy>
           </EntropyProvider>
         </SpotifyPlaybackProvider>
       </AudioPreviewProvider>

@@ -55,6 +55,12 @@ jobs:
         continue-on-error: true
         run: node scripts/sync-youtube.mjs --deep
 
+      # Yeni parça/konser bildirimi: Vercel'deki rota, 09:00–22:00 (TR) arasında gönderir; gece çalışmaları
+      # yalnızca kuyruğa alır. Başarısız olması işi bozmaz (sonraki çalışmada tekrar denenir).
+      - name: Bildirimleri tetikle
+        continue-on-error: true
+        run: curl -fsSL --max-time 90 "https://www.xn--ehinah-vjbe.com/api/cron/notify" || true
+
       - name: Doğrula
         if: steps.sync.outputs.changed == 'true'
         run: |

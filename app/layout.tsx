@@ -2,6 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { ConcertsProvider } from "@/components/concerts/ConcertsProvider";
+import { NotifyProvider } from "@/components/notify/NotifyProvider";
+import { PwaProvider } from "@/components/pwa/PwaProvider";
 import { PageFadeIn } from "@/components/transition/PageFadeIn";
 import { PageTransitionOverlay } from "@/components/transition/PageTransitionOverlay";
 import { siteConfig } from "@/data/site";
@@ -47,6 +49,9 @@ export const metadata: Metadata = {
     images: [siteConfig.media.bubiletOg],
   },
   robots: { index: true, follow: true },
+  applicationName: "Şehinşah",
+  appleWebApp: { capable: true, title: "Şehinşah", statusBarStyle: "black-translucent" },
+  formatDetection: { telephone: false },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
   },
@@ -93,9 +98,13 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
         />
-        <ConcertsProvider startsAt={concerts.map((c) => c.startsAt)}>
-          <PageFadeIn>{children}</PageFadeIn>
-        </ConcertsProvider>
+        <PwaProvider>
+          <NotifyProvider>
+            <ConcertsProvider startsAt={concerts.map((c) => c.startsAt)}>
+              <PageFadeIn>{children}</PageFadeIn>
+            </ConcertsProvider>
+          </NotifyProvider>
+        </PwaProvider>
         <PageTransitionOverlay />
         <Analytics />
       </body>

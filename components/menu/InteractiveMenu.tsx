@@ -10,6 +10,7 @@ import { ChaosToggle } from "@/components/ui/ChaosToggle";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { MenuCursor } from "@/components/menu/MenuCursor";
 import { MenuPreview } from "@/components/menu/MenuPreview";
+import { InstallButton, NotifyButton } from "@/components/notify/NotifyButton";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { useHasConcerts } from "@/hooks/useHasConcerts";
@@ -209,6 +210,8 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
         </div>
         <div className={styles.metaRow}>
           <ExternalLink href={siteConfig.links.bubilet}>BUBİLET ↗</ExternalLink>
+          <NotifyButton className={styles.metaButton} label="BİLDİRİMLER" />
+          <InstallButton className={styles.metaButton} label="UYGULAMAYI YÜKLE" />
           <ChaosToggle />
           <EntropyMenuProgress />
           <Link href="/admin" className={styles.adminLink} onClick={onClose}>

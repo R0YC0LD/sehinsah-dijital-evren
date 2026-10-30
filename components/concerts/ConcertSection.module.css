@@ -37,6 +37,13 @@
   min-width: 0;
 }
 
+.headerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.5rem;
+}
+
 .all {
   color: var(--text-muted);
 }

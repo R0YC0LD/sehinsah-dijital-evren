@@ -98,6 +98,19 @@ Ana sayfadaki "KONSER TAKVİMİ" (menüde TAKVİM): sıradaki konser paneli (can
 **Gereksinim:** Vercel projesinde Upstash KV bağlı olmalı (`KV_REST_API_URL`, `KV_REST_API_TOKEN` — yorumlarla aynı). Yoksa rota 503 verir ve site yedek dosyayı kullanır.
 **Elle/yerel:** `npm run sync:concerts` yedek dosyayı günceller (GitHub Actions'tan Bubilet 403 verdiği için orada çalışmaz).
 
+### Uygulama (PWA), bildirimler ve Derin Entropi
+
+**PWA (telefona yükleme):** `app/manifest.ts` + `public/sw.js` + ikonlar (`public/icons/`, `app/apple-icon.png`; `npm run generate:pwa` ile `app/icon.png`'den üretilir). Chrome/Edge/Android "UYGULAMAYI YÜKLE" önerir (menüde ve bildirim penceresinde buton), iOS'ta Paylaş → Ana Ekrana Ekle talimatı gösterilir. Service worker bilerek minimaldir: **hiçbir sayfayı önbelleğe almaz** (eski içerik riski yok); yalnızca bağlantı yokken `offline.html` gösterir ve push bildirimlerini işler. Yalnızca production'da kaydedilir.
+
+**Bildirimler (Web Push):** Ziyaretçi menüden, müzik bölümünden ya da takvimden "haber ver" ile konu seçerek (yeni parça/albüm, yeni konser) abone olur.
+- Anahtarlar (VAPID) ilk kullanımda üretilip **Upstash KV**'ye yazılır; elle kurulum yok (isteğe bağlı: `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, `VAPID_SUBJECT`). Abonelikler KV'de (`sehinsah:push:subs`).
+- **Tespit:** `/api/cron/notify` Spotify'dan taze sürüm listesini ve KV'deki konserleri "bilinenler" kümesiyle karşılaştırır (ilk çalışma mevcutları sessizce bilinen yapar; 21 günden eski sürüm duyurulmaz). Konser cron'u her çalışmada, GitHub Action günde 4 kez bu rotayı tetikler.
+- **Sessiz saatler:** Gönderim yalnızca 09:00–22:00 (TR); gece bulunan olaylar kuyrukta bekler, sabah gider. 3'ten fazla birikmiş olay tek özet bildirime dönüşür.
+- **Güvenlik/hijyen:** Abonelik uç noktaları yalnızca bilinen push servislerine (FCM, Mozilla, Apple, Windows) izinlidir (SSRF önlemi); IP başına hız sınırı; ölü abonelikler (404/410) otomatik silinir; kullanıcı yalnızca kendi cihazına test bildirimi gönderebilir.
+- iOS'ta push yalnızca ana ekrana eklenmiş uygulamada çalışır. Brave'de "Push mesajları için Google hizmetlerini kullan" açık olmalı (arayüz bunu hatırlatır).
+
+**Derin Entropi (2. seviye easter egg):** Ana sayfadaki 5 beyin (1. seviye) bitince kapı açılır: parça sayfalarının ~%35'inde, kullanıcıya özel (kalıcı) tohumdan türeyen yerlerde gizli beyinler belirir (`lib/entropy/deep.ts`). 5 FARKLI yayından beyin toplayan, menüdeki "ENTROPİ ARŞİVİ"nden de açılan ödül penceresinde duvar kağıtlarını (`public/media/rewards/`) kazanır. İlerleme `localStorage`'dadır.
+
 ### Verified catalog fallback
 
 1. Vercel live Spotify cache (`spotify-sehinsah-catalog-v4`)

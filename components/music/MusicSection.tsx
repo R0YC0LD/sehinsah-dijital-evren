@@ -4,6 +4,7 @@ import { CatalogSummary } from "@/components/music/CatalogSummary";
 import { FeaturedTrackList } from "@/components/music/FeaturedTrackList";
 import { LatestRelease } from "@/components/music/LatestRelease";
 import { SpotifyArtistEmbed } from "@/components/music/SpotifyArtistEmbed";
+import { NotifyButton } from "@/components/notify/NotifyButton";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
@@ -34,6 +35,7 @@ export function MusicSection({ catalog }: Props) {
               <span className={styles.listenLabel}>DİNLE</span>
               <PlatformLinks variant="listen" placement="music" />
             </div>
+            <NotifyButton className={`editorial-link ${styles.notify}`} label="YENİ PARÇA OLUNCA HABER VER" />
           </div>
           <CatalogSummary catalog={catalog} />
           <EntropyBrain id="music-heading-edge" />

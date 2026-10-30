@@ -11,6 +11,7 @@
 }
 
 .media {
+  position: relative;
   display: grid;
   gap: 1rem;
   min-width: 0;
@@ -333,6 +334,7 @@
 }
 
 .info {
+  position: relative;
   display: grid;
   align-content: start;
   gap: 1.1rem;

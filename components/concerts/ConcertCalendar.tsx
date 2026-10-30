@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { ConcertFeatured } from "@/components/concerts/ConcertFeatured";
 import { ConcertRail, type RailConcert } from "@/components/concerts/ConcertRail";
 import styles from "@/components/concerts/ConcertSection.module.css";
+import { NotifyButton } from "@/components/notify/NotifyButton";
 import { isUpcoming } from "@/lib/concerts";
 
 type Props = {
@@ -44,9 +45,12 @@ export function ConcertCalendar({ concerts, allEventsUrl, meta, title, subtitle 
             <h2 className={`display ${styles.title}`}>{title}</h2>
             <p className={styles.subtitle}>{subtitle}</p>
           </div>
-          <a href={allEventsUrl} target="_blank" rel="noopener noreferrer" className={`editorial-link ${styles.all}`}>
-            TÜM ETKİNLİKLER ↗
-          </a>
+          <div className={styles.headerLinks}>
+            <NotifyButton className={`editorial-link ${styles.all}`} label="YENİ KONSER OLUNCA HABER VER" />
+            <a href={allEventsUrl} target="_blank" rel="noopener noreferrer" className={`editorial-link ${styles.all}`}>
+              TÜM ETKİNLİKLER ↗
+            </a>
+          </div>
         </div>
 
         <ConcertFeatured key={next.id} concert={next} />
