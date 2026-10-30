@@ -2,8 +2,29 @@
   "schemaVersion": 4,
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
-  "generatedAt": "2026-10-23T00:00:00.000Z",
+  "generatedAt": "2026-10-30T00:00:00.000Z",
   "releases": [
+    {
+      "id": "5yotNaBNQlkf5VoWQc4ZaT",
+      "spotifyId": "5yotNaBNQlkf5VoWQc4ZaT",
+      "objectType": "album",
+      "name": "70'lik",
+      "albumType": "single",
+      "releaseDate": "2026-10-30",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27347a79c528c31d03e4a9a21e8",
+      "spotifyUrl": "https://open.spotify.com/album/5yotNaBNQlkf5VoWQc4ZaT",
+      "uri": "spotify:album:5yotNaBNQlkf5VoWQc4ZaT",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "0wIb1zb5lU5uY6HuK2D8ZL",
       "spotifyId": "0wIb1zb5lU5uY6HuK2D8ZL",
@@ -1861,6 +1882,27 @@
   ],
   "singles": [
     {
+      "id": "5yotNaBNQlkf5VoWQc4ZaT",
+      "spotifyId": "5yotNaBNQlkf5VoWQc4ZaT",
+      "objectType": "album",
+      "name": "70'lik",
+      "albumType": "single",
+      "releaseDate": "2026-10-30",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27347a79c528c31d03e4a9a21e8",
+      "spotifyUrl": "https://open.spotify.com/album/5yotNaBNQlkf5VoWQc4ZaT",
+      "uri": "spotify:album:5yotNaBNQlkf5VoWQc4ZaT",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
       "id": "0wIb1zb5lU5uY6HuK2D8ZL",
       "spotifyId": "0wIb1zb5lU5uY6HuK2D8ZL",
       "objectType": "album",
@@ -3547,35 +3589,31 @@
   ],
   "tracks": [],
   "latestRelease": {
-    "id": "0wIb1zb5lU5uY6HuK2D8ZL",
-    "spotifyId": "0wIb1zb5lU5uY6HuK2D8ZL",
+    "id": "5yotNaBNQlkf5VoWQc4ZaT",
+    "spotifyId": "5yotNaBNQlkf5VoWQc4ZaT",
     "objectType": "album",
-    "name": "Sodom & Gomore",
+    "name": "70'lik",
     "albumType": "single",
-    "releaseDate": "2026-10-23",
+    "releaseDate": "2026-10-30",
     "releaseYear": "2026",
     "totalTracks": 1,
-    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27320f25b7044895e0b2b3866b6",
-    "spotifyUrl": "https://open.spotify.com/album/0wIb1zb5lU5uY6HuK2D8ZL",
-    "uri": "spotify:album:0wIb1zb5lU5uY6HuK2D8ZL",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27347a79c528c31d03e4a9a21e8",
+    "spotifyUrl": "https://open.spotify.com/album/5yotNaBNQlkf5VoWQc4ZaT",
+    "uri": "spotify:album:5yotNaBNQlkf5VoWQc4ZaT",
     "artists": [
       {
         "id": "0FUsrstJwmg4WVHQMTYuUA",
         "name": "Şehinşah"
-      },
-      {
-        "id": "3yzGegJHrOW1CndMVFoo3m",
-        "name": "Hidra"
       }
     ],
     "containsTargetArtist": true,
     "verified": true
   },
   "counts": {
-    "total": 84,
+    "total": 85,
     "albums": 4,
-    "singles": 80,
+    "singles": 81,
     "tracks": 0
   },
-  "updatedAt": "2026-10-23T00:00:00.000Z"
+  "updatedAt": "2026-10-30T00:00:00.000Z"
 }

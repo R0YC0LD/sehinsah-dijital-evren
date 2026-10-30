@@ -3,8 +3,27 @@
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
   "allowCollaborations": false,
-  "generatedAt": "2026-10-23T00:00:00.000Z",
+  "generatedAt": "2026-10-30T00:00:00.000Z",
   "tracks": [
+    {
+      "id": "57nmhwF2m4de6U9SK6SEC2",
+      "spotifyId": "57nmhwF2m4de6U9SK6SEC2",
+      "uri": "spotify:track:57nmhwF2m4de6U9SK6SEC2",
+      "spotifyUrl": "https://open.spotify.com/track/57nmhwF2m4de6U9SK6SEC2",
+      "name": "70'lik",
+      "durationMs": 151483,
+      "albumId": "5yotNaBNQlkf5VoWQc4ZaT",
+      "albumName": "70'lik",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "3byoJn9zmed6KfEUEv9Upo",
       "spotifyId": "3byoJn9zmed6KfEUEv9Upo",
@@ -1531,6 +1550,6 @@
     }
   ],
   "counts": {
-    "total": 80
+    "total": 81
   }
 }
