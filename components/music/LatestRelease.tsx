@@ -1,11 +1,15 @@
+import Link from "next/link";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { siteConfig } from "@/data/site";
+import { releaseSlug } from "@/lib/release/slug";
 import type { SpotifyRelease } from "@/lib/spotify/types";
 import { isDirectSpotifyAlbumUrl } from "@/lib/spotify/validate-links";
 import styles from "./LatestRelease.module.css";
 
 type Props = {
   release: SpotifyRelease | null;
+  /** Slug çakışmalarını çözmek için tüm sürümler. */
+  all?: SpotifyRelease[];
 };
 
 function isRecent(date: string) {
@@ -16,7 +20,7 @@ function isRecent(date: string) {
   return days >= 0 && days <= 45;
 }
 
-export function LatestRelease({ release }: Props) {
+export function LatestRelease({ release, all = [] }: Props) {
   if (!release || !release.verified) {
     return (
       <div className={`panel ${styles.box}`}>
@@ -89,9 +93,14 @@ export function LatestRelease({ release }: Props) {
         {release.totalTracks ? ` · ${release.totalTracks} parça` : ""}
       </p>
       {safe ? (
-        <ExternalLink href={release.spotifyUrl} className={styles.cta}>
-          {siteConfig.music.listenLabel}
-        </ExternalLink>
+        <div className={styles.links}>
+          <Link href={`/muzik/${releaseSlug(release, all)}`} className={styles.page}>
+            KLİP VE DETAYLAR →
+          </Link>
+          <ExternalLink href={release.spotifyUrl} className={styles.cta}>
+            {siteConfig.music.listenLabel}
+          </ExternalLink>
+        </div>
       ) : (
         <p className={styles.empty}>BAĞLANTI DOĞRULANAMADI</p>
       )}

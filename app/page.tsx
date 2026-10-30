@@ -2,6 +2,7 @@ import { SiteShell } from "@/components/SiteShell";
 import { BioTeaser } from "@/components/home/BioTeaser";
 import { HeroSection } from "@/components/hero/HeroSection";
 import { MusicSection } from "@/components/music/MusicSection";
+import { ConcertSection } from "@/components/concerts/ConcertSection";
 import { TicketSection } from "@/components/sections/TicketSection";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { FinalSection } from "@/components/sections/FinalSection";
@@ -16,6 +17,7 @@ export default async function HomePage() {
         <HeroSection />
         <MusicSection catalog={catalog} />
         <TicketSection />
+        <ConcertSection />
         <InstagramSection />
         <FinalSection />
       </main>

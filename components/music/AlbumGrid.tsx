@@ -6,6 +6,7 @@ import { AlbumCard } from "@/components/music/AlbumCard";
 import { AlbumFilters, type AlbumFilter } from "@/components/music/AlbumFilters";
 import { AlbumQuickView } from "@/components/music/AlbumQuickView";
 import { siteConfig } from "@/data/site";
+import { releaseSlug } from "@/lib/release/slug";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import styles from "./AlbumGrid.module.css";
@@ -28,6 +29,11 @@ export function AlbumGrid({ catalog }: Props) {
     );
     return Array.from(set).sort((a, b) => (a < b ? 1 : -1));
   }, [catalog.releases]);
+
+  const hrefs = useMemo(
+    () => new Map(catalog.releases.map((r) => [r.id, `/muzik/${releaseSlug(r, catalog.releases)}`])),
+    [catalog.releases],
+  );
 
   const items = useMemo(() => {
     let list =
@@ -110,6 +116,7 @@ export function AlbumGrid({ catalog }: Props) {
           <AlbumCard
             key={album.id}
             album={album}
+            href={hrefs.get(album.id) ?? `/muzik/${album.id}`}
             onOpen={() => setActiveId(album.id)}
           />
         ))}
@@ -117,7 +124,11 @@ export function AlbumGrid({ catalog }: Props) {
 
       {active && typeof document !== "undefined"
         ? createPortal(
-            <AlbumQuickView album={active} onClose={() => setActiveId(null)} />,
+            <AlbumQuickView
+              album={active}
+              pageHref={hrefs.get(active.id) ?? `/muzik/${active.id}`}
+              onClose={() => setActiveId(null)}
+            />,
             document.body,
           )
         : null}

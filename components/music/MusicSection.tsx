@@ -40,7 +40,7 @@ export function MusicSection({ catalog }: Props) {
         </div>
 
         <div className={styles.topGrid}>
-          <LatestRelease release={latest} />
+          <LatestRelease release={latest} all={catalog.releases} />
           <FeaturedTrackList catalog={catalog} />
         </div>
 

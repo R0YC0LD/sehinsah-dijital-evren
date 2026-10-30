@@ -1,0 +1,342 @@
+.grid {
+  display: grid;
+  gap: clamp(1.75rem, 4vw, 3.25rem);
+}
+
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.media {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.screen {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #040603;
+  border: 1px solid var(--line);
+  box-shadow:
+    0 0 0 1px var(--sehinsah-green-faint),
+    0 28px 60px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: cover;
+}
+
+.sound {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.85rem;
+  min-height: 2.4rem;
+  padding: 0 0.95rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--sehinsah-green);
+  background: rgba(4, 6, 3, 0.78);
+  border: 1px solid var(--sehinsah-green-line);
+  backdrop-filter: blur(6px);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sound:hover,
+.sound:focus-visible {
+  background: var(--sehinsah-green);
+  color: #051009;
+  box-shadow: 0 0 18px var(--sehinsah-green-glow);
+}
+
+.coverStage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+}
+
+.coverBackdrop {
+  object-fit: cover;
+  filter: blur(38px) saturate(1.1);
+  transform: scale(1.25);
+  opacity: 0.42;
+  z-index: -1;
+}
+
+.coverStage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(4, 6, 3, 0.78) 100%),
+    linear-gradient(rgba(4, 6, 3, 0.25), rgba(4, 6, 3, 0.25));
+}
+
+.coverArt {
+  position: relative;
+  height: 82%;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--sehinsah-green-faint);
+  animation: coverBreath 9s ease-in-out infinite alternate;
+}
+
+.coverImage {
+  object-fit: cover;
+}
+
+@keyframes coverBreath {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.035);
+  }
+}
+
+.watch {
+  justify-self: start;
+  color: var(--text-muted);
+}
+
+.watch:hover {
+  color: var(--text);
+}
+
+.tracks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+
+.track {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.1rem;
+  padding: 0 0.5rem;
+  text-align: left;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--line);
+  border-left: 2px solid transparent;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.track:hover {
+  color: var(--text);
+  background: var(--sehinsah-green-faint);
+}
+
+.trackActive {
+  color: var(--text);
+  border-left-color: var(--sehinsah-green);
+  background: var(--sehinsah-green-faint);
+}
+
+.trackNo {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+.trackName {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.explicit {
+  display: inline-grid;
+  place-items: center;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-left: 0.5rem;
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  border: 1px solid var(--line);
+  vertical-align: 0.1em;
+}
+
+.clipBadge {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: var(--sehinsah-green);
+  border: 1px solid var(--sehinsah-green-line);
+  padding: 0.18rem 0.4rem;
+}
+
+.trackTime {
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.info {
+  display: grid;
+  align-content: start;
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+.title {
+  font-size: clamp(2.6rem, 6.4vw, 4.6rem);
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.artists {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+.artist {
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.artist:hover {
+  color: var(--sehinsah-green);
+}
+
+.facts {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+
+.facts > div {
+  padding: 0.7rem 0.85rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.facts dt {
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+}
+
+.facts dd {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+}
+
+.primary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 3rem;
+  padding: 0 1.35rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  color: #051009;
+  background: var(--sehinsah-green);
+  border: 1px solid rgba(122, 255, 174, 0.74);
+  transition: box-shadow 0.25s ease, transform 0.25s var(--ease);
+}
+
+.primary:hover,
+.primary:focus-visible {
+  box-shadow: 0 0 26px var(--sehinsah-green-glow);
+  transform: translateY(-2px);
+}
+
+.embed {
+  border: 1px solid var(--line);
+  background: rgba(8, 8, 8, 0.5);
+}
+
+.embedFrame {
+  display: block;
+  border: 0;
+}
+
+.lyrics {
+  display: grid;
+  gap: 0.85rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+.lyricsTitle {
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+}
+
+.lyricsText {
+  white-space: pre-wrap;
+  line-height: 1.85;
+  max-width: 60ch;
+}
+
+.credit {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.lyricsNote {
+  display: grid;
+  gap: 0.85rem;
+  justify-items: start;
+  color: var(--text-muted);
+  line-height: 1.65;
+  max-width: 52ch;
+  font-size: 0.92rem;
+}
+
+.lyricsLink {
+  color: var(--spotify);
+}
+
+.copyrights {
+  display: grid;
+  gap: 0.25rem;
+  font-size: 0.68rem;
+  line-height: 1.5;
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+@media (max-width: 899px) {
+  .track {
+    grid-template-columns: 1.8rem minmax(0, 1fr) auto;
+  }
+
+  .track .trackTime {
+    display: none;
+  }
+
+  .sound {
+    min-height: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coverArt {
+    animation: none;
+  }
+}

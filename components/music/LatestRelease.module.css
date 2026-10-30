@@ -66,6 +66,31 @@
   font-size: 0.85rem;
 }
 
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.page {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.5rem;
+  padding: 0 1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  color: #051009;
+  background: var(--sehinsah-green);
+  border: 1px solid rgba(122, 255, 174, 0.74);
+  transition: box-shadow 0.25s ease;
+}
+
+.page:hover,
+.page:focus-visible {
+  box-shadow: 0 0 22px var(--sehinsah-green-glow);
+}
+
 .cta {
   color: var(--spotify);
   font-size: 0.78rem;

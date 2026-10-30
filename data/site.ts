@@ -42,6 +42,12 @@ export const siteConfig = {
     label: "Bubilet",
     url: "https://www.bubilet.com.tr/sanatci/sehinsah",
   },
+  calendar: {
+    meta: "03 / TAKVİM",
+    title: "KONSER TAKVİMİ",
+    subtitle: "Yaklaşan konserler ve etkinlikler. Kaydır, tarihini seç, biletini al.",
+    empty: "Yeni tarihler çok yakında. Duyurular için takipte kal.",
+  },
   store: {
     meta: "MAĞAZA / KOLEKSİYON",
     title: "MAĞAZA",
@@ -138,8 +144,9 @@ export const siteConfig = {
     { id: "hero", index: "01", label: "ANA SAYFA", href: "#hero", preview: "falling" as const },
     { id: "muzik", index: "02", label: "MÜZİK", href: "#muzik", preview: "music" as const },
     { id: "sahne", index: "03", label: "SAHNE", href: "#sahne", preview: "bubilet" as const },
-    { id: "magaza", index: "04", label: "MAĞAZA", href: "/magaza", preview: "magaza" as const },
-    { id: "instagram", index: "05", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
+    { id: "takvim", index: "04", label: "TAKVİM", href: "#takvim", preview: "bubilet" as const },
+    { id: "magaza", index: "05", label: "MAĞAZA", href: "/magaza", preview: "magaza" as const },
+    { id: "instagram", index: "06", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
   ],
 };
 

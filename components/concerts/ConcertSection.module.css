@@ -1,0 +1,49 @@
+.section {
+  position: relative;
+  padding: clamp(4.5rem, 10vh, 7rem) 0;
+}
+
+.backdrop {
+  background: linear-gradient(180deg, rgba(5, 5, 5, 0.1), rgba(11, 11, 11, 0.4), rgba(5, 5, 5, 0.1));
+}
+
+.ghost {
+  position: absolute;
+  left: 2%;
+  top: 6%;
+  font-size: clamp(4rem, 14vw, 10rem);
+  color: rgba(238, 233, 223, 0.04);
+  white-space: nowrap;
+}
+
+.content {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.header {
+  display: grid;
+  gap: 0.85rem;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+  width: min(100%, 60%);
+}
+
+.title {
+  font-size: clamp(2.8rem, 8vw, 5rem);
+}
+
+.subtitle {
+  color: var(--text-muted);
+  max-width: 38ch;
+}
+
+@media (max-width: 899px) {
+  .section {
+    padding: var(--mobile-section-y) 0;
+  }
+
+  .header {
+    width: 100%;
+    padding-inline: var(--mobile-page-x);
+  }
+}

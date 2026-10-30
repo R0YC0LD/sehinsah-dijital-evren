@@ -12,6 +12,7 @@
     "verify:spotify": "node scripts/verify-spotify-links.mjs && node scripts/verify-single-tracks.mjs",
     "sync:spotify": "node scripts/sync-spotify.mjs",
     "sync:auto": "node --env-file=.env.local scripts/auto-sync-releases.mjs",
+    "sync:youtube": "node scripts/sync-youtube.mjs",
     "migrate:catalog": "node scripts/migrate-catalog.mjs",
     "purge:catalog": "node scripts/purge-contaminated-catalog.mjs",
     "build:singles": "node scripts/build-single-tracks.mjs",

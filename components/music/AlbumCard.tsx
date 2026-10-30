@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { isEpRelease } from "@/lib/spotify/normalize";
 import type { SpotifyRelease } from "@/lib/spotify/types";
@@ -7,10 +8,11 @@ import styles from "./AlbumCard.module.css";
 
 type Props = {
   album: SpotifyRelease;
+  href: string;
   onOpen: () => void;
 };
 
-export function AlbumCard({ album, onOpen }: Props) {
+export function AlbumCard({ album, href, onOpen }: Props) {
   const typeLabel =
     album.albumType === "album"
       ? "Albüm"
@@ -62,14 +64,19 @@ export function AlbumCard({ album, onOpen }: Props) {
 
   return (
     <div className={styles.card}>
-      <button
-        type="button"
+      <Link
+        href={href}
         className={styles.link}
         aria-label={`${album.name} albümünü incele`}
-        onClick={onOpen}
+        onClick={(e) => {
+          // Ctrl/Cmd/orta tık: sayfayı yeni sekmede aç. Düz tık: hızlı önizleme.
+          if (e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          onOpen();
+        }}
       >
         {body}
-      </button>
+      </Link>
       <ReleaseActions
         id={album.id}
         type="album"
