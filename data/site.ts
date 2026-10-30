@@ -35,10 +35,6 @@ export const siteConfig = {
     noPreview: "ÖNİZLEME YOK",
   },
   tickets: {
-    title: "SAHNE",
-    subtitle: "Güncel konserleri ve etkinlikleri görüntüle.",
-    cta: "ETKİNLİKLERİ GÖR ↗",
-    meta: "CANLI / ETKİNLİKLER",
     label: "Bubilet",
     url: "https://www.bubilet.com.tr/sanatci/sehinsah",
   },
@@ -142,10 +138,9 @@ export const siteConfig = {
   nav: [
     { id: "hero", index: "01", label: "ANA SAYFA", href: "#hero", preview: "falling" as const },
     { id: "muzik", index: "02", label: "MÜZİK", href: "#muzik", preview: "music" as const },
-    { id: "sahne", index: "03", label: "SAHNE", href: "#sahne", preview: "bubilet" as const },
-    { id: "takvim", index: "04", label: "TAKVİM", href: "#takvim", preview: "bubilet" as const },
-    { id: "magaza", index: "05", label: "MAĞAZA", href: "/magaza", preview: "magaza" as const },
-    { id: "instagram", index: "06", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
+    { id: "takvim", index: "03", label: "TAKVİM", href: "#takvim", preview: "bubilet" as const },
+    { id: "magaza", index: "04", label: "MAĞAZA", href: "/magaza", preview: "magaza" as const },
+    { id: "instagram", index: "05", label: "INSTAGRAM", href: "#instagram", preview: "instagram" as const },
   ],
 };
 

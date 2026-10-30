@@ -13,6 +13,7 @@
     "sync:spotify": "node scripts/sync-spotify.mjs",
     "sync:auto": "node --env-file=.env.local scripts/auto-sync-releases.mjs",
     "sync:youtube": "node scripts/sync-youtube.mjs",
+    "audit:videos": "node scripts/audit-videos.mjs",
     "sync:concerts": "node scripts/sync-concerts.mjs",
     "sync:details": "node --env-file=.env.local scripts/sync-release-details.mjs",
     "migrate:catalog": "node scripts/migrate-catalog.mjs",

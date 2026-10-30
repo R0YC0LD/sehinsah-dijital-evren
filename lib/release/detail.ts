@@ -3,7 +3,7 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import detailsFile from "@/data/generated/release-details.json";
 import { isGitHubPages } from "@/lib/deploy";
-import { findVideoId } from "@/lib/youtube/match";
+import { findVideoId, normalizeTitle } from "@/lib/youtube/match";
 import { hasSpotifyCredentials, spotifyFetch } from "@/lib/spotify/server-client";
 import { getVerifiedSingleTracks } from "@/lib/spotify/single-tracks";
 import type { SpotifyRelease } from "@/lib/spotify/types";
@@ -135,12 +135,22 @@ export async function getReleaseDetail(release: SpotifyRelease): Promise<Release
     }
   }
 
+  // Klip, ad eşleşmesine ek olarak parça süresi / sürüm tarihiyle doğrulanır (yanlış video çıkmasın).
   const tracks: ReleaseTrack[] = part.tracks.map((t) => ({
     ...t,
-    videoId: findVideoId(t.name, [t.id]),
+    videoId: findVideoId(t.name, [t.id], {
+      durationMs: t.durationMs,
+      releaseDate: release.releaseDate,
+    }),
   }));
+  const sameNameTrack = part.tracks.find(
+    (t) => normalizeTitle(t.name) === normalizeTitle(release.name),
+  );
   const releaseVideo =
-    findVideoId(release.name, [release.id]) ??
+    findVideoId(release.name, [release.id], {
+      durationMs: sameNameTrack?.durationMs ?? (part.tracks.length === 1 ? part.tracks[0].durationMs : undefined),
+      releaseDate: release.releaseDate,
+    }) ??
     (tracks.length === 1 ? tracks[0].videoId : null) ??
     tracks.find((t) => t.videoId)?.videoId ??
     null;

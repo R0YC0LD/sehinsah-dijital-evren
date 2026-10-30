@@ -3,7 +3,6 @@ export type EntropySlotId =
   | "hero-lower-left"
   | "music-heading-edge"
   | "discography-divider"
-  | "stage-poster-edge"
   | "store-grid-edge"
   | "instagram-ring-side"
   | "final-copy-corner"
@@ -11,7 +10,7 @@ export type EntropySlotId =
 
 export type EntropySlot = {
   id: EntropySlotId;
-  section: "menu" | "hero" | "music" | "stage" | "magaza" | "instagram" | "final" | "footer";
+  section: "menu" | "hero" | "music" | "magaza" | "instagram" | "final" | "footer";
   placement: string;
   required?: boolean;
 };

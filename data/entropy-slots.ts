@@ -25,11 +25,6 @@ export const entropySlots: EntropySlot[] = [
     placement: "discography-divider-safe",
   },
   {
-    id: "stage-poster-edge",
-    section: "stage",
-    placement: "poster-lower-edge-safe",
-  },
-  {
     id: "store-grid-edge",
     section: "magaza",
     placement: "grid-edge-safe",

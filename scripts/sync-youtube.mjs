@@ -44,6 +44,31 @@ async function fromRss() {
   return out;
 }
 
+/** "3:12" / "1:02:05" → saniye. */
+function clockToSeconds(text) {
+  const m = /^(?:(\d{1,2}):)?(\d{1,2}):(\d{2})$/.exec(String(text).trim());
+  if (!m) return null;
+  return Number(m[1] || 0) * 3600 + Number(m[2]) * 60 + Number(m[3]);
+}
+
+/** Bir video kartının (lockupViewModel) içindeki süre rozetini ("3:12") bulur. */
+function findDuration(node) {
+  let found = null;
+  (function walk(o) {
+    if (found !== null || !o || typeof o !== "object") return;
+    const badge = o.thumbnailBadgeViewModel?.text;
+    if (typeof badge === "string") {
+      const sec = clockToSeconds(badge);
+      if (sec) {
+        found = sec;
+        return;
+      }
+    }
+    for (const k in o) walk(o[k]);
+  })(node);
+  return found;
+}
+
 async function fromUploadsPage() {
   const res = await fetch(`https://www.youtube.com/playlist?list=${UPLOADS}`, { headers: HEADERS });
   if (!res.ok) throw new Error(`playlist_${res.status}`);
@@ -55,19 +80,26 @@ async function fromUploadsPage() {
   const seen = new Map();
   (function walk(o) {
     if (!o || typeof o !== "object") return;
+    const lockupTitle = o.metadata?.lockupMetadataViewModel?.title?.content;
+    if (o.contentId && lockupTitle && !seen.has(o.contentId)) {
+      // Süre: parça süresiyle doğrulama için (aynı adlı yanlış videoyu eler).
+      const durationSec = findDuration(o);
+      seen.set(o.contentId, {
+        title: lockupTitle.trim(),
+        ...(durationSec ? { durationSec } : {}),
+      });
+    }
     if (typeof o.videoId === "string" && o.videoId.length === 11) {
       const title =
         o.title?.runs?.[0]?.text ||
         o.title?.simpleText ||
         o.headline?.runs?.[0]?.text ||
         o.headline?.simpleText;
-      if (title && !seen.has(o.videoId)) seen.set(o.videoId, title);
+      if (title && !seen.has(o.videoId)) seen.set(o.videoId, { title: title.trim() });
     }
-    const lockupTitle = o.metadata?.lockupMetadataViewModel?.title?.content;
-    if (o.contentId && lockupTitle && !seen.has(o.contentId)) seen.set(o.contentId, lockupTitle);
     for (const k in o) walk(o[k]);
   })(data);
-  return [...seen].map(([id, title]) => ({ id, title: title.trim() }));
+  return [...seen].map(([id, v]) => ({ id, ...v }));
 }
 
 async function setOutput(key, value) {

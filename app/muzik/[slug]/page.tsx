@@ -12,7 +12,6 @@ import { siteConfig } from "@/data/site";
 import { getReleaseDetail } from "@/lib/release/detail";
 import { formatDuration, formatReleaseDate, releaseTypeLabel } from "@/lib/release/format";
 import { findReleaseBySlug, releaseSlug } from "@/lib/release/slug";
-import { findVideoId } from "@/lib/youtube/match";
 import { getMusicCatalog } from "@/lib/spotify/catalog-service";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -47,7 +46,7 @@ export async function generateMetadata({
   const canonicalSlug = releaseSlug(release, catalog.releases);
   const type = releaseTypeLabel(release);
   const title = `${release.name} — ${siteConfig.displayName}`;
-  const hasClip = Boolean(findVideoId(release.name, [release.id]));
+  const hasClip = Boolean((await getReleaseDetail(release)).videoId);
   const description = `${siteConfig.displayName} – ${release.name} (${type}, ${formatReleaseDate(release.releaseDate)}). ${hasClip ? "Klibi izle, " : ""}Spotify’da dinle, çıkış tarihi ve parça bilgileri.`;
   const images = release.imageUrl ? [{ url: release.imageUrl, width: 640, height: 640 }] : undefined;
   const url = `${getSiteUrl()}/muzik/${canonicalSlug}`;

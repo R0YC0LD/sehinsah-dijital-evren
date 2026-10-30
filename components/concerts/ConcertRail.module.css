@@ -21,6 +21,20 @@
   color: var(--text-muted);
 }
 
+.hintTitle {
+  color: var(--text);
+}
+
+.hint span {
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
+  .hintLine {
+    display: none;
+  }
+}
+
 .hintLine {
   width: clamp(2rem, 8vw, 4.5rem);
   height: 1px;
@@ -222,6 +236,29 @@
 .cta:focus-visible {
   box-shadow: 0 0 22px var(--sehinsah-green-glow);
   transform: translateY(-2px);
+}
+
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+}
+
+.tool {
+  padding: 0;
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.tool:hover,
+.tool:focus-visible {
+  color: var(--sehinsah-green);
+  border-color: var(--sehinsah-green-line);
 }
 
 .more {

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { downloadIcs, mapsUrl } from "@/lib/calendar-links";
 import styles from "./ConcertRail.module.css";
 
 export type RailConcert = {
@@ -112,9 +113,9 @@ export function ConcertRail({ concerts, allEventsUrl }: Props) {
     <div className={styles.wrap}>
       <div className={styles.controls}>
         <p className={styles.hint} aria-hidden="true">
-          <span>KAYDIR</span>
+          <span className={styles.hintTitle}>SONRAKİ ETKİNLİKLER</span>
           <span className={styles.hintLine} />
-          <span>→</span>
+          <span>KAYDIR →</span>
         </p>
         <div className={styles.buttons}>
           <button
@@ -175,8 +176,9 @@ export function ConcertRail({ concerts, allEventsUrl }: Props) {
                   {countdown ? <span className={styles.countdown}>{countdown}</span> : null}
                 </div>
 
-                <h3 className={`display ${styles.cardTitle}`}>{c.title}</h3>
-                {c.lineup.length ? <p className={styles.lineup}>{c.lineup.join(" · ")}</p> : null}
+                <h3 className={`display ${styles.cardTitle}`}>
+                  {c.lineup.length ? c.lineup.join(" · ") : c.title}
+                </h3>
 
                 <dl className={styles.meta}>
                   <div>
@@ -210,6 +212,15 @@ export function ConcertRail({ concerts, allEventsUrl }: Props) {
                 >
                   {c.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
                 </a>
+
+                <div className={styles.tools}>
+                  <button type="button" className={styles.tool} onClick={() => downloadIcs(c)}>
+                    TAKVİME EKLE
+                  </button>
+                  <a className={styles.tool} href={mapsUrl(c)} target="_blank" rel="noopener noreferrer" draggable={false}>
+                    YOL TARİFİ ↗
+                  </a>
+                </div>
               </div>
             </article>
           );

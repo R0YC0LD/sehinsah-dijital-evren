@@ -2,7 +2,7 @@ import { ConcertCalendar } from "@/components/concerts/ConcertCalendar";
 import type { RailConcert } from "@/components/concerts/ConcertRail";
 import { concerts } from "@/data/concerts";
 import { siteConfig } from "@/data/site";
-import { upcomingConcerts } from "@/lib/concerts";
+import { splitLineup, upcomingConcerts } from "@/lib/concerts";
 import { getSiteUrl } from "@/lib/site-url";
 
 const WEEKDAYS = ["PAZAR", "PAZARTESİ", "SALI", "ÇARŞAMBA", "PERŞEMBE", "CUMA", "CUMARTESİ"];
@@ -30,7 +30,7 @@ export function ConcertSection() {
     return {
       id: c.id,
       title: c.title,
-      lineup: [],
+      lineup: splitLineup(c.title),
       startsAt: c.startsAt,
       day: String(start.day).padStart(2, "0"),
       month: start.month,

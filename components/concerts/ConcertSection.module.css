@@ -22,10 +22,26 @@
 }
 
 .header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-inline: clamp(1.25rem, 4vw, 3rem);
+}
+
+.headerText {
   display: grid;
   gap: 0.85rem;
-  padding-inline: clamp(1.25rem, 4vw, 3rem);
-  width: min(100%, 60%);
+  min-width: 0;
+}
+
+.all {
+  color: var(--text-muted);
+}
+
+.all:hover {
+  color: var(--sehinsah-green);
 }
 
 .title {
@@ -43,7 +59,6 @@
   }
 
   .header {
-    width: 100%;
     padding-inline: var(--mobile-page-x);
   }
 }

@@ -17,7 +17,6 @@ const SLOT_CLASS: Record<EntropySlotId, string> = {
   "hero-lower-left": styles["slot-hero-lower-left"],
   "music-heading-edge": styles["slot-music-heading-edge"],
   "discography-divider": styles["slot-discography-divider"],
-  "stage-poster-edge": styles["slot-stage-poster-edge"],
   "store-grid-edge": styles["slot-store-grid-edge"],
   "instagram-ring-side": styles["slot-instagram-ring-side"],
   "final-copy-corner": styles["slot-final-copy-corner"],

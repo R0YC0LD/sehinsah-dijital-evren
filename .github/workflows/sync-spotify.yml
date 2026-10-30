@@ -53,7 +53,7 @@ jobs:
       - name: YouTube videolarını çek
         id: yt
         continue-on-error: true
-        run: node scripts/sync-youtube.mjs
+        run: node scripts/sync-youtube.mjs --deep
 
       - name: Doğrula
         if: steps.sync.outputs.changed == 'true'

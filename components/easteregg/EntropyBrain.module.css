@@ -134,11 +134,6 @@
   left: clamp(12px, 4vw, 40px);
 }
 
-.slot-stage-poster-edge {
-  left: clamp(12px, 4vw, 36px);
-  bottom: 18%;
-}
-
 .slot-store-grid-edge {
   top: -8px;
   right: clamp(12px, 4vw, 40px);
@@ -196,11 +191,6 @@
   .slot-music-heading-edge {
     top: 8%;
     right: 14px;
-  }
-
-  .slot-stage-poster-edge {
-    left: 14px;
-    bottom: 22%;
   }
 
   .slot-instagram-ring-side {
