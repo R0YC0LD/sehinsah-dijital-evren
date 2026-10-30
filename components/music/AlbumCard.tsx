@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { CoverImage } from "@/components/ui/CoverImage";
 import Link from "next/link";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { isEpRelease } from "@/lib/spotify/normalize";
@@ -30,13 +30,11 @@ export function AlbumCard({ album, href, onOpen }: Props) {
     <>
       <div className={styles.cover}>
         {album.imageUrl ? (
-          <Image
+          <CoverImage
             src={album.imageUrl}
             alt={`${album.name} albüm kapağı`}
-            fill
+            size="md"
             sizes="(max-width: 699px) 45vw, (max-width: 1099px) 30vw, 280px"
-            loading="lazy"
-            className={styles.image}
           />
         ) : (
           <div className={styles.placeholder}>Kapak bulunamadı</div>

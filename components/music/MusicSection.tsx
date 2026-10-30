@@ -7,6 +7,7 @@ import { SpotifyArtistEmbed } from "@/components/music/SpotifyArtistEmbed";
 import { NotifyButton } from "@/components/notify/NotifyButton";
 import { PlatformLinks } from "@/components/platforms/PlatformLinks";
 import { siteConfig } from "@/data/site";
+import { trackPageHrefs } from "@/lib/release/track-links";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import styles from "./MusicSection.module.css";
 
@@ -47,7 +48,7 @@ export function MusicSection({ catalog }: Props) {
         </div>
 
         <div className={styles.embed}>
-          <SpotifyArtistEmbed tracks={catalog.verifiedSingleTracks || []} />
+          <SpotifyArtistEmbed tracks={catalog.verifiedSingleTracks || []} pageHrefs={trackPageHrefs(catalog)} />
         </div>
 
         <div className={styles.disco}>

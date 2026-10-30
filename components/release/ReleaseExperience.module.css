@@ -212,7 +212,8 @@
 }
 
 .coverBackdrop {
-  object-fit: cover;
+  position: absolute;
+  inset: 0;
   filter: blur(38px) saturate(1.1);
   transform: scale(1.25);
   opacity: 0.42;
@@ -268,6 +269,34 @@
   border-top: 1px solid var(--line);
 }
 
+.trackItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: stretch;
+  border-bottom: 1px solid var(--line);
+}
+
+.trackPage {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  border-left: 1px solid var(--line);
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.trackPage:hover,
+.trackPage:focus-visible {
+  color: var(--sehinsah-green);
+  background: var(--sehinsah-green-faint);
+}
+
+.fromRelease {
+  color: var(--text-muted);
+}
+
 .track {
   width: 100%;
   display: grid;
@@ -278,7 +307,6 @@
   padding: 0 0.5rem;
   text-align: left;
   color: var(--text-muted);
-  border-bottom: 1px solid var(--line);
   border-left: 2px solid transparent;
   transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
@@ -410,16 +438,6 @@
 .primary:focus-visible {
   box-shadow: 0 0 26px var(--sehinsah-green-glow);
   transform: translateY(-2px);
-}
-
-.embed {
-  border: 1px solid var(--line);
-  background: rgba(8, 8, 8, 0.5);
-}
-
-.embedFrame {
-  display: block;
-  border: 0;
 }
 
 .copyrights {

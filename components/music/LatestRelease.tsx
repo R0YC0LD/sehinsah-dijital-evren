@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CoverImage } from "@/components/ui/CoverImage";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import { siteConfig } from "@/data/site";
 import { releaseSlug } from "@/lib/release/slug";
@@ -50,17 +51,14 @@ export function LatestRelease({ release, all = [] }: Props) {
   const cover = (
     <>
       {release.imageUrl ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
+        <CoverImage
           src={release.imageUrl}
           alt={`${release.name} albüm kapağı`}
-          width={640}
-          height={640}
+          size="lg"
+          priority
+          fit="contain"
           className={styles.cover}
-          loading="eager"
-          fetchPriority="high"
-        />
-      ) : (
+        />      ) : (
         <div className={`display ${styles.fallback}`}>{release.name}</div>
       )}
     </>

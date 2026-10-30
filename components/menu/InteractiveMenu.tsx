@@ -11,6 +11,7 @@ import { ExternalLink } from "@/components/ui/ExternalLink";
 import { MenuCursor } from "@/components/menu/MenuCursor";
 import { MenuPreview } from "@/components/menu/MenuPreview";
 import { InstallButton, NotifyButton } from "@/components/notify/NotifyButton";
+import { coverUrl } from "@/components/ui/CoverImage";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
 import { useHasConcerts } from "@/hooks/useHasConcerts";
@@ -153,7 +154,7 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
 
   const verifiedCover =
     catalog.latestRelease?.verified && catalog.latestRelease.imageUrl
-      ? catalog.latestRelease.imageUrl
+      ? coverUrl(catalog.latestRelease.imageUrl, "md")
       : null;
 
   return (

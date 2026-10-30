@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/data/products";
-import { releaseSlug } from "@/lib/release/slug";
+import { storedTracks } from "@/lib/release/detail";
+import { releaseSlug, trackSlug } from "@/lib/release/slug";
 import { getMusicCatalog } from "@/lib/spotify/catalog-service";
 import { getSiteUrl } from "@/lib/site-url";
 
@@ -36,6 +37,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
+    ...catalog.releases.flatMap((r) => {
+      const tracks = storedTracks(r.id);
+      if (tracks.length < 2) return [];
+      return tracks.map((t) => ({
+        url: `${siteUrl}/muzik/${releaseSlug(r, catalog.releases)}/${trackSlug(t, tracks)}`,
+        lastModified: r.releaseDate ? new Date(r.releaseDate) : now,
+        changeFrequency: "monthly" as const,
+        priority: 0.5,
+      }));
+    }),
     ...products.map((p) => ({
       url: `${siteUrl}/magaza/${p.id}`,
       lastModified: now,

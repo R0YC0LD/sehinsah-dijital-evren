@@ -69,12 +69,13 @@ JSON yedeğini güncellemek için: `npm run sync:spotify` ve `npm run build:sing
 
 Kurulum (bir kez): GitHub repo > Settings > Secrets and variables > Actions > `SPOTIFY_CLIENT_ID` ve `SPOTIFY_CLIENT_SECRET` secret'larını ekle. Elle tetiklemek için Actions sekmesi > "Spotify yeni sürüm senkronu" > Run workflow. Yerelde denemek için `npm run sync:auto`.
 
-### Parça sayfaları (`/muzik/<ad>-<yıl>`)
+### Yayın ve parça sayfaları (`/muzik/<ad>-<yıl>[/<parça>]`)
 
-Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sürüm için otomatik oluşur, sitemap'e girer.
+Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sürüm için otomatik oluşur, sitemap'e girer. **Çok parçalı yayınlarda (EP/albüm) her parçanın da kendi sayfası vardır** (ör. `/muzik/entropi-2026/bu-ask-haram`): klip, süre ve Spotify bağlantısı o parçaya göre değişir; parça listesindeki → ile açılır, ana sayfadaki oynatıcıdan da "PARÇA SAYFASI" ile gidilir (`lib/release/page-data.ts`, `lib/release/track-links.ts`). Tek parçalı yayında parça adresi yayın sayfasına yönlenir. Sayfalarda **Spotify gömme oynatıcısı yoktur** (ana sayfadaki rastgele oynatıcı hariç).
 
 - **Veri:** Parça listesi, süre, etiket ve telif satırı `data/generated/release-details.json` içinden okunur (`scripts/sync-release-details.mjs` Spotify'dan doldurur, GitHub Action yeni sürümleri tamamlar). Böylece sayfalar statik üretilir ve ziyaretçi başına Spotify API'ye gidilmez (rate limit riski yok). JSON'da olmayan yeni bir sürüm için API denenir, olmazsa çalma kuyruğundaki parçalardan yedek kurulur — `lib/release/detail.ts`.
-- **Klip:** `data/generated/youtube-videos.json` (yalnızca resmî kanal) başlıkları parça/albüm adıyla **tam eşleşirse VE doğrulanırsa** kapak + oynat düğmesi olarak gösterilir; **tıklayınca klip SESLİ başlar** (kullanıcı hareketi olduğu için tarayıcılar izin verir; sitenin Spotify'ı otomatik duraklatılır, Spotify oynatıcısına tıklanırsa klip duraklar). Doğrulama (`lib/youtube/matcher.mjs`): videonun **süresi** parça süresiyle (±%12, en az 15 sn) ve — yeni videolarda — **yayın tarihi** sürüm tarihiyle (±60 gün) uymalı; "Intro/Outro/Skit" gibi çok genel adlar ve 4 harften kısa adlar yalnızca süre doğrulamasıyla kabul edilir. Doğrulanamazsa klipsiz kapak sahnesi + Spotify oynatıcı gösterilir (yanlış klip oynamaz). Denetim: `npm run audit:videos`; elle düzeltme/engelleme: `data/track-videos.json` (`"<spotify-id>": "<video-id>"` ya da `null`).
+- **Klip:** `data/generated/youtube-videos.json` (yalnızca resmî kanal) başlıkları parça/albüm adıyla **tam eşleşirse VE doğrulanırsa** kapak + oynat düğmesi olarak gösterilir; **tıklayınca klip SESLİ başlar** (kullanıcı hareketi olduğu için tarayıcılar izin verir; sitenin ana sayfadaki Spotify çalması otomatik duraklatılır). Doğrulama (`lib/youtube/matcher.mjs`): videonun **süresi** parça süresiyle (±%12, en az 15 sn) ve — yeni videolarda — **yayın tarihi** sürüm tarihiyle (±60 gün) uymalı; "Intro/Outro/Skit" gibi çok genel adlar ve 4 harften kısa adlar yalnızca süre doğrulamasıyla kabul edilir. Doğrulanamazsa klipsiz kapak sahnesi gösterilir (yanlış klip oynamaz). Denetim: `npm run audit:videos`; elle düzeltme/engelleme: `data/track-videos.json` (`"<spotify-id>": "<video-id>"` ya da `null`).
+- **Kapak görselleri:** `components/ui/CoverImage.tsx` Spotify CDN'den doğrudan, ekrandaki boyuta uygun sürümü (64/300/640 px) yükler; yüklenirken iskelet gösterir, hata olursa yeniden dener ve büyük boyuta düşer (yarım/boş görsel kalmaz).
 - **YouTube listesi:** GitHub Action RSS ile günlük günceller; ilk toplu liste için `node scripts/sync-youtube.mjs --deep`.
 
 ### Konser takvimi (otonom)
@@ -109,7 +110,7 @@ Ana sayfadaki "KONSER TAKVİMİ" (menüde TAKVİM): sıradaki konser paneli (can
 - **Güvenlik/hijyen:** Abonelik uç noktaları yalnızca bilinen push servislerine (FCM, Mozilla, Apple, Windows) izinlidir (SSRF önlemi); IP başına hız sınırı; ölü abonelikler (404/410) otomatik silinir; kullanıcı yalnızca kendi cihazına test bildirimi gönderebilir.
 - iOS'ta push yalnızca ana ekrana eklenmiş uygulamada çalışır. Brave'de "Push mesajları için Google hizmetlerini kullan" açık olmalı (arayüz bunu hatırlatır).
 
-**Derin Entropi (2. seviye easter egg):** Ana sayfadaki 5 beyin (1. seviye) bitince kapı açılır: parça sayfalarının ~%35'inde, kullanıcıya özel (kalıcı) tohumdan türeyen yerlerde gizli beyinler belirir (`lib/entropy/deep.ts`). 5 FARKLI yayından beyin toplayan, menüdeki "ENTROPİ ARŞİVİ"nden de açılan ödül penceresinde duvar kağıtlarını (`public/media/rewards/`) kazanır. İlerleme `localStorage`'dadır.
+**Derin Entropi (2. seviye easter egg):** Ana sayfadaki 5 beyin (1. seviye) bitince kapı açılır: parça sayfalarının ~%35'inde, kullanıcıya özel (kalıcı) tohumdan türeyen yerlerde gizli beyinler belirir (`lib/entropy/deep.ts`). 5 FARKLI yayından beyin toplayan, menüdeki "ENTROPİ ARŞİVİ"nden de açılan ödül penceresinde duvar kağıtlarını (`public/media/rewards/`, `npm run generate:pwa` ile simetrik kompozisyonda üretilir) kazanır. İlerleme `localStorage`'dadır.
 
 ### Verified catalog fallback
 
@@ -337,3 +338,7 @@ npm run purge:catalog
 npm run sync:spotify
 npm run build
 ```
+
+### Düşen karakter
+
+`components/global/GlobalFallingLayer.tsx`: yol ve yön sabit (üstte −%64 ekran → altta +%124 ekran). Hareket tek bir `requestAnimationFrame` döngüsüyle, kare süresine bağlı sönümlü takiple sürülür; yalnızca `transform`/`opacity` yazılır (yeniden boyama yok), hareket yokken döngü durur. `prefers-reduced-motion`'da kapalıdır.

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { ExternalLink } from "@/components/ui/ExternalLink";
 import {
   persistOpeningTrack,
@@ -46,6 +47,7 @@ declare global {
 
 type Props = {
   tracks: VerifiedSingleTrack[];
+  pageHrefs?: Record<string, string>;
 };
 
 function trackIdFromUri(uri: string) {
@@ -53,7 +55,7 @@ function trackIdFromUri(uri: string) {
   return parts[parts.length - 1] || "";
 }
 
-export function RandomSpotifyPlayer({ tracks }: Props) {
+export function RandomSpotifyPlayer({ tracks, pageHrefs = {} }: Props) {
   const hostRef = useRef<HTMLDivElement>(null);
   const controllerRef = useRef<EmbedController | null>(null);
   const currentRef = useRef<VerifiedSingleTrack | null>(null);
@@ -476,6 +478,15 @@ export function RandomSpotifyPlayer({ tracks }: Props) {
           <button type="button" className={styles.control} onClick={skipNext}>
             SIRADAKİ
           </button>
+          {nowPlaying && pageHrefs[nowPlaying.id] ? (
+            <Link
+              href={pageHrefs[nowPlaying.id]}
+              className={styles.open}
+              aria-label={`${nowPlaying.name} parça sayfasına git`}
+            >
+              PARÇA SAYFASI →
+            </Link>
+          ) : null}
           {nowPlaying ? (
             <ExternalLink
               href={nowPlaying.spotifyUrl}

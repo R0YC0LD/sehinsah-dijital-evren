@@ -1,10 +1,11 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { DeepEntropyBrain } from "@/components/easteregg/DeepEntropyBrain";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { useSpotifyPlayback } from "@/components/providers/SpotifyPlaybackProvider";
+import { CoverImage } from "@/components/ui/CoverImage";
 import styles from "./ReleaseExperience.module.css";
 
 export type ExperienceTrack = {
@@ -14,6 +15,8 @@ export type ExperienceTrack = {
   explicit: boolean;
   videoId: string | null;
   spotifyUrl: string;
+  /** Parçanın kendi sayfası (çok parçalı yayınlarda). */
+  href?: string;
 };
 
 type Props = {
@@ -27,6 +30,8 @@ type Props = {
   };
   artists: Array<{ id: string; name: string }>;
   tracks: ExperienceTrack[];
+  /** Parça sayfasında önceden seçili parça. */
+  initialTrackId?: string | null;
   /** Sürüm genelinde varsayılan klip. */
   releaseVideoId: string | null;
   totalDurationLabel: string;
@@ -54,6 +59,7 @@ export function ReleaseExperience({
   release,
   artists,
   tracks,
+  initialTrackId = null,
   releaseVideoId,
   totalDurationLabel,
   label,
@@ -61,12 +67,10 @@ export function ReleaseExperience({
 }: Props) {
   const { pausePlayback } = useSpotifyPlayback();
   const stageRef = useRef<HTMLDivElement>(null);
-  const frameRef = useRef<HTMLIFrameElement>(null);
-  const embedRef = useRef<HTMLIFrameElement>(null);
 
   const singleTrack = tracks.length === 1 ? tracks[0] : null;
   const [activeTrackId, setActiveTrackId] = useState<string | null>(
-    singleTrack ? singleTrack.id : null,
+    initialTrackId ?? (singleTrack ? singleTrack.id : null),
   );
   const [playing, setPlaying] = useState(false);
   const [frameReady, setFrameReady] = useState(false);
@@ -90,33 +94,11 @@ export function ReleaseExperience({
     setPosterFallback(false);
   }, [videoId]);
 
-  const embedUri = activeTrack
-    ? `https://open.spotify.com/embed/track/${activeTrack.id}?utm_source=generator&theme=0`
-    : `https://open.spotify.com/embed/album/${release.id}?utm_source=generator&theme=0`;
-  const embedHeight = activeTrack ? 152 : tracks.length > 1 ? 352 : 152;
-
   /** Klip sesli başlayacağı için sitenin Spotify çalması klibin üstüne binmesin. */
   const startClip = useCallback(() => {
     pausePlayback();
     setPlaying(true);
   }, [pausePlayback]);
-
-  // Spotify oynatıcısına odaklanılırsa (tıklanırsa) klip duraklatılır: iki ses üst üste binmesin.
-  useEffect(() => {
-    if (!playing) return;
-    const onBlur = () => {
-      window.setTimeout(() => {
-        if (embedRef.current && document.activeElement === embedRef.current) {
-          frameRef.current?.contentWindow?.postMessage(
-            JSON.stringify({ event: "command", func: "pauseVideo", args: [] }),
-            "*",
-          );
-        }
-      }, 0);
-    };
-    window.addEventListener("blur", onBlur);
-    return () => window.removeEventListener("blur", onBlur);
-  }, [playing]);
 
   const selectTrack = (track: ExperienceTrack) => {
     const same = track.id === activeTrackId && tracks.length > 1;
@@ -155,6 +137,7 @@ export function ReleaseExperience({
   ));
 
   const showFrame = Boolean(videoId) && playing;
+  const heading = activeTrack && tracks.length > 1 ? activeTrack.name : release.name;
 
   return (
     <div className={styles.grid}>
@@ -205,9 +188,8 @@ export function ReleaseExperience({
               {showFrame ? (
                 <iframe
                   key={videoId}
-                  ref={frameRef}
                   className={`${styles.frame} ${frameReady ? styles.frameReady : ""}`}
-                  src={youtubeSrc(videoId, origin)}
+                  src={youtubeSrc(videoId as string, origin)}
                   title={`${clipTitle} — klip`}
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   allowFullScreen
@@ -218,27 +200,11 @@ export function ReleaseExperience({
             </>
           ) : (
             <div className={styles.coverStage}>
-              {release.coverUrl ? (
-                <Image
-                  src={release.coverUrl}
-                  alt=""
-                  fill
-                  sizes="(max-width: 899px) 100vw, 60vw"
-                  className={styles.coverBackdrop}
-                  aria-hidden="true"
-                />
-              ) : null}
+              <div className={styles.coverBackdrop} aria-hidden="true">
+                <CoverImage src={release.coverUrl} alt="" size="sm" />
+              </div>
               <div className={styles.coverArt}>
-                {release.coverUrl ? (
-                  <Image
-                    src={release.coverUrl}
-                    alt={`${release.name} albüm kapağı`}
-                    fill
-                    priority
-                    sizes="(max-width: 899px) 70vw, 340px"
-                    className={styles.coverImage}
-                  />
-                ) : null}
+                <CoverImage src={release.coverUrl} alt={`${release.name} albüm kapağı`} size="lg" priority />
               </div>
             </div>
           )}
@@ -258,7 +224,7 @@ export function ReleaseExperience({
         {tracks.length > 1 ? (
           <ol className={styles.tracks} aria-label="Parça listesi">
             {tracks.map((track, index) => (
-              <li key={track.id}>
+              <li key={track.id} className={styles.trackItem}>
                 <button
                   type="button"
                   className={`${styles.track} ${track.id === activeTrackId ? styles.trackActive : ""}`}
@@ -273,6 +239,11 @@ export function ReleaseExperience({
                   {track.videoId ? <span className={styles.clipBadge}>KLİP</span> : null}
                   <span className={styles.trackTime}>{track.durationLabel}</span>
                 </button>
+                {track.href ? (
+                  <Link href={track.href} className={styles.trackPage} aria-label={`${track.name} parça sayfası`}>
+                    →
+                  </Link>
+                ) : null}
               </li>
             ))}
           </ol>
@@ -284,8 +255,11 @@ export function ReleaseExperience({
         <p className="meta-label">
           {release.dateLabel} · {release.typeLabel}
         </p>
-        <h1 className={`display ${styles.title}`}>{release.name}</h1>
-        <p className={styles.artists}>{artistLine}</p>
+        <h1 className={`display ${styles.title}`}>{heading}</h1>
+        <p className={styles.artists}>
+          {activeTrack && tracks.length > 1 ? <span className={styles.fromRelease}>{release.name} · </span> : null}
+          {artistLine}
+        </p>
 
         <dl className={styles.facts}>
           <div>
@@ -305,7 +279,7 @@ export function ReleaseExperience({
           {totalDurationLabel ? (
             <div>
               <dt>SÜRE</dt>
-              <dd>{totalDurationLabel}</dd>
+              <dd>{activeTrack && tracks.length > 1 ? activeTrack.durationLabel : totalDurationLabel}</dd>
             </div>
           ) : null}
           {label ? (
@@ -330,20 +304,6 @@ export function ReleaseExperience({
             type="album"
             name={release.name}
             spotifyUrl={release.spotifyUrl}
-          />
-        </div>
-
-        <div className={styles.embed}>
-          <iframe
-            key={embedUri}
-            ref={embedRef}
-            title={`${clipTitle} — Spotify`}
-            src={embedUri}
-            width="100%"
-            height={embedHeight}
-            loading="lazy"
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            className={styles.embedFrame}
           />
         </div>
 

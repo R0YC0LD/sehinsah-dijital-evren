@@ -25,6 +25,7 @@
 }
 
 .coverLink {
+  position: relative;
   display: block;
   width: min(100%, 420px);
   aspect-ratio: 1;

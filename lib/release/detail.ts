@@ -58,6 +58,11 @@ type RawAlbumFull = {
 let apiCooldownUntil = 0;
 const API_COOLDOWN_MS = 10 * 60_000;
 
+/** JSON'daki kayıtlı parça listesi (senkron): statik sayfa parametreleri ve bağlantılar için. */
+export function storedTracks(releaseId: string): Array<{ id: string; name: string }> {
+  return fromStore(releaseId)?.tracks ?? [];
+}
+
 function fromStore(id: string): Part | null {
   const entry = (detailsFile as { details: Record<string, Part> }).details[id];
   return entry?.tracks?.length ? entry : null;

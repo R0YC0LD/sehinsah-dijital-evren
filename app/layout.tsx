@@ -91,7 +91,8 @@ export default async function RootLayout({
       <head>
         {/* Spotify iframe API + embed: bağlantıyı önceden kur (müzik başlatma kapısı hızlanır). */}
         <link rel="preconnect" href="https://open.spotify.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://i.scdn.co" />
+        <link rel="preconnect" href="https://i.scdn.co" crossOrigin="" />
+        <link rel="preconnect" href="https://i.ytimg.com" crossOrigin="" />
       </head>
       <body>
         <script

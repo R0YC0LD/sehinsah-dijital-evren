@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { coverUrl } from "@/components/ui/CoverImage";
 import { siteConfig } from "@/data/site";
 import type { SpotifyTrack } from "@/lib/spotify/types";
 import { isDirectSpotifyTrackUrl } from "@/lib/spotify/validate-links";
@@ -63,7 +64,7 @@ export function RandomTrackPicker({ tracks }: Props) {
             {pick.imageUrl ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={pick.imageUrl}
+                src={coverUrl(pick.imageUrl, "md")}
                 alt=""
                 width={96}
                 height={96}

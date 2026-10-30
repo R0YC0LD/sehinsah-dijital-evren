@@ -41,10 +41,6 @@
 }
 
 .shadow {
-  --shadow-y: -6px;
-  --shadow-blur: 8px;
-  --shadow-opacity: 0.028;
-  --shadow-scale-y: 1.01;
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -57,18 +53,13 @@
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
-  opacity: var(--shadow-opacity);
-  filter: blur(var(--shadow-blur));
-  transform: translate3d(0, var(--shadow-y), 0) scale3d(1, var(--shadow-scale-y), 1);
+  /* Blur sabit: kaydırma hızına göre değişen filtre her karede yeniden boyama gerektirir. */
+  filter: blur(11px);
+  opacity: 0.028;
+  transform: translate3d(0, -6px, 0) scale3d(1, 1.01, 1);
   transform-origin: center;
   pointer-events: none;
-  will-change: transform, opacity, filter;
-}
-
-@media (max-width: 1199px) {
-  .shadow {
-    --shadow-opacity: 0.022;
-  }
+  will-change: transform, opacity;
 }
 
 @media (max-width: 899px) {
@@ -76,9 +67,6 @@
     opacity: 0.84;
   }
 
-  .shadow {
-    --shadow-opacity: 0.018;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -92,6 +80,4 @@
   }
 }
 
-[data-chaos="true"] .shadow {
-  --shadow-opacity: 0.04;
-}
+

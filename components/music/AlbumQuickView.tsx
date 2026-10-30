@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { CoverImage } from "@/components/ui/CoverImage";
 import Link from "next/link";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { useQuickViewModal } from "@/hooks/useQuickViewModal";
@@ -41,13 +41,7 @@ export function AlbumQuickView({ album, pageHref, onClose }: Props) {
 
         <div className={styles.cover}>
           {album.imageUrl ? (
-            <Image
-              src={album.imageUrl}
-              alt={`${album.name} albüm kapağı`}
-              fill
-              sizes="(max-width: 719px) 90vw, 340px"
-              className={styles.image}
-            />
+            <CoverImage src={album.imageUrl} alt={`${album.name} albüm kapağı`} size="md" sizes="(max-width: 719px) 90vw, 340px" />
           ) : (
             <div className={styles.placeholder}>Kapak bulunamadı</div>
           )}

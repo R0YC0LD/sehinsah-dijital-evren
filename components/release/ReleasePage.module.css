@@ -24,6 +24,12 @@
   gap: clamp(2.5rem, 6vw, 4.5rem);
 }
 
+.crumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.75rem;
+}
+
 .back {
   display: inline-flex;
   width: fit-content;
