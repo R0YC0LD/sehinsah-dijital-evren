@@ -24,7 +24,6 @@ export type RailConcert = {
 type Props = {
   concerts: RailConcert[];
   allEventsUrl: string;
-  emptyMessage: string;
 };
 
 const DAY_MS = 24 * 60 * 60 * 1000;
@@ -36,7 +35,7 @@ function countdownLabel(startsAt: string, now: number): string | null {
   return days === 1 ? "YARIN" : `${days} GÜN KALDI`;
 }
 
-export function ConcertRail({ concerts, allEventsUrl, emptyMessage }: Props) {
+export function ConcertRail({ concerts, allEventsUrl }: Props) {
   const railRef = useRef<HTMLDivElement>(null);
   const drag = useRef({ active: false, moved: false, startX: 0, startLeft: 0 });
   const [now, setNow] = useState<number | null>(null);
@@ -108,17 +107,6 @@ export function ConcertRail({ concerts, allEventsUrl, emptyMessage }: Props) {
     if (e.key === "ArrowRight") scrollByCard(1);
     if (e.key === "ArrowLeft") scrollByCard(-1);
   };
-
-  if (!concerts.length) {
-    return (
-      <div className={`panel ${styles.empty}`}>
-        <p className={styles.emptyText}>{emptyMessage}</p>
-        <a href={allEventsUrl} target="_blank" rel="noopener noreferrer" className={`editorial-link ${styles.emptyLink}`}>
-          BUBİLET’TE TAKİP ET ↗
-        </a>
-      </div>
-    );
-  }
 
   return (
     <div className={styles.wrap}>

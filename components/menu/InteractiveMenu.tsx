@@ -12,6 +12,7 @@ import { MenuCursor } from "@/components/menu/MenuCursor";
 import { MenuPreview } from "@/components/menu/MenuPreview";
 import { siteConfig } from "@/data/site";
 import type { MusicCatalog } from "@/lib/spotify/types";
+import { useHasConcerts } from "@/hooks/useHasConcerts";
 import { useIsTouchDevice } from "@/hooks/useIsTouchDevice";
 import styles from "./InteractiveMenu.module.css";
 
@@ -37,6 +38,9 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
   const rafId = useRef(0);
   const latestPoint = useRef({ x: 0, y: 0 });
   const isTouch = useIsTouchDevice();
+  const hasConcerts = useHasConcerts();
+  // Yaklaşan konser yoksa takvim bölümü sayfada yok; menüde de gösterme.
+  const navItems = siteConfig.nav.filter((item) => item.id !== "takvim" || hasConcerts);
 
   useEffect(() => {
     document.body.classList.toggle("menu-open", open);
@@ -168,7 +172,7 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
           onPointerUp={endPointer}
           onPointerCancel={endPointer}
         >
-          {siteConfig.nav.map((item, i) => (
+          {navItems.map((item, i) => (
             <button
               key={item.id}
               ref={i === 0 ? firstRef : undefined}
@@ -186,7 +190,7 @@ export function InteractiveMenu({ open, onClose, catalog, onStopAudio }: Props) 
                 go(item.href);
               }}
             >
-              <span className={styles.index}>{item.index}</span>
+              <span className={styles.index}>{String(i + 1).padStart(2, "0")}</span>
               <span className={`display ${styles.label}`}>{item.label}</span>
             </button>
           ))}

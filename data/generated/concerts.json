@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "source": "bubilet",
+  "updatedAt": "2026-10-30T10:32:44.921Z",
+  "concerts": [
+    {
+      "id": "bubilet-301205",
+      "title": "Allame & Aspova & Hidra & Şehinşah & Lab Gang",
+      "startsAt": "2026-11-17T21:30:00+03:00",
+      "city": "İstanbul",
+      "venue": "Dorock XL Kadıköy",
+      "ticketUrl": "https://www.bubilet.com.tr/istanbul/etkinlik/hiphop-operation/seans/301205",
+      "soldOut": false,
+      "ageLimit": "18+"
+    },
+    {
+      "id": "bubilet-304248",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-18T22:00:00+03:00",
+      "city": "Ankara",
+      "venue": "Holly Stone Performance Hall Ankara",
+      "ticketUrl": "https://www.bubilet.com.tr/ankara/etkinlik/sehinsah-konseri-/seans/304248",
+      "soldOut": false,
+      "doorsAt": "2026-12-18T21:00:00+03:00",
+      "ageLimit": "18+"
+    }
+  ]
+}

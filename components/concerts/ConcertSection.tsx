@@ -1,11 +1,9 @@
-import { ConcertRail, type RailConcert } from "@/components/concerts/ConcertRail";
-import styles from "@/components/concerts/ConcertSection.module.css";
+import { ConcertCalendar } from "@/components/concerts/ConcertCalendar";
+import type { RailConcert } from "@/components/concerts/ConcertRail";
 import { concerts } from "@/data/concerts";
 import { siteConfig } from "@/data/site";
+import { upcomingConcerts } from "@/lib/concerts";
 import { getSiteUrl } from "@/lib/site-url";
-
-/** Etkinlik başladıktan sonra bu kadar süre daha "yaklaşan" sayılır (gece yarısı sonrası biten konserler). */
-const GRACE_MS = 6 * 60 * 60 * 1000;
 
 const WEEKDAYS = ["PAZAR", "PAZARTESİ", "SALI", "ÇARŞAMBA", "PERŞEMBE", "CUMA", "CUMARTESİ"];
 const MONTHS = ["OCAK", "ŞUBAT", "MART", "NİSAN", "MAYIS", "HAZİRAN", "TEMMUZ", "AĞUSTOS", "EYLÜL", "EKİM", "KASIM", "ARALIK"];
@@ -22,18 +20,17 @@ function trParts(iso: string) {
   };
 }
 
+/** Yaklaşan konser yoksa hiçbir şey çizmez (boş bölüm yok). */
 export function ConcertSection() {
-  const now = Date.now();
-  const upcoming = concerts
-    .filter((c) => new Date(c.startsAt).getTime() + GRACE_MS > now)
-    .sort((a, b) => a.startsAt.localeCompare(b.startsAt));
+  const upcoming = upcomingConcerts(concerts, Date.now());
+  if (!upcoming.length) return null;
 
   const railItems: RailConcert[] = upcoming.map((c) => {
     const start = trParts(c.startsAt);
     return {
       id: c.id,
       title: c.title,
-      lineup: c.lineup ?? [],
+      lineup: [],
       startsAt: c.startsAt,
       day: String(start.day).padStart(2, "0"),
       month: start.month,
@@ -52,7 +49,7 @@ export function ConcertSection() {
   const jsonLd = upcoming.map((c) => ({
     "@context": "https://schema.org",
     "@type": "MusicEvent",
-    name: c.lineup?.length ? `${c.title}: ${c.lineup.join(", ")}` : c.title,
+    name: c.title,
     startDate: c.startsAt,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
@@ -70,31 +67,18 @@ export function ConcertSection() {
   }));
 
   return (
-    <section id="takvim" className={`section-shell ${styles.section}`} aria-label="Konser takvimi">
-      {jsonLd.length ? (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-        />
-      ) : null}
-
-      <div className={`section-backdrop ${styles.backdrop}`} aria-hidden="true">
-        <span className={`display ${styles.ghost}`}>TAKVİM</span>
-      </div>
-
-      <div className={`section-content ${styles.content}`}>
-        <div className={styles.header}>
-          <p className="meta-label">{siteConfig.calendar.meta}</p>
-          <h2 className={`display ${styles.title}`}>{siteConfig.calendar.title}</h2>
-          <p className={styles.subtitle}>{siteConfig.calendar.subtitle}</p>
-        </div>
-
-        <ConcertRail
-          concerts={railItems}
-          allEventsUrl={siteConfig.tickets.url}
-          emptyMessage={siteConfig.calendar.empty}
-        />
-      </div>
-    </section>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
+      />
+      <ConcertCalendar
+        concerts={railItems}
+        allEventsUrl={siteConfig.tickets.url}
+        meta={siteConfig.calendar.meta}
+        title={siteConfig.calendar.title}
+        subtitle={siteConfig.calendar.subtitle}
+      />
+    </>
   );
 }

@@ -77,9 +77,14 @@ Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sü
 - **Klip:** `data/generated/youtube-videos.json` (resmî kanal) başlıkları parça/albüm adıyla **tam eşleşirse** üstte sessiz otomatik oynar ("SESİ AÇ" ile ses açılır; Spotify çalıyorsa duraklatılır). Eşleşme yoksa kapak sahnesi + Spotify oynatıcı. Yanlış eşleşmeyi düzeltmek için `data/track-videos.ts`.
 - **YouTube listesi:** GitHub Action RSS ile günlük günceller; ilk toplu liste için `node scripts/sync-youtube.mjs --deep`.
 
-### Konser takvimi
+### Konser takvimi (otomatik)
 
-`data/concerts.ts` içindeki etkinlikler ana sayfada "KONSER TAKVİMİ" bölümünde yatay kaydırmalı kartlar olarak görünür (menüde TAKVİM). Tarihi geçenler otomatik gizlenir; her etkinlik için schema.org `MusicEvent` verisi üretilir. Kaynak: Bubilet etkinlik sayfaları — yeni etkinlik eklemek için diziye bir kayıt ekle.
+Ana sayfadaki "KONSER TAKVİMİ" bölümü (menüde TAKVİM) `data/generated/concerts.json` dosyasından beslenir; yatay kaydırmalı kartlar, geri sayım ve schema.org `MusicEvent` verisi üretir.
+
+- **Kaynak:** Bubilet sanatçı sayfası (`/sanatci/sehinsah`) ve etkinlik sayfaları — `robots.txt`'in izin verdiği sayfalar, dürüst User-Agent, az istek.
+- **Otomatik güncelleme:** `scripts/sync-concerts.mjs`, GitHub Action ile günde 4 kez (TR saatiyle 01:30, 07:00, 13:30, 19:30) çalışır: yeni etkinlik ekler, **tarihi geçeni veya Bubilet'ten kalkanı siler**, değişiklik varsa commit'leyip yayına alır.
+- **Eski/boş veri olmaması için:** (1) Bubilet'in "N seans listeleniyor" bilgisi okunan bağlantı sayısıyla tutmazsa hiçbir şey yazılmaz ve çalışma hata verir (e-posta gelir); (2) Bubilet'e ulaşılamazsa mevcut veri korunur ve çalışma yine hata verir (sessizce eskimez); (3) sayfa tarayıcıda şimdiki zamana göre süzülür — geçmiş konser statik sayfada kalsa bile gizlenir; (4) hiç yaklaşan konser kalmazsa bölüm ve menü öğesi tamamen kaybolur.
+- **Elle çalıştırma:** `npm run sync:concerts`.
 
 ### Verified catalog fallback
 

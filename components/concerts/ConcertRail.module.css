@@ -250,24 +250,6 @@
   color: var(--text-muted);
 }
 
-.empty {
-  display: grid;
-  gap: 1rem;
-  justify-items: start;
-  margin-inline: clamp(1.25rem, 4vw, 3rem);
-  padding: 1.5rem;
-  max-width: 460px;
-}
-
-.emptyText {
-  margin: 0;
-  color: var(--text-muted);
-}
-
-.emptyLink {
-  color: var(--spotify);
-}
-
 @media (max-width: 520px) {
   .card {
     grid-template-columns: 1fr;

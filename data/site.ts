@@ -46,7 +46,6 @@ export const siteConfig = {
     meta: "03 / TAKVİM",
     title: "KONSER TAKVİMİ",
     subtitle: "Yaklaşan konserler ve etkinlikler. Kaydır, tarihini seç, biletini al.",
-    empty: "Yeni tarihler çok yakında. Duyurular için takipte kal.",
   },
   store: {
     meta: "MAĞAZA / KOLEKSİYON",
