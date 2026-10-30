@@ -82,7 +82,7 @@ Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sü
 Ana sayfadaki "KONSER TAKVİMİ" bölümü (menüde TAKVİM) `data/generated/concerts.json` dosyasından beslenir; yatay kaydırmalı kartlar, geri sayım ve schema.org `MusicEvent` verisi üretir.
 
 - **Kaynak:** Bubilet sanatçı sayfası (`/sanatci/sehinsah`) ve etkinlik sayfaları — `robots.txt`'in izin verdiği sayfalar, dürüst User-Agent, az istek.
-- **Otomatik güncelleme:** `scripts/sync-concerts.mjs`, GitHub Action ile günde 4 kez (TR saatiyle 01:30, 07:00, 13:30, 19:30) çalışır: yeni etkinlik ekler, **tarihi geçeni veya Bubilet'ten kalkanı siler**, değişiklik varsa commit'leyip yayına alır.
+- **Güncelleme:** `scripts/sync-concerts.mjs` yeni etkinlik ekler, **tarihi geçeni veya Bubilet'ten kalkanı siler**; değişiklik varsa `data/generated/concerts.json` commit'lenip push edilir (Vercel yeniden yayınlar). **Not:** Bubilet (Cloudflare) GitHub Actions sunucularına `HTTP 403` veriyor, bu yüzden script GitHub Action'da DEĞİL, Bubilet'e erişebilen bir yerden (kendi bilgisayar / zamanlanmış görev) çalıştırılmalıdır.
 - **Eski/boş veri olmaması için:** (1) Bubilet'in "N seans listeleniyor" bilgisi okunan bağlantı sayısıyla tutmazsa hiçbir şey yazılmaz ve çalışma hata verir (e-posta gelir); (2) Bubilet'e ulaşılamazsa mevcut veri korunur ve çalışma yine hata verir (sessizce eskimez); (3) sayfa tarayıcıda şimdiki zamana göre süzülür — geçmiş konser statik sayfada kalsa bile gizlenir; (4) hiç yaklaşan konser kalmazsa bölüm ve menü öğesi tamamen kaybolur.
 - **Elle çalıştırma:** `npm run sync:concerts`.
 

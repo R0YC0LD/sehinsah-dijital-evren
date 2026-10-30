@@ -4,7 +4,6 @@ name: Spotify yeni sürüm senkronu
 # commit'ler ve main'e push eder; Vercel push'u görüp siteyi yeniden yayınlar.
 #
 # Saatler UTC. Türkiye (UTC+3) karşılığı: 01:30, 07:00, 13:30, 19:30.
-# Konser takvimi (Bubilet) de her çalışmada güncellenir.
 # Cron "ya da elle çalıştır" için: GitHub > Actions > "Spotify yeni sürüm senkronu" > Run workflow.
 on:
   schedule:
@@ -56,13 +55,6 @@ jobs:
         continue-on-error: true
         run: node scripts/sync-youtube.mjs
 
-      # Konser takvimi: yeni etkinlik ekler, geçmişi/kalkanı siler. Bubilet'e ulaşılamazsa veya
-      # sayfa yapısı değişmişse veriyi korur ve HATA verir (son adım işi kırmızı yapar).
-      - name: Konser takvimini çek
-        id: concerts
-        continue-on-error: true
-        run: node scripts/sync-concerts.mjs
-
       - name: Doğrula
         if: steps.sync.outputs.changed == 'true'
         run: |
@@ -70,29 +62,17 @@ jobs:
           node scripts/verify-single-tracks.mjs
 
       - name: Commit ve push
-        if: steps.sync.outputs.changed == 'true' || steps.details.outputs.changed == 'true' || steps.yt.outputs.changed == 'true' || steps.concerts.outputs.changed == 'true'
+        if: steps.sync.outputs.changed == 'true' || steps.details.outputs.changed == 'true' || steps.yt.outputs.changed == 'true'
         env:
           SUMMARY: ${{ steps.sync.outputs.summary }}
-          CONCERTS: ${{ steps.concerts.outputs.summary }}
         run: |
           git config user.name "sehinsah-sync-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/generated
           if [ -n "${SUMMARY}" ]; then
             git commit -m "Auto-sync: yeni Spotify sürümü — ${SUMMARY}"
-          elif [ -n "${CONCERTS}" ]; then
-            git commit -m "Auto-sync: ${CONCERTS}"
           else
             git commit -m "Auto-sync: sürüm detayları / YouTube listesi güncellendi"
           fi
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
-
-      # Konser senkronu hata verdiyse (Bubilet'e ulaşılamadı / sayfa yapısı değişti) işi KIRMIZI işaretle:
-      # GitHub e-posta atar; diğer güncellemeler yukarıda zaten commit'lendi. Site eski veriyi göstermez
-      # (geçmiş konserler çalışma anında gizlenir).
-      - name: Konser senkronu hata verdiyse uyar
-        if: always() && steps.concerts.outcome == 'failure'
-        run: |
-          echo "::error::Konser takvimi senkronu başarısız (Bubilet'e ulaşılamadı veya sayfa yapısı değişti). Logu ve scripts/sync-concerts.mjs'i kontrol et."
-          exit 1
