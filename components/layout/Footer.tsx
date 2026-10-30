@@ -34,12 +34,12 @@ export function Footer() {
       <div className={styles.footerBottom}>
         <div className={styles.platformsWrap}>
           <PlatformLinks variant="all" placement="footer" className={styles.platforms} />
-          <EntropyBrain id="footer-credit-nearby" />
         </div>
         <div className={styles.creditSlot}>
           <DesignerCredit />
         </div>
       </div>
+      <EntropyBrain id="footer-credit-nearby" />
     </footer>
   );
 }

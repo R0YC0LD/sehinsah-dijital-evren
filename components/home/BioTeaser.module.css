@@ -1,9 +1,8 @@
 .wrap {
-  position: fixed;
-  left: clamp(14px, 3vw, 28px);
-  bottom: clamp(14px, 3vw, 28px);
-  z-index: 70;
-  width: min(86vw, 300px);
+  position: relative;
+  z-index: 12;
+  width: min(calc(100% - 2 * clamp(1.25rem, 4vw, 3rem)), 340px);
+  margin: 0 0 clamp(1.5rem, 4vw, 2.5rem) clamp(1.25rem, 4vw, 3rem);
   padding: 1rem 1.1rem 1.1rem;
   border: 1px solid var(--sehinsah-green-line);
   background: rgba(6, 6, 6, 0.88);

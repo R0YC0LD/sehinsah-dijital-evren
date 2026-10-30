@@ -1,8 +1,16 @@
 .menu {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   z-index: 100;
-  background: rgba(5, 5, 5, 0.96);
+  /* Tam opak: arkadaki sayfa içeriği menünün altından görünüp üst üste binmesin. */
+  background: #050505;
   padding: calc(var(--header-h) + 0.85rem) clamp(1.1rem, 4vw, 3rem)
     calc(1.1rem + var(--safe-bottom));
   display: flex;
@@ -25,8 +33,9 @@
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2rem;
   align-items: center;
-  min-height: 0;
-  flex: 1;
+  /* İçerik hiçbir zaman kapsayıcıdan küçük olmaz: sığmıyorsa menü kaydırılır, üst üste binmez. */
+  min-height: auto;
+  flex: 1 0 auto;
 }
 
 .previewSlot {
@@ -90,6 +99,7 @@
 }
 
 .footer {
+  flex: none;
   display: grid;
   gap: 0.85rem;
   padding-top: 0.9rem;
@@ -195,5 +205,12 @@
 
   .grid > * {
     min-width: 0;
+  }
+}
+
+/* Kısa telefon ekranları: önizleme görseli yer kaplamasın, liste ve alt bağlantılar rahat sığsın */
+@media (max-width: 899px) and (max-height: 700px) {
+  .previewSlot {
+    display: none;
   }
 }

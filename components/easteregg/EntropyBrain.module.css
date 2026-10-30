@@ -131,7 +131,7 @@
 
 .slot-discography-divider {
   top: -8px;
-  left: clamp(12px, 4vw, 40px);
+  right: clamp(12px, 4vw, 40px);
 }
 
 .slot-store-grid-edge {
@@ -140,8 +140,9 @@
 }
 
 .slot-instagram-ring-side {
-  left: clamp(10px, 3vw, 24px);
-  top: 42%;
+  left: auto;
+  right: clamp(12px, 3vw, 28px);
+  top: 10%;
 }
 
 .slot-final-copy-corner {
@@ -149,9 +150,10 @@
   left: clamp(12px, 4vw, 32px);
 }
 
+/* Footer'ın üst çizgisinin üstünde, sağda: ikon satırının ya da tasarımcı kredisinin üstüne binmez. */
 .slot-footer-credit-nearby {
-  left: 0;
-  bottom: 8px;
+  top: -22px;
+  right: clamp(12px, 4vw, 40px);
 }
 
 @media (max-width: 1199px) {
@@ -183,9 +185,11 @@
     height: 28px;
   }
 
+  /* Mobil: içerik sütunu soldaki %70; beyin sağ boşlukta durur, "AŞAĞI" ipucu/CTA'nın üstüne binmez. */
   .slot-hero-lower-left {
-    left: 14px;
-    bottom: 26%;
+    left: auto;
+    right: 12px;
+    bottom: 30%;
   }
 
   .slot-music-heading-edge {
@@ -195,6 +199,7 @@
 
   .slot-instagram-ring-side {
     left: 12px;
+    right: auto;
     top: 58%;
   }
 
