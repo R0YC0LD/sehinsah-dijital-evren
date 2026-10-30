@@ -1,8 +1,8 @@
 import { ConcertCalendar } from "@/components/concerts/ConcertCalendar";
 import type { RailConcert } from "@/components/concerts/ConcertRail";
-import { concerts } from "@/data/concerts";
 import { siteConfig } from "@/data/site";
 import { splitLineup, upcomingConcerts } from "@/lib/concerts";
+import { getConcerts } from "@/lib/concerts/source";
 import { getSiteUrl } from "@/lib/site-url";
 
 const WEEKDAYS = ["PAZAR", "PAZARTESİ", "SALI", "ÇARŞAMBA", "PERŞEMBE", "CUMA", "CUMARTESİ"];
@@ -21,8 +21,8 @@ function trParts(iso: string) {
 }
 
 /** Yaklaşan konser yoksa hiçbir şey çizmez (boş bölüm yok). */
-export function ConcertSection() {
-  const upcoming = upcomingConcerts(concerts, Date.now());
+export async function ConcertSection() {
+  const upcoming = upcomingConcerts(await getConcerts(), Date.now());
   if (!upcoming.length) return null;
 
   const railItems: RailConcert[] = upcoming.map((c) => {

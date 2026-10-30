@@ -164,3 +164,20 @@
     gap: 0.75rem;
   }
 }
+
+/* Çok dar telefonlar (320–360px): "INSTAGRAM" gibi uzun etiketler taşmasın */
+@media (max-width: 360px) {
+  .link {
+    grid-template-columns: 1.75rem minmax(0, 1fr);
+    gap: 0.5rem;
+  }
+
+  .label {
+    font-size: clamp(1.55rem, 8vw, 2.1rem);
+    overflow-wrap: anywhere;
+  }
+
+  .grid > * {
+    min-width: 0;
+  }
+}

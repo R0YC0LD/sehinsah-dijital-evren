@@ -74,17 +74,29 @@ Kurulum (bir kez): GitHub repo > Settings > Secrets and variables > Actions > `S
 Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sürüm için otomatik oluşur, sitemap'e girer.
 
 - **Veri:** Parça listesi, süre, etiket ve telif satırı `data/generated/release-details.json` içinden okunur (`scripts/sync-release-details.mjs` Spotify'dan doldurur, GitHub Action yeni sürümleri tamamlar). Böylece sayfalar statik üretilir ve ziyaretçi başına Spotify API'ye gidilmez (rate limit riski yok). JSON'da olmayan yeni bir sürüm için API denenir, olmazsa çalma kuyruğundaki parçalardan yedek kurulur — `lib/release/detail.ts`.
-- **Klip:** `data/generated/youtube-videos.json` (yalnızca resmî kanal) başlıkları parça/albüm adıyla **tam eşleşirse VE doğrulanırsa** üstte sessiz otomatik oynar ("SESİ AÇ" ile ses açılır; Spotify çalıyorsa duraklatılır). Doğrulama (`lib/youtube/matcher.mjs`): videonun **süresi** parça süresiyle (±%12, en az 15 sn) ve — yeni videolarda — **yayın tarihi** sürüm tarihiyle (±60 gün) uymalı; "Intro/Outro/Skit" gibi çok genel adlar ve 4 harften kısa adlar yalnızca süre doğrulamasıyla kabul edilir. Doğrulanamazsa klipsiz kapak sahnesi + Spotify oynatıcı gösterilir (yanlış klip oynamaz). Denetim: `npm run audit:videos`; elle düzeltme/engelleme: `data/track-videos.json` (`"<spotify-id>": "<video-id>"` ya da `null`).
+- **Klip:** `data/generated/youtube-videos.json` (yalnızca resmî kanal) başlıkları parça/albüm adıyla **tam eşleşirse VE doğrulanırsa** kapak + oynat düğmesi olarak gösterilir; **tıklayınca klip SESLİ başlar** (kullanıcı hareketi olduğu için tarayıcılar izin verir; sitenin Spotify'ı otomatik duraklatılır, Spotify oynatıcısına tıklanırsa klip duraklar). Doğrulama (`lib/youtube/matcher.mjs`): videonun **süresi** parça süresiyle (±%12, en az 15 sn) ve — yeni videolarda — **yayın tarihi** sürüm tarihiyle (±60 gün) uymalı; "Intro/Outro/Skit" gibi çok genel adlar ve 4 harften kısa adlar yalnızca süre doğrulamasıyla kabul edilir. Doğrulanamazsa klipsiz kapak sahnesi + Spotify oynatıcı gösterilir (yanlış klip oynamaz). Denetim: `npm run audit:videos`; elle düzeltme/engelleme: `data/track-videos.json` (`"<spotify-id>": "<video-id>"` ya da `null`).
 - **YouTube listesi:** GitHub Action RSS ile günlük günceller; ilk toplu liste için `node scripts/sync-youtube.mjs --deep`.
 
-### Konser takvimi (otomatik)
+### Konser takvimi (otonom)
 
-Ana sayfadaki "KONSER TAKVİMİ" bölümü (menüde TAKVİM) `data/generated/concerts.json` dosyasından beslenir; yatay kaydırmalı kartlar, geri sayım ve schema.org `MusicEvent` verisi üretir.
+Ana sayfadaki "KONSER TAKVİMİ" (menüde TAKVİM): sıradaki konser paneli (canlı geri sayım, takvime ekle `.ics`/Google, yol tarifi, paylaş) + kaydırmalı diğer etkinlikler. schema.org `MusicEvent` verisi üretir.
 
-- **Kaynak:** Bubilet sanatçı sayfası (`/sanatci/sehinsah`) ve etkinlik sayfaları — `robots.txt`'in izin verdiği sayfalar, dürüst User-Agent, az istek.
-- **Güncelleme:** `scripts/sync-concerts.mjs` yeni etkinlik ekler, **tarihi geçeni veya Bubilet'ten kalkanı siler**; değişiklik varsa `data/generated/concerts.json` commit'lenip push edilir (Vercel yeniden yayınlar). **Not:** Bubilet (Cloudflare) GitHub Actions sunucularına `HTTP 403` veriyor, bu yüzden script GitHub Action'da DEĞİL, Bubilet'e erişebilen bir yerden (kendi bilgisayar / zamanlanmış görev) çalıştırılmalıdır.
-- **Eski/boş veri olmaması için:** (1) Bubilet'in "N seans listeleniyor" bilgisi okunan bağlantı sayısıyla tutmazsa hiçbir şey yazılmaz ve çalışma hata verir (e-posta gelir); (2) Bubilet'e ulaşılamazsa mevcut veri korunur ve çalışma yine hata verir (sessizce eskimez); (3) sayfa tarayıcıda şimdiki zamana göre süzülür — geçmiş konser statik sayfada kalsa bile gizlenir; (4) hiç yaklaşan konser kalmazsa bölüm ve menü öğesi tamamen kaybolur.
-- **Elle çalıştırma:** `npm run sync:concerts`.
+**Kaynak:** Bubilet'teki Şehinşah sanatçı sayfası — Şehinşah'ın katıldığı/katılacağı TÜM etkinlikler (kendi konserleri, çok sanatçılı geceler, festivaller) otomatik bulunur. `robots.txt`'in izin verdiği sayfalar, dürüst User-Agent, az istek.
+
+**Otomasyon (elle bir şey yapılmaz):**
+- `vercel.json` → Vercel Cron günde 2 kez (TR saatiyle ~01:30 ve ~07:00; Hobby planda ±1 saat) `app/api/cron/concerts` rotasını çağırır.
+- Rota Bubilet'i okur (`lib/concerts/bubilet.mjs`), değişiklik varsa **Upstash KV**'ye (`sehinsah:concerts:v1`) yazar ve siteyi tazeler (`revalidateTag`/`revalidatePath`). Yeni etkinlik eklenir; **tarihi geçen veya Bubilet'ten kalkan silinir**. Deploy/commit gerekmez.
+- Site veriyi `lib/concerts/source.ts` ile okur: KV ve derlemeyle gelen yedek (`data/generated/concerts.json`) arasında `updatedAt`'ı yeni olan. Bu yüzden takvim boş kalmaz.
+
+**Eski/boş/yanlış veri olmaması için:**
+1. Bubilet'in "N seans listeleniyor" bilgisi okunan bağlantı sayısıyla tutmazsa hiçbir şey yazılmaz (sayfa yapısı değişmiş olabilir).
+2. Bubilet'e ulaşılamazsa mevcut veri korunur (Vercel loglarında hata görünür).
+3. Sayfa tarayıcıda şimdiki zamana göre süzülür: geçmiş konser statik sayfada kalsa bile gizlenir, sıradaki konser otomatik bir sonrakine geçer.
+4. Hiç yaklaşan konser kalmazsa bölüm ve menü öğesi tamamen kaybolur.
+5. Rota herkese açık çağrılsa da güvenlidir: 5 dk kilit + başarıda 30 dk bekleme. İsteğe bağlı `CRON_SECRET` tanımlanırsa `Authorization: Bearer` ister.
+
+**Gereksinim:** Vercel projesinde Upstash KV bağlı olmalı (`KV_REST_API_URL`, `KV_REST_API_TOKEN` — yorumlarla aynı). Yoksa rota 503 verir ve site yedek dosyayı kullanır.
+**Elle/yerel:** `npm run sync:concerts` yedek dosyayı günceller (GitHub Actions'tan Bubilet 403 verdiği için orada çalışmaz).
 
 ### Verified catalog fallback
 

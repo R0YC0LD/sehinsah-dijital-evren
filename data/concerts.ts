@@ -1,9 +1,7 @@
-import concertsFile from "@/data/generated/concerts.json";
-
 /**
- * Konser takvimi verisi — ELLE DÜZENLEME: `scripts/sync-concerts.mjs` Bubilet'ten doldurur
- * (GitHub Action her gün 01:30, 07:00, 13:30, 19:30'da çalıştırır). Yeni etkinlik eklenir,
- * tarihi geçen/Bubilet'ten kalkan silinir. Kaynak: data/generated/concerts.json.
+ * Konser verisi tipi. Canlı veri: Vercel cron (app/api/cron/concerts) Bubilet'ten günde 2 kez
+ * okuyup Upstash KV'ye yazar (lib/concerts/source.ts). Yedek/anlık görüntü:
+ * data/generated/concerts.json (`npm run sync:concerts`). ELLE DÜZENLEME GEREKMEZ.
  */
 export type Concert = {
   id: string;
@@ -17,5 +15,3 @@ export type Concert = {
   ageLimit?: string;
   soldOut?: boolean;
 };
-
-export const concerts: Concert[] = (concertsFile as { concerts: Concert[] }).concerts;

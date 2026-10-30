@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Space_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { ConcertsProvider } from "@/components/concerts/ConcertsProvider";
 import { PageFadeIn } from "@/components/transition/PageFadeIn";
 import { PageTransitionOverlay } from "@/components/transition/PageTransitionOverlay";
 import { siteConfig } from "@/data/site";
+import { getConcerts } from "@/lib/concerts/source";
 import { getSiteUrl } from "@/lib/site-url";
 import "./globals.css";
 
@@ -75,9 +77,10 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
+  const concerts = await getConcerts();
   return (
     <html lang="tr" className={`${anton.variable} ${space.variable}`}>
       <head>
@@ -90,7 +93,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(musicGroupJsonLd) }}
         />
-        <PageFadeIn>{children}</PageFadeIn>
+        <ConcertsProvider startsAt={concerts.map((c) => c.startsAt)}>
+          <PageFadeIn>{children}</PageFadeIn>
+        </ConcertsProvider>
         <PageTransitionOverlay />
         <Analytics />
       </body>

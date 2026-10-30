@@ -1,0 +1,6 @@
+{
+  "crons": [
+    { "path": "/api/cron/concerts?run=night", "schedule": "30 22 * * *" },
+    { "path": "/api/cron/concerts?run=morning", "schedule": "0 4 * * *" }
+  ]
+}

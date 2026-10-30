@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { ReleaseActions } from "@/components/music/ReleaseActions";
 import { useSpotifyPlayback } from "@/components/providers/SpotifyPlaybackProvider";
-import { useReducedMotion } from "@/hooks/useReducedMotion";
 import styles from "./ReleaseExperience.module.css";
 
 export type ExperienceTrack = {
@@ -34,14 +33,13 @@ type Props = {
   copyrights: string[];
 };
 
-type SaveDataConnection = { saveData?: boolean };
-
-function youtubeSrc(id: string, autoplay: boolean, muted: boolean, origin: string) {
+/**
+ * Kullanıcı oynat'a bastığında iframe oluşturulur; bu bir kullanıcı hareketi olduğu için
+ * tarayıcılar sesli başlatmaya izin verir (sessiz otomatik oynatma + "sesi aç" düğmesi yok).
+ */
+function youtubeSrc(id: string, origin: string) {
   const params = new URLSearchParams({
-    autoplay: autoplay ? "1" : "0",
-    mute: muted ? "1" : "0",
-    loop: "1",
-    playlist: id,
+    autoplay: "1",
     playsinline: "1",
     rel: "0",
     modestbranding: "1",
@@ -60,65 +58,81 @@ export function ReleaseExperience({
   label,
   copyrights,
 }: Props) {
-  const reduced = useReducedMotion();
   const { pausePlayback } = useSpotifyPlayback();
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  const mutedRef = useRef(true);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  const embedRef = useRef<HTMLIFrameElement>(null);
 
   const singleTrack = tracks.length === 1 ? tracks[0] : null;
   const [activeTrackId, setActiveTrackId] = useState<string | null>(
     singleTrack ? singleTrack.id : null,
   );
-  const [muted, setMuted] = useState(true);
-  const [mounted, setMounted] = useState(false);
-  const [autoplay, setAutoplay] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const [frameReady, setFrameReady] = useState(false);
+  const [posterFallback, setPosterFallback] = useState(false);
   const [origin, setOrigin] = useState("");
 
   useEffect(() => {
-    const connection = (navigator as Navigator & { connection?: SaveDataConnection }).connection;
-    setAutoplay(!connection?.saveData);
     setOrigin(window.location.origin);
-    setMounted(true);
   }, []);
 
   const activeTrack = useMemo(
     () => tracks.find((t) => t.id === activeTrackId) ?? null,
     [tracks, activeTrackId],
   );
-
   const videoId = activeTrack ? activeTrack.videoId : releaseVideoId;
-  const shouldAutoplay = autoplay && !reduced;
-  // Ses açık/kapalı durumu src'yi değiştirmesin (klip baştan başlamasın): src yalnızca
-  // video değişince yeniden hesaplanır, mute komutu postMessage ile gider.
-  const frameSrc = useMemo(
-    () => (videoId ? youtubeSrc(videoId, shouldAutoplay, mutedRef.current, origin) : ""),
-    [videoId, shouldAutoplay, origin],
-  );
+  const clipTitle = activeTrack?.name ?? release.name;
+
+  // Video değişince poster/yükleme durumu sıfırlanır.
+  useEffect(() => {
+    setFrameReady(false);
+    setPosterFallback(false);
+  }, [videoId]);
 
   const embedUri = activeTrack
     ? `https://open.spotify.com/embed/track/${activeTrack.id}?utm_source=generator&theme=0`
     : `https://open.spotify.com/embed/album/${release.id}?utm_source=generator&theme=0`;
   const embedHeight = activeTrack ? 152 : tracks.length > 1 ? 352 : 152;
 
+  /** Klip sesli başlayacağı için sitenin Spotify çalması klibin üstüne binmesin. */
+  const startClip = useCallback(() => {
+    pausePlayback();
+    setPlaying(true);
+  }, [pausePlayback]);
 
-  const toggleSound = useCallback(() => {
-    const frame = iframeRef.current?.contentWindow;
-    if (!frame) return;
-    const next = !muted;
-    frame.postMessage(
-      JSON.stringify({ event: "command", func: next ? "mute" : "unMute", args: [] }),
-      "*",
-    );
-    if (!next) {
-      // Klip sesi açılınca sitenin Spotify çalması klibin üstüne binmesin.
-      pausePlayback();
+  // Spotify oynatıcısına odaklanılırsa (tıklanırsa) klip duraklatılır: iki ses üst üste binmesin.
+  useEffect(() => {
+    if (!playing) return;
+    const onBlur = () => {
+      window.setTimeout(() => {
+        if (embedRef.current && document.activeElement === embedRef.current) {
+          frameRef.current?.contentWindow?.postMessage(
+            JSON.stringify({ event: "command", func: "pauseVideo", args: [] }),
+            "*",
+          );
+        }
+      }, 0);
+    };
+    window.addEventListener("blur", onBlur);
+    return () => window.removeEventListener("blur", onBlur);
+  }, [playing]);
+
+  const selectTrack = (track: ExperienceTrack) => {
+    const same = track.id === activeTrackId && tracks.length > 1;
+    const nextId = same ? null : track.id;
+    setActiveTrackId(nextId);
+
+    const nextVideo = nextId === null ? releaseVideoId : track.videoId;
+    if (nextId !== null && nextVideo) {
+      // Parçaya basmak da bir oynat hareketidir: klip sesli başlar.
+      startClip();
+      // Küçük ekranlarda liste sahnenin altında; klip görünsün.
+      if (window.matchMedia("(max-width: 899px)").matches) {
+        stageRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    } else {
+      setPlaying(false);
     }
-    mutedRef.current = next;
-    setMuted(next);
-  }, [muted, pausePlayback]);
-
-  const selectTrack = (id: string) => {
-    setActiveTrackId((prev) => (prev === id && tracks.length > 1 ? null : id));
   };
 
   const artistLine = artists.map((a, i) => (
@@ -139,40 +153,64 @@ export function ReleaseExperience({
     </span>
   ));
 
+  const showFrame = Boolean(videoId) && playing;
+
   return (
     <div className={styles.grid}>
       <div className={styles.media}>
-        <div className={styles.screen}>
+        <div ref={stageRef} className={styles.screen}>
           {videoId ? (
             <>
-              {mounted ? (
+              <button
+                type="button"
+                className={`${styles.poster} ${showFrame && frameReady ? styles.posterHidden : ""}`}
+                onClick={startClip}
+                aria-label={`Klibi oynat: ${clipTitle}`}
+                tabIndex={showFrame ? -1 : 0}
+                aria-hidden={showFrame && frameReady}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  key={`${videoId}-${posterFallback ? "mq" : "max"}`}
+                  className={styles.posterImage}
+                  src={`https://i.ytimg.com/vi/${videoId}/${posterFallback ? "mqdefault" : "maxresdefault"}.jpg`}
+                  alt=""
+                  loading="eager"
+                  decoding="async"
+                  onError={() => setPosterFallback(true)}
+                  onLoad={(e) => {
+                    // maxresdefault yoksa YouTube 120×90'lık gri bir yer tutucu döndürür.
+                    if (!posterFallback && e.currentTarget.naturalWidth <= 200) setPosterFallback(true);
+                  }}
+                />
+                <span className={styles.shade} aria-hidden="true" />
+                <span className={styles.playWrap} aria-hidden="true">
+                  <span className={styles.ring} />
+                  <span className={styles.play}>
+                    <svg viewBox="0 0 24 24" className={styles.playIcon} focusable="false">
+                      <path d="M8 5.2v13.6a1 1 0 0 0 1.5.86l11-6.8a1 1 0 0 0 0-1.72l-11-6.8A1 1 0 0 0 8 5.2Z" />
+                    </svg>
+                  </span>
+                </span>
+                <span className={styles.posterLabel}>
+                  <span className={styles.posterKicker}>KLİP</span>
+                  <span className={styles.posterTitle}>{clipTitle}</span>
+                </span>
+                {showFrame && !frameReady ? <span className={styles.spinner} aria-hidden="true" /> : null}
+              </button>
+
+              {showFrame ? (
                 <iframe
                   key={videoId}
-                  ref={iframeRef}
-                  className={styles.frame}
-                  src={frameSrc}
-                  title={`${release.name} — klip`}
+                  ref={frameRef}
+                  className={`${styles.frame} ${frameReady ? styles.frameReady : ""}`}
+                  src={youtubeSrc(videoId, origin)}
+                  title={`${clipTitle} — klip`}
                   allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                   allowFullScreen
                   referrerPolicy="strict-origin-when-cross-origin"
+                  onLoad={() => setFrameReady(true)}
                 />
-              ) : (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  className={styles.frame}
-                  src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
-                  alt={`${release.name} klip kapağı`}
-                />
-              )}
-              {mounted ? (
-                <button
-                  type="button"
-                  className={styles.sound}
-                  onClick={toggleSound}
-                  aria-pressed={!muted}
-                >
-                  {muted ? "SESİ AÇ" : "SESİ KAPAT"}
-                </button>
               ) : null}
             </>
           ) : (
@@ -221,7 +259,7 @@ export function ReleaseExperience({
                 <button
                   type="button"
                   className={`${styles.track} ${track.id === activeTrackId ? styles.trackActive : ""}`}
-                  onClick={() => selectTrack(track.id)}
+                  onClick={() => selectTrack(track)}
                   aria-pressed={track.id === activeTrackId}
                 >
                   <span className={styles.trackNo}>{String(index + 1).padStart(2, "0")}</span>
@@ -294,7 +332,8 @@ export function ReleaseExperience({
         <div className={styles.embed}>
           <iframe
             key={embedUri}
-            title={`${activeTrack?.name ?? release.name} — Spotify`}
+            ref={embedRef}
+            title={`${clipTitle} — Spotify`}
             src={embedUri}
             width="100%"
             height={embedHeight}

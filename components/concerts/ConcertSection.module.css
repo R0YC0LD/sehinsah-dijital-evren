@@ -18,6 +18,7 @@
 
 .content {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: clamp(1.5rem, 3vw, 2.25rem);
 }
 

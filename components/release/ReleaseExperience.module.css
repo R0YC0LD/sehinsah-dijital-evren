@@ -30,32 +30,176 @@
 .frame {
   position: absolute;
   inset: 0;
+  z-index: 2;
   width: 100%;
   height: 100%;
   border: 0;
-  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.sound {
+.frameReady {
+  opacity: 1;
+}
+
+/* Kapak + oynat düğmesi: tıklayınca klip SESLİ başlar */
+.poster {
   position: absolute;
-  left: 0.85rem;
-  bottom: 0.85rem;
-  min-height: 2.4rem;
-  padding: 0 0.95rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.18em;
-  color: var(--sehinsah-green);
-  background: rgba(4, 6, 3, 0.78);
-  border: 1px solid var(--sehinsah-green-line);
-  backdrop-filter: blur(6px);
-  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  inset: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background: #040603;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.sound:hover,
-.sound:focus-visible {
-  background: var(--sehinsah-green);
+.posterHidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.posterImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform 0.9s var(--ease), filter 0.5s ease;
+  filter: saturate(0.92) brightness(0.86);
+}
+
+.poster:hover .posterImage,
+.poster:focus-visible .posterImage {
+  transform: scale(1.045);
+  filter: saturate(1) brightness(0.95);
+}
+
+.shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgba(4, 6, 3, 0) 35%, rgba(4, 6, 3, 0.62) 100%),
+    linear-gradient(180deg, rgba(4, 6, 3, 0.1) 40%, rgba(4, 6, 3, 0.82) 100%);
+}
+
+.playWrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: clamp(3.75rem, 12%, 5.75rem);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+}
+
+.play {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   color: #051009;
-  box-shadow: 0 0 18px var(--sehinsah-green-glow);
+  background: var(--sehinsah-green);
+  box-shadow: 0 0 0 1px rgba(122, 255, 174, 0.7), 0 10px 34px rgba(0, 0, 0, 0.55), 0 0 36px var(--sehinsah-green-glow);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s ease;
+}
+
+.poster:hover .play,
+.poster:focus-visible .play {
+  transform: scale(1.08);
+  box-shadow: 0 0 0 1px rgba(122, 255, 174, 0.9), 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 56px var(--sehinsah-green-glow);
+}
+
+.poster:active .play {
+  transform: scale(0.96);
+}
+
+.playIcon {
+  width: 42%;
+  height: 42%;
+  margin-left: 6%;
+  fill: currentColor;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--sehinsah-green);
+  opacity: 0;
+  animation: ringPulse 2.8s ease-out infinite;
+}
+
+@keyframes ringPulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.poster:focus-visible {
+  outline: 2px solid var(--sehinsah-green);
+  outline-offset: -4px;
+}
+
+.posterLabel {
+  position: absolute;
+  left: clamp(0.85rem, 3%, 1.5rem);
+  right: clamp(0.85rem, 3%, 1.5rem);
+  bottom: clamp(0.75rem, 3%, 1.25rem);
+  display: grid;
+  gap: 0.2rem;
+  text-align: left;
+  pointer-events: none;
+}
+
+.posterKicker {
+  font-size: 0.58rem;
+  letter-spacing: 0.26em;
+  color: var(--sehinsah-green);
+}
+
+.posterTitle {
+  font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+  line-height: 1.2;
+  color: var(--text);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: clamp(5.5rem, 16%, 7.5rem);
+  aspect-ratio: 1;
+  margin: calc(clamp(5.5rem, 16%, 7.5rem) / -2) 0 0 calc(clamp(5.5rem, 16%, 7.5rem) / -2);
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--sehinsah-green);
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .coverStage {
@@ -294,13 +438,66 @@
     display: none;
   }
 
-  .sound {
-    min-height: 2.75rem;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .coverArt {
     animation: none;
+  }
+}
+
+/* Giriş hareketi: sahne ve bilgi sütunu sırayla yükselerek belirir */
+.media,
+.info > * {
+  animation: riseIn 0.7s var(--ease) both;
+}
+
+.info > :nth-child(2) {
+  animation-delay: 0.05s;
+}
+.info > :nth-child(3) {
+  animation-delay: 0.1s;
+}
+.info > :nth-child(4) {
+  animation-delay: 0.15s;
+}
+.info > :nth-child(5) {
+  animation-delay: 0.2s;
+}
+.info > :nth-child(n + 6) {
+  animation-delay: 0.25s;
+}
+
+/* Yalnızca konum hareketi: animasyon hiç çalışmasa bile içerik görünür kalır (opaklık oynatılmaz). */
+@keyframes riseIn {
+  from {
+    transform: translateY(14px);
+  }
+}
+
+@media (max-width: 899px) {
+  .playWrap {
+    width: clamp(3.5rem, 18%, 4.5rem);
+  }
+
+  .posterKicker {
+    font-size: 0.54rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media,
+  .info > *,
+  .ring,
+  .spinner,
+  .coverArt {
+    animation: none;
+  }
+
+  .posterImage,
+  .play,
+  .frame,
+  .poster {
+    transition: none;
   }
 }
