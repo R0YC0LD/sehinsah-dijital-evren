@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { downloadIcs, mapsUrl } from "@/lib/calendar-links";
+import { daysUntil } from "@/lib/concerts";
 import styles from "./ConcertRail.module.css";
 
 export type RailConcert = {
@@ -14,6 +15,7 @@ export type RailConcert = {
   year: string;
   weekday: string;
   time: string;
+  timeTba: boolean;
   doors: string | null;
   city: string;
   venue: string;
@@ -27,12 +29,9 @@ type Props = {
   allEventsUrl: string;
 };
 
-const DAY_MS = 24 * 60 * 60 * 1000;
-
-function countdownLabel(startsAt: string, now: number): string | null {
-  const diff = new Date(startsAt).getTime() - now;
-  if (diff <= 0) return "BUGÜN";
-  const days = Math.ceil(diff / DAY_MS);
+function countdownLabel(startsAt: string, now: number): string {
+  const days = daysUntil(startsAt, now);
+  if (days <= 0) return "BUGÜN";
   return days === 1 ? "YARIN" : `${days} GÜN KALDI`;
 }
 
@@ -170,8 +169,10 @@ export function ConcertRail({ concerts, allEventsUrl }: Props) {
                 <div className={styles.badges}>
                   {c.soldOut ? (
                     <span className={styles.soldOut}>TÜKENDİ</span>
-                  ) : (
+                  ) : c.ticketUrl ? (
                     <span className={styles.onSale}>BİLETLER SATIŞTA</span>
+                  ) : (
+                    <span className={styles.countdown}>BİLET BİLGİSİ YAKINDA</span>
                   )}
                   {countdown ? <span className={styles.countdown}>{countdown}</span> : null}
                 </div>
@@ -203,15 +204,17 @@ export function ConcertRail({ concerts, allEventsUrl }: Props) {
                   ) : null}
                 </dl>
 
-                <a
-                  href={c.ticketUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={styles.cta}
-                  draggable={false}
-                >
-                  {c.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
-                </a>
+                {c.ticketUrl ? (
+                  <a
+                    href={c.ticketUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.cta}
+                    draggable={false}
+                  >
+                    {c.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
+                  </a>
+                ) : null}
 
                 <div className={styles.tools}>
                   <button type="button" className={styles.tool} onClick={() => downloadIcs(c)}>

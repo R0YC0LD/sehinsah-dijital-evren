@@ -82,7 +82,9 @@ Her yayının kendi sayfası var (ör. `/muzik/70lik-2026`); katalogdaki her sü
 
 Ana sayfadaki "KONSER TAKVİMİ" (menüde TAKVİM): sıradaki konser paneli (canlı geri sayım, takvime ekle `.ics`/Google, yol tarifi, paylaş) + kaydırmalı diğer etkinlikler. schema.org `MusicEvent` verisi üretir.
 
-**Kaynak:** Bubilet'teki Şehinşah sanatçı sayfası — Şehinşah'ın katıldığı/katılacağı TÜM etkinlikler (kendi konserleri, çok sanatçılı geceler, festivaller) otomatik bulunur. `robots.txt`'in izin verdiği sayfalar, dürüst User-Agent, az istek.
+**Afişte olup Bubilet'te olmayanlar:** `data/tour-dates.ts` içinde elle tutulur (cron bu dosyaya dokunmaz, tarihi geçen gizlenir). Saat ve bilet bağlantısı yoksa kartta "AÇIKLANACAK" yazar. Aynı gün Bubilet'te etkinlik çıkınca Bubilet kaydı geçerli olur.
+
+**Kaynak:** Bubilet sanatçı sayfası (çok sanatçılı geceler, festivaller) + `sitemap.xml`'deki tüm `sehinsah` etkinlik sayfaları (şehir konserleri sanatçı sayfasında görünmeyebilir). Yeni şehirler otomatik bulunur. `robots.txt`'in izin verdiği sayfalar, dürüst User-Agent, az istek.
 
 **Otomasyon (elle bir şey yapılmaz):**
 - `vercel.json` → Vercel Cron günde 2 kez (TR saatiyle ~01:30 ve ~07:00; Hobby planda ±1 saat) `app/api/cron/concerts` rotasını çağırır.

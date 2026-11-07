@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { RailConcert } from "@/components/concerts/ConcertRail";
 import { downloadIcs, googleCalendarUrl, mapsUrl } from "@/lib/calendar-links";
+import { daysUntil } from "@/lib/concerts";
 import { shareOrCopy } from "@/lib/share";
 import styles from "./ConcertFeatured.module.css";
 
@@ -39,6 +40,8 @@ export function ConcertFeatured({ concert }: Props) {
   const started = diff !== null && diff <= 0;
   const parts = diff !== null && diff > 0 ? split(diff) : null;
   const names = concert.lineup;
+  // Saat açıklanmadıysa saniye saymak yanıltır: yalnızca gün gösterilir.
+  const daysLeft = concert.timeTba && now !== null ? daysUntil(concert.startsAt, now) : null;
 
   const share = async () => {
     const result = await shareOrCopy(`${window.location.origin}/#takvim`, concert.title);
@@ -66,8 +69,10 @@ export function ConcertFeatured({ concert }: Props) {
         <div className={styles.badges}>
           {concert.soldOut ? (
             <span className={styles.soldOut}>TÜKENDİ</span>
-          ) : (
+          ) : concert.ticketUrl ? (
             <span className={styles.onSale}>BİLETLER SATIŞTA</span>
+          ) : (
+            <span className={styles.badge}>BİLET BİLGİSİ YAKINDA</span>
           )}
           {concert.ageLimit ? <span className={styles.badge}>{concert.ageLimit}</span> : null}
         </div>
@@ -104,7 +109,11 @@ export function ConcertFeatured({ concert }: Props) {
 
       <div className={styles.side}>
         <div className={styles.count} role="timer" aria-label="Konsere kalan süre">
-          {started ? (
+          {concert.timeTba ? (
+            <p className={`display ${styles.started}`}>
+              {daysLeft === null ? "--" : daysLeft <= 0 ? "BUGÜN" : daysLeft === 1 ? "YARIN" : `${daysLeft} GÜN`}
+            </p>
+          ) : started ? (
             <p className={`display ${styles.started}`}>BAŞLADI</p>
           ) : (
             <div className={styles.units}>
@@ -127,15 +136,17 @@ export function ConcertFeatured({ concert }: Props) {
           )}
         </div>
 
-        <a
-          href={concert.ticketUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.cta}
-          draggable={false}
-        >
-          {concert.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
-        </a>
+        {concert.ticketUrl ? (
+          <a
+            href={concert.ticketUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.cta}
+            draggable={false}
+          >
+            {concert.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
+          </a>
+        ) : null}
 
         <div className={styles.tools}>
           <button type="button" className={styles.tool} onClick={() => downloadIcs(concert)}>

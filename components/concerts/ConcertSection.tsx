@@ -36,7 +36,8 @@ export async function ConcertSection() {
       month: start.month,
       year: String(start.year),
       weekday: start.weekday,
-      time: start.time,
+      time: c.timeTba ? "AÇIKLANACAK" : start.time,
+      timeTba: Boolean(c.timeTba),
       doors: c.doorsAt ? trParts(c.doorsAt).time : null,
       city: c.city,
       venue: c.venue,
@@ -50,20 +51,24 @@ export async function ConcertSection() {
     "@context": "https://schema.org",
     "@type": "MusicEvent",
     name: c.title,
-    startDate: c.startsAt,
+    startDate: c.timeTba ? c.startsAt.slice(0, 10) : c.startsAt,
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location: {
       "@type": "Place",
       name: c.venue,
-      address: { "@type": "PostalAddress", addressLocality: c.city, addressCountry: "TR" },
+      address: { "@type": "PostalAddress", addressLocality: c.city, addressCountry: c.country ?? "TR" },
     },
     performer: { "@type": "MusicGroup", name: siteConfig.displayName, url: getSiteUrl() },
-    offers: {
-      "@type": "Offer",
-      url: c.ticketUrl,
-      availability: c.soldOut ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
-    },
+    ...(c.ticketUrl
+      ? {
+          offers: {
+            "@type": "Offer",
+            url: c.ticketUrl,
+            availability: c.soldOut ? "https://schema.org/SoldOut" : "https://schema.org/InStock",
+          },
+        }
+      : {}),
   }));
 
   return (

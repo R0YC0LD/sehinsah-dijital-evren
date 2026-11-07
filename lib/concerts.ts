@@ -20,6 +20,15 @@ export function splitLineup(title: string): string[] {
   return names.length >= 3 ? names : [];
 }
 
+const DAY_MS = 24 * 60 * 60 * 1000;
+const TR_OFFSET_MS = 3 * 60 * 60 * 1000;
+const trDay = (ms: number) => Math.floor((ms + TR_OFFSET_MS) / DAY_MS);
+
+/** Türkiye takvimine göre konsere kalan gün (0: bugün). */
+export function daysUntil(startsAt: string, now: number): number {
+  return trDay(new Date(startsAt).getTime()) - trDay(now);
+}
+
 export function upcomingConcerts<T extends Pick<Concert, "startsAt">>(list: T[], now: number): T[] {
   return list.filter((c) => isUpcoming(c, now)).sort((a, b) => a.startsAt.localeCompare(b.startsAt));
 }

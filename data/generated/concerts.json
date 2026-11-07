@@ -1,8 +1,38 @@
 {
   "schemaVersion": 1,
   "source": "bubilet",
-  "updatedAt": "2026-10-30T10:32:44.921Z",
+  "updatedAt": "2026-11-07T13:24:01.685Z",
   "concerts": [
+    {
+      "id": "bubilet-277946",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-11-07T21:30:00+03:00",
+      "city": "Çanakkale",
+      "venue": "The Keep",
+      "ticketUrl": "https://www.bubilet.com.tr/canakkale/etkinlik/sehinsah-konseri-/seans/277946",
+      "soldOut": false,
+      "doorsAt": "2026-11-07T20:30:00+03:00"
+    },
+    {
+      "id": "bubilet-271580",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-11-11T21:30:00+03:00",
+      "city": "Denizli",
+      "venue": "Holly Stone Performance Hall Denizli",
+      "ticketUrl": "https://www.bubilet.com.tr/denizli/etkinlik/sehinsah-konseri-/seans/271580",
+      "soldOut": false,
+      "doorsAt": "2026-11-11T20:00:00+03:00"
+    },
+    {
+      "id": "bubilet-271581",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-11-12T21:30:00+03:00",
+      "city": "Aydın",
+      "venue": "Holly Stone Performance Hall Aydın",
+      "ticketUrl": "https://www.bubilet.com.tr/aydin/etkinlik/sehinsah-konseri-/seans/271581",
+      "soldOut": false,
+      "doorsAt": "2026-11-12T20:00:00+03:00"
+    },
     {
       "id": "bubilet-301205",
       "title": "Allame & Aspova & Hidra & Şehinşah & Lab Gang",
@@ -11,6 +41,76 @@
       "venue": "Dorock XL Kadıköy",
       "ticketUrl": "https://www.bubilet.com.tr/istanbul/etkinlik/hiphop-operation/seans/301205",
       "soldOut": false,
+      "ageLimit": "18+"
+    },
+    {
+      "id": "bubilet-288143",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-11-20T22:00:00+03:00",
+      "city": "Kıbrıs",
+      "venue": "Berlin Nicosia",
+      "ticketUrl": "https://www.bubilet.com.tr/kibris/etkinlik/sehinsah-konseri-/seans/288143",
+      "soldOut": false,
+      "doorsAt": "2026-11-20T20:30:00+03:00"
+    },
+    {
+      "id": "bubilet-261395",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-11-29T21:30:00+03:00",
+      "city": "Bursa",
+      "venue": "Holly Stone Performance Hall Bursa",
+      "ticketUrl": "https://www.bubilet.com.tr/bursa/etkinlik/sehinsah-konseri-/seans/261395",
+      "soldOut": false,
+      "doorsAt": "2026-11-29T20:00:00+03:00"
+    },
+    {
+      "id": "bubilet-261393",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-04T21:30:00+03:00",
+      "city": "Diyarbakır",
+      "venue": "Holly Stone Diyarbakır",
+      "ticketUrl": "https://www.bubilet.com.tr/diyarbakir/etkinlik/sehinsah-konseri-/seans/261393",
+      "soldOut": false,
+      "doorsAt": "2026-12-04T20:00:00+03:00"
+    },
+    {
+      "id": "bubilet-261394",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-05T21:30:00+03:00",
+      "city": "Batman",
+      "venue": "Holly Stone Batman",
+      "ticketUrl": "https://www.bubilet.com.tr/batman/etkinlik/sehinsah-konseri-/seans/261394",
+      "soldOut": false,
+      "doorsAt": "2026-12-05T20:00:00+03:00"
+    },
+    {
+      "id": "bubilet-289056",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-09T21:30:00+03:00",
+      "city": "Adana",
+      "venue": "Holly Stone Performance Hall Adana",
+      "ticketUrl": "https://www.bubilet.com.tr/adana/etkinlik/sehinsah-konseri-/seans/289056",
+      "soldOut": false,
+      "doorsAt": "2026-12-09T20:00:00+03:00"
+    },
+    {
+      "id": "bubilet-308786",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-10T20:30:00+03:00",
+      "city": "Mersin",
+      "venue": "Social Hall Mersin",
+      "ticketUrl": "https://www.bubilet.com.tr/mersin/etkinlik/sehinsah-konseri-/seans/308786",
+      "soldOut": false
+    },
+    {
+      "id": "bubilet-310077",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-16T21:30:00+03:00",
+      "city": "Antalya",
+      "venue": "Holly Stone Performance Hall Antalya",
+      "ticketUrl": "https://www.bubilet.com.tr/antalya/etkinlik/sehinsah-konseri-/seans/310077",
+      "soldOut": false,
+      "doorsAt": "2026-12-16T20:00:00+03:00",
       "ageLimit": "18+"
     },
     {
@@ -23,6 +123,35 @@
       "soldOut": false,
       "doorsAt": "2026-12-18T21:00:00+03:00",
       "ageLimit": "18+"
+    },
+    {
+      "id": "bubilet-284261",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-19T21:00:00+03:00",
+      "city": "Konya",
+      "venue": "Konya PSM",
+      "ticketUrl": "https://www.bubilet.com.tr/konya/etkinlik/sehinsah-konseri-/seans/284261",
+      "soldOut": false,
+      "doorsAt": "2026-12-19T19:30:00+03:00"
+    },
+    {
+      "id": "bubilet-289209",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-25T22:30:00+03:00",
+      "city": "İzmir",
+      "venue": "Ooze Venue",
+      "ticketUrl": "https://www.bubilet.com.tr/izmir/etkinlik/sehinsah-konseri-/seans/289209",
+      "soldOut": false,
+      "doorsAt": "2026-12-25T20:00:00+03:00"
+    },
+    {
+      "id": "bubilet-307248",
+      "title": "Şehinşah Konseri",
+      "startsAt": "2026-12-27T21:30:00+03:00",
+      "city": "İstanbul",
+      "venue": "IF Performance Hall Beşiktaş",
+      "ticketUrl": "https://www.bubilet.com.tr/istanbul/etkinlik/sehinsah-konseri-/seans/307248",
+      "soldOut": false
     }
   ]
 }

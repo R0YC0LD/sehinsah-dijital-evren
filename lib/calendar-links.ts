@@ -7,6 +7,7 @@ export type CalendarEvent = {
   city: string;
   venue: string;
   ticketUrl: string;
+  timeTba?: boolean;
 };
 
 /** Bitiş saati bilinmiyor; takvim girdisi için makul bir süre varsayılır. */
@@ -25,14 +26,20 @@ const place = (event: CalendarEvent) =>
   event.venue.toLocaleLowerCase("tr").includes(event.city.toLocaleLowerCase("tr"))
     ? event.venue
     : `${event.venue}, ${event.city}`;
-const details = (event: CalendarEvent) => `Bilet: ${event.ticketUrl}`;
+const details = (event: CalendarEvent) => (event.ticketUrl ? `Bilet: ${event.ticketUrl}` : "");
+
+/** Saat açıklanmadıysa takvime tüm gün etkinliği olarak girer. */
+const dayStamp = (event: CalendarEvent, offsetDays = 0) => {
+  const [year, month, day] = event.startsAt.slice(0, 10).split("-").map(Number);
+  return new Date(Date.UTC(year, month - 1, day + offsetDays)).toISOString().slice(0, 10).replace(/-/g, "");
+};
 
 export function googleCalendarUrl(event: CalendarEvent): string {
   const { start, end } = range(event);
   const params = new URLSearchParams({
     action: "TEMPLATE",
     text: event.title,
-    dates: `${start}/${end}`,
+    dates: event.timeTba ? `${dayStamp(event)}/${dayStamp(event, 1)}` : `${start}/${end}`,
     location: place(event),
     details: details(event),
   });
@@ -63,12 +70,12 @@ export function icsContent(event: CalendarEvent, now: number = Date.now()): stri
     "BEGIN:VEVENT",
     `UID:${event.id}@sehinsah`,
     `DTSTAMP:${utcStamp(now)}`,
-    `DTSTART:${start}`,
-    `DTEND:${end}`,
+    event.timeTba ? `DTSTART;VALUE=DATE:${dayStamp(event)}` : `DTSTART:${start}`,
+    event.timeTba ? `DTEND;VALUE=DATE:${dayStamp(event, 1)}` : `DTEND:${end}`,
     `SUMMARY:${escapeIcs(event.title)}`,
     `LOCATION:${escapeIcs(place(event))}`,
     `DESCRIPTION:${escapeIcs(details(event))}`,
-    `URL:${event.ticketUrl}`,
+    ...(event.ticketUrl ? [`URL:${event.ticketUrl}`] : []),
     "END:VEVENT",
     "END:VCALENDAR",
     "",

@@ -4,12 +4,14 @@ import { unstable_cache } from "next/cache";
 import { Redis } from "@upstash/redis";
 import snapshot from "@/data/generated/concerts.json";
 import type { Concert } from "@/data/concerts";
+import { tourConcerts } from "@/data/tour-dates";
 
 /**
  * Konser verisinin kaynağı:
  *  1) Upstash KV (Vercel cron → app/api/cron/concerts Bubilet'ten günde 2 kez yazar) — canlı kaynak.
  *  2) data/generated/concerts.json — derlemeyle gelen yedek/anlık görüntü (KV yoksa/boşsa/erişilemezse).
  * İkisinden `updatedAt`'ı yeni olan kullanılır; bu yüzden takvim hiçbir zaman boş kalmaz.
+ * Üzerine data/tour-dates.ts eklenir: cron yalnızca Bubilet kayıtlarını yazdığı için bu tarihler silinmez.
  */
 export const CONCERTS_KEY = "sehinsah:concerts:v1";
 export const CONCERTS_LOCK_KEY = "sehinsah:concerts:lock";
@@ -85,6 +87,12 @@ export async function holdLock(seconds: number): Promise<void> {
   if (redis) await redis.set(CONCERTS_LOCK_KEY, String(Date.now()), { ex: seconds });
 }
 
+/** Aynı gün Bubilet'te etkinlik varsa saat ve bilet bilgisi orada olduğu için afiş kaydı düşer. */
+function withTourDates(concerts: Concert[]): Concert[] {
+  const days = new Set(concerts.map((c) => c.startsAt.slice(0, 10)));
+  return [...concerts, ...tourConcerts.filter((c) => !days.has(c.startsAt.slice(0, 10)))];
+}
+
 async function loadConcerts(): Promise<Concert[]> {
   const bundled = normalize(snapshot) ?? { updatedAt: "", concerts: [] };
   let stored: StoredConcerts | null = null;
@@ -93,12 +101,12 @@ async function loadConcerts(): Promise<Concert[]> {
   } catch {
     stored = null;
   }
-  if (stored && stored.updatedAt >= bundled.updatedAt) return stored.concerts;
-  return bundled.concerts;
+  const live = stored && stored.updatedAt >= bundled.updatedAt ? stored.concerts : bundled.concerts;
+  return withTourDates(live);
 }
 
 /** 15 dk cache; cron güncelleyince `revalidateTag("concerts")` ile hemen tazelenir. */
-export const getConcerts = unstable_cache(loadConcerts, ["concerts-v2"], {
+export const getConcerts = unstable_cache(loadConcerts, ["concerts-v4"], {
   revalidate: 900,
   tags: ["concerts"],
 });
