@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import type { RailConcert } from "@/components/concerts/ConcertRail";
 import { downloadIcs, googleCalendarUrl, mapsUrl } from "@/lib/calendar-links";
 import { daysUntil } from "@/lib/concerts";
+import { trackConcert } from "@/lib/concerts/track";
 import { shareOrCopy } from "@/lib/share";
 import styles from "./ConcertFeatured.module.css";
 
@@ -44,6 +45,7 @@ export function ConcertFeatured({ concert }: Props) {
   const daysLeft = concert.timeTba && now !== null ? daysUntil(concert.startsAt, now) : null;
 
   const share = async () => {
+    trackConcert(concert.id, "share");
     const result = await shareOrCopy(`${window.location.origin}/#takvim`, concert.title);
     if (result === "copied") {
       setNote("BAĞLANTI KOPYALANDI");
@@ -143,13 +145,22 @@ export function ConcertFeatured({ concert }: Props) {
             rel="noopener noreferrer"
             className={styles.cta}
             draggable={false}
+            onClick={() => trackConcert(concert.id, "ticket")}
+            onAuxClick={() => trackConcert(concert.id, "ticket")}
           >
             {concert.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
           </a>
         ) : null}
 
         <div className={styles.tools}>
-          <button type="button" className={styles.tool} onClick={() => downloadIcs(concert)}>
+          <button
+            type="button"
+            className={styles.tool}
+            onClick={() => {
+              trackConcert(concert.id, "calendar");
+              downloadIcs(concert);
+            }}
+          >
             TAKVİME EKLE
           </button>
           <a
@@ -157,10 +168,17 @@ export function ConcertFeatured({ concert }: Props) {
             href={googleCalendarUrl(concert)}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackConcert(concert.id, "calendar")}
           >
             GOOGLE TAKVİM ↗
           </a>
-          <a className={styles.tool} href={mapsUrl(concert)} target="_blank" rel="noopener noreferrer">
+          <a
+            className={styles.tool}
+            href={mapsUrl(concert)}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackConcert(concert.id, "maps")}
+          >
             YOL TARİFİ ↗
           </a>
           <button type="button" className={styles.tool} onClick={share}>

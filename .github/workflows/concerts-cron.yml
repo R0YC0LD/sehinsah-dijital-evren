@@ -1,0 +1,22 @@
+# Konser botunun yedek tetikleyicisi. Asıl zamanlama vercel.json'da; Hobby planda Vercel cron saati
+# bir saate kadar kayabildiği ve tek seferlik hata olabildiği için aynı saatlerde burası da çağırır.
+# Rota 30 dk kilitli olduğu için çift çalışma olmaz. Bubilet'i Vercel okur (GitHub IP'lerine 403 veriyor).
+name: Konser takvimi yedek tetikleyici
+
+on:
+  schedule:
+    - cron: "0 19 * * *" # 22:00 TR
+    - cron: "0 23 * * *" # 02:00 TR
+  workflow_dispatch:
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Konser rotasını çağır
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          curl -sS --max-time 90 ${CRON_SECRET:+-H "Authorization: Bearer ${CRON_SECRET}"} \
+            "https://www.xn--ehinah-vjbe.com/api/cron/concerts?run=backup"

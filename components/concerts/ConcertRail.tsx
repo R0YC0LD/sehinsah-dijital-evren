@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { downloadIcs, mapsUrl } from "@/lib/calendar-links";
 import { daysUntil } from "@/lib/concerts";
+import { trackConcert } from "@/lib/concerts/track";
 import styles from "./ConcertRail.module.css";
 
 export type RailConcert = {
@@ -211,16 +212,21 @@ export function ConcertRail({ concerts, allEventsUrl }: Props) {
                     rel="noopener noreferrer"
                     className={styles.cta}
                     draggable={false}
+                    onClick={() => trackConcert(c.id, "ticket")}
+                    onAuxClick={() => trackConcert(c.id, "ticket")}
                   >
                     {c.soldOut ? "BUBİLET’TE GÖR ↗" : "BİLET AL ↗"}
                   </a>
                 ) : null}
 
                 <div className={styles.tools}>
-                  <button type="button" className={styles.tool} onClick={() => downloadIcs(c)}>
+                  <button type="button" className={styles.tool} onClick={() => {
+                      trackConcert(c.id, "calendar");
+                      downloadIcs(c);
+                    }}>
                     TAKVİME EKLE
                   </button>
-                  <a className={styles.tool} href={mapsUrl(c)} target="_blank" rel="noopener noreferrer" draggable={false}>
+                  <a className={styles.tool} href={mapsUrl(c)} target="_blank" rel="noopener noreferrer" draggable={false} onClick={() => trackConcert(c.id, "maps")}>
                     YOL TARİFİ ↗
                   </a>
                 </div>

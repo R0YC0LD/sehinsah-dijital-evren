@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { ConcertStats } from "@/components/admin/ConcertStats";
 import { products } from "@/data/products";
 import type { Comment } from "@/lib/comments/types";
 import styles from "./AdminPanel.module.css";
@@ -114,11 +115,15 @@ export function AdminPanel() {
   return (
     <div className={styles.panel}>
       <div className={styles.header}>
-        <h1 className={`display ${styles.title}`}>YORUM YÖNETİMİ</h1>
+        <h1 className={`display ${styles.title}`}>YÖNETİM</h1>
         <button type="button" className={styles.logout} onClick={onLogout}>
           ÇIKIŞ YAP
         </button>
       </div>
+
+      <ConcertStats />
+
+      <h2 className={`display ${styles.sectionTitle}`}>YORUMLAR</h2>
 
       {loadingComments ? (
         <p className={styles.status}>Yükleniyor…</p>

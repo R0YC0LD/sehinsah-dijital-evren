@@ -7,12 +7,20 @@ type Size = "sm" | "md" | "lg";
 
 /** Spotify kapak adresindeki boyut kodu: b273 = 640px, 1e02 = 300px, 4851 = 64px. */
 const CODE: Record<Size, string> = { lg: "b273", md: "1e02", sm: "4851" };
-const PATTERN = /^(https:\/\/i\.scdn\.co\/image\/ab67616d0000)(?:b273|1e02|4851)(.+)$/;
+const PATTERN = /^https:\/\/i\.scdn\.co\/image\/ab67616d0000(?:b273|1e02|4851)(.+)$/;
+const STATIC_EXPORT = process.env.NEXT_PUBLIC_DEPLOY_TARGET === "github-pages";
 
-/** Kapak adresini istenen boyuta çevirir (Spotify kapak biçimi değilse olduğu gibi döner). */
+/**
+ * Kapak adresini istenen boyuta çevirir (Spotify kapak biçimi değilse olduğu gibi döner).
+ * Spotify CDN'i önbellekte olmayan kapakta saniyelerce bekletebildiği için aynı dosyalar
+ * public/media/covers altından sunulur (scripts/mirror-covers.mjs). Henüz inmemiş yeni kapak
+ * next.config'deki fallback rewrite ile Spotify'dan gelir.
+ */
 export function coverUrl(src: string, size: Size): string {
   const m = PATTERN.exec(src);
-  return m ? `${m[1]}${CODE[size]}${m[2]}` : src;
+  if (!m) return src;
+  const id = `ab67616d0000${CODE[size]}${m[1]}`;
+  return STATIC_EXPORT ? `https://i.scdn.co/image/${id}` : `/media/covers/${id}.jpg`;
 }
 
 type Props = {
@@ -28,7 +36,7 @@ type Props = {
 };
 
 /**
- * Spotify kapağı: doğrudan CDN'den (Next görsel optimize hattının zaman aşımlarına takılmaz),
+ * Spotify kapağı: kendi sunucumuzdan, özgün dosya olarak (kalite kaybı yok, optimize hattına takılmaz),
  * yüklenirken iskelet gösterir, yarım/boş kalmasın diye hata durumunda bir kez daha dener ve
  * büyük boyuta düşer. Üst eleman `position: relative` olmalıdır (kapsayıcıyı doldurur).
  */

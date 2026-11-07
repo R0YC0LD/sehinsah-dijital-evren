@@ -11,16 +11,20 @@ import {
   acquireLock,
   getConcerts,
   holdLock,
+  noteSuspectDrop,
   readStoredConcerts,
   redis,
   writeStoredConcerts,
+  writeSyncStatus,
 } from "@/lib/concerts/source";
 import type { Concert } from "@/data/concerts";
 
 /**
- * Vercel Cron (vercel.json) bu rotayı günde 2 kez çağırır (01:30 ve 07:00 TR). Bubilet'teki
- * Şehinşah etkinliklerini okur, değişiklik varsa Upstash KV'ye yazar ve siteyi tazeler.
- * Hata durumunda mevcut veri korunur; yapı değişmişse hiçbir şey yazılmaz.
+ * Vercel Cron (vercel.json) bu rotayı her gün 22:00 ve 02:00 (TR) çağırır; GitHub Action yedek
+ * tetikleyicidir. Bubilet'teki Şehinşah etkinliklerini okur, değişiklik varsa Upstash KV'ye yazar
+ * ve siteyi tazeler. Hata durumunda mevcut veri korunur; yapı değişmişse hiçbir şey yazılmaz.
+ * Konserlerin yarısından çoğu tek seferde kaybolursa ilk taramada yazılmaz: sonraki tarama da
+ * aynı sonucu verirse gerçek kabul edilir. Her çalışmanın sonucu yönetim panelinde görünür.
  *
  * Herkese açık çağrılsa da zararsızdır: 5 dk kilit + başarıda 30 dk bekleme, Bubilet'e yük bindirmez.
  * İsteğe bağlı: Vercel'de CRON_SECRET tanımlanırsa Authorization: Bearer ile korunur.
@@ -44,10 +48,24 @@ export async function GET(request: Request) {
 
   try {
     const stored = await readStoredConcerts().catch(() => null);
-    const previous: Concert[] = stored?.concerts ?? (await getConcerts());
+    const previous: Concert[] = (stored?.concerts ?? (await getConcerts())).filter((c) => c.ticketUrl);
 
-    const { concerts, sessions } = await fetchBubiletConcerts({ previous });
+    const { concerts, sessions, complete, warnings } = await fetchBubiletConcerts({ previous });
     const before = upcomingConcerts(previous, Date.now());
+    const lost = before.filter((b) => !concerts.some((c) => c.id === b.id));
+
+    if (before.length >= 4 && lost.length > before.length / 2 && !(await noteSuspectDrop(true))) {
+      await writeSyncStatus({
+        ok: false,
+        upcoming: before.length,
+        sessions,
+        complete,
+        warnings: [...warnings, `${lost.length} konser kayboldu görünüyor, sonraki tarama bekleniyor`],
+      });
+      return json({ ok: true, held: "suspect_drop", lost: lost.length });
+    }
+    await noteSuspectDrop(false);
+
     const changed = !stored || JSON.stringify(concerts) !== JSON.stringify(before);
 
     if (changed) {
@@ -56,6 +74,7 @@ export async function GET(request: Request) {
       revalidatePath("/", "layout");
     }
     await holdLock(1800);
+    await writeSyncStatus({ ok: true, upcoming: concerts.length, sessions, complete, warnings });
 
     // Yeni konser/sürüm bildirimi: sessiz saatlerde (22:00–09:00 TR) yalnızca kuyruğa alınır.
     const notify = await runNotify().catch((error) => ({
@@ -68,13 +87,16 @@ export async function GET(request: Request) {
       ok: true,
       changed,
       sessions,
+      complete,
+      warnings,
       upcoming: concerts.length,
       added: concerts.filter((c) => !before.some((b) => b.id === c.id)).map((c) => c.title),
-      removed: before.filter((b) => !concerts.some((c) => c.id === b.id)).map((b) => b.title),
+      removed: lost.map((b) => b.title),
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     console.error("[cron/concerts]", message);
+    await writeSyncStatus({ ok: false, upcoming: 0, sessions: 0, complete: false, warnings: [message] }).catch(() => {});
     if (error instanceof Unreachable) return json({ ok: false, error: "bubilet_unreachable", detail: message }, 502);
     if (error instanceof StructureChanged) return json({ ok: false, error: "structure_changed", detail: message }, 502);
     return json({ ok: false, error: "failed", detail: message }, 500);

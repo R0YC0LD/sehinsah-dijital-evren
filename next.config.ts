@@ -26,6 +26,14 @@ const nextConfig: NextConfig = {
             { protocol: "https", hostname: "image-cdn-fa.spotifycdn.com", pathname: "/**" },
           ],
         },
+        async rewrites() {
+          return {
+            beforeFiles: [],
+            afterFiles: [],
+            // Sync botu indirene kadar yeni kapak Spotify'dan gelir.
+            fallback: [{ source: "/media/covers/:id.jpg", destination: "https://i.scdn.co/image/:id" }],
+          };
+        },
         async headers() {
           const cache = (value: string) => [{ key: "Cache-Control", value }];
           return [
@@ -33,6 +41,11 @@ const nextConfig: NextConfig = {
             {
               source: "/media/:path*",
               headers: cache("public, max-age=604800, stale-while-revalidate=2592000"),
+            },
+            // Kapak adı içeriğin kimliğidir, değişmez.
+            {
+              source: "/media/covers/:path*",
+              headers: cache("public, max-age=31536000, immutable"),
             },
             {
               source: "/sw.js",

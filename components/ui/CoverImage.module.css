@@ -19,7 +19,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.45s ease;
+  transition: opacity 0.18s ease;
 }
 
 .contain {

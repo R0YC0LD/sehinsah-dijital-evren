@@ -15,6 +15,7 @@
     "sync:youtube": "node scripts/sync-youtube.mjs",
     "audit:videos": "node scripts/audit-videos.mjs",
     "sync:concerts": "node scripts/sync-concerts.mjs",
+    "sync:covers": "node scripts/mirror-covers.mjs",
     "sync:details": "node --env-file=.env.local scripts/sync-release-details.mjs",
     "migrate:catalog": "node scripts/migrate-catalog.mjs",
     "purge:catalog": "node scripts/purge-contaminated-catalog.mjs",

@@ -15,6 +15,8 @@ import { tourConcerts } from "@/data/tour-dates";
  */
 export const CONCERTS_KEY = "sehinsah:concerts:v1";
 export const CONCERTS_LOCK_KEY = "sehinsah:concerts:lock";
+const CONCERTS_STATUS_KEY = "sehinsah:concerts:status";
+const CONCERTS_SUSPECT_KEY = "sehinsah:concerts:suspect";
 
 export type StoredConcerts = { updatedAt: string; concerts: Concert[] };
 
@@ -74,6 +76,35 @@ export async function writeStoredConcerts(concerts: Concert[]): Promise<void> {
   if (!redis) throw new Error("kv_not_configured");
   const value: StoredConcerts = { updatedAt: new Date().toISOString(), concerts };
   await withTimeout(redis.set(CONCERTS_KEY, value), KV_TIMEOUT_MS * 2);
+}
+
+export type SyncStatus = {
+  at: string;
+  ok: boolean;
+  upcoming: number;
+  sessions: number;
+  complete: boolean;
+  warnings: string[];
+};
+
+export async function writeSyncStatus(status: Omit<SyncStatus, "at">): Promise<void> {
+  if (redis) await redis.set(CONCERTS_STATUS_KEY, { at: new Date().toISOString(), ...status });
+}
+
+export async function readSyncStatus(): Promise<SyncStatus | null> {
+  return redis ? redis.get<SyncStatus>(CONCERTS_STATUS_KEY) : null;
+}
+
+/** true dönerse şüpheli kayıp ikinci kez görüldü: gerçek kabul edilir. */
+export async function noteSuspectDrop(suspect: boolean): Promise<boolean> {
+  if (!redis) return true;
+  if (!suspect) {
+    await redis.del(CONCERTS_SUSPECT_KEY);
+    return false;
+  }
+  const seen = await redis.incr(CONCERTS_SUSPECT_KEY);
+  await redis.expire(CONCERTS_SUSPECT_KEY, 3 * 24 * 60 * 60);
+  return seen >= 2;
 }
 
 /** Aynı anda/çok sık çalışmayı engeller (herkese açık rota Bubilet'e yük bindirmesin). */
