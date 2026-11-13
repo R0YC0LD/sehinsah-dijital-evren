@@ -2,8 +2,29 @@
   "schemaVersion": 4,
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
-  "generatedAt": "2026-10-30T00:00:00.000Z",
+  "generatedAt": "2026-11-13T02:45:13.411Z",
   "releases": [
+    {
+      "id": "2dJUV6RN5RndBgUfAORbv6",
+      "spotifyId": "2dJUV6RN5RndBgUfAORbv6",
+      "objectType": "album",
+      "name": "Niagara",
+      "albumType": "single",
+      "releaseDate": "2026-11-13",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27393644171fbfb557ff0118651",
+      "spotifyUrl": "https://open.spotify.com/album/2dJUV6RN5RndBgUfAORbv6",
+      "uri": "spotify:album:2dJUV6RN5RndBgUfAORbv6",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "5yotNaBNQlkf5VoWQc4ZaT",
       "spotifyId": "5yotNaBNQlkf5VoWQc4ZaT",
@@ -1882,6 +1903,27 @@
   ],
   "singles": [
     {
+      "id": "2dJUV6RN5RndBgUfAORbv6",
+      "spotifyId": "2dJUV6RN5RndBgUfAORbv6",
+      "objectType": "album",
+      "name": "Niagara",
+      "albumType": "single",
+      "releaseDate": "2026-11-13",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27393644171fbfb557ff0118651",
+      "spotifyUrl": "https://open.spotify.com/album/2dJUV6RN5RndBgUfAORbv6",
+      "uri": "spotify:album:2dJUV6RN5RndBgUfAORbv6",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
       "id": "5yotNaBNQlkf5VoWQc4ZaT",
       "spotifyId": "5yotNaBNQlkf5VoWQc4ZaT",
       "objectType": "album",
@@ -3589,17 +3631,17 @@
   ],
   "tracks": [],
   "latestRelease": {
-    "id": "5yotNaBNQlkf5VoWQc4ZaT",
-    "spotifyId": "5yotNaBNQlkf5VoWQc4ZaT",
+    "id": "2dJUV6RN5RndBgUfAORbv6",
+    "spotifyId": "2dJUV6RN5RndBgUfAORbv6",
     "objectType": "album",
-    "name": "70'lik",
+    "name": "Niagara",
     "albumType": "single",
-    "releaseDate": "2026-10-30",
+    "releaseDate": "2026-11-13",
     "releaseYear": "2026",
     "totalTracks": 1,
-    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27347a79c528c31d03e4a9a21e8",
-    "spotifyUrl": "https://open.spotify.com/album/5yotNaBNQlkf5VoWQc4ZaT",
-    "uri": "spotify:album:5yotNaBNQlkf5VoWQc4ZaT",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27393644171fbfb557ff0118651",
+    "spotifyUrl": "https://open.spotify.com/album/2dJUV6RN5RndBgUfAORbv6",
+    "uri": "spotify:album:2dJUV6RN5RndBgUfAORbv6",
     "artists": [
       {
         "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -3610,10 +3652,10 @@
     "verified": true
   },
   "counts": {
-    "total": 85,
+    "total": 86,
     "albums": 4,
-    "singles": 81,
+    "singles": 82,
     "tracks": 0
   },
-  "updatedAt": "2026-10-30T00:00:00.000Z"
+  "updatedAt": "2026-11-13T02:45:13.411Z"
 }
