@@ -2,8 +2,29 @@
   "schemaVersion": 4,
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
-  "generatedAt": "2026-11-13T02:45:13.411Z",
+  "generatedAt": "2026-11-20T03:37:57.622Z",
   "releases": [
+    {
+      "id": "6pErpG2bT2aX1joUTCNJqC",
+      "spotifyId": "6pErpG2bT2aX1joUTCNJqC",
+      "objectType": "album",
+      "name": "CENNETTEN GELEN",
+      "albumType": "single",
+      "releaseDate": "2026-11-20",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27354584b6302fd7ae49977ebeb",
+      "spotifyUrl": "https://open.spotify.com/album/6pErpG2bT2aX1joUTCNJqC",
+      "uri": "spotify:album:6pErpG2bT2aX1joUTCNJqC",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "2dJUV6RN5RndBgUfAORbv6",
       "spotifyId": "2dJUV6RN5RndBgUfAORbv6",
@@ -1903,6 +1924,27 @@
   ],
   "singles": [
     {
+      "id": "6pErpG2bT2aX1joUTCNJqC",
+      "spotifyId": "6pErpG2bT2aX1joUTCNJqC",
+      "objectType": "album",
+      "name": "CENNETTEN GELEN",
+      "albumType": "single",
+      "releaseDate": "2026-11-20",
+      "releaseYear": "2026",
+      "totalTracks": 1,
+      "imageUrl": "https://i.scdn.co/image/ab67616d0000b27354584b6302fd7ae49977ebeb",
+      "spotifyUrl": "https://open.spotify.com/album/6pErpG2bT2aX1joUTCNJqC",
+      "uri": "spotify:album:6pErpG2bT2aX1joUTCNJqC",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "containsTargetArtist": true,
+      "verified": true
+    },
+    {
       "id": "2dJUV6RN5RndBgUfAORbv6",
       "spotifyId": "2dJUV6RN5RndBgUfAORbv6",
       "objectType": "album",
@@ -3631,17 +3673,17 @@
   ],
   "tracks": [],
   "latestRelease": {
-    "id": "2dJUV6RN5RndBgUfAORbv6",
-    "spotifyId": "2dJUV6RN5RndBgUfAORbv6",
+    "id": "6pErpG2bT2aX1joUTCNJqC",
+    "spotifyId": "6pErpG2bT2aX1joUTCNJqC",
     "objectType": "album",
-    "name": "Niagara",
+    "name": "CENNETTEN GELEN",
     "albumType": "single",
-    "releaseDate": "2026-11-13",
+    "releaseDate": "2026-11-20",
     "releaseYear": "2026",
     "totalTracks": 1,
-    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27393644171fbfb557ff0118651",
-    "spotifyUrl": "https://open.spotify.com/album/2dJUV6RN5RndBgUfAORbv6",
-    "uri": "spotify:album:2dJUV6RN5RndBgUfAORbv6",
+    "imageUrl": "https://i.scdn.co/image/ab67616d0000b27354584b6302fd7ae49977ebeb",
+    "spotifyUrl": "https://open.spotify.com/album/6pErpG2bT2aX1joUTCNJqC",
+    "uri": "spotify:album:6pErpG2bT2aX1joUTCNJqC",
     "artists": [
       {
         "id": "0FUsrstJwmg4WVHQMTYuUA",
@@ -3652,10 +3694,10 @@
     "verified": true
   },
   "counts": {
-    "total": 86,
+    "total": 87,
     "albums": 4,
-    "singles": 82,
+    "singles": 83,
     "tracks": 0
   },
-  "updatedAt": "2026-11-13T02:45:13.411Z"
+  "updatedAt": "2026-11-20T03:37:57.622Z"
 }

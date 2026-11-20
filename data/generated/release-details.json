@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T02:45:14.481Z",
+  "generatedAt": "2026-11-20T03:37:58.715Z",
   "details": {
     "5yotNaBNQlkf5VoWQc4ZaT": {
       "tracks": [
@@ -3899,6 +3899,29 @@
             }
           ],
           "spotifyUrl": "https://open.spotify.com/track/5JHs22bNc4G90VySWKgH9j"
+        }
+      ],
+      "label": null,
+      "copyrights": [
+        "© 2026 Şehinşah Music",
+        "℗ 2026 Şehinşah Music"
+      ]
+    },
+    "6pErpG2bT2aX1joUTCNJqC": {
+      "tracks": [
+        {
+          "id": "7CgFbRhpd9ZGw0OU7aXbOG",
+          "name": "CENNETTEN GELEN",
+          "trackNumber": 1,
+          "durationMs": 135285,
+          "explicit": false,
+          "artists": [
+            {
+              "id": "0FUsrstJwmg4WVHQMTYuUA",
+              "name": "Şehinşah"
+            }
+          ],
+          "spotifyUrl": "https://open.spotify.com/track/7CgFbRhpd9ZGw0OU7aXbOG"
         }
       ],
       "label": null,

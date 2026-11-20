@@ -1,6 +1,6 @@
 {
   "channelId": "UC5kvrlBkq31r5e36YP9UO6g",
-  "updatedAt": "2026-11-13T11:46:21.450Z",
+  "updatedAt": "2026-11-20T03:37:59.772Z",
   "videos": [
     {
       "id": "5Q1BmNkFel8",
@@ -522,6 +522,12 @@
       "title": "Şehinşah | Niagara",
       "durationSec": 219,
       "published": "2026-11-12"
+    },
+    {
+      "id": "Xc83EHu4qJs",
+      "title": "Şehinşah | Cennetten Gelen",
+      "durationSec": 139,
+      "published": "2026-11-19"
     }
   ]
 }

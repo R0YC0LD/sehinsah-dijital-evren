@@ -3,8 +3,27 @@
   "source": "spotify-api",
   "targetArtistId": "0FUsrstJwmg4WVHQMTYuUA",
   "allowCollaborations": false,
-  "generatedAt": "2026-11-13T02:45:13.411Z",
+  "generatedAt": "2026-11-20T03:37:57.622Z",
   "tracks": [
+    {
+      "id": "7CgFbRhpd9ZGw0OU7aXbOG",
+      "spotifyId": "7CgFbRhpd9ZGw0OU7aXbOG",
+      "uri": "spotify:track:7CgFbRhpd9ZGw0OU7aXbOG",
+      "spotifyUrl": "https://open.spotify.com/track/7CgFbRhpd9ZGw0OU7aXbOG",
+      "name": "CENNETTEN GELEN",
+      "durationMs": 135285,
+      "albumId": "6pErpG2bT2aX1joUTCNJqC",
+      "albumName": "CENNETTEN GELEN",
+      "artists": [
+        {
+          "id": "0FUsrstJwmg4WVHQMTYuUA",
+          "name": "Şehinşah"
+        }
+      ],
+      "targetArtistIsPrimary": true,
+      "containsTargetArtist": true,
+      "verified": true
+    },
     {
       "id": "5JHs22bNc4G90VySWKgH9j",
       "spotifyId": "5JHs22bNc4G90VySWKgH9j",
@@ -1569,6 +1588,6 @@
     }
   ],
   "counts": {
-    "total": 82
+    "total": 83
   }
 }
